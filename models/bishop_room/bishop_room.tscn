@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b43to1dh3kk0o"]
+
+[ext_resource type="PackedScene" uid="uid://b1hgp7map5hpx" path="res://models/bishop_room/bishop_room.glb" id="1_vkna5"]
+[ext_resource type="Script" path="res://scripts/Room.gd" id="2_6xvav"]
+
+[sub_resource type="Environment" id="Environment_5umkh"]
+
+[node name="Bishop Room" instance=ExtResource("1_vkna5")]
+script = ExtResource("2_6xvav")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource("Environment_5umkh")
+
+[node name="Window Light" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(-0.175775, -0.553023, -0.814413, 0.0884764, -0.832821, 0.546426, -0.980446, 0.0239915, 0.195318, -9.98702, 3.03356, -5.64631)
+light_energy = 5.0
+shadow_enabled = true
+shadow_blur = 2.0
+spot_range = 12.0
+spot_angle = 50.14

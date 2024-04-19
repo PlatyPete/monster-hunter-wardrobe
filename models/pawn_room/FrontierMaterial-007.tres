@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://byhgd11anlrjq"]
+
+[ext_resource type="Texture2D" uid="uid://u7fdpsp33lqe" path="res://models/pawn_room/pawn_room_st81_tex_5.png" id="1_qxbxj"]
+
+[resource]
+resource_name = "FrontierMaterial-007"
+cull_mode = 2
+albedo_texture = ExtResource("1_qxbxj")

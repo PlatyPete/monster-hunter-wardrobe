@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbudhssbang3j"]
+
+[ext_resource type="PackedScene" uid="uid://034l3yqg3us2" path="res://models/kokoto_house/kokoto_house.glb" id="1_y6mu8"]
+[ext_resource type="Script" path="res://scripts/Room.gd" id="2_um0qg"]
+
+[sub_resource type="Environment" id="Environment_frffb"]
+background_energy_multiplier = 0.5
+
+[node name="Kokoto House" instance=ExtResource("1_y6mu8")]
+script = ExtResource("2_um0qg")
+
+[node name="Player Position" type="Node3D" parent="." index="1"]
+transform = Transform3D(0.241008, 0, 0.970524, 0, 1, 0, -0.970524, 0, 0.241008, -5.07489, 2.38419e-07, -3.67718)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
+environment = SubResource("Environment_frffb")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74783, 1.56326, -4.35864)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, -0.769979, 0.638069, 0, -0.638069, -0.769979, -4.67436, 2.25814, -9.10309)
+light_energy = 2.0
+spot_range = 7.071
+spot_angle = 47.5

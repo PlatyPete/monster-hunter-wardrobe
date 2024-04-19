@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://kiwi15cpuk7f"]
+
+[ext_resource type="PackedScene" uid="uid://cnt3jk0gp2118" path="res://models/king_room/king_room.glb" id="1_e7bo7"]
+[ext_resource type="Script" path="res://scripts/Room.gd" id="2_golqt"]
+
+[sub_resource type="Environment" id="Environment_naopu"]
+
+[node name="King Room" instance=ExtResource("1_e7bo7")]
+script = ExtResource("2_golqt")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="5"]
+environment = SubResource("Environment_naopu")
+
+[node name="Sun Light" type="DirectionalLight3D" parent="." index="6"]
+transform = Transform3D(0.736912, 0.18165, -0.651125, 0, 0.963219, 0.268718, 0.675989, -0.198022, 0.709807, 0, 0, 0)
+light_energy = 0.5

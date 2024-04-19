@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://mmhcmqjqie77"]
+
+[ext_resource type="Texture2D" uid="uid://d3sl3st4pbs4e" path="res://models/queen_room/queen_room_st84_tex_3.png" id="1_jit44"]
+
+[resource]
+resource_name = "FrontierMaterial-004"
+cull_mode = 2
+albedo_texture = ExtResource("1_jit44")
