@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dimm1f4d6p6l3"]
+
+[ext_resource type="Texture2D" uid="uid://bohpjienkil8e" path="res://models/bishop_room/bishop_room_st83_tex_4.png" id="1_y18va"]
+
+[resource]
+resource_name = "Material-004"
+cull_mode = 2
+albedo_texture = ExtResource("1_y18va")

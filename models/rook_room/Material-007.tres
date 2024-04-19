@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://x3pjtg4uqnlt"]
+
+[ext_resource type="Texture2D" uid="uid://b2y8q6sfqvid8" path="res://models/rook_room/rook_room_st82_tex_5.png" id="1_2lax3"]
+
+[resource]
+resource_name = "Material-007"
+cull_mode = 2
+albedo_texture = ExtResource("1_2lax3")

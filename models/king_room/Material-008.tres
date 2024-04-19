@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bek6n5pw0msg0"]
+
+[ext_resource type="Texture2D" uid="uid://r2ixt8oocj35" path="res://models/king_room/king_room_st85_tex_6.png" id="1_jcb7b"]
+
+[resource]
+resource_name = "Material-008"
+cull_mode = 2
+albedo_color = Color(1, 1, 1, 0.5)
+albedo_texture = ExtResource("1_jcb7b")

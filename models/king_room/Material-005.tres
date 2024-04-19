@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c8b2or5nfrakc"]
+
+[ext_resource type="Texture2D" uid="uid://bx45ifsgpqcc8" path="res://models/king_room/king_room_st85_tex_4.png" id="1_n3huv"]
+
+[resource]
+resource_name = "Material-005"
+cull_mode = 2
+albedo_texture = ExtResource("1_n3huv")

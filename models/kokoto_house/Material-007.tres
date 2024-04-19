@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://btptntn27lhjt"]
+
+[ext_resource type="Texture2D" uid="uid://bpitggs0r4qsq" path="res://models/kokoto_house/kokoto_house_st86_tex_3.png" id="1_qaliu"]
+
+[resource]
+resource_name = "Material-007"
+cull_mode = 2
+albedo_texture = ExtResource("1_qaliu")

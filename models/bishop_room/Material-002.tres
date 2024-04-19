@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bahv4nmomjh4g"]
+
+[ext_resource type="Texture2D" uid="uid://dq7li7o5n4e11" path="res://models/bishop_room/bishop_room_st83_tex_2.png" id="1_odk7k"]
+
+[resource]
+resource_name = "Material-002"
+transparency = 4
+cull_mode = 2
+albedo_texture = ExtResource("1_odk7k")
