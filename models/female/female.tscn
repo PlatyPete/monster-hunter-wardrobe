@@ -1,0 +1,1434 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd0ejsd2b5tr2"]
+
+[ext_resource type="PackedScene" uid="uid://w6nsihyx8fls" path="res://models/female/female.glb" id="1_2hcov"]
+[ext_resource type="Script" path="res://scripts/Hunter.gd" id="2_x1x6y"]
+
+[node name="Hunter" instance=ExtResource("1_2hcov")]
+transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
+script = ExtResource("2_x1x6y")
+groups_prefix = "f_"
+
+[node name="Skeleton3D" parent="Armature" index="0"]
+bones/1/rotation = Quaternion(0, 0, 1, 0)
+bones/2/position = Vector3(0, 108.6, -2.52532e-07)
+bones/2/rotation = Quaternion(-0.0439878, -0.296004, -0.00253893, 0.95417)
+bones/3/rotation = Quaternion(-0.0418045, 0.214548, 0.128646, 0.967301)
+bones/4/rotation = Quaternion(0.141607, 8.70243e-09, -4.11602e-10, 0.989923)
+bones/5/rotation = Quaternion(-0.0338964, -0.067544, -0.10438, 0.991662)
+bones/6/rotation = Quaternion(0.0563719, -0.153988, -0.157201, 0.973857)
+bones/7/rotation = Quaternion(0.0613207, -9.33079e-10, 1.86616e-09, 0.998118)
+bones/8/rotation = Quaternion(-0.0508664, -0.0125294, 0.141714, 0.98852)
+bones/9/position = Vector3(3.34132e-07, 2.08189e-08, -2.07302e-07)
+bones/10/rotation = Quaternion(0.0775891, -1.73108e-08, 1.40121e-09, 0.996985)
+bones/12/position = Vector3(13.5, 1.99998, -1.43051e-06)
+bones/12/rotation = Quaternion(-0.0126403, -0.0214482, -0.507572, 0.861249)
+bones/13/position = Vector3(27.5, -1.43051e-06, 4.05312e-06)
+bones/13/rotation = Quaternion(0.426499, -0.221085, 0.0341845, 0.876385)
+bones/14/position = Vector3(26, -1.16825e-05, -2.74181e-06)
+bones/14/rotation = Quaternion(-0.111661, -0.0909328, -0.0310186, 0.989091)
+bones/16/position = Vector3(-13.5, 2, 2.14577e-06)
+bones/16/rotation = Quaternion(-0.0066548, 0.0615126, 0.527255, 0.847451)
+bones/17/position = Vector3(-27.5, 3.33786e-06, 1.54972e-06)
+bones/17/rotation = Quaternion(-0.304433, 0.110057, 0.160099, 0.932511)
+bones/18/position = Vector3(-26, -7.15256e-07, -2.86102e-06)
+bones/20/position = Vector3(-2.2, 13.3754, 3.5)
+bones/20/rotation = Quaternion(-0.0396863, 0.0605129, 0.0348391, 0.996769)
+bones/22/position = Vector3(2.29506, -159.016, -2.43456)
+bones/22/rotation = Quaternion(0.238445, -0.0193332, 0.969978, -0.043737)
+bones/24/position = Vector3(-0.444762, -122.944, -1.18715)
+bones/24/rotation = Quaternion(0.295309, 0.030178, 0.954707, -0.0204354)
+bones/26/position = Vector3(-2.2, 13.3754, 3.5)
+bones/26/rotation = Quaternion(-0.0396863, 0.0605129, 0.0348391, 0.996769)
+bones/28/position = Vector3(-0.444762, -122.944, -1.18715)
+bones/28/rotation = Quaternion(0.295309, 0.030178, 0.954707, -0.0204354)
+bones/29/position = Vector3(-7.15256e-07, 22.7, -5.5)
+bones/29/rotation = Quaternion(-4.65661e-09, 1.49012e-08, -3.25963e-09, 1)
+bones/30/position = Vector3(-2.2, 13.3754, 3.5)
+bones/30/rotation = Quaternion(-0.0396863, 0.0605129, 0.0348391, 0.996769)
+bones/45/position = Vector3(0, -108.6, 0)
+bones/45/rotation = Quaternion(0.296004, -0.0439878, 0.95417, 0.00253893)
+bones/46/position = Vector3(-3.99289e-07, 7.69859e-06, -6.48512e-07)
+bones/47/rotation = Quaternion(-0.0418045, 0.214548, 0.128646, 0.967301)
+bones/48/rotation = Quaternion(0.141607, 2.82241e-09, -1.76401e-10, 0.989923)
+bones/49/rotation = Quaternion(0.0563719, -0.153988, -0.157201, 0.973857)
+bones/50/rotation = Quaternion(0.0613207, 5.13193e-09, -8.39771e-09, 0.998118)
+
+[node name="f_arm000" parent="Armature/Skeleton3D" index="0" groups=["f_arms"]]
+
+[node name="f_arm001" parent="Armature/Skeleton3D" index="1" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm002" parent="Armature/Skeleton3D" index="2" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm003" parent="Armature/Skeleton3D" index="3" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm004" parent="Armature/Skeleton3D" index="4" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm005" parent="Armature/Skeleton3D" index="5" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm006" parent="Armature/Skeleton3D" index="6" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm007" parent="Armature/Skeleton3D" index="7" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm008" parent="Armature/Skeleton3D" index="8" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm009" parent="Armature/Skeleton3D" index="9" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm010" parent="Armature/Skeleton3D" index="10" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm011" parent="Armature/Skeleton3D" index="11" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm012" parent="Armature/Skeleton3D" index="12" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm013" parent="Armature/Skeleton3D" index="13" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm014" parent="Armature/Skeleton3D" index="14" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm015" parent="Armature/Skeleton3D" index="15" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm016" parent="Armature/Skeleton3D" index="16" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm017" parent="Armature/Skeleton3D" index="17" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm018" parent="Armature/Skeleton3D" index="18" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm019" parent="Armature/Skeleton3D" index="19" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm020" parent="Armature/Skeleton3D" index="20" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm021" parent="Armature/Skeleton3D" index="21" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm022" parent="Armature/Skeleton3D" index="22" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm023" parent="Armature/Skeleton3D" index="23" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm024" parent="Armature/Skeleton3D" index="24" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm025" parent="Armature/Skeleton3D" index="25" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm026" parent="Armature/Skeleton3D" index="26" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm027" parent="Armature/Skeleton3D" index="27" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm028" parent="Armature/Skeleton3D" index="28" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm029" parent="Armature/Skeleton3D" index="29" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm030" parent="Armature/Skeleton3D" index="30" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm031" parent="Armature/Skeleton3D" index="31" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm032" parent="Armature/Skeleton3D" index="32" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm033" parent="Armature/Skeleton3D" index="33" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm034" parent="Armature/Skeleton3D" index="34" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm035" parent="Armature/Skeleton3D" index="35" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm036" parent="Armature/Skeleton3D" index="36" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm037" parent="Armature/Skeleton3D" index="37" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm038" parent="Armature/Skeleton3D" index="38" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm039" parent="Armature/Skeleton3D" index="39" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm040" parent="Armature/Skeleton3D" index="40" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm041" parent="Armature/Skeleton3D" index="41" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm042" parent="Armature/Skeleton3D" index="42" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm043" parent="Armature/Skeleton3D" index="43" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm044" parent="Armature/Skeleton3D" index="44" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm045" parent="Armature/Skeleton3D" index="45" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm046" parent="Armature/Skeleton3D" index="46" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm047" parent="Armature/Skeleton3D" index="47" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm048" parent="Armature/Skeleton3D" index="48" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm049" parent="Armature/Skeleton3D" index="49" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm050" parent="Armature/Skeleton3D" index="50" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm051" parent="Armature/Skeleton3D" index="51" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm052" parent="Armature/Skeleton3D" index="52" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm053" parent="Armature/Skeleton3D" index="53" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm054" parent="Armature/Skeleton3D" index="54" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm055" parent="Armature/Skeleton3D" index="55" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm056" parent="Armature/Skeleton3D" index="56" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm057" parent="Armature/Skeleton3D" index="57" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm058" parent="Armature/Skeleton3D" index="58" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm059" parent="Armature/Skeleton3D" index="59" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm060" parent="Armature/Skeleton3D" index="60" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm061" parent="Armature/Skeleton3D" index="61" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm062" parent="Armature/Skeleton3D" index="62" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm063" parent="Armature/Skeleton3D" index="63" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm064" parent="Armature/Skeleton3D" index="64" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm065" parent="Armature/Skeleton3D" index="65" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm066" parent="Armature/Skeleton3D" index="66" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm067" parent="Armature/Skeleton3D" index="67" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm068" parent="Armature/Skeleton3D" index="68" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm069" parent="Armature/Skeleton3D" index="69" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm070" parent="Armature/Skeleton3D" index="70" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm071" parent="Armature/Skeleton3D" index="71" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm072" parent="Armature/Skeleton3D" index="72" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm073" parent="Armature/Skeleton3D" index="73" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm074" parent="Armature/Skeleton3D" index="74" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm075" parent="Armature/Skeleton3D" index="75" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm076" parent="Armature/Skeleton3D" index="76" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm077" parent="Armature/Skeleton3D" index="77" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm078" parent="Armature/Skeleton3D" index="78" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm079" parent="Armature/Skeleton3D" index="79" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm080" parent="Armature/Skeleton3D" index="80" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm081" parent="Armature/Skeleton3D" index="81" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm082" parent="Armature/Skeleton3D" index="82" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm083" parent="Armature/Skeleton3D" index="83" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm084" parent="Armature/Skeleton3D" index="84" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm085" parent="Armature/Skeleton3D" index="85" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm086" parent="Armature/Skeleton3D" index="86" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm087" parent="Armature/Skeleton3D" index="87" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm088" parent="Armature/Skeleton3D" index="88" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm089" parent="Armature/Skeleton3D" index="89" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm090" parent="Armature/Skeleton3D" index="90" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm091" parent="Armature/Skeleton3D" index="91" groups=["f_arms"]]
+visible = false
+
+[node name="f_arm092" parent="Armature/Skeleton3D" index="92" groups=["f_arms"]]
+visible = false
+
+[node name="f_body000" parent="Armature/Skeleton3D" index="93" groups=["f_body"]]
+
+[node name="f_body001" parent="Armature/Skeleton3D" index="94" groups=["f_body"]]
+visible = false
+
+[node name="f_body002" parent="Armature/Skeleton3D" index="95" groups=["f_body"]]
+visible = false
+
+[node name="f_body003" parent="Armature/Skeleton3D" index="96" groups=["f_body"]]
+visible = false
+
+[node name="f_body004" parent="Armature/Skeleton3D" index="97" groups=["f_body"]]
+visible = false
+
+[node name="f_body005" parent="Armature/Skeleton3D" index="98" groups=["f_body"]]
+visible = false
+
+[node name="f_body006" parent="Armature/Skeleton3D" index="99" groups=["f_body"]]
+visible = false
+
+[node name="f_body007" parent="Armature/Skeleton3D" index="100" groups=["f_body"]]
+visible = false
+
+[node name="f_body008" parent="Armature/Skeleton3D" index="101" groups=["f_body"]]
+visible = false
+
+[node name="f_body009" parent="Armature/Skeleton3D" index="102" groups=["f_body"]]
+visible = false
+
+[node name="f_body010" parent="Armature/Skeleton3D" index="103" groups=["f_body"]]
+visible = false
+
+[node name="f_body011" parent="Armature/Skeleton3D" index="104" groups=["f_body"]]
+visible = false
+
+[node name="f_body012" parent="Armature/Skeleton3D" index="105" groups=["f_body"]]
+visible = false
+
+[node name="f_body013" parent="Armature/Skeleton3D" index="106" groups=["f_body"]]
+visible = false
+
+[node name="f_body014" parent="Armature/Skeleton3D" index="107" groups=["f_body"]]
+visible = false
+
+[node name="f_body015" parent="Armature/Skeleton3D" index="108" groups=["f_body"]]
+visible = false
+
+[node name="f_body016" parent="Armature/Skeleton3D" index="109" groups=["f_body"]]
+visible = false
+
+[node name="f_body017" parent="Armature/Skeleton3D" index="110" groups=["f_body"]]
+visible = false
+
+[node name="f_body018" parent="Armature/Skeleton3D" index="111" groups=["f_body"]]
+visible = false
+
+[node name="f_body019" parent="Armature/Skeleton3D" index="112" groups=["f_body"]]
+visible = false
+
+[node name="f_body020" parent="Armature/Skeleton3D" index="113" groups=["f_body"]]
+visible = false
+
+[node name="f_body021" parent="Armature/Skeleton3D" index="114" groups=["f_body"]]
+visible = false
+
+[node name="f_body022" parent="Armature/Skeleton3D" index="115" groups=["f_body"]]
+visible = false
+
+[node name="f_body023" parent="Armature/Skeleton3D" index="116" groups=["f_body"]]
+visible = false
+
+[node name="f_body024" parent="Armature/Skeleton3D" index="117" groups=["f_body"]]
+visible = false
+
+[node name="f_body025" parent="Armature/Skeleton3D" index="118" groups=["f_body"]]
+visible = false
+
+[node name="f_body026" parent="Armature/Skeleton3D" index="119" groups=["f_body"]]
+visible = false
+
+[node name="f_body027" parent="Armature/Skeleton3D" index="120" groups=["f_body"]]
+visible = false
+
+[node name="f_body028" parent="Armature/Skeleton3D" index="121" groups=["f_body"]]
+visible = false
+
+[node name="f_body029" parent="Armature/Skeleton3D" index="122" groups=["f_body"]]
+visible = false
+
+[node name="f_body030" parent="Armature/Skeleton3D" index="123" groups=["f_body"]]
+visible = false
+
+[node name="f_body031" parent="Armature/Skeleton3D" index="124" groups=["f_body"]]
+visible = false
+
+[node name="f_body032" parent="Armature/Skeleton3D" index="125" groups=["f_body"]]
+visible = false
+
+[node name="f_body033" parent="Armature/Skeleton3D" index="126" groups=["f_body"]]
+visible = false
+
+[node name="f_body034" parent="Armature/Skeleton3D" index="127" groups=["f_body"]]
+visible = false
+
+[node name="f_body035" parent="Armature/Skeleton3D" index="128" groups=["f_body"]]
+visible = false
+
+[node name="f_body036" parent="Armature/Skeleton3D" index="129" groups=["f_body"]]
+visible = false
+
+[node name="f_body037" parent="Armature/Skeleton3D" index="130" groups=["f_body"]]
+visible = false
+
+[node name="f_body038" parent="Armature/Skeleton3D" index="131" groups=["f_body"]]
+visible = false
+
+[node name="f_body039" parent="Armature/Skeleton3D" index="132" groups=["f_body"]]
+visible = false
+
+[node name="f_body040" parent="Armature/Skeleton3D" index="133" groups=["f_body"]]
+visible = false
+
+[node name="f_body041" parent="Armature/Skeleton3D" index="134" groups=["f_body"]]
+visible = false
+
+[node name="f_body042" parent="Armature/Skeleton3D" index="135" groups=["f_body"]]
+visible = false
+
+[node name="f_body043" parent="Armature/Skeleton3D" index="136" groups=["f_body"]]
+visible = false
+
+[node name="f_body044" parent="Armature/Skeleton3D" index="137" groups=["f_body"]]
+visible = false
+
+[node name="f_body045" parent="Armature/Skeleton3D" index="138" groups=["f_body"]]
+visible = false
+
+[node name="f_body046" parent="Armature/Skeleton3D" index="139" groups=["f_body"]]
+visible = false
+
+[node name="f_body047" parent="Armature/Skeleton3D" index="140" groups=["f_body"]]
+visible = false
+
+[node name="f_body048" parent="Armature/Skeleton3D" index="141" groups=["f_body"]]
+visible = false
+
+[node name="f_body049" parent="Armature/Skeleton3D" index="142" groups=["f_body"]]
+visible = false
+
+[node name="f_body050" parent="Armature/Skeleton3D" index="143" groups=["f_body"]]
+visible = false
+
+[node name="f_body051" parent="Armature/Skeleton3D" index="144" groups=["f_body"]]
+visible = false
+
+[node name="f_body052" parent="Armature/Skeleton3D" index="145" groups=["f_body"]]
+visible = false
+
+[node name="f_body053" parent="Armature/Skeleton3D" index="146" groups=["f_body"]]
+visible = false
+
+[node name="f_body054" parent="Armature/Skeleton3D" index="147" groups=["f_body"]]
+visible = false
+
+[node name="f_body055" parent="Armature/Skeleton3D" index="148" groups=["f_body"]]
+visible = false
+
+[node name="f_body056" parent="Armature/Skeleton3D" index="149" groups=["f_body"]]
+visible = false
+
+[node name="f_body057" parent="Armature/Skeleton3D" index="150" groups=["f_body"]]
+visible = false
+
+[node name="f_body058" parent="Armature/Skeleton3D" index="151" groups=["f_body"]]
+visible = false
+
+[node name="f_body059" parent="Armature/Skeleton3D" index="152" groups=["f_body"]]
+visible = false
+
+[node name="f_body060" parent="Armature/Skeleton3D" index="153" groups=["f_body"]]
+visible = false
+
+[node name="f_body061" parent="Armature/Skeleton3D" index="154" groups=["f_body"]]
+visible = false
+
+[node name="f_body062" parent="Armature/Skeleton3D" index="155" groups=["f_body"]]
+visible = false
+
+[node name="f_body063" parent="Armature/Skeleton3D" index="156" groups=["f_body"]]
+visible = false
+
+[node name="f_body064" parent="Armature/Skeleton3D" index="157" groups=["f_body"]]
+visible = false
+
+[node name="f_body065" parent="Armature/Skeleton3D" index="158" groups=["f_body"]]
+visible = false
+
+[node name="f_body066" parent="Armature/Skeleton3D" index="159" groups=["f_body"]]
+visible = false
+
+[node name="f_body067" parent="Armature/Skeleton3D" index="160" groups=["f_body"]]
+visible = false
+
+[node name="f_body068" parent="Armature/Skeleton3D" index="161" groups=["f_body"]]
+visible = false
+
+[node name="f_body069" parent="Armature/Skeleton3D" index="162" groups=["f_body"]]
+visible = false
+
+[node name="f_body070" parent="Armature/Skeleton3D" index="163" groups=["f_body"]]
+visible = false
+
+[node name="f_body071" parent="Armature/Skeleton3D" index="164" groups=["f_body"]]
+visible = false
+
+[node name="f_body072" parent="Armature/Skeleton3D" index="165" groups=["f_body"]]
+visible = false
+
+[node name="f_body073" parent="Armature/Skeleton3D" index="166" groups=["f_body"]]
+visible = false
+
+[node name="f_body074" parent="Armature/Skeleton3D" index="167" groups=["f_body"]]
+visible = false
+
+[node name="f_body075" parent="Armature/Skeleton3D" index="168" groups=["f_body"]]
+visible = false
+
+[node name="f_body076" parent="Armature/Skeleton3D" index="169" groups=["f_body"]]
+visible = false
+
+[node name="f_body077" parent="Armature/Skeleton3D" index="170" groups=["f_body"]]
+visible = false
+
+[node name="f_body078" parent="Armature/Skeleton3D" index="171" groups=["f_body"]]
+visible = false
+
+[node name="f_body079" parent="Armature/Skeleton3D" index="172" groups=["f_body"]]
+visible = false
+
+[node name="f_body080" parent="Armature/Skeleton3D" index="173" groups=["f_body"]]
+visible = false
+
+[node name="f_body081" parent="Armature/Skeleton3D" index="174" groups=["f_body"]]
+visible = false
+
+[node name="f_body082" parent="Armature/Skeleton3D" index="175" groups=["f_body"]]
+visible = false
+
+[node name="f_body083" parent="Armature/Skeleton3D" index="176" groups=["f_body"]]
+visible = false
+
+[node name="f_body084" parent="Armature/Skeleton3D" index="177" groups=["f_body"]]
+visible = false
+
+[node name="f_body085" parent="Armature/Skeleton3D" index="178" groups=["f_body"]]
+visible = false
+
+[node name="f_body086" parent="Armature/Skeleton3D" index="179" groups=["f_body"]]
+visible = false
+
+[node name="f_body087" parent="Armature/Skeleton3D" index="180" groups=["f_body"]]
+visible = false
+
+[node name="f_body088" parent="Armature/Skeleton3D" index="181" groups=["f_body"]]
+visible = false
+
+[node name="f_body089" parent="Armature/Skeleton3D" index="182" groups=["f_body"]]
+visible = false
+
+[node name="f_body090" parent="Armature/Skeleton3D" index="183" groups=["f_body"]]
+visible = false
+
+[node name="f_body091" parent="Armature/Skeleton3D" index="184" groups=["f_body"]]
+visible = false
+
+[node name="f_body092" parent="Armature/Skeleton3D" index="185" groups=["f_body"]]
+visible = false
+
+[node name="f_body093" parent="Armature/Skeleton3D" index="186" groups=["f_body"]]
+visible = false
+
+[node name="f_face000" parent="Armature/Skeleton3D" index="187" groups=["f_face"]]
+
+[node name="f_face001" parent="Armature/Skeleton3D" index="188" groups=["f_face"]]
+visible = false
+
+[node name="f_face002" parent="Armature/Skeleton3D" index="189" groups=["f_face"]]
+visible = false
+
+[node name="f_face003" parent="Armature/Skeleton3D" index="190" groups=["f_face"]]
+visible = false
+
+[node name="f_face004" parent="Armature/Skeleton3D" index="191" groups=["f_face"]]
+visible = false
+
+[node name="f_face005" parent="Armature/Skeleton3D" index="192" groups=["f_face"]]
+visible = false
+
+[node name="f_face006" parent="Armature/Skeleton3D" index="193" groups=["f_face"]]
+visible = false
+
+[node name="f_face007" parent="Armature/Skeleton3D" index="194" groups=["f_face"]]
+visible = false
+
+[node name="f_face008" parent="Armature/Skeleton3D" index="195" groups=["f_face"]]
+visible = false
+
+[node name="f_face009" parent="Armature/Skeleton3D" index="196" groups=["f_face"]]
+visible = false
+
+[node name="f_face010" parent="Armature/Skeleton3D" index="197" groups=["f_face"]]
+visible = false
+
+[node name="f_face011" parent="Armature/Skeleton3D" index="198" groups=["f_face"]]
+visible = false
+
+[node name="f_face012" parent="Armature/Skeleton3D" index="199" groups=["f_face"]]
+visible = false
+
+[node name="f_face013" parent="Armature/Skeleton3D" index="200" groups=["f_face"]]
+visible = false
+
+[node name="f_face014" parent="Armature/Skeleton3D" index="201" groups=["f_face"]]
+visible = false
+
+[node name="f_face015" parent="Armature/Skeleton3D" index="202" groups=["f_face"]]
+visible = false
+
+[node name="f_face016" parent="Armature/Skeleton3D" index="203" groups=["f_face"]]
+visible = false
+
+[node name="f_face017" parent="Armature/Skeleton3D" index="204" groups=["f_face"]]
+visible = false
+
+[node name="f_face018" parent="Armature/Skeleton3D" index="205" groups=["f_face"]]
+visible = false
+
+[node name="f_face019" parent="Armature/Skeleton3D" index="206" groups=["f_face"]]
+visible = false
+
+[node name="f_face020" parent="Armature/Skeleton3D" index="207" groups=["f_face"]]
+visible = false
+
+[node name="f_face021" parent="Armature/Skeleton3D" index="208" groups=["f_face"]]
+visible = false
+
+[node name="f_face022" parent="Armature/Skeleton3D" index="209" groups=["f_face"]]
+visible = false
+
+[node name="f_face023" parent="Armature/Skeleton3D" index="210" groups=["f_face"]]
+visible = false
+
+[node name="f_hair000" parent="Armature/Skeleton3D" index="211" groups=["f_hair"]]
+
+[node name="f_hair001" parent="Armature/Skeleton3D" index="212" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair002" parent="Armature/Skeleton3D" index="213" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair003" parent="Armature/Skeleton3D" index="214" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair004" parent="Armature/Skeleton3D" index="215" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair005" parent="Armature/Skeleton3D" index="216" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair006" parent="Armature/Skeleton3D" index="217" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair007" parent="Armature/Skeleton3D" index="218" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair008" parent="Armature/Skeleton3D" index="219" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair009" parent="Armature/Skeleton3D" index="220" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair010" parent="Armature/Skeleton3D" index="221" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair011" parent="Armature/Skeleton3D" index="222" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair012" parent="Armature/Skeleton3D" index="223" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair013" parent="Armature/Skeleton3D" index="224" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair014" parent="Armature/Skeleton3D" index="225" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair015" parent="Armature/Skeleton3D" index="226" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair016" parent="Armature/Skeleton3D" index="227" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair017" parent="Armature/Skeleton3D" index="228" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair018" parent="Armature/Skeleton3D" index="229" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair019" parent="Armature/Skeleton3D" index="230" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair020" parent="Armature/Skeleton3D" index="231" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair021" parent="Armature/Skeleton3D" index="232" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair022" parent="Armature/Skeleton3D" index="233" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair023" parent="Armature/Skeleton3D" index="234" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair024" parent="Armature/Skeleton3D" index="235" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair025" parent="Armature/Skeleton3D" index="236" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair026" parent="Armature/Skeleton3D" index="237" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair027" parent="Armature/Skeleton3D" index="238" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair028" parent="Armature/Skeleton3D" index="239" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair029" parent="Armature/Skeleton3D" index="240" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair030" parent="Armature/Skeleton3D" index="241" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair031" parent="Armature/Skeleton3D" index="242" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair032" parent="Armature/Skeleton3D" index="243" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair033" parent="Armature/Skeleton3D" index="244" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair034" parent="Armature/Skeleton3D" index="245" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair035" parent="Armature/Skeleton3D" index="246" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair036" parent="Armature/Skeleton3D" index="247" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair037" parent="Armature/Skeleton3D" index="248" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair038" parent="Armature/Skeleton3D" index="249" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair039" parent="Armature/Skeleton3D" index="250" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair040" parent="Armature/Skeleton3D" index="251" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair041" parent="Armature/Skeleton3D" index="252" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair042" parent="Armature/Skeleton3D" index="253" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair043" parent="Armature/Skeleton3D" index="254" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair044" parent="Armature/Skeleton3D" index="255" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair045" parent="Armature/Skeleton3D" index="256" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair046" parent="Armature/Skeleton3D" index="257" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair047" parent="Armature/Skeleton3D" index="258" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair048" parent="Armature/Skeleton3D" index="259" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair049" parent="Armature/Skeleton3D" index="260" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair050" parent="Armature/Skeleton3D" index="261" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair051" parent="Armature/Skeleton3D" index="262" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair052" parent="Armature/Skeleton3D" index="263" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair053" parent="Armature/Skeleton3D" index="264" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair054" parent="Armature/Skeleton3D" index="265" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair055" parent="Armature/Skeleton3D" index="266" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair056" parent="Armature/Skeleton3D" index="267" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair057" parent="Armature/Skeleton3D" index="268" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair058" parent="Armature/Skeleton3D" index="269" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair059" parent="Armature/Skeleton3D" index="270" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair060" parent="Armature/Skeleton3D" index="271" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair061" parent="Armature/Skeleton3D" index="272" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair062" parent="Armature/Skeleton3D" index="273" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair063" parent="Armature/Skeleton3D" index="274" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair064" parent="Armature/Skeleton3D" index="275" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair065" parent="Armature/Skeleton3D" index="276" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair066" parent="Armature/Skeleton3D" index="277" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair067" parent="Armature/Skeleton3D" index="278" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair068" parent="Armature/Skeleton3D" index="279" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair069" parent="Armature/Skeleton3D" index="280" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair070" parent="Armature/Skeleton3D" index="281" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair071" parent="Armature/Skeleton3D" index="282" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair072" parent="Armature/Skeleton3D" index="283" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair073" parent="Armature/Skeleton3D" index="284" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair074" parent="Armature/Skeleton3D" index="285" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair075" parent="Armature/Skeleton3D" index="286" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair076" parent="Armature/Skeleton3D" index="287" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair077" parent="Armature/Skeleton3D" index="288" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair078" parent="Armature/Skeleton3D" index="289" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair079" parent="Armature/Skeleton3D" index="290" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair080" parent="Armature/Skeleton3D" index="291" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair081" parent="Armature/Skeleton3D" index="292" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair082" parent="Armature/Skeleton3D" index="293" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair083" parent="Armature/Skeleton3D" index="294" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair084" parent="Armature/Skeleton3D" index="295" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair085" parent="Armature/Skeleton3D" index="296" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair086" parent="Armature/Skeleton3D" index="297" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair087" parent="Armature/Skeleton3D" index="298" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair088" parent="Armature/Skeleton3D" index="299" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair089" parent="Armature/Skeleton3D" index="300" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair090" parent="Armature/Skeleton3D" index="301" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair091" parent="Armature/Skeleton3D" index="302" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair092" parent="Armature/Skeleton3D" index="303" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair093" parent="Armature/Skeleton3D" index="304" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair094" parent="Armature/Skeleton3D" index="305" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair095" parent="Armature/Skeleton3D" index="306" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair096" parent="Armature/Skeleton3D" index="307" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair097" parent="Armature/Skeleton3D" index="308" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair098" parent="Armature/Skeleton3D" index="309" groups=["f_hair"]]
+visible = false
+
+[node name="f_hair099" parent="Armature/Skeleton3D" index="310" groups=["f_hair"]]
+visible = false
+
+[node name="f_reg000" parent="Armature/Skeleton3D" index="311" groups=["f_legs"]]
+
+[node name="f_reg001" parent="Armature/Skeleton3D" index="312" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg002" parent="Armature/Skeleton3D" index="313" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg003" parent="Armature/Skeleton3D" index="314" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg004" parent="Armature/Skeleton3D" index="315" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg005" parent="Armature/Skeleton3D" index="316" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg006" parent="Armature/Skeleton3D" index="317" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg007" parent="Armature/Skeleton3D" index="318" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg008" parent="Armature/Skeleton3D" index="319" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg009" parent="Armature/Skeleton3D" index="320" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg010" parent="Armature/Skeleton3D" index="321" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg011" parent="Armature/Skeleton3D" index="322" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg012" parent="Armature/Skeleton3D" index="323" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg013" parent="Armature/Skeleton3D" index="324" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg014" parent="Armature/Skeleton3D" index="325" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg015" parent="Armature/Skeleton3D" index="326" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg016" parent="Armature/Skeleton3D" index="327" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg017" parent="Armature/Skeleton3D" index="328" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg018" parent="Armature/Skeleton3D" index="329" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg019" parent="Armature/Skeleton3D" index="330" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg020" parent="Armature/Skeleton3D" index="331" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg021" parent="Armature/Skeleton3D" index="332" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg022" parent="Armature/Skeleton3D" index="333" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg023" parent="Armature/Skeleton3D" index="334" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg024" parent="Armature/Skeleton3D" index="335" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg025" parent="Armature/Skeleton3D" index="336" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg026" parent="Armature/Skeleton3D" index="337" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg027" parent="Armature/Skeleton3D" index="338" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg028" parent="Armature/Skeleton3D" index="339" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg029" parent="Armature/Skeleton3D" index="340" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg030" parent="Armature/Skeleton3D" index="341" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg031" parent="Armature/Skeleton3D" index="342" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg032" parent="Armature/Skeleton3D" index="343" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg033" parent="Armature/Skeleton3D" index="344" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg034" parent="Armature/Skeleton3D" index="345" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg035" parent="Armature/Skeleton3D" index="346" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg036" parent="Armature/Skeleton3D" index="347" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg037" parent="Armature/Skeleton3D" index="348" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg038" parent="Armature/Skeleton3D" index="349" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg039" parent="Armature/Skeleton3D" index="350" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg040" parent="Armature/Skeleton3D" index="351" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg041" parent="Armature/Skeleton3D" index="352" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg042" parent="Armature/Skeleton3D" index="353" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg043" parent="Armature/Skeleton3D" index="354" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg044" parent="Armature/Skeleton3D" index="355" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg045" parent="Armature/Skeleton3D" index="356" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg046" parent="Armature/Skeleton3D" index="357" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg047" parent="Armature/Skeleton3D" index="358" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg048" parent="Armature/Skeleton3D" index="359" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg049" parent="Armature/Skeleton3D" index="360" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg050" parent="Armature/Skeleton3D" index="361" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg051" parent="Armature/Skeleton3D" index="362" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg052" parent="Armature/Skeleton3D" index="363" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg053" parent="Armature/Skeleton3D" index="364" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg054" parent="Armature/Skeleton3D" index="365" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg055" parent="Armature/Skeleton3D" index="366" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg056" parent="Armature/Skeleton3D" index="367" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg057" parent="Armature/Skeleton3D" index="368" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg058" parent="Armature/Skeleton3D" index="369" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg059" parent="Armature/Skeleton3D" index="370" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg060" parent="Armature/Skeleton3D" index="371" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg061" parent="Armature/Skeleton3D" index="372" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg062" parent="Armature/Skeleton3D" index="373" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg063" parent="Armature/Skeleton3D" index="374" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg064" parent="Armature/Skeleton3D" index="375" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg065" parent="Armature/Skeleton3D" index="376" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg066" parent="Armature/Skeleton3D" index="377" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg067" parent="Armature/Skeleton3D" index="378" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg068" parent="Armature/Skeleton3D" index="379" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg069" parent="Armature/Skeleton3D" index="380" groups=["f_legs"]]
+visible = false
+
+[node name="f_reg070" parent="Armature/Skeleton3D" index="381" groups=["f_legs"]]
+visible = false
+
+[node name="f_wst000" parent="Armature/Skeleton3D" index="382" groups=["f_waist"]]
+
+[node name="f_wst001" parent="Armature/Skeleton3D" index="383" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst002" parent="Armature/Skeleton3D" index="384" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst003" parent="Armature/Skeleton3D" index="385" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst004" parent="Armature/Skeleton3D" index="386" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst005" parent="Armature/Skeleton3D" index="387" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst006" parent="Armature/Skeleton3D" index="388" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst007" parent="Armature/Skeleton3D" index="389" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst008" parent="Armature/Skeleton3D" index="390" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst009" parent="Armature/Skeleton3D" index="391" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst010" parent="Armature/Skeleton3D" index="392" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst011" parent="Armature/Skeleton3D" index="393" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst012" parent="Armature/Skeleton3D" index="394" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst013" parent="Armature/Skeleton3D" index="395" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst014" parent="Armature/Skeleton3D" index="396" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst015" parent="Armature/Skeleton3D" index="397" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst016" parent="Armature/Skeleton3D" index="398" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst017" parent="Armature/Skeleton3D" index="399" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst018" parent="Armature/Skeleton3D" index="400" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst019" parent="Armature/Skeleton3D" index="401" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst020" parent="Armature/Skeleton3D" index="402" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst021" parent="Armature/Skeleton3D" index="403" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst022" parent="Armature/Skeleton3D" index="404" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst023" parent="Armature/Skeleton3D" index="405" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst024" parent="Armature/Skeleton3D" index="406" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst025" parent="Armature/Skeleton3D" index="407" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst026" parent="Armature/Skeleton3D" index="408" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst027" parent="Armature/Skeleton3D" index="409" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst028" parent="Armature/Skeleton3D" index="410" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst029" parent="Armature/Skeleton3D" index="411" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst030" parent="Armature/Skeleton3D" index="412" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst031" parent="Armature/Skeleton3D" index="413" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst032" parent="Armature/Skeleton3D" index="414" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst033" parent="Armature/Skeleton3D" index="415" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst034" parent="Armature/Skeleton3D" index="416" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst035" parent="Armature/Skeleton3D" index="417" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst036" parent="Armature/Skeleton3D" index="418" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst037" parent="Armature/Skeleton3D" index="419" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst038" parent="Armature/Skeleton3D" index="420" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst039" parent="Armature/Skeleton3D" index="421" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst040" parent="Armature/Skeleton3D" index="422" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst041" parent="Armature/Skeleton3D" index="423" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst042" parent="Armature/Skeleton3D" index="424" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst043" parent="Armature/Skeleton3D" index="425" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst044" parent="Armature/Skeleton3D" index="426" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst045" parent="Armature/Skeleton3D" index="427" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst046" parent="Armature/Skeleton3D" index="428" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst047" parent="Armature/Skeleton3D" index="429" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst048" parent="Armature/Skeleton3D" index="430" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst049" parent="Armature/Skeleton3D" index="431" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst050" parent="Armature/Skeleton3D" index="432" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst051" parent="Armature/Skeleton3D" index="433" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst052" parent="Armature/Skeleton3D" index="434" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst053" parent="Armature/Skeleton3D" index="435" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst054" parent="Armature/Skeleton3D" index="436" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst055" parent="Armature/Skeleton3D" index="437" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst056" parent="Armature/Skeleton3D" index="438" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst057" parent="Armature/Skeleton3D" index="439" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst058" parent="Armature/Skeleton3D" index="440" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst059" parent="Armature/Skeleton3D" index="441" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst060" parent="Armature/Skeleton3D" index="442" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst061" parent="Armature/Skeleton3D" index="443" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst062" parent="Armature/Skeleton3D" index="444" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst063" parent="Armature/Skeleton3D" index="445" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst064" parent="Armature/Skeleton3D" index="446" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst065" parent="Armature/Skeleton3D" index="447" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst066" parent="Armature/Skeleton3D" index="448" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst067" parent="Armature/Skeleton3D" index="449" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst068" parent="Armature/Skeleton3D" index="450" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst069" parent="Armature/Skeleton3D" index="451" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst070" parent="Armature/Skeleton3D" index="452" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst071" parent="Armature/Skeleton3D" index="453" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst072" parent="Armature/Skeleton3D" index="454" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst073" parent="Armature/Skeleton3D" index="455" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst074" parent="Armature/Skeleton3D" index="456" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst075" parent="Armature/Skeleton3D" index="457" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst076" parent="Armature/Skeleton3D" index="458" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst077" parent="Armature/Skeleton3D" index="459" groups=["f_waist"]]
+visible = false
+
+[node name="f_wst078" parent="Armature/Skeleton3D" index="460" groups=["f_waist"]]
+visible = false
+
+[node name="AnimationPlayer" parent="." index="1"]
+autoplay = "Idle"
