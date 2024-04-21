@@ -1752,7 +1752,40 @@ const LEGS_SKIN: Array[int] = [
 	1 # 70
 ]
 
-func does_model_have_skin(armor_category: Category, model_index: int, gender: Gender) -> bool:
+const BASE_BODY_INDICES: Array = [
+	[0,12,13,14],
+	[0,16,17,18]
+]
+const BASE_ARMS_INDICES: Array = [
+	[0,12,13,14],
+	[0,16,17,18]
+]
+const BASE_LEGS_INDICES: Array = [
+	[0,11,12,13],
+	[0,13,14,15]
+]
+
+const FACE_SKIN_MAP: Array = [
+	[
+		0,1,2,3,
+		0,1,2,3,
+		0,2,0,1,
+		0,3,2,3,
+		0,1,2,1,
+		3,3,0,1
+	],
+	[
+		0,1,2,3,
+		0,1,0,3,
+		1,2,0,1,
+		2,3,0,3,
+		0,2,1,1,
+		3,3,0,1
+	]
+]
+
+
+func does_model_have_skin(armor_category: Category, gender: Gender, model_index: int) -> bool:
 	match armor_category:
 		Category.BODY:
 			return BODY_SKIN[2 * model_index + gender] == 1
@@ -1763,3 +1796,16 @@ func does_model_have_skin(armor_category: Category, model_index: int, gender: Ge
 
 	# To eliminate the need to wrap this function in an if statement, we can expect invalid categories in this function, which will never have a skin material
 	return false
+
+
+func get_base_model_index(model_category: Category, gender: Gender, skin_index: int) -> int:
+	match model_category:
+		Category.BODY:
+			return BASE_BODY_INDICES[gender][skin_index]
+		Category.ARMS:
+			return BASE_ARMS_INDICES[gender][skin_index]
+		Category.LEGS:
+			return BASE_LEGS_INDICES[gender][skin_index]
+
+	print("Invalid base model category ", model_category)
+	return 0
