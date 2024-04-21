@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjl1qf7m37ans"]
+[gd_scene load_steps=7 format=3 uid="uid://bjl1qf7m37ans"]
 
 [ext_resource type="Script" path="res://scripts/ArmorTable.gd" id="1_l04mw"]
 [ext_resource type="PackedScene" uid="uid://hh82ts8ouwhe" path="res://ui_elements/armor_row.tscn" id="2_paffe"]
+[ext_resource type="Texture2D" uid="uid://b2jm283suyn81" path="res://icons/fire.png" id="3_6o0ql"]
+[ext_resource type="Texture2D" uid="uid://c05wu4ensk3eq" path="res://icons/water.png" id="4_7u3n2"]
+[ext_resource type="Texture2D" uid="uid://cjg06ciub3ywr" path="res://icons/thunder.png" id="5_ebcop"]
+[ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="6_vd6pg"]
 
 [node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
 theme_override_constants/margin_left = 4
@@ -19,36 +23,44 @@ layout_mode = 2
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="Label" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Name Label" type="Label" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.0
 text = "Name"
 
-[node name="Label2" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Defense" type="Label" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Def"
 
-[node name="Label3" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Fire Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "F"
+size_flags_vertical = 4
+texture = ExtResource("3_6o0ql")
+stretch_mode = 4
 
-[node name="Label4" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Water Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "W"
+size_flags_vertical = 4
+texture = ExtResource("4_7u3n2")
+stretch_mode = 4
 
-[node name="Label5" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Thunder Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "T"
+size_flags_vertical = 4
+texture = ExtResource("5_ebcop")
+stretch_mode = 4
 
-[node name="Label6" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Dragon Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "D"
+size_flags_vertical = 4
+texture = ExtResource("6_vd6pg")
+stretch_mode = 4
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_mode = 2
