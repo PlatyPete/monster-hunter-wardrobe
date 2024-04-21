@@ -5,6 +5,7 @@ extends Node3D
 
 var active_model_indices: Array[int] = [0,0,0,0,0,0]
 var armor_indices: Array[int] = [0,0,0,0,0]
+var hair_color: Color
 var models: Array
 var skin_index: int = 0
 
@@ -48,6 +49,15 @@ func set_base_model(model_category: ArmorData.Category):
 			set_model(model_category, model_index)
 
 
+func set_hair_color(new_hair_color: Color):
+	hair_color = new_hair_color
+
+	var active_index: int = active_model_indices[ArmorData.Category.HAIR]
+	var model_mesh: Mesh = models[ArmorData.Category.HAIR][active_index].get_mesh()
+	var hair_material: StandardMaterial3D = model_mesh.surface_get_material(0)
+	hair_material.set_albedo(hair_color)
+
+
 func set_model(model_category: ArmorData.Category, model_index: int):
 	var active_index: int = active_model_indices[model_category]
 	models[model_category][active_index].hide()
@@ -56,6 +66,8 @@ func set_model(model_category: ArmorData.Category, model_index: int):
 	models[model_category][model_index].show()
 
 	match model_category:
+		ArmorData.Category.HAIR:
+			set_hair_color(hair_color)
 		ArmorData.Category.BODY, ArmorData.Category.ARMS, ArmorData.Category.LEGS:
 			set_model_skin(model_category)
 		ArmorData.Category.FACE:
@@ -83,5 +95,3 @@ func set_model_skin(model_category: ArmorData.Category):
 		var model_mesh: Mesh = models[model_category][model_index].get_mesh()
 		var skin_material: StandardMaterial3D = model_mesh.surface_get_material(0)
 		skin_material.albedo_texture = skin_textures[skin_index]
-		model_mesh.surface_set_material(0, skin_material)
-		models[model_category][model_index].set_mesh(model_mesh)

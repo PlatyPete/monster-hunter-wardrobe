@@ -2,6 +2,7 @@ extends Control
 
 signal face_changed(gender: ArmorData.Gender, face_index: int)
 signal gender_changed(gender: ArmorData.Gender)
+signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 
 @export var female_check: CheckBox
 @export var male_check: CheckBox
@@ -68,6 +69,9 @@ func _ready():
 		f_color_picker.add_preset(color)
 		m_color_picker.add_preset(color)
 
+	f_hair_color.color_changed.connect(_on_hair_color_changed)
+	m_hair_color.color_changed.connect(_on_hair_color_changed)
+
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
@@ -98,6 +102,10 @@ func _on_gender_changed():
 	toggle_armor_rows()
 
 	gender_changed.emit(gender)
+
+
+func _on_hair_color_changed(new_color: Color):
+	hair_color_changed.emit(get_gender(), new_color)
 
 
 func _on_hunter_class_changed():

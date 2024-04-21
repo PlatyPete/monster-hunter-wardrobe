@@ -26,8 +26,11 @@ func _ready():
 
 	$UIController.face_changed.connect(_on_face_changed)
 	$UIController.gender_changed.connect(_on_gender_changed)
+	$UIController.hair_color_changed.connect(_on_hair_color_changed)
 
 	$UIController.toggle_armor_rows()
+
+	# TODO: set player customization and armor from save file
 
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
@@ -40,6 +43,10 @@ func _on_face_changed(gender: ArmorData.Gender, face_index: int):
 func _on_gender_changed(gender: ArmorData.Gender):
 	hunters[gender].show()
 	hunters[(gender + 1) % 2].hide()
+
+
+func _on_hair_color_changed(gender: ArmorData.Gender, hair_color: Color):
+	hunters[gender].set_hair_color(hair_color)
 
 
 func load_room(room_name: String):
