@@ -65,18 +65,18 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 - [ ] Armor
 	- [x] Shared skeletons/armatures: one male, one female
 	- [x] Separate armor categories into different tabs
-	- [ ] Apply current hair color when equipping armor with hair
-	- [ ] Apply current skin texture when equipping armor with exposed skin
+	- [x] Apply current hair color when equipping armor with hair
+	- [x] Apply current skin texture when equipping armor with exposed skin
 	- [ ] Menu to equip MH1 armor sets that have armor skills
 	- [ ] Search bar for armor pieces by name
 	- [ ] Filter by element resistance
 	- [ ] Filter by armor skill
 	- [ ] Filter by rank availability
-- [ ] Player
-	- [ ] Toggle gender
-	- [ ] Change face (also changes skin tone)
-	- [ ] Change hair model
-	- [ ] Change hair color
+- [x] Player
+	- [x] Toggle gender
+	- [x] Change face (also changes skin tone)
+	- [x] Change hair model
+	- [x] Change hair color
 - [ ] Rooms
 	- [x] Room models
 	- [ ] Fade through black when changing rooms
