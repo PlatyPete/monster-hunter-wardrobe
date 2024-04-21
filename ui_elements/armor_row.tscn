@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://hh82ts8ouwhe"]
+
+[ext_resource type="Script" path="res://scripts/ArmorRow.gd" id="1_nl6m7"]
+
+[node name="ArmorRow" type="HBoxContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_nl6m7")
+
+[node name="CheckBox" type="CheckBox" parent="."]
+layout_mode = 2
+
+[node name="Name" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Armor"
+
+[node name="Defense" type="Label" parent="."]
+layout_mode = 2
+text = "8"
+
+[node name="FireRes" type="Label" parent="."]
+layout_mode = 2
+text = "0"
+
+[node name="WaterRes" type="Label" parent="."]
+layout_mode = 2
+text = "0"
+
+[node name="ThunderRes" type="Label" parent="."]
+layout_mode = 2
+text = "0"
+
+[node name="DragonRes" type="Label" parent="."]
+layout_mode = 2
+text = "0"

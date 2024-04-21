@@ -1,0 +1,287 @@
+[gd_scene load_steps=9 format=3 uid="uid://bq45b0sufjwd4"]
+
+[ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
+[ext_resource type="PackedScene" uid="uid://hh82ts8ouwhe" path="res://ui_elements/armor_row.tscn" id="2_d61wq"]
+[ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
+[ext_resource type="ButtonGroup" uid="uid://c6g6x2n1ypw0u" path="res://button_groups/f_arms_buttons.tres" id="4_350c4"]
+[ext_resource type="ButtonGroup" uid="uid://cypgnobkwcqya" path="res://button_groups/f_body_buttons.tres" id="5_eeo1u"]
+[ext_resource type="ButtonGroup" uid="uid://bu1h8tcciorvr" path="res://button_groups/f_hair_buttons.tres" id="6_cc3ag"]
+[ext_resource type="ButtonGroup" uid="uid://dy6gyiadjo137" path="res://button_groups/f_legs_buttons.tres" id="7_k0sty"]
+[ext_resource type="ButtonGroup" uid="uid://bh1s5f02fe3u7" path="res://button_groups/f_waist_buttons.tres" id="8_s5qu1"]
+
+[node name="UIController" type="Control" node_paths=PackedStringArray("hair_container", "body_container", "arms_container", "waist_container", "legs_container")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_rept1")
+script = ExtResource("2_jy3o4")
+hair_container = NodePath("MarginContainer/TabContainer/H/VBoxContainer/ScrollContainer/VBoxContainer")
+body_container = NodePath("MarginContainer/TabContainer/B/VBoxContainer/ScrollContainer/VBoxContainer")
+arms_container = NodePath("MarginContainer/TabContainer/A/VBoxContainer/ScrollContainer/VBoxContainer")
+waist_container = NodePath("MarginContainer/TabContainer/W/VBoxContainer/ScrollContainer/VBoxContainer")
+legs_container = NodePath("MarginContainer/TabContainer/L/VBoxContainer/ScrollContainer/VBoxContainer")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 167.0
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+layout_mode = 2
+clip_tabs = false
+
+[node name="H" type="MarginContainer" parent="MarginContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/H"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/H/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="Label3" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "F"
+
+[node name="Label4" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W"
+
+[node name="Label5" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "T"
+
+[node name="Label6" type="Label" parent="MarginContainer/TabContainer/H/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/H/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/H/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="B" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/B"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/B/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="Label3" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "F"
+
+[node name="Label4" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W"
+
+[node name="Label5" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "T"
+
+[node name="Label6" type="Label" parent="MarginContainer/TabContainer/B/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/B/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/B/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="A" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/A"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/A/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="Label3" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "F"
+
+[node name="Label4" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W"
+
+[node name="Label5" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "T"
+
+[node name="Label6" type="Label" parent="MarginContainer/TabContainer/A/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/A/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/A/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="W" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/W"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/W/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="Label3" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "F"
+
+[node name="Label4" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W"
+
+[node name="Label5" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "T"
+
+[node name="Label6" type="Label" parent="MarginContainer/TabContainer/W/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/W/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/W/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="L" type="MarginContainer" parent="MarginContainer/TabContainer"]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/L"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/TabContainer/L/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Name"
+
+[node name="Label2" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Defense"
+
+[node name="Label3" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "F"
+
+[node name="Label4" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "W"
+
+[node name="Label5" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "T"
+
+[node name="Label6" type="Label" parent="MarginContainer/TabContainer/L/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/TabContainer/L/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/TabContainer/L/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("armor_row", "f_arms_buttons", "f_body_buttons", "f_hair_buttons", "f_legs_buttons", "f_waist_buttons"), [ExtResource("2_d61wq"), ExtResource("4_350c4"), ExtResource("5_eeo1u"), ExtResource("6_cc3ag"), ExtResource("7_k0sty"), ExtResource("8_s5qu1")]]
