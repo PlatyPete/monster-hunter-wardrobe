@@ -1,30 +1,31 @@
-[gd_scene load_steps=14 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=15 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
 [ext_resource type="PackedScene" uid="uid://bjl1qf7m37ans" path="res://ui_elements/armor_table.tscn" id="3_gq8sg"]
+[ext_resource type="ButtonGroup" uid="uid://b3xkira017dvx" path="res://button_groups/gender_buttons.tres" id="4_5mdki"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_2iwh5"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_63jxj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_nciqy"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_auq6c"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_vhpx2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_sxv4w"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_4pxmb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wme38"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_o4smm"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_1eigl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_2oohf"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_7by1l"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_a8iy6"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ee8c6"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_f0ew5"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_48j6n"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1kf7f"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_1exv4"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_au5nn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_8tgns"]
 
-[node name="UIController" type="Control" node_paths=PackedStringArray("hair_table", "body_table", "arms_table", "waist_table", "legs_table")]
+[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,13 +34,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
-hair_table = NodePath("MarginContainer/TabContainer/H")
-body_table = NodePath("MarginContainer/TabContainer/B")
-arms_table = NodePath("MarginContainer/TabContainer/A")
-waist_table = NodePath("MarginContainer/TabContainer/W")
-legs_table = NodePath("MarginContainer/TabContainer/L")
+female_check = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FGenderCheck")
+male_check = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MGenderCheck")
+f_face_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FFaceOptions")
+f_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FHairOption")
+f_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FColorPickerButton")
+m_face_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MFaceOptions")
+m_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MHairOption")
+m_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MColorPickerButton")
+hair_table = NodePath("ArmorContainer/TabContainer/H")
+body_table = NodePath("ArmorContainer/TabContainer/B")
+arms_table = NodePath("ArmorContainer/TabContainer/A")
+waist_table = NodePath("ArmorContainer/TabContainer/W")
+legs_table = NodePath("ArmorContainer/TabContainer/L")
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="ArmorContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
@@ -50,35 +59,259 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="TabContainer" type="TabContainer" parent="MarginContainer"]
+[node name="TabContainer" type="TabContainer" parent="ArmorContainer"]
 layout_mode = 2
 clip_tabs = false
 
-[node name="H" parent="MarginContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="H" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_2iwh5")
-button_group_m = SubResource("ButtonGroup_nciqy")
+button_group_f = SubResource("ButtonGroup_63jxj")
+button_group_m = SubResource("ButtonGroup_auq6c")
 
-[node name="B" parent="MarginContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="B" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_vhpx2")
-button_group_m = SubResource("ButtonGroup_4pxmb")
+button_group_f = SubResource("ButtonGroup_sxv4w")
+button_group_m = SubResource("ButtonGroup_wme38")
 
-[node name="A" parent="MarginContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="A" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_o4smm")
-button_group_m = SubResource("ButtonGroup_2oohf")
+button_group_f = SubResource("ButtonGroup_1eigl")
+button_group_m = SubResource("ButtonGroup_7by1l")
 
-[node name="W" parent="MarginContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="W" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_a8iy6")
-button_group_m = SubResource("ButtonGroup_f0ew5")
+button_group_f = SubResource("ButtonGroup_ee8c6")
+button_group_m = SubResource("ButtonGroup_48j6n")
 
-[node name="L" parent="MarginContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="L" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_1kf7f")
-button_group_m = SubResource("ButtonGroup_au5nn")
+button_group_f = SubResource("ButtonGroup_1exv4")
+button_group_m = SubResource("ButtonGroup_8tgns")
+
+[node name="PlayerContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="TabContainer" type="TabContainer" parent="PlayerContainer"]
+layout_mode = 2
+
+[node name="Hunter" type="MarginContainer" parent="PlayerContainer/TabContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+
+[node name="GridContainer" type="GridContainer" parent="PlayerContainer/TabContainer/Hunter"]
+layout_mode = 2
+columns = 2
+
+[node name="FGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("4_5mdki")
+text = "Female"
+
+[node name="MGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+button_group = ExtResource("4_5mdki")
+text = "Male"
+
+[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+text = "Face"
+
+[node name="FFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+alignment = 2
+item_count = 24
+selected = 0
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+popup/item_9/text = "10"
+popup/item_9/id = 9
+popup/item_10/text = "11"
+popup/item_10/id = 10
+popup/item_11/text = "12"
+popup/item_11/id = 11
+popup/item_12/text = "13"
+popup/item_12/id = 12
+popup/item_13/text = "14"
+popup/item_13/id = 13
+popup/item_14/text = "15"
+popup/item_14/id = 14
+popup/item_15/text = "16"
+popup/item_15/id = 15
+popup/item_16/text = "17"
+popup/item_16/id = 16
+popup/item_17/text = "18"
+popup/item_17/id = 17
+popup/item_18/text = "19"
+popup/item_18/id = 18
+popup/item_19/text = "20"
+popup/item_19/id = 19
+popup/item_20/text = "21"
+popup/item_20/id = 20
+popup/item_21/text = "22"
+popup/item_21/id = 21
+popup/item_22/text = "23"
+popup/item_22/id = 22
+popup/item_23/text = "24"
+popup/item_23/id = 23
+
+[node name="MFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+visible = false
+layout_mode = 2
+alignment = 2
+item_count = 24
+selected = 0
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+popup/item_9/text = "10"
+popup/item_9/id = 9
+popup/item_10/text = "11"
+popup/item_10/id = 10
+popup/item_11/text = "12"
+popup/item_11/id = 11
+popup/item_12/text = "13"
+popup/item_12/id = 12
+popup/item_13/text = "14"
+popup/item_13/id = 13
+popup/item_14/text = "15"
+popup/item_14/id = 14
+popup/item_15/text = "16"
+popup/item_15/id = 15
+popup/item_16/text = "17"
+popup/item_16/id = 16
+popup/item_17/text = "18"
+popup/item_17/id = 17
+popup/item_18/text = "19"
+popup/item_18/id = 18
+popup/item_19/text = "20"
+popup/item_19/id = 19
+popup/item_20/text = "21"
+popup/item_20/id = 20
+popup/item_21/text = "22"
+popup/item_21/id = 21
+popup/item_22/text = "23"
+popup/item_22/id = 22
+popup/item_23/text = "24"
+popup/item_23/id = 23
+
+[node name="Label2" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+text = "Hair"
+
+[node name="FHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+alignment = 2
+item_count = 10
+selected = 0
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+popup/item_9/text = "10"
+popup/item_9/id = 9
+
+[node name="MHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+visible = false
+layout_mode = 2
+alignment = 2
+item_count = 10
+selected = 0
+popup/item_0/text = "1"
+popup/item_0/id = 0
+popup/item_1/text = "2"
+popup/item_1/id = 1
+popup/item_2/text = "3"
+popup/item_2/id = 2
+popup/item_3/text = "4"
+popup/item_3/id = 3
+popup/item_4/text = "5"
+popup/item_4/id = 4
+popup/item_5/text = "6"
+popup/item_5/id = 5
+popup/item_6/text = "7"
+popup/item_6/id = 6
+popup/item_7/text = "8"
+popup/item_7/id = 7
+popup/item_8/text = "9"
+popup/item_8/id = 8
+popup/item_9/text = "10"
+popup/item_9/id = 9
+
+[node name="Label3" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+text = "Hair Color"
+
+[node name="FColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+layout_mode = 2
+color = Color(0.898039, 0.603922, 0.403922, 1)
+edit_alpha = false
+
+[node name="MColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+visible = false
+layout_mode = 2
+color = Color(0.898039, 0.603922, 0.403922, 1)
+edit_alpha = false
