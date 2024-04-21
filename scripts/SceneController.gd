@@ -2,11 +2,12 @@ extends Node
 
 @export var room: Node3D
 
+@onready var hunters: Array = $HunterContainer.get_children()
+
 var game_version: ArmorData.Game = ArmorData.Game.MH1
 
 
 func _ready():
-	var hunters = $HunterContainer.get_children()
 	for gender_index in ArmorData.Gender.BOTH:
 		for armor_category in ArmorData.ARMOR[game_version].size():
 			var armor_index: int = 0
@@ -24,15 +25,18 @@ func _ready():
 
 				armor_index += 1
 
+	$UIController.face_changed.connect(_on_face_changed)
 	$UIController.gender_changed.connect(_on_gender_changed)
 
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
 
 
-func _on_gender_changed(gender: ArmorData.Gender):
-	var hunters = $HunterContainer.get_children()
+func _on_face_changed(gender: ArmorData.Gender, face_index: int):
+	hunters[gender].set_model(ArmorData.Category.FACE, face_index)
 
+
+func _on_gender_changed(gender: ArmorData.Gender):
 	hunters[gender].show()
 	hunters[(gender + 1) % 2].hide()
 

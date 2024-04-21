@@ -1,5 +1,6 @@
 extends Control
 
+signal face_changed(gender: ArmorData.Gender, face_index: int)
 signal gender_changed(gender: ArmorData.Gender)
 
 @export var female_check: CheckBox
@@ -46,6 +47,9 @@ func _ready():
 	female_check.pressed.connect(_on_gender_changed)
 	male_check.pressed.connect(_on_gender_changed)
 
+	f_face_options.item_selected.connect(_on_face_selected)
+	m_face_options.item_selected.connect(_on_face_selected)
+
 	var f_color_picker: ColorPicker = f_hair_color.get_picker()
 	var m_color_picker: ColorPicker = m_hair_color.get_picker()
 	for color in HAIR_COLORS:
@@ -53,8 +57,12 @@ func _ready():
 		m_color_picker.add_preset(color)
 
 
+func _on_face_selected(face_index: int):
+	face_changed.emit(get_gender(), face_index)
+
+
 func _on_gender_changed():
-	var gender: ArmorData.Gender = ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
+	var gender: ArmorData.Gender = get_gender()
 
 	match gender:
 		ArmorData.Gender.FEMALE:
@@ -89,3 +97,7 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 			return legs_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 
 	return null
+
+
+func get_gender() -> ArmorData.Gender:
+	return ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
