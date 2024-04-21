@@ -27,6 +27,10 @@ signal gender_changed(gender: ArmorData.Gender)
 @export var sword_check: CheckBox
 @export var gun_check: CheckBox
 
+@export_group("Icons")
+@export var tab_container: TabContainer
+@export var armor_icons: Array[Texture2D]
+
 const HAIR_COLORS: Array[Color] = [
 	Color("#e59a67"),
 	Color("#bf7a59"),
@@ -48,6 +52,10 @@ const HAIR_COLORS: Array[Color] = [
 
 
 func _ready():
+	for index in armor_icons.size():
+		tab_container.set_tab_title(index, "")
+		tab_container.set_tab_icon(index, armor_icons[index])
+
 	female_check.pressed.connect(_on_gender_changed)
 	male_check.pressed.connect(_on_gender_changed)
 

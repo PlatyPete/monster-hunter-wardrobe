@@ -1,10 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=21 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
 [ext_resource type="PackedScene" uid="uid://bjl1qf7m37ans" path="res://ui_elements/armor_table.tscn" id="3_gq8sg"]
+[ext_resource type="Texture2D" uid="uid://brgi3tkpu2tia" path="res://icons/head.png" id="3_i40es"]
 [ext_resource type="ButtonGroup" uid="uid://b3xkira017dvx" path="res://button_groups/gender_buttons.tres" id="4_5mdki"]
+[ext_resource type="Texture2D" uid="uid://63yebswkhos" path="res://icons/body.png" id="4_lfb81"]
 [ext_resource type="ButtonGroup" uid="uid://ejfb6odjwlcq" path="res://button_groups/class_buttons.tres" id="5_govkv"]
+[ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="5_inf15"]
+[ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="6_c5vbq"]
+[ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_nm8dw"]
 
@@ -26,7 +31,7 @@
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_j88h0"]
 
-[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check")]
+[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,6 +55,8 @@ waist_table = NodePath("ArmorContainer/TabContainer/W")
 legs_table = NodePath("ArmorContainer/TabContainer/L")
 sword_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/SwordCheckBox")
 gun_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GunCheckBox")
+tab_container = NodePath("ArmorContainer/TabContainer")
+armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
 
 [node name="ArmorContainer" type="MarginContainer" parent="."]
 layout_mode = 1
