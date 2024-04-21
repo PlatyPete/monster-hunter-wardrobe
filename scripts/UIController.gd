@@ -80,6 +80,22 @@ func _on_gender_changed():
 			f_hair_color.hide()
 			m_hair_color.show()
 
+	var scene_tree: SceneTree = get_tree()
+	var f_armor_rows: Array = scene_tree.get_nodes_in_group("f_armor_rows")
+	var m_armor_rows: Array = scene_tree.get_nodes_in_group("m_armor_rows")
+
+	match gender:
+		ArmorData.Gender.FEMALE:
+			for f_armor_row in f_armor_rows:
+				f_armor_row.show()
+			for m_armor_row in m_armor_rows:
+				m_armor_row.hide()
+		ArmorData.Gender.MALE:
+			for f_armor_row in f_armor_rows:
+				f_armor_row.hide()
+			for m_armor_row in m_armor_rows:
+				m_armor_row.show()
+
 	gender_changed.emit(gender)
 
 

@@ -18,7 +18,9 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 	match gender:
 		ArmorData.Gender.FEMALE:
 			new_armor_row.set_button_group(button_group_f)
+			new_armor_row.add_to_group("f_armor_rows")
 		ArmorData.Gender.MALE:
 			new_armor_row.set_button_group(button_group_m)
+			new_armor_row.add_to_group("m_armor_rows")
 
 	return new_armor_row

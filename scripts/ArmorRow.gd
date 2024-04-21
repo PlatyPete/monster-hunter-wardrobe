@@ -26,6 +26,10 @@ func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorDat
 		set_defense(str(armor_piece.def))
 		for element_index in ArmorData.Element.COUNT:
 			set_resistance(element_index, str(armor_piece.res[element_index]))
+	else:
+		set_defense("")
+		for element_index in ArmorData.Element.COUNT:
+			set_resistance(element_index, "")
 
 
 func set_armor_name(new_name: String):

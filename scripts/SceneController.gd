@@ -14,8 +14,7 @@ func _ready():
 			for armor_piece in ArmorData.ARMOR[game_version][armor_category]:
 				# Only add an armor row if this armor piece is valid for the current gender
 				if not armor_piece.has("gender") or armor_piece.gender == gender_index:
-					var armor_row = $UIController.add_armor_row(ArmorData.Game.MH1, armor_category, ArmorData.Gender.FEMALE, armor_index, armor_piece)
-					# var armor_row = $UIController.add_armor_check_box(ArmorData.Game.MH1, armor_category, ArmorData.Gender.FEMALE, armor_index, armor_piece)
+					var armor_row = $UIController.add_armor_row(ArmorData.Game.MH1, armor_category, gender_index, armor_index, armor_piece)
 					if armor_row:
 						armor_row.armor_selected.connect(hunters[gender_index].equip_armor)
 					else:
