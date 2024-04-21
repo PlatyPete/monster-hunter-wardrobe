@@ -1,0 +1,38 @@
+[gd_scene load_steps=11 format=3 uid="uid://jm8whlsji61c"]
+
+[ext_resource type="Script" path="res://scripts/SceneController.gd" id="1_5wnts"]
+[ext_resource type="PackedScene" uid="uid://b6o7vhj2bmhls" path="res://models/pawn_room/pawn_room.tscn" id="1_u2x8g"]
+[ext_resource type="PackedScene" uid="uid://dd0ejsd2b5tr2" path="res://models/female/female.tscn" id="2_x3u75"]
+[ext_resource type="PackedScene" uid="uid://bbudhssbang3j" path="res://models/kokoto_house/kokoto_house.tscn" id="3_6dufj"]
+[ext_resource type="PackedScene" uid="uid://cfa5juhestr78" path="res://models/male/male.tscn" id="3_tai3g"]
+[ext_resource type="PackedScene" uid="uid://b43to1dh3kk0o" path="res://models/bishop_room/bishop_room.tscn" id="4_ugrui"]
+[ext_resource type="PackedScene" uid="uid://kiwi15cpuk7f" path="res://models/king_room/king_room.tscn" id="4_xqr6i"]
+[ext_resource type="PackedScene" uid="uid://c81vfemqj2ul3" path="res://models/queen_room/queen_room.tscn" id="7_j68bp"]
+[ext_resource type="PackedScene" uid="uid://cvw7y0racr3ff" path="res://models/rook_room/rook_room.tscn" id="9_fwwcy"]
+[ext_resource type="PackedScene" uid="uid://bq45b0sufjwd4" path="res://ui_elements/ui_container.tscn" id="10_e5p7p"]
+
+[node name="Scene" type="Node" node_paths=PackedStringArray("room")]
+script = ExtResource("1_5wnts")
+room = NodePath("Kokoto House")
+
+[node name="HunterContainer" type="Node3D" parent="."]
+
+[node name="Hunter F" parent="HunterContainer" instance=ExtResource("2_x3u75")]
+
+[node name="Hunter M" parent="HunterContainer" instance=ExtResource("3_tai3g")]
+visible = false
+
+[node name="CameraGimbal" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CameraGimbal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+current = true
+fov = 55.0
+
+[node name="Kokoto House" parent="." instance=ExtResource("3_6dufj")]
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("bishop_room", "king_room", "kokoto_house", "pawn_room", "queen_room", "rook_room"), [ExtResource("4_ugrui"), ExtResource("4_xqr6i"), ExtResource("3_6dufj"), ExtResource("1_u2x8g"), ExtResource("7_j68bp"), ExtResource("9_fwwcy")]]
+
+[node name="UIController" parent="." instance=ExtResource("10_e5p7p")]
