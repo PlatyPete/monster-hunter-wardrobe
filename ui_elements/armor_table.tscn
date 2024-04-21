@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjl1qf7m37ans"]
+
+[ext_resource type="Script" path="res://scripts/ArmorTable.gd" id="1_l04mw"]
+[ext_resource type="PackedScene" uid="uid://hh82ts8ouwhe" path="res://ui_elements/armor_row.tscn" id="2_paffe"]
+
+[node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 4
+script = ExtResource("1_l04mw")
+table_body = NodePath("VBoxContainer/ScrollContainer/ArmorCheckBoxes")
+armor_row_scene = ExtResource("2_paffe")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="ArmorHeader" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Label" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+text = "Name"
+
+[node name="Label2" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Def"
+
+[node name="Label3" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "F"
+
+[node name="Label4" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "W"
+
+[node name="Label5" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "T"
+
+[node name="Label6" type="Label" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "D"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ArmorCheckBoxes" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3

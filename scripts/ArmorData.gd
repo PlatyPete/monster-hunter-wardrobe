@@ -2,7 +2,7 @@ extends Node
 
 # FACE is at the end so each model key can correspond to the armor categories
 enum Category { HAIR, BODY, ARMS, WAIST, LEGS, FACE, COUNT }
-enum Element { FIRE, WATER, THUNDER, DRAGON }
+enum Element { FIRE, WATER, THUNDER, DRAGON, COUNT }
 enum Game { MH1, MHG }
 enum Gender { FEMALE, MALE, BOTH }
 enum HunterClass { SWORD, GUN, BOTH }

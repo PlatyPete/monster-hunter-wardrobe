@@ -22,12 +22,14 @@ func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorDat
 	set_armor_name(armor_data.name)
 
 	if armor_index != 0:
-		# TODO: add other armor properties
-		pass
+		var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
+		set_defense(str(armor_piece.def))
+		for element_index in ArmorData.Element.COUNT:
+			set_resistance(element_index, str(armor_piece.res[element_index]))
 
 
 func set_armor_name(new_name: String):
-	$Name.set_text(new_name)
+	$CheckBox.set_text(new_name)
 
 
 func set_button_group(button_group: ButtonGroup):
