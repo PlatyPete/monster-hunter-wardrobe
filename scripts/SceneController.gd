@@ -24,8 +24,17 @@ func _ready():
 
 				armor_index += 1
 
+	$UIController.gender_changed.connect(_on_gender_changed)
+
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
+
+
+func _on_gender_changed(gender: ArmorData.Gender):
+	var hunters = $HunterContainer.get_children()
+
+	hunters[gender].show()
+	hunters[(gender + 1) % 2].hide()
 
 
 func load_room(room_name: String):
