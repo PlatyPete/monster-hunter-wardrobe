@@ -27,6 +27,8 @@ func _ready():
 	$UIController.face_changed.connect(_on_face_changed)
 	$UIController.gender_changed.connect(_on_gender_changed)
 
+	$UIController.toggle_armor_rows()
+
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
 

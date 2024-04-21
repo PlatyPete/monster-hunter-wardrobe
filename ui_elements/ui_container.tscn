@@ -1,31 +1,32 @@
-[gd_scene load_steps=15 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=16 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
 [ext_resource type="PackedScene" uid="uid://bjl1qf7m37ans" path="res://ui_elements/armor_table.tscn" id="3_gq8sg"]
 [ext_resource type="ButtonGroup" uid="uid://b3xkira017dvx" path="res://button_groups/gender_buttons.tres" id="4_5mdki"]
+[ext_resource type="ButtonGroup" uid="uid://ejfb6odjwlcq" path="res://button_groups/class_buttons.tres" id="5_govkv"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_63jxj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_nm8dw"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_auq6c"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_evt8p"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_sxv4w"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_bg6j8"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wme38"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_eprov"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1eigl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4juc2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_7by1l"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_irf8f"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ee8c6"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_mbyph"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_48j6n"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_idtoq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1exv4"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ek6gt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_8tgns"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_j88h0"]
 
-[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table")]
+[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,19 +35,21 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
-female_check = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FGenderCheck")
-male_check = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MGenderCheck")
-f_face_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FFaceOptions")
-f_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FHairOption")
-f_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/FColorPickerButton")
-m_face_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MFaceOptions")
-m_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MHairOption")
-m_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/GridContainer/MColorPickerButton")
+female_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FGenderCheck")
+male_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MGenderCheck")
+f_face_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FFaceOptions")
+f_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FHairOption")
+f_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FColorPickerButton")
+m_face_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MFaceOptions")
+m_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MHairOption")
+m_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MColorPickerButton")
 hair_table = NodePath("ArmorContainer/TabContainer/H")
 body_table = NodePath("ArmorContainer/TabContainer/B")
 arms_table = NodePath("ArmorContainer/TabContainer/A")
 waist_table = NodePath("ArmorContainer/TabContainer/W")
 legs_table = NodePath("ArmorContainer/TabContainer/L")
+sword_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/SwordCheckBox")
+gun_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GunCheckBox")
 
 [node name="ArmorContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -65,32 +68,32 @@ clip_tabs = false
 
 [node name="H" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_63jxj")
-button_group_m = SubResource("ButtonGroup_auq6c")
+f_button_group = SubResource("ButtonGroup_nm8dw")
+m_button_group = SubResource("ButtonGroup_evt8p")
 
 [node name="B" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_sxv4w")
-button_group_m = SubResource("ButtonGroup_wme38")
+f_button_group = SubResource("ButtonGroup_bg6j8")
+m_button_group = SubResource("ButtonGroup_eprov")
 
 [node name="A" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_1eigl")
-button_group_m = SubResource("ButtonGroup_7by1l")
+f_button_group = SubResource("ButtonGroup_4juc2")
+m_button_group = SubResource("ButtonGroup_irf8f")
 
 [node name="W" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_ee8c6")
-button_group_m = SubResource("ButtonGroup_48j6n")
+f_button_group = SubResource("ButtonGroup_mbyph")
+m_button_group = SubResource("ButtonGroup_idtoq")
 
 [node name="L" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-button_group_f = SubResource("ButtonGroup_1exv4")
-button_group_m = SubResource("ButtonGroup_8tgns")
+f_button_group = SubResource("ButtonGroup_ek6gt")
+m_button_group = SubResource("ButtonGroup_j88h0")
 
 [node name="PlayerContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -111,31 +114,34 @@ layout_mode = 2
 
 [node name="Hunter" type="MarginContainer" parent="PlayerContainer/TabContainer"]
 layout_mode = 2
-theme_override_constants/margin_left = 8
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 8
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="GridContainer" type="GridContainer" parent="PlayerContainer/TabContainer/Hunter"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayerContainer/TabContainer/Hunter"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="FGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="FGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_pressed = true
 button_group = ExtResource("4_5mdki")
 text = "Female"
 
-[node name="MGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="MGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_group = ExtResource("4_5mdki")
 text = "Male"
 
-[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Face"
 
-[node name="FFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="FFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 24
@@ -189,7 +195,7 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="MFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="MFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -244,11 +250,11 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="Label2" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="Label2" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Hair"
 
-[node name="FHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="FHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 10
@@ -274,7 +280,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="MHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="MHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -301,17 +307,31 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="Label3" type="Label" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="Label3" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Hair Color"
 
-[node name="FColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="FColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
-[node name="MColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/GridContainer"]
+[node name="MColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
+
+[node name="HSeparator" type="HSeparator" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+layout_mode = 2
+
+[node name="SwordCheckBox" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+layout_mode = 2
+button_pressed = true
+button_group = ExtResource("5_govkv")
+text = "Blademaster"
+
+[node name="GunCheckBox" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+layout_mode = 2
+button_group = ExtResource("5_govkv")
+text = "Gunner"

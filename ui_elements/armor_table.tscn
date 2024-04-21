@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://hh82ts8ouwhe" path="res://ui_elements/armor_row.tscn" id="2_paffe"]
 
 [node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
-theme_override_constants/margin_left = 8
+theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 8
+theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 script = ExtResource("1_l04mw")
 table_body = NodePath("VBoxContainer/ScrollContainer/ArmorCheckBoxes")

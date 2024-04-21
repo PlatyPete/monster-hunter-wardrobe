@@ -23,6 +23,10 @@ signal gender_changed(gender: ArmorData.Gender)
 @export var waist_table: Control
 @export var legs_table: Control
 
+@export_group("Class Options")
+@export var sword_check: CheckBox
+@export var gun_check: CheckBox
+
 const HAIR_COLORS: Array[Color] = [
 	Color("#e59a67"),
 	Color("#bf7a59"),
@@ -56,6 +60,9 @@ func _ready():
 		f_color_picker.add_preset(color)
 		m_color_picker.add_preset(color)
 
+	sword_check.pressed.connect(_on_hunter_class_changed)
+	gun_check.pressed.connect(_on_hunter_class_changed)
+
 
 func _on_face_selected(face_index: int):
 	face_changed.emit(get_gender(), face_index)
@@ -80,23 +87,13 @@ func _on_gender_changed():
 			f_hair_color.hide()
 			m_hair_color.show()
 
-	var scene_tree: SceneTree = get_tree()
-	var f_armor_rows: Array = scene_tree.get_nodes_in_group("f_armor_rows")
-	var m_armor_rows: Array = scene_tree.get_nodes_in_group("m_armor_rows")
-
-	match gender:
-		ArmorData.Gender.FEMALE:
-			for f_armor_row in f_armor_rows:
-				f_armor_row.show()
-			for m_armor_row in m_armor_rows:
-				m_armor_row.hide()
-		ArmorData.Gender.MALE:
-			for f_armor_row in f_armor_rows:
-				f_armor_row.hide()
-			for m_armor_row in m_armor_rows:
-				m_armor_row.show()
+	toggle_armor_rows()
 
 	gender_changed.emit(gender)
+
+
+func _on_hunter_class_changed():
+	toggle_armor_rows()
 
 
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
@@ -117,3 +114,25 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 
 func get_gender() -> ArmorData.Gender:
 	return ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
+
+
+func get_hunter_class() -> ArmorData.HunterClass:
+	return ArmorData.HunterClass.SWORD if sword_check.is_pressed() else ArmorData.HunterClass.GUN
+
+
+func toggle_armor_rows():
+	var gender: ArmorData.Gender = get_gender()
+	var hunter_class: ArmorData.HunterClass = get_hunter_class()
+
+	var scene_tree: SceneTree = get_tree()
+	match gender:
+		ArmorData.Gender.FEMALE:
+			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
+				f_armor_row.toggle_by_filters(hunter_class)
+			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
+				m_armor_row.hide()
+		ArmorData.Gender.MALE:
+			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
+				f_armor_row.hide()
+			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
+				m_armor_row.toggle_by_filters(hunter_class)

@@ -5,6 +5,8 @@ signal armor_selected(game_version: int, armor_category: ArmorData.Category, arm
 var armor_category: ArmorData.Category
 var armor_index: int
 var game_version: int
+var gender: ArmorData.Gender
+var hunter_class: ArmorData.HunterClass
 
 
 func _ready():
@@ -19,6 +21,8 @@ func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorDat
 	armor_category = new_armor_category
 	armor_index = new_armor_index
 	game_version = new_game_version
+	hunter_class = armor_data.get("hunter_class", ArmorData.HunterClass.BOTH)
+
 	set_armor_name(armor_data.name)
 
 	if armor_index != 0:
@@ -54,3 +58,7 @@ func set_resistance(element: ArmorData.Element, new_resistance: String):
 			$ThunderRes.set_text(new_resistance)
 		ArmorData.Element.DRAGON:
 			$DragonRes.set_text(new_resistance)
+
+
+func toggle_by_filters(active_hunter_class: ArmorData.HunterClass):
+	set_visible(hunter_class == ArmorData.HunterClass.BOTH or hunter_class == active_hunter_class)

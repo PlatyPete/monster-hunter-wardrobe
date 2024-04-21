@@ -4,8 +4,8 @@ extends Control
 @export var armor_row_scene: PackedScene
 
 @export_group("Button Groups")
-@export var button_group_f: ButtonGroup
-@export var button_group_m: ButtonGroup
+@export var f_button_group: ButtonGroup
+@export var m_button_group: ButtonGroup
 
 
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
@@ -17,10 +17,10 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 
 	match gender:
 		ArmorData.Gender.FEMALE:
-			new_armor_row.set_button_group(button_group_f)
+			new_armor_row.set_button_group(f_button_group)
 			new_armor_row.add_to_group("f_armor_rows")
 		ArmorData.Gender.MALE:
-			new_armor_row.set_button_group(button_group_m)
+			new_armor_row.set_button_group(m_button_group)
 			new_armor_row.add_to_group("m_armor_rows")
 
 	return new_armor_row
