@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var gender: ArmorData.Gender
+@export var skin_textures: Array[Texture2D]
 
 var active_model_indices: Array[int] = [0,0,0,0,0,0]
 var armor_indices: Array[int] = [0,0,0,0,0]
@@ -23,8 +24,7 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 	if armor_piece.model_indices[gender] == 0:
 		# Either the None option was picked, or a piercing, which has no model
 		armor_indices[armor_category] = 0
-		# TODO: choose the appropriate base model, based on which face is selected
-		print("Armor piece should be removed")
+		set_base_model(armor_category)
 	elif not armor_piece.has("gender") or armor_piece.gender == gender:
 		armor_indices[armor_category] = armor_index
 		set_model(armor_category, armor_piece.model_indices[gender])
@@ -41,6 +41,13 @@ func is_armor_equipped(model_category: ArmorData.Category) -> bool:
 	return armor_indices[model_category] != 0
 
 
+func set_base_model(model_category: ArmorData.Category):
+	match model_category:
+		ArmorData.Category.BODY, ArmorData.Category.ARMS, ArmorData.Category.LEGS:
+			var model_index: int = ArmorData.get_base_model_index(model_category, gender, skin_index)
+			set_model(model_category, model_index)
+
+
 func set_model(model_category: ArmorData.Category, model_index: int):
 	var active_index: int = active_model_indices[model_category]
 	models[model_category][active_index].hide()
@@ -49,18 +56,32 @@ func set_model(model_category: ArmorData.Category, model_index: int):
 	models[model_category][model_index].show()
 
 	match model_category:
+		ArmorData.Category.BODY, ArmorData.Category.ARMS, ArmorData.Category.LEGS:
+			set_model_skin(model_category)
 		ArmorData.Category.FACE:
 			skin_index = ArmorData.FACE_SKIN_MAP[gender][model_index]
-			set_model_skin(ArmorData.Category.BODY)
-			set_model_skin(ArmorData.Category.ARMS)
-			set_model_skin(ArmorData.Category.LEGS)
+
+			if is_armor_equipped(ArmorData.Category.BODY):
+				set_model_skin(ArmorData.Category.BODY)
+			else:
+				set_model(ArmorData.Category.BODY, ArmorData.get_base_model_index(ArmorData.Category.BODY, gender, skin_index))
+
+			if is_armor_equipped(ArmorData.Category.ARMS):
+				set_model_skin(ArmorData.Category.ARMS)
+			else:
+				set_model(ArmorData.Category.ARMS, ArmorData.get_base_model_index(ArmorData.Category.ARMS, gender, skin_index))
+
+			if is_armor_equipped(ArmorData.Category.LEGS):
+				set_model_skin(ArmorData.Category.LEGS)
+			else:
+				set_model(ArmorData.Category.LEGS, ArmorData.get_base_model_index(ArmorData.Category.LEGS, gender, skin_index))
 
 
 func set_model_skin(model_category: ArmorData.Category):
-	if is_armor_equipped(model_category):
-		# TODO: if the armor piece has skin
-			# TODO: set the appropriate skin texture to the 0th material
-		pass
-	else:
-		var model_index: int = ArmorData.get_base_model_index(model_category, gender, skin_index)
-		set_model(model_category, model_index)
+	var model_index: int = active_model_indices[model_category]
+	if ArmorData.does_model_have_skin(model_category, gender, model_index):
+		var model_mesh: Mesh = models[model_category][model_index].get_mesh()
+		var skin_material: StandardMaterial3D = model_mesh.surface_get_material(0)
+		skin_material.albedo_texture = skin_textures[skin_index]
+		model_mesh.surface_set_material(0, skin_material)
+		models[model_category][model_index].set_mesh(model_mesh)

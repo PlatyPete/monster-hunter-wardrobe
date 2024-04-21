@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://dd0ejsd2b5tr2"]
+[gd_scene load_steps=7 format=3 uid="uid://dd0ejsd2b5tr2"]
 
 [ext_resource type="PackedScene" uid="uid://w6nsihyx8fls" path="res://models/female/female.glb" id="1_2hcov"]
 [ext_resource type="Script" path="res://scripts/Hunter.gd" id="2_x1x6y"]
+[ext_resource type="Texture2D" uid="uid://bgrign4uyqhlg" path="res://textures/f_skin_0.png" id="3_ud5r6"]
+[ext_resource type="Texture2D" uid="uid://buxqdwfhryuli" path="res://textures/f_skin_1.png" id="4_x7m8l"]
+[ext_resource type="Texture2D" uid="uid://dus1l2rkjuua1" path="res://textures/f_skin_2.png" id="5_e8us5"]
+[ext_resource type="Texture2D" uid="uid://qyg8lwme2ofl" path="res://textures/f_skin_3.png" id="6_xx35x"]
 
 [node name="Hunter" instance=ExtResource("1_2hcov")]
 transform = Transform3D(0.01, 0, 0, 0, -4.37114e-10, -0.01, 0, 0.01, -4.37114e-10, 0, 0, 0)
 script = ExtResource("2_x1x6y")
+skin_textures = Array[Texture2D]([ExtResource("3_ud5r6"), ExtResource("4_x7m8l"), ExtResource("5_e8us5"), ExtResource("6_xx35x")])
 
 [node name="Skeleton3D" parent="Armature" index="0"]
 bones/1/rotation = Quaternion(0, 0, 1, 0)
