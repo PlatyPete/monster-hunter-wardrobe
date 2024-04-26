@@ -13,7 +13,7 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 
 	table_body.add_child(new_armor_row)
 
-	new_armor_row.set_all_data(game_version, armor_category, armor_index, armor_data);
+	new_armor_row.set_all_data(game_version, armor_category, gender, armor_index, armor_data);
 
 	match gender:
 		ArmorData.Gender.FEMALE:
