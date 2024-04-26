@@ -6,6 +6,7 @@ signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 
 @export var female_check: CheckBox
 @export var male_check: CheckBox
+@export var stats_container: Control
 
 @export_group("Female Options")
 @export var f_face_options: OptionButton
@@ -51,6 +52,11 @@ const HAIR_COLORS: Array[Color] = [
 	Color("#ff9600")
 ]
 
+var armor_indices: Array = [
+	[0,0,0,0,0],
+	[0,0,0,0,0]
+]
+
 
 func _ready():
 	for index in armor_icons.size():
@@ -74,6 +80,11 @@ func _ready():
 
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
+
+
+func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
+	armor_indices[gender][armor_category] = armor_index
+	stats_container.set_stats(armor_indices[gender])
 
 
 func _on_face_selected(face_index: int):
@@ -113,19 +124,24 @@ func _on_hunter_class_changed():
 
 
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
+	var armor_piece
+
 	match armor_category:
 		ArmorData.Category.HAIR:
-			return hair_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+			armor_piece = hair_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 		ArmorData.Category.BODY:
-			return body_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+			armor_piece = body_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 		ArmorData.Category.ARMS:
-			return arms_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+			armor_piece = arms_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 		ArmorData.Category.WAIST:
-			return waist_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+			armor_piece = waist_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 		ArmorData.Category.LEGS:
-			return legs_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+			armor_piece = legs_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+		_:
+			return null
 
-	return null
+	armor_piece.armor_selected.connect(_on_armor_selected)
+	return armor_piece
 
 
 func get_gender() -> ArmorData.Gender:

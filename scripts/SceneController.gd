@@ -4,19 +4,17 @@ extends Node
 
 @onready var hunters: Array = $HunterContainer.get_children()
 
-var game_version: ArmorData.Game = ArmorData.Game.MH1
-
 
 func _ready():
 	for gender_index in ArmorData.Gender.BOTH:
-		for armor_category in ArmorData.ARMOR[game_version].size():
+		for armor_category in ArmorData.ARMOR[ArmorData.game_version].size():
 			var armor_index: int = 0
-			for armor_piece in ArmorData.ARMOR[game_version][armor_category]:
+			for armor_piece in ArmorData.ARMOR[ArmorData.game_version][armor_category]:
 				# Only add an armor row if this armor piece is valid for the current gender
 				if not armor_piece.has("gender") or armor_piece.gender == gender_index:
 					var armor_row = $UIController.add_armor_row(ArmorData.Game.MH1, armor_category, gender_index, armor_index, armor_piece)
 					if armor_row:
-						armor_row.armor_selected.connect(hunters[gender_index].equip_armor)
+						armor_row.armor_selected.connect(_on_armor_selected)
 					else:
 						# If we pass an invalid armor category to the add_armor_row method, it will return null
 						print("No armor row created")
@@ -34,6 +32,10 @@ func _ready():
 
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
+
+
+func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
+	hunters[gender].equip_armor(game_version, armor_category, armor_index)
 
 
 func _on_face_changed(gender: ArmorData.Gender, face_index: int):

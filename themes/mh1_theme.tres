@@ -7,3 +7,5 @@ default_font = ExtResource("1_bopox")
 default_font_size = 10
 ColorPicker/constants/sv_height = 80
 ColorPicker/constants/sv_width = 80
+TabContainer/constants/icon_max_width = 16
+TabContainer/constants/side_margin = 0

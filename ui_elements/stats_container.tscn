@@ -1,0 +1,178 @@
+[gd_scene load_steps=11 format=3 uid="uid://c16ivf6w2xk68"]
+
+[ext_resource type="Texture2D" uid="uid://brgi3tkpu2tia" path="res://icons/head.png" id="1_fey57"]
+[ext_resource type="Script" path="res://scripts/StatsContainer.gd" id="1_te0r8"]
+[ext_resource type="Texture2D" uid="uid://63yebswkhos" path="res://icons/body.png" id="2_085ux"]
+[ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="3_ai768"]
+[ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="4_rphhp"]
+[ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="5_wlyau"]
+[ext_resource type="Texture2D" uid="uid://b2jm283suyn81" path="res://icons/fire.png" id="6_j8015"]
+[ext_resource type="Texture2D" uid="uid://c05wu4ensk3eq" path="res://icons/water.png" id="7_n6row"]
+[ext_resource type="Texture2D" uid="uid://cjg06ciub3ywr" path="res://icons/thunder.png" id="8_i2p06"]
+[ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="9_iaf3f"]
+
+[node name="StatsContainer" type="VBoxContainer" node_paths=PackedStringArray("armor_labels", "armor_icons", "defense_label", "resistance_labels")]
+script = ExtResource("1_te0r8")
+armor_labels = [NodePath("GridContainer2/Head"), NodePath("GridContainer2/Body"), NodePath("GridContainer2/Arms"), NodePath("GridContainer2/Waist"), NodePath("GridContainer2/Legs")]
+armor_icons = [NodePath("GridContainer2/HeadIcon"), NodePath("GridContainer2/BodyIcon"), NodePath("GridContainer2/ArmsIcon"), NodePath("GridContainer2/WaistIcon"), NodePath("GridContainer2/LegsIcon")]
+defense_label = NodePath("GridContainer/Defense")
+resistance_labels = [NodePath("GridContainer/FireRes"), NodePath("GridContainer/WaterRes"), NodePath("GridContainer/ThunderRes"), NodePath("GridContainer/DragonRes")]
+
+[node name="GridContainer2" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 2
+
+[node name="HeadIcon" type="TextureRect" parent="GridContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("1_fey57")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Head" type="Label" parent="GridContainer2"]
+layout_mode = 2
+text = "NONE"
+
+[node name="BodyIcon" type="TextureRect" parent="GridContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_085ux")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Body" type="Label" parent="GridContainer2"]
+layout_mode = 2
+text = "NONE"
+
+[node name="ArmsIcon" type="TextureRect" parent="GridContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_ai768")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Arms" type="Label" parent="GridContainer2"]
+layout_mode = 2
+text = "NONE"
+
+[node name="WaistIcon" type="TextureRect" parent="GridContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("4_rphhp")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Waist" type="Label" parent="GridContainer2"]
+layout_mode = 2
+text = "NONE"
+
+[node name="LegsIcon" type="TextureRect" parent="GridContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("5_wlyau")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Legs" type="Label" parent="GridContainer2"]
+layout_mode = 2
+text = "NONE"
+
+[node name="HSeparator" type="HSeparator" parent="."]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 2
+columns = 9
+
+[node name="Label" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Defense"
+horizontal_alignment = 1
+
+[node name="VSeparator" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("6_j8015")
+stretch_mode = 3
+
+[node name="VSeparator2" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("7_n6row")
+stretch_mode = 3
+
+[node name="VSeparator4" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("8_i2p06")
+stretch_mode = 3
+
+[node name="VSeparator3" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("9_iaf3f")
+stretch_mode = 3
+
+[node name="Defense" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator5" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="FireRes" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator6" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="WaterRes" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator7" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="ThunderRes" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator8" type="VSeparator" parent="GridContainer"]
+layout_mode = 2
+
+[node name="DragonRes" type="Label" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "-1"
+horizontal_alignment = 1

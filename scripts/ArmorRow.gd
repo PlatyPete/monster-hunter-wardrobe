@@ -1,6 +1,6 @@
 extends Control
 
-signal armor_selected(game_version: int, armor_category: ArmorData.Category, armor_index: int)
+signal armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int)
 
 var armor_category: ArmorData.Category
 var armor_index: int
@@ -14,7 +14,7 @@ func _ready():
 
 
 func _on_pressed():
-	armor_selected.emit(game_version, armor_category, armor_index)
+	armor_selected.emit(game_version, armor_category, gender, armor_index)
 
 
 func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorData.Category, new_armor_index: int, armor_data):

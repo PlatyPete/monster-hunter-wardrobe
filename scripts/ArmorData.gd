@@ -1784,6 +1784,8 @@ const FACE_SKIN_MAP: Array = [
 	]
 ]
 
+var game_version: Game = Game.MH1
+
 
 func does_model_have_skin(armor_category: Category, gender: Gender, model_index: int) -> bool:
 	match armor_category:
