@@ -148,6 +148,17 @@ func get_gender() -> ArmorData.Gender:
 	return ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
 
 
+func get_hair_color(gender: ArmorData.Gender) -> Color:
+	match gender:
+		ArmorData.Gender.FEMALE:
+			return f_hair_color.get_pick_color()
+		ArmorData.Gender.MALE:
+			return m_hair_color.get_pick_color()
+
+	print("Invalid gender for hair color", gender)
+	return Color("#000000")
+
+
 func get_hunter_class() -> ArmorData.HunterClass:
 	return ArmorData.HunterClass.SWORD if sword_check.is_pressed() else ArmorData.HunterClass.GUN
 

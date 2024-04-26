@@ -28,6 +28,10 @@ func _ready():
 
 	$UIController.toggle_armor_rows()
 
+	for gender in ArmorData.Gender.BOTH:
+		var hair_color: Color = $UIController.get_hair_color(gender)
+		hunters[gender].set_hair_color(hair_color)
+
 	# TODO: set player customization and armor from save file
 
 	# TODO: get room to load from save file
