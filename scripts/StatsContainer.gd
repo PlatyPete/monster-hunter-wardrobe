@@ -6,6 +6,12 @@ extends Control
 @export var resistance_labels: Array[Label]
 
 
+func set_rarity_color(armor_category: ArmorData.Category, rarity: int):
+	var rarity_color: Color = ArmorData.get_rarity_color(rarity)
+	armor_icons[armor_category].set_modulate(rarity_color)
+	armor_labels[armor_category].set_modulate(rarity_color)
+
+
 func set_stats(armor_indices: Array):
 	var defense: int = 0
 	var resistances: Array[int] = [0,0,0,0,0]

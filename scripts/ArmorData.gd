@@ -10,6 +10,13 @@ enum HunterClass { SWORD, GUN, BOTH }
 const CATEGORY_NAMES: Array = ["hair","body","arms","waist","legs","face"]
 const GENDER_PREFIXES: Array = ["f_","m_"]
 
+const RARITY_COLORS: Array = [
+	Color("#63bd85"), # 4
+	Color("#e7515a"), # 5
+	Color("#a5beff"), # 6
+	Color("#f69b61")  # 7
+]
+
 const ARMOR = [
 	[
 		[
@@ -1811,3 +1818,10 @@ func get_base_model_index(model_category: Category, gender: Gender, skin_index: 
 
 	print("Invalid base model category ", model_category)
 	return 0
+
+
+func get_rarity_color(rarity: int) -> Color:
+	if rarity < 4:
+		return Color("#ffffff")
+
+	return RARITY_COLORS[rarity - 4]

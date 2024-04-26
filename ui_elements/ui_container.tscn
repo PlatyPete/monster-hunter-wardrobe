@@ -12,25 +12,25 @@
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_w2dqn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_pd8i1"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_on3xi"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_x8abl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_rdemt"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_e1484"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_k4crl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_jm183"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_0r0fg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_npnjs"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_3kvnc"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_e6gto"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_0r4f6"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_s0puj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_y26vq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wcxm3"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ynk27"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_fpvp1"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jgkfi"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_gxalp"]
 
 [node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "stats_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
 layout_mode = 3
@@ -77,32 +77,32 @@ clip_tabs = false
 
 [node name="H" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_w2dqn")
-m_button_group = SubResource("ButtonGroup_on3xi")
+f_button_group = SubResource("ButtonGroup_pd8i1")
+m_button_group = SubResource("ButtonGroup_x8abl")
 
 [node name="B" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_rdemt")
-m_button_group = SubResource("ButtonGroup_k4crl")
+f_button_group = SubResource("ButtonGroup_e1484")
+m_button_group = SubResource("ButtonGroup_jm183")
 
 [node name="A" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_0r0fg")
-m_button_group = SubResource("ButtonGroup_3kvnc")
+f_button_group = SubResource("ButtonGroup_npnjs")
+m_button_group = SubResource("ButtonGroup_e6gto")
 
 [node name="W" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_0r4f6")
-m_button_group = SubResource("ButtonGroup_y26vq")
+f_button_group = SubResource("ButtonGroup_s0puj")
+m_button_group = SubResource("ButtonGroup_wcxm3")
 
 [node name="L" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ynk27")
-m_button_group = SubResource("ButtonGroup_jgkfi")
+f_button_group = SubResource("ButtonGroup_fpvp1")
+m_button_group = SubResource("ButtonGroup_gxalp")
 
 [node name="PlayerContainer" type="MarginContainer" parent="."]
 layout_mode = 1
