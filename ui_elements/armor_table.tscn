@@ -29,10 +29,16 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.0
 text = "Name"
 
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+
 [node name="Defense" type="Label" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Def"
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
 
 [node name="Fire Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
@@ -41,6 +47,9 @@ size_flags_vertical = 4
 texture = ExtResource("3_6o0ql")
 stretch_mode = 4
 
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+
 [node name="Water Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -48,12 +57,18 @@ size_flags_vertical = 4
 texture = ExtResource("4_7u3n2")
 stretch_mode = 4
 
+[node name="VSeparator4" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
+
 [node name="Thunder Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("5_ebcop")
 stretch_mode = 4
+
+[node name="VSeparator5" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
+layout_mode = 2
 
 [node name="Dragon Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2

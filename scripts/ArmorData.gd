@@ -3,7 +3,7 @@ extends Node
 # FACE is at the end so each model key can correspond to the armor categories
 enum Category { HAIR, BODY, ARMS, WAIST, LEGS, FACE, COUNT }
 enum Element { FIRE, WATER, THUNDER, DRAGON, COUNT }
-enum Game { MH1, MHG }
+enum Game { MH1, MHG, BOTH }
 enum Gender { FEMALE, MALE, BOTH }
 enum HunterClass { SWORD, GUN, BOTH }
 
@@ -1825,3 +1825,7 @@ func get_rarity_color(rarity: int) -> Color:
 		return Color("#ffffff")
 
 	return RARITY_COLORS[rarity - 4]
+
+
+func set_game(game_index: Game):
+	game_version = game_index

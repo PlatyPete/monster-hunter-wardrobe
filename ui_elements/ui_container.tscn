@@ -12,28 +12,27 @@
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_sgoph"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_m8put"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_48pre"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_tcoxr"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_g8igp"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_g0p75"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_boukk"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4nd8s"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ku036"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4xsjt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_n7s0s"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_qj2ii"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_kx7sj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_1kxq2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_hdpi6"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ynbne"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_qg4dn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4kwea"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_doqmf"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ow18e"]
 
-[node name="UIController" type="Control" node_paths=PackedStringArray("female_check", "male_check", "stats_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
-layout_mode = 3
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -41,76 +40,96 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
-female_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FGenderCheck")
-male_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MGenderCheck")
-stats_container = NodePath("PlayerContainer/TabContainer/Stats/VBoxContainer/StatsContainer")
-f_face_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FFaceOptions")
-f_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FHairOption")
-f_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FColorPickerButton")
-m_face_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MFaceOptions")
-m_hair_options = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MHairOption")
-m_hair_color = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MColorPickerButton")
-hair_table = NodePath("ArmorContainer/TabContainer/H")
-body_table = NodePath("ArmorContainer/TabContainer/B")
-arms_table = NodePath("ArmorContainer/TabContainer/A")
-waist_table = NodePath("ArmorContainer/TabContainer/W")
-legs_table = NodePath("ArmorContainer/TabContainer/L")
-sword_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/SwordCheckBox")
-gun_check = NodePath("PlayerContainer/TabContainer/Hunter/VBoxContainer/GunCheckBox")
-tab_container = NodePath("ArmorContainer/TabContainer")
+game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
+female_check = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FGenderCheck")
+male_check = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MGenderCheck")
+stats_container = NodePath("Control/PlayerContainer/TabContainer/Stats/VBoxContainer/StatsContainer")
+f_face_options = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FFaceOptions")
+f_hair_options = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FHairOption")
+f_hair_color = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/FColorPickerButton")
+m_face_options = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MFaceOptions")
+m_hair_options = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MHairOption")
+m_hair_color = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer/MColorPickerButton")
+hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
+body_table = NodePath("Control/ArmorContainer/TabContainer/B")
+arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
+waist_table = NodePath("Control/ArmorContainer/TabContainer/W")
+legs_table = NodePath("Control/ArmorContainer/TabContainer/L")
+sword_check = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/SwordCheckBox")
+gun_check = NodePath("Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GunCheckBox")
+tab_container = NodePath("Control/ArmorContainer/TabContainer")
 armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
 
-[node name="ArmorContainer" type="MarginContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="GameOptions" type="OptionButton" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+item_count = 2
+selected = 0
+popup/item_0/text = "Monster Hunter 1"
+popup/item_0/id = 0
+popup/item_1/text = "Monster Hunter G"
+popup/item_1/id = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArmorContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
-offset_right = 167.0
+offset_right = 153.0
 grow_vertical = 2
 theme_override_constants/margin_left = 8
 theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="TabContainer" type="TabContainer" parent="ArmorContainer"]
+[node name="TabContainer" type="TabContainer" parent="Control/ArmorContainer"]
 layout_mode = 2
 clip_tabs = false
 
-[node name="H" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="H" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_sgoph")
-m_button_group = SubResource("ButtonGroup_48pre")
+f_button_group = SubResource("ButtonGroup_m8put")
+m_button_group = SubResource("ButtonGroup_tcoxr")
 
-[node name="B" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="B" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_g8igp")
-m_button_group = SubResource("ButtonGroup_boukk")
+f_button_group = SubResource("ButtonGroup_g0p75")
+m_button_group = SubResource("ButtonGroup_4nd8s")
 
-[node name="A" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="A" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ku036")
-m_button_group = SubResource("ButtonGroup_n7s0s")
+f_button_group = SubResource("ButtonGroup_4xsjt")
+m_button_group = SubResource("ButtonGroup_qj2ii")
 
-[node name="W" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="W" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_kx7sj")
-m_button_group = SubResource("ButtonGroup_hdpi6")
+f_button_group = SubResource("ButtonGroup_1kxq2")
+m_button_group = SubResource("ButtonGroup_ynbne")
 
-[node name="L" parent="ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="L" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_qg4dn")
-m_button_group = SubResource("ButtonGroup_doqmf")
+f_button_group = SubResource("ButtonGroup_4kwea")
+m_button_group = SubResource("ButtonGroup_ow18e")
 
-[node name="PlayerContainer" type="MarginContainer" parent="."]
+[node name="PlayerContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -16.0
+offset_left = -148.0
 grow_horizontal = 0
 grow_vertical = 2
 theme_override_constants/margin_left = 8
@@ -118,43 +137,41 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="TabContainer" type="TabContainer" parent="PlayerContainer"]
+[node name="TabContainer" type="TabContainer" parent="Control/PlayerContainer"]
 layout_mode = 2
 tab_alignment = 2
-current_tab = 1
 clip_tabs = false
 
-[node name="Hunter" type="MarginContainer" parent="PlayerContainer/TabContainer"]
-visible = false
+[node name="Hunter" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerContainer/TabContainer/Hunter"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/Hunter"]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="FGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="FGenderCheck" type="CheckBox" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_pressed = true
 button_group = ExtResource("4_5mdki")
 text = "Female"
 
-[node name="MGenderCheck" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="MGenderCheck" type="CheckBox" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_group = ExtResource("4_5mdki")
 text = "Male"
 
-[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Face"
 
-[node name="FFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="FFaceOptions" type="OptionButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 24
@@ -208,7 +225,7 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="MFaceOptions" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="MFaceOptions" type="OptionButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -263,11 +280,11 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="Label2" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Hair"
 
-[node name="FHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="FHairOption" type="OptionButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 10
@@ -293,7 +310,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="MHairOption" type="OptionButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="MHairOption" type="OptionButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -320,64 +337,65 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="Label3" type="Label" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="Label3" type="Label" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Hair Color"
 
-[node name="FColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="FColorPickerButton" type="ColorPickerButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
-[node name="MColorPickerButton" type="ColorPickerButton" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
+[node name="MColorPickerButton" type="ColorPickerButton" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
-[node name="HSeparator" type="HSeparator" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer"]
 layout_mode = 2
 
-[node name="SwordCheckBox" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+[node name="SwordCheckBox" type="CheckBox" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer"]
 layout_mode = 2
 button_pressed = true
 button_group = ExtResource("5_govkv")
 text = "Blademaster"
 
-[node name="GunCheckBox" type="CheckBox" parent="PlayerContainer/TabContainer/Hunter/VBoxContainer"]
+[node name="GunCheckBox" type="CheckBox" parent="Control/PlayerContainer/TabContainer/Hunter/VBoxContainer"]
 layout_mode = 2
 button_group = ExtResource("5_govkv")
 text = "Gunner"
 
-[node name="Stats" type="MarginContainer" parent="PlayerContainer/TabContainer"]
+[node name="Stats" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
 theme_override_constants/margin_right = 4
 theme_override_constants/margin_bottom = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerContainer/TabContainer/Stats"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/Stats"]
 layout_mode = 2
 
-[node name="StatsContainer" parent="PlayerContainer/TabContainer/Stats/VBoxContainer" instance=ExtResource("11_p35ui")]
+[node name="StatsContainer" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer" instance=ExtResource("11_p35ui")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="PlayerContainer/TabContainer/Stats/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PlayerContainer/TabContainer/Stats/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
 text = "SKILL"
 
-[node name="VSeparator" type="VSeparator" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -386,7 +404,7 @@ texture = ExtResource("3_i40es")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -395,7 +413,7 @@ texture = ExtResource("4_lfb81")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect3" type="TextureRect" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -404,7 +422,7 @@ texture = ExtResource("5_inf15")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect4" type="TextureRect" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -413,7 +431,7 @@ texture = ExtResource("6_c5vbq")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="TextureRect5" type="TextureRect" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="TextureRect5" type="TextureRect" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -422,24 +440,24 @@ texture = ExtResource("7_asrhl")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Label2" type="Label" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 text = "TOTAL"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PlayerContainer/TabContainer/Stats/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/ScrollContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Stats/VBoxContainer"]
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
 text = "[SKILLS]"
 
-[node name="ActivatedSkills" type="VBoxContainer" parent="PlayerContainer/TabContainer/Stats/VBoxContainer"]
+[node name="ActivatedSkills" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PlayerContainer/TabContainer/Stats/VBoxContainer/ActivatedSkills"]
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/Stats/VBoxContainer/ActivatedSkills"]
 layout_mode = 2
 text = "NO_SKILL"

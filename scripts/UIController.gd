@@ -5,6 +5,7 @@ signal gender_changed(gender: ArmorData.Gender)
 signal hair_changed(gender: ArmorData.Gender, )
 signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 
+@export var game_options: OptionButton
 @export var female_check: CheckBox
 @export var male_check: CheckBox
 @export var stats_container: Control
@@ -60,6 +61,8 @@ var armor_indices: Array = [
 
 
 func _ready():
+	game_options.item_selected.connect(_on_game_changed)
+
 	for index in armor_icons.size():
 		tab_container.set_tab_title(index, "")
 		tab_container.set_tab_icon(index, armor_icons[index])
@@ -95,6 +98,11 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 
 func _on_face_selected(face_index: int):
 	face_changed.emit(get_gender(), face_index)
+
+
+func _on_game_changed(game_index: int):
+	ArmorData.set_game(game_index)
+	toggle_armor_rows()
 
 
 func _on_gender_changed():

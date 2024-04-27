@@ -12,11 +12,17 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.0
 text = "Armor"
 
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+
 [node name="Defense" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "24"
 horizontal_alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="FireRes" type="Label" parent="."]
 layout_mode = 2
@@ -24,17 +30,26 @@ size_flags_horizontal = 3
 text = "-1"
 horizontal_alignment = 2
 
+[node name="VSeparator3" type="VSeparator" parent="."]
+layout_mode = 2
+
 [node name="WaterRes" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
 horizontal_alignment = 2
 
+[node name="VSeparator4" type="VSeparator" parent="."]
+layout_mode = 2
+
 [node name="ThunderRes" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
 horizontal_alignment = 2
+
+[node name="VSeparator5" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="DragonRes" type="Label" parent="."]
 layout_mode = 2

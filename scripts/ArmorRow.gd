@@ -32,9 +32,9 @@ func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorDat
 		for element_index in ArmorData.Element.COUNT:
 			set_resistance(element_index, str(armor_piece.res[element_index]))
 	else:
-		set_defense("")
+		set_defense("0")
 		for element_index in ArmorData.Element.COUNT:
-			set_resistance(element_index, "")
+			set_resistance(element_index, "0")
 
 
 func set_armor_name(new_name: String):
@@ -62,4 +62,4 @@ func set_resistance(element: ArmorData.Element, new_resistance: String):
 
 
 func toggle_by_filters(active_hunter_class: ArmorData.HunterClass):
-	set_visible(hunter_class == ArmorData.HunterClass.BOTH or hunter_class == active_hunter_class)
+	set_visible(game_version == ArmorData.game_version and (hunter_class == ArmorData.HunterClass.BOTH or hunter_class == active_hunter_class))
