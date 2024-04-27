@@ -97,7 +97,10 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
 
 	if game_version == ArmorData.Game.MH1:
-		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices[ArmorData.Game.MH1])
+		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices[gender])
+		set_active_skills(armor_skills)
+	else:
+		var armor_skills: Array = ArmorData.get_armor_set_skills_g(armor_indices[gender])
 		set_active_skills(armor_skills)
 
 func _on_face_selected(face_index: int):
