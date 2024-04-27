@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://boyckx3e3r42a"]
+[gd_scene load_steps=2 format=3 uid="uid://bb18c8csd4qox"]
+
+[ext_resource type="Script" path="res://scripts/SkillRow.gd" id="1_jywth"]
 
 [node name="SkillRow" type="HBoxContainer"]
 anchors_preset = 15
@@ -6,42 +8,65 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jywth")
 
 [node name="SkillName" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
+size_flags_stretch_ratio = 10.0
 text = "skill"
 
 [node name="VSeparator" type="VSeparator" parent="."]
 layout_mode = 2
 
-[node name="HeadPoints" type="Label" parent="."]
+[node name="HairPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="BodyPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator3" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="ArmsPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator4" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="WaistPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator5" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="LegsPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
+horizontal_alignment = 1
+
+[node name="VSeparator6" type="VSeparator" parent="."]
+layout_mode = 2
 
 [node name="TotalPoints" type="Label" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
 text = "-1"
+horizontal_alignment = 1

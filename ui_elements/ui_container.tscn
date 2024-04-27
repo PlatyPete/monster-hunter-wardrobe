@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=23 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
+[ext_resource type="PackedScene" uid="uid://bb18c8csd4qox" path="res://ui_elements/skill_row.tscn" id="3_5y62j"]
 [ext_resource type="PackedScene" uid="uid://bjl1qf7m37ans" path="res://ui_elements/armor_table.tscn" id="3_gq8sg"]
 [ext_resource type="Texture2D" uid="uid://brgi3tkpu2tia" path="res://icons/head.png" id="3_i40es"]
 [ext_resource type="ButtonGroup" uid="uid://b3xkira017dvx" path="res://button_groups/gender_buttons.tres" id="4_5mdki"]
@@ -32,7 +33,7 @@
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_b2lnl"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "active_skill_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "skill_rows", "active_skill_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -44,6 +45,8 @@ game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 female_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FGenderCheck")
 male_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MGenderCheck")
 stats_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/StatsContainer")
+skill_rows = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer/SkillRows")
+skill_row_scene = ExtResource("3_5y62j")
 active_skill_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills")
 f_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
 f_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
@@ -391,7 +394,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
+size_flags_stretch_ratio = 10.0
 text = "SKILL"
 
 [node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
@@ -406,6 +409,9 @@ texture = ExtResource("3_i40es")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="VSeparator2" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="TextureRect2" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
@@ -414,6 +420,9 @@ size_flags_vertical = 4
 texture = ExtResource("4_lfb81")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="VSeparator3" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
 
 [node name="TextureRect3" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -424,6 +433,9 @@ texture = ExtResource("5_inf15")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="VSeparator4" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="TextureRect4" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
@@ -432,6 +444,9 @@ size_flags_vertical = 4
 texture = ExtResource("6_c5vbq")
 expand_mode = 1
 stretch_mode = 4
+
+[node name="VSeparator5" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
 
 [node name="TextureRect5" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
@@ -442,15 +457,20 @@ texture = ExtResource("7_asrhl")
 expand_mode = 1
 stretch_mode = 4
 
+[node name="VSeparator6" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
 text = "TOTAL"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer"]
+[node name="SkillRows" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 

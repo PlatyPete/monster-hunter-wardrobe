@@ -1995,31 +1995,58 @@ func get_armor_set_skills_1(armor_indices: Array) -> Array:
 	return ["NO_SKILL"]
 
 
-func get_armor_set_skills_g(armor_indices: Array) -> Array:
-	var armor_skills: Dictionary = {}
+func get_armor_set_skills_g(armor_indices: Array) -> Dictionary:
+	var add_torso_up: bool = false
+	var armor_skill_points: Dictionary = {}
 	for category_index in Category.FACE:
 		var armor_piece = ARMOR[Game.MHG][category_index][armor_indices[category_index]]
 		for skill in armor_piece.get("skills", []):
-			if !armor_skills.has(skill.k):
-				armor_skills[skill.k] = skill.q
+			if !add_torso_up and skill.k.begins_with("TORSO"):
+				add_torso_up = true
+
+			if !armor_skill_points.has(skill.k):
+				armor_skill_points[skill.k] = {
+					"total": skill.q
+				}
 			else:
-				armor_skills[skill.k] += skill.q
+				armor_skill_points[skill.k].total += skill.q
+
+			armor_skill_points[skill.k][str(category_index)] = skill.q
+
+	if add_torso_up:
+		var body_key: String = str(Category.BODY)
+		for skill_name in armor_skill_points:
+			if !skill_name.begins_with("TORSO") and armor_skill_points[skill_name].has(body_key):
+				var additional_points: int = 0
+
+				if armor_skill_points.has("TORSO_UP"):
+					additional_points = armor_skill_points[skill_name][body_key] * armor_skill_points["TORSO_UP"].total
+				if armor_skill_points.has("TORSO_PLUS_1"):
+					additional_points += 1
+				if armor_skill_points.has("TORSO_PLUS_2"):
+					additional_points += 2
+
+				armor_skill_points[skill_name][body_key] += additional_points
+				armor_skill_points[skill_name].total += additional_points
 
 	var armor_skill_list: Array = []
-	for skill_name in armor_skills:
-		if armor_skills[skill_name] <= -10 or 10 <= armor_skills[skill_name]:
+	for skill_name in armor_skill_points:
+		if skill_name.begins_with("TORSO"):
+			continue
+
+		if armor_skill_points[skill_name].total <= -10 or 10 <= armor_skill_points[skill_name].total:
 			var skill_index: int
-			if armor_skills[skill_name] <= -25:
+			if armor_skill_points[skill_name].total <= -25:
 				skill_index = 0
-			elif armor_skills[skill_name] <= -15:
+			elif armor_skill_points[skill_name].total <= -15:
 				skill_index = 1
-			elif armor_skills[skill_name] <= -10:
+			elif armor_skill_points[skill_name].total <= -10:
 				skill_index = 2
-			elif armor_skills[skill_name] >= 25:
+			elif armor_skill_points[skill_name].total >= 25:
 				skill_index = 5
-			elif armor_skills[skill_name] >= 15:
+			elif armor_skill_points[skill_name].total >= 15:
 				skill_index = 4
-			elif armor_skills[skill_name] >= 10:
+			elif armor_skill_points[skill_name].total >= 10:
 				skill_index = 3
 
 			while SKILL_LEVELS[skill_name][skill_index].is_empty():
@@ -2027,14 +2054,17 @@ func get_armor_set_skills_g(armor_indices: Array) -> Array:
 					skill_index = 3
 					break
 
-				if armor_skills[skill_name] < 0:
+				if armor_skill_points[skill_name].total < 0:
 					skill_index += 1
 				else:
 					skill_index -= 1
 
 			armor_skill_list.push_back(SKILL_LEVELS[skill_name][skill_index])
 
-	return armor_skill_list
+	return {
+		"activated_skills": armor_skill_list,
+		"skill_points": armor_skill_points
+	}
 
 
 func does_model_have_skin(armor_category: Category, gender: Gender, model_index: int) -> bool:

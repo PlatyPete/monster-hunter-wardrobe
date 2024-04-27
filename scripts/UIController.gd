@@ -9,6 +9,8 @@ signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 @export var female_check: CheckBox
 @export var male_check: CheckBox
 @export var stats_container: Control
+@export var skill_rows: Control
+@export var skill_row_scene: PackedScene
 @export var active_skill_container: VBoxContainer
 
 @export_group("Female Options")
@@ -100,8 +102,9 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices[gender])
 		set_active_skills(armor_skills)
 	else:
-		var armor_skills: Array = ArmorData.get_armor_set_skills_g(armor_indices[gender])
-		set_active_skills(armor_skills)
+		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices[gender])
+		set_active_skills(armor_skills.activated_skills)
+		set_skill_points(armor_skills.skill_points)
 
 func _on_face_selected(face_index: int):
 	face_changed.emit(get_gender(), face_index)
@@ -197,6 +200,23 @@ func set_active_skills(skill_names: Array):
 		var skill_label: Label = Label.new()
 		skill_label.set_text(skill_name)
 		active_skill_container.add_child(skill_label)
+
+
+func set_skill_points(skill_points):
+	for skill_row in skill_rows.get_children():
+		var skill_name: String = skill_row.get_skill_name()
+		if skill_points.has(skill_name):
+			skill_row.set_skill_points(skill_points[skill_name])
+			skill_points[skill_name].updated = true
+		else:
+			skill_row.queue_free()
+
+	for skill_name in skill_points:
+		if not skill_points[skill_name].get("updated", false):
+			var skill_row = skill_row_scene.instantiate()
+			skill_row.set_skill_name(skill_name)
+			skill_row.set_skill_points(skill_points[skill_name])
+			skill_rows.add_child(skill_row)
 
 
 func toggle_armor_rows():
