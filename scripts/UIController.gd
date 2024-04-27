@@ -86,7 +86,7 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 	armor_indices[gender][armor_category] = armor_index
 	stats_container.set_stats(armor_indices[gender])
 	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
-	stats_container.set_rarity_color(armor_category, armor_piece.rarity)
+	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
 
 
 func _on_face_selected(face_index: int):
