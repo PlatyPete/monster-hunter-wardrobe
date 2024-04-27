@@ -29,6 +29,7 @@ func _ready():
 	$UIController.hair_color_changed.connect(_on_hair_color_changed)
 
 	$UIController.toggle_armor_rows()
+	$UIController.toggle_game_elements()
 
 	for gender in ArmorData.Gender.BOTH:
 		var hair_color: Color = $UIController.get_hair_color(gender)

@@ -385,7 +385,7 @@ layout_mode = 2
 [node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
@@ -446,7 +446,7 @@ stretch_mode = 4
 layout_mode = 2
 text = "TOTAL"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 size_flags_vertical = 3
 

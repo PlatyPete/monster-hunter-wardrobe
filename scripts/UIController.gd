@@ -109,6 +109,7 @@ func _on_face_selected(face_index: int):
 
 func _on_game_changed(game_index: int):
 	ArmorData.set_game(game_index)
+	toggle_game_elements()
 	toggle_armor_rows()
 
 
@@ -214,3 +215,10 @@ func toggle_armor_rows():
 				f_armor_row.hide()
 			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
 				m_armor_row.toggle_by_filters(hunter_class)
+
+
+func toggle_game_elements():
+	var show_mhg_elements: bool = ArmorData.game_version == ArmorData.Game.MHG
+	var scene_tree: SceneTree = get_tree()
+	for node in scene_tree.get_nodes_in_group("mhg_elements"):
+		node.set_visible(show_mhg_elements)
