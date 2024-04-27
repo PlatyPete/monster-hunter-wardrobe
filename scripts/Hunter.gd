@@ -4,7 +4,10 @@ extends Node3D
 @export var skin_textures: Array[Texture2D]
 
 var active_model_indices: Array[int] = [0,0,0,0,0,0]
-var armor_indices: Array[int] = [0,0,0,0,0]
+var armor_indices: Array[int] = [
+	0,0,0,0,0,
+	0,0,0,0,0
+]
 var hair_index: int = 0
 var hair_color: Color
 var models: Array
@@ -19,16 +22,24 @@ func _ready():
 		var category_name = ArmorData.CATEGORY_NAMES[i]
 		models.push_back(scene_tree.get_nodes_in_group(groups_prefix + category_name))
 
+	ArmorData.game_changed.connect(_on_game_changed)
+
+
+func _on_game_changed(game_version: ArmorData.Game):
+	for model_category in ArmorData.Category.FACE:
+		var armor_index: int = armor_indices[ArmorData.Category.FACE * ArmorData.game_version + model_category]
+		equip_armor(ArmorData.game_version, model_category, armor_index)
+
 
 func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_index: int):
 	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
 
 	if armor_piece.model_indices[gender] == 0:
 		# Either the None option was picked, or a piercing, which has no model
-		armor_indices[armor_category] = 0
+		armor_indices[ArmorData.Category.FACE * ArmorData.game_version + armor_category] = 0
 		set_base_model(armor_category)
 	elif not armor_piece.has("gender") or armor_piece.gender == gender:
-		armor_indices[armor_category] = armor_index
+		armor_indices[ArmorData.Category.FACE * ArmorData.game_version + armor_category] = armor_index
 		set_model(armor_category, armor_piece.model_indices[gender])
 	else:
 		# This shouldn't happen, but I suppose it's possible?
@@ -40,7 +51,7 @@ func get_models_in_category(model_category: ArmorData.Category):
 
 
 func is_armor_equipped(model_category: ArmorData.Category) -> bool:
-	return armor_indices[model_category] != 0
+	return armor_indices[ArmorData.FACE * ArmorData.game_version + model_category] != 0
 
 
 func set_base_model(model_category: ArmorData.Category):

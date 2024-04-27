@@ -7,6 +7,8 @@ enum Game { MH1, MHG, BOTH }
 enum Gender { FEMALE, MALE, BOTH }
 enum HunterClass { SWORD, GUN, BOTH }
 
+signal game_changed(game_version: Game)
+
 const CATEGORY_NAMES: Array = ["hair","body","arms","waist","legs","face"]
 const GENDER_PREFIXES: Array = ["f_","m_"]
 
@@ -1829,3 +1831,4 @@ func get_rarity_color(rarity: int) -> Color:
 
 func set_game(game_index: Game):
 	game_version = game_index
+	game_changed.emit(game_version)
