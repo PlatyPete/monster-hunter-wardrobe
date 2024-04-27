@@ -27,7 +27,7 @@ size_flags_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 7.0
-text = "Name"
+text = "NAME"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
@@ -35,7 +35,7 @@ layout_mode = 2
 [node name="Defense" type="Label" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Def"
+text = "DEFENSE"
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2

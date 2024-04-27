@@ -9,6 +9,7 @@ signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 @export var female_check: CheckBox
 @export var male_check: CheckBox
 @export var stats_container: Control
+@export var active_skill_container: VBoxContainer
 
 @export_group("Female Options")
 @export var f_face_options: OptionButton
@@ -95,6 +96,9 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
 	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
 
+	if game_version == ArmorData.Game.MH1:
+		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices[ArmorData.Game.MH1])
+		set_active_skills(armor_skills)
 
 func _on_face_selected(face_index: int):
 	face_changed.emit(get_gender(), face_index)
@@ -179,6 +183,16 @@ func get_hair_color(gender: ArmorData.Gender) -> Color:
 
 func get_hunter_class() -> ArmorData.HunterClass:
 	return ArmorData.HunterClass.SWORD if sword_check.is_pressed() else ArmorData.HunterClass.GUN
+
+
+func set_active_skills(skill_names: Array):
+	for child in active_skill_container.get_children():
+		child.queue_free()
+
+	for skill_name in skill_names:
+		var skill_label: Label = Label.new()
+		skill_label.set_text(skill_name)
+		active_skill_container.add_child(skill_label)
 
 
 func toggle_armor_rows():
