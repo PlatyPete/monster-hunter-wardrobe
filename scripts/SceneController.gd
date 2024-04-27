@@ -24,6 +24,7 @@ func _ready():
 
 	$UIController.face_changed.connect(_on_face_changed)
 	$UIController.gender_changed.connect(_on_gender_changed)
+	$UIController.hair_changed.connect(_on_hair_changed)
 	$UIController.hair_color_changed.connect(_on_hair_color_changed)
 
 	$UIController.toggle_armor_rows()
@@ -49,6 +50,10 @@ func _on_face_changed(gender: ArmorData.Gender, face_index: int):
 func _on_gender_changed(gender: ArmorData.Gender):
 	hunters[gender].show()
 	hunters[(gender + 1) % 2].hide()
+
+
+func _on_hair_changed(gender: ArmorData.Gender, hair_index: int):
+	hunters[gender].set_hair(hair_index)
 
 
 func _on_hair_color_changed(gender: ArmorData.Gender, hair_color: Color):

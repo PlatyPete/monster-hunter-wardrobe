@@ -5,6 +5,7 @@ extends Node3D
 
 var active_model_indices: Array[int] = [0,0,0,0,0,0]
 var armor_indices: Array[int] = [0,0,0,0,0]
+var hair_index: int = 0
 var hair_color: Color
 var models: Array
 var skin_index: int = 0
@@ -44,9 +45,16 @@ func is_armor_equipped(model_category: ArmorData.Category) -> bool:
 
 func set_base_model(model_category: ArmorData.Category):
 	match model_category:
+		ArmorData.Category.HAIR:
+			set_hair(hair_index)
 		ArmorData.Category.BODY, ArmorData.Category.ARMS, ArmorData.Category.LEGS:
 			var model_index: int = ArmorData.get_base_model_index(model_category, gender, skin_index)
 			set_model(model_category, model_index)
+
+
+func set_hair(new_hair_index: int):
+	hair_index = new_hair_index
+	set_model(ArmorData.Category.HAIR, new_hair_index)
 
 
 func set_hair_color(new_hair_color: Color):
