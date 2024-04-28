@@ -1985,7 +1985,7 @@ func does_armor_set_have_skills(armor_names: Array, skill_set_pieces: Array) -> 
 
 func get_armor_set_skills_1(armor_indices: Array) -> Array:
 	var armor_names: Array = ["", "", "", "", ""]
-	for category_index in Category.FACE:
+	for category_index in armor_indices.size():
 		armor_names[category_index] = ARMOR[Game.MH1][category_index][armor_indices[category_index]].name
 
 	for skill_set in SKILL_SETS:
@@ -1998,7 +1998,7 @@ func get_armor_set_skills_1(armor_indices: Array) -> Array:
 func get_armor_set_skills_g(armor_indices: Array) -> Dictionary:
 	var add_torso_up: bool = false
 	var armor_skill_points: Dictionary = {}
-	for category_index in Category.FACE:
+	for category_index in armor_indices.size():
 		var armor_piece = ARMOR[Game.MHG][category_index][armor_indices[category_index]]
 		for skill in armor_piece.get("skills", []):
 			if !add_torso_up and skill.k.begins_with("TORSO"):
@@ -2078,6 +2078,23 @@ func does_model_have_skin(armor_category: Category, gender: Gender, model_index:
 
 	# To eliminate the need to wrap this function in an if statement, we can expect invalid categories in this function, which will never have a skin material
 	return false
+
+
+func get_armor_materials(armor_indices: Array) -> Dictionary:
+	var materials: Dictionary = {}
+	for category_index in armor_indices.size():
+		var armor_piece = ARMOR[game_version][category_index][armor_indices[category_index]]
+		for material in armor_piece.get("mats", []):
+			if materials.has(material.m):
+				materials[material.m].total += material.q
+			else:
+				materials[material.m] = {
+					"total": material.q
+				}
+
+			materials[material.m][str(category_index)] = material.q
+
+	return materials
 
 
 func get_base_model_index(model_category: Category, gender: Gender, skin_index: int) -> int:

@@ -8,10 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="6_vd6pg"]
 
 [node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
 script = ExtResource("1_l04mw")
 table_body = NodePath("VBoxContainer/ScrollContainer/ArmorCheckBoxes")
 armor_row_scene = ExtResource("2_paffe")
@@ -76,6 +72,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("6_vd6pg")
 stretch_mode = 4
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
 layout_mode = 2

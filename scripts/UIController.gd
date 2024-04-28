@@ -12,6 +12,9 @@ signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 @export var skill_rows: Control
 @export var skill_row_scene: PackedScene
 @export var active_skill_container: VBoxContainer
+@export var material_rows: VBoxContainer
+@export var material_row_scene: PackedScene
+@export var zenni_labels: Array[Label]
 
 @export_group("Female Options")
 @export var f_face_options: OptionButton
@@ -91,6 +94,8 @@ func _ready():
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
+	set_zenni(armor_indices[ArmorData.Gender.FEMALE])
+
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
 	armor_indices[gender][armor_category] = armor_index
@@ -105,6 +110,11 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices[gender])
 		set_active_skills(armor_skills.activated_skills)
 		set_skill_points(armor_skills.skill_points)
+
+	var materials: Dictionary = ArmorData.get_armor_materials(armor_indices[gender])
+	set_materials(materials)
+
+	set_zenni(armor_indices[gender])
 
 func _on_face_selected(face_index: int):
 	face_changed.emit(get_gender(), face_index)
@@ -202,6 +212,23 @@ func set_active_skills(skill_names: Array):
 		active_skill_container.add_child(skill_label)
 
 
+func set_materials(materials):
+	for material_row in material_rows.get_children():
+		var material_name: String = material_row.get_material_name()
+		if materials.has(material_name):
+			material_row.set_materials(materials[material_name])
+			materials[material_name].updated = true
+		else:
+			material_row.queue_free()
+
+	for material_name in materials:
+		if not materials[material_name].get("updated", false):
+			var material_row = material_row_scene.instantiate()
+			material_row.set_material_name(material_name)
+			material_row.set_materials(materials[material_name])
+			material_rows.add_child(material_row)
+
+
 func set_skill_points(skill_points):
 	for skill_row in skill_rows.get_children():
 		var skill_name: String = skill_row.get_skill_name()
@@ -217,6 +244,22 @@ func set_skill_points(skill_points):
 			skill_row.set_skill_name(skill_name)
 			skill_row.set_skill_points(skill_points[skill_name])
 			skill_rows.add_child(skill_row)
+
+
+func set_zenni(armor_indices: Array):
+	var total_zenni: int = 0
+	for armor_category in armor_indices.size():
+		var forge: int = ArmorData.ARMOR[ArmorData.game_version][armor_category][armor_indices[armor_category]].get("forge",0)
+		if forge == 0:
+			zenni_labels[armor_category].set_text("")
+		else:
+			zenni_labels[armor_category].set_text(str(forge))
+			total_zenni += forge
+
+	if total_zenni == 0:
+		zenni_labels[ArmorData.Category.FACE].set_text("")
+	else:
+		zenni_labels[ArmorData.Category.FACE].set_text(str(total_zenni))
 
 
 func toggle_armor_rows():

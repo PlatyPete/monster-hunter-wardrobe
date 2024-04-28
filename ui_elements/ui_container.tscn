@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=24 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bjl1qf7m37ans" path="res://ui_elements/armor_table.tscn" id="3_gq8sg"]
 [ext_resource type="Texture2D" uid="uid://brgi3tkpu2tia" path="res://icons/head.png" id="3_i40es"]
 [ext_resource type="ButtonGroup" uid="uid://b3xkira017dvx" path="res://button_groups/gender_buttons.tres" id="4_5mdki"]
+[ext_resource type="PackedScene" uid="uid://kodydy1u48ke" path="res://ui_elements/material_row.tscn" id="4_kqgpw"]
 [ext_resource type="Texture2D" uid="uid://63yebswkhos" path="res://icons/body.png" id="4_lfb81"]
 [ext_resource type="ButtonGroup" uid="uid://ejfb6odjwlcq" path="res://button_groups/class_buttons.tres" id="5_govkv"]
 [ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="5_inf15"]
@@ -13,27 +14,27 @@
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jf0kj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_3qlgg"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_3vvcj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_bgoa3"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_hoonl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_45lik"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1nbay"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_smm41"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_42hdk"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_57yda"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_7p8kw"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_hly51"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_py1l5"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_h5cpf"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_mdkpl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_33qly"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_a7ybj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_racy1"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_b2lnl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_3jr87"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "skill_rows", "active_skill_container", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "zenni_labels", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -48,6 +49,9 @@ stats_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxConta
 skill_rows = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer/SkillRows")
 skill_row_scene = ExtResource("3_5y62j")
 active_skill_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills")
+material_rows = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer/MaterialRows")
+material_row_scene = ExtResource("4_kqgpw")
+zenni_labels = [NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/HairZenni"), NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/BodyZenni"), NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/ArmorZenni"), NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/WaistZenni"), NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/LegsZenni"), NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer/TotalZenni")]
 f_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
 f_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
 f_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FColorPickerButton")
@@ -89,10 +93,6 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 153.0
 grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
 
 [node name="TabContainer" type="TabContainer" parent="Control/ArmorContainer"]
 layout_mode = 2
@@ -100,32 +100,32 @@ clip_tabs = false
 
 [node name="H" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_jf0kj")
-m_button_group = SubResource("ButtonGroup_3vvcj")
+f_button_group = SubResource("ButtonGroup_3qlgg")
+m_button_group = SubResource("ButtonGroup_bgoa3")
 
 [node name="B" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_hoonl")
-m_button_group = SubResource("ButtonGroup_1nbay")
+f_button_group = SubResource("ButtonGroup_45lik")
+m_button_group = SubResource("ButtonGroup_smm41")
 
 [node name="A" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_42hdk")
-m_button_group = SubResource("ButtonGroup_7p8kw")
+f_button_group = SubResource("ButtonGroup_57yda")
+m_button_group = SubResource("ButtonGroup_hly51")
 
 [node name="W" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_py1l5")
-m_button_group = SubResource("ButtonGroup_mdkpl")
+f_button_group = SubResource("ButtonGroup_h5cpf")
+m_button_group = SubResource("ButtonGroup_33qly")
 
 [node name="L" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_a7ybj")
-m_button_group = SubResource("ButtonGroup_b2lnl")
+f_button_group = SubResource("ButtonGroup_racy1")
+m_button_group = SubResource("ButtonGroup_3jr87")
 
 [node name="PlayerContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
@@ -136,24 +136,16 @@ anchor_bottom = 1.0
 offset_left = -148.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_constants/margin_left = 8
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 8
-theme_override_constants/margin_bottom = 8
 
 [node name="TabContainer" type="TabContainer" parent="Control/PlayerContainer"]
 layout_mode = 2
 tab_alignment = 2
-current_tab = 1
+current_tab = 2
 clip_tabs = false
 
 [node name="HUNTER" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
 visible = false
 layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/HUNTER"]
 layout_mode = 2
@@ -373,11 +365,8 @@ button_group = ExtResource("5_govkv")
 text = "GUNNER"
 
 [node name="STATS" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+visible = false
 layout_mode = 2
-theme_override_constants/margin_left = 4
-theme_override_constants/margin_top = 4
-theme_override_constants/margin_right = 4
-theme_override_constants/margin_bottom = 4
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS"]
 layout_mode = 2
@@ -469,6 +458,7 @@ text = "TOTAL"
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 size_flags_vertical = 3
+horizontal_scroll_mode = 0
 
 [node name="SkillRows" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -484,3 +474,163 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills"]
 layout_mode = 2
 text = "NO_SKILL"
+
+[node name="MATERIALS" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 10.0
+text = "MATERIAL"
+
+[node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("3_i40es")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator2" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect2" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("4_lfb81")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator3" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect3" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("5_inf15")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator4" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect4" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("6_c5vbq")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator5" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+texture = ExtResource("7_asrhl")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VSeparator6" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "TOTAL"
+
+[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="MaterialRows" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "ZENNI"
+
+[node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HairZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000"
+horizontal_alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="BodyZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000"
+horizontal_alignment = 2
+
+[node name="VSeparator3" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="ArmorZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000"
+horizontal_alignment = 2
+
+[node name="VSeparator4" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="WaistZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000"
+horizontal_alignment = 2
+
+[node name="VSeparator5" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LegsZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "1000"
+horizontal_alignment = 2
+
+[node name="VSeparator6" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="TotalZenni" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "1000"
+horizontal_alignment = 2
