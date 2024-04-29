@@ -1,5 +1,7 @@
 extends Control
 
+enum Option { AUDIO }
+
 signal face_changed(gender: ArmorData.Gender, face_index: int)
 signal gender_changed(gender: ArmorData.Gender)
 signal hair_changed(gender: ArmorData.Gender, hair_index: int)
@@ -9,6 +11,7 @@ signal room_changed(room_index: int)
 @export_group("Toolbar")
 @export var game_options: OptionButton
 @export var room_options: OptionButton
+@export var options_dropdown: MenuButton
 
 @export_group("Armor Menu")
 @export var hair_table: Control
@@ -71,6 +74,7 @@ var armor_indices: Array = [
 func _ready():
 	game_options.item_selected.connect(_on_game_changed)
 	room_options.item_selected.connect(_on_room_changed)
+	options_dropdown.get_popup().index_pressed.connect(_on_options_selected)
 
 	for index in armor_icons.size():
 		tab_container.set_tab_title(index, "")
@@ -163,6 +167,12 @@ func _on_hair_selected(hair_index: int):
 
 func _on_hunter_class_changed():
 	toggle_armor_rows()
+
+
+func _on_options_selected(option_index: int):
+	match option_index:
+		Option.AUDIO:
+			$AudioOptions.popup_centered()
 
 
 func _on_room_changed(room_index: int):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=26 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -14,28 +14,29 @@
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
+[ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_k1hrq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_do0sx"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_l4gdn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4hqxq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ppw2p"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_fhkk8"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_o0qky"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_8k5i8"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_j6bsv"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_85jrd"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ybbym"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_pv3h8"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_tb8bj"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_r6xro"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_f87wi"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_h6y6m"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_gnucx"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_uwpet"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_gac1y"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_do3is"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -45,6 +46,7 @@ theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
+options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
 hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
 body_table = NodePath("Control/ArmorContainer/TabContainer/B")
 arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
@@ -103,6 +105,13 @@ popup/item_4/id = 4
 popup/item_5/text = "KING_ROOM"
 popup/item_5/id = 5
 
+[node name="OptionsDropdown" type="MenuButton" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "OPTIONS"
+item_count = 1
+popup/item_0/text = "AUDIO"
+popup/item_0/id = 0
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
@@ -120,32 +129,32 @@ clip_tabs = false
 
 [node name="H" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_k1hrq")
-m_button_group = SubResource("ButtonGroup_l4gdn")
+f_button_group = SubResource("ButtonGroup_do0sx")
+m_button_group = SubResource("ButtonGroup_4hqxq")
 
 [node name="B" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ppw2p")
-m_button_group = SubResource("ButtonGroup_o0qky")
+f_button_group = SubResource("ButtonGroup_fhkk8")
+m_button_group = SubResource("ButtonGroup_8k5i8")
 
 [node name="A" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_j6bsv")
-m_button_group = SubResource("ButtonGroup_ybbym")
+f_button_group = SubResource("ButtonGroup_85jrd")
+m_button_group = SubResource("ButtonGroup_pv3h8")
 
 [node name="W" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_tb8bj")
-m_button_group = SubResource("ButtonGroup_f87wi")
+f_button_group = SubResource("ButtonGroup_r6xro")
+m_button_group = SubResource("ButtonGroup_h6y6m")
 
 [node name="L" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_gnucx")
-m_button_group = SubResource("ButtonGroup_gac1y")
+f_button_group = SubResource("ButtonGroup_uwpet")
+m_button_group = SubResource("ButtonGroup_do3is")
 
 [node name="PlayerContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
@@ -598,3 +607,75 @@ row_title = "FORGE"
 [node name="BuyRow" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer" instance=ExtResource("14_wcwcn")]
 layout_mode = 2
 row_title = "BUY"
+
+[node name="AudioOptions" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("master_volume", "master_mute", "music_volume", "music_mute", "sound_volume", "sound_mute")]
+title = "AUDIO_OPTIONS"
+initial_position = 1
+size = Vector2i(320, 129)
+min_size = Vector2i(256, 70)
+cancel_button_text = "CANCEL"
+script = ExtResource("15_2jh1n")
+master_volume = NodePath("GridContainer/MasterVolume")
+master_mute = NodePath("GridContainer/MasterMute")
+music_volume = NodePath("GridContainer/MusicVolume")
+music_mute = NodePath("GridContainer/MusicMute")
+sound_volume = NodePath("GridContainer/SoundVolume")
+sound_mute = NodePath("GridContainer/SoundMute")
+
+[node name="GridContainer" type="GridContainer" parent="AudioOptions"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 88.0
+columns = 3
+
+[node name="Label" type="Label" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+text = "MASTER"
+
+[node name="MasterVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MasterMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "MUTE"
+
+[node name="Label3" type="Label" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+text = "MUSIC"
+
+[node name="MusicVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="MusicMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "MUTE"
+
+[node name="Label2" type="Label" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+text = "SOUND EFFECTS"
+
+[node name="SoundVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="SoundMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "MUTE"
