@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://kiwi15cpuk7f"]
+[gd_scene load_steps=6 format=3 uid="uid://kiwi15cpuk7f"]
 
 [ext_resource type="PackedScene" uid="uid://cnt3jk0gp2118" path="res://models/king_room/king_room.glb" id="1_e7bo7"]
 [ext_resource type="Script" path="res://scripts/Room.gd" id="2_golqt"]
+[ext_resource type="AudioStream" uid="uid://d2dq75fvlars4" path="res://music/king_room.ogg" id="3_ubur0"]
+[ext_resource type="AnimationLibrary" uid="uid://bpu4w87fvtjla" path="res://music/music_animations.res" id="4_h7vpv"]
 
 [sub_resource type="Environment" id="Environment_naopu"]
 
@@ -17,3 +19,12 @@ light_energy = 0.5
 
 [node name="Player Position" type="Node3D" parent="." index="7"]
 transform = Transform3D(0.427216, 0, -0.90415, 0, 1, 0, 0.90415, 0, 0.427216, -7.75293, 0, -6.28826)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
+stream = ExtResource("3_ubur0")
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="9"]
+libraries = {
+"music_animations": ExtResource("4_h7vpv")
+}

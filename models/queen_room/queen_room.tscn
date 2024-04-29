@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://c81vfemqj2ul3"]
+[gd_scene load_steps=8 format=3 uid="uid://c81vfemqj2ul3"]
 
 [ext_resource type="PackedScene" uid="uid://bog0bpqiy5bbr" path="res://models/queen_room/queen_room.glb" id="1_f8jfw"]
 [ext_resource type="Script" path="res://scripts/Room.gd" id="2_nxmlt"]
+[ext_resource type="AudioStream" uid="uid://c0vtkdgxtid7n" path="res://music/queen_room.ogg" id="3_lhtd1"]
+[ext_resource type="AnimationLibrary" uid="uid://bpu4w87fvtjla" path="res://music/music_animations.res" id="4_5w7nq"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nivs7"]
 sky_top_color = Color(0.2, 0.47451, 0.666667, 1)
@@ -33,3 +35,12 @@ transform = Transform3D(0.90088, 0, -0.434068, 0, 1, 0, 0.434068, 0, 0.90088, -4
 [node name="Sun Light" type="DirectionalLight3D" parent="." index="3"]
 transform = Transform3D(-0.716163, 0.12878, -0.68595, -0.0128513, 0.98023, 0.197445, 0.697815, 0.150218, -0.700349, 0, 0, 0)
 shadow_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
+stream = ExtResource("3_lhtd1")
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+libraries = {
+"music_animations": ExtResource("4_5w7nq")
+}

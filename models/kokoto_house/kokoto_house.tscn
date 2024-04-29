@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbudhssbang3j"]
+[gd_scene load_steps=6 format=3 uid="uid://bbudhssbang3j"]
 
 [ext_resource type="PackedScene" uid="uid://034l3yqg3us2" path="res://models/kokoto_house/kokoto_house.glb" id="1_y6mu8"]
 [ext_resource type="Script" path="res://scripts/Room.gd" id="2_um0qg"]
+[ext_resource type="AudioStream" uid="uid://bpqngs3btqa4l" path="res://music/kokoto_house.ogg" id="3_j1vqy"]
+[ext_resource type="AnimationLibrary" uid="uid://bpu4w87fvtjla" path="res://music/music_animations.res" id="4_fol21"]
 
 [sub_resource type="Environment" id="Environment_frffb"]
 background_energy_multiplier = 0.5
@@ -23,3 +25,12 @@ transform = Transform3D(1, 0, 0, 0, -0.769979, 0.638069, 0, -0.638069, -0.769979
 light_energy = 2.0
 spot_range = 7.071
 spot_angle = 47.5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="5"]
+stream = ExtResource("3_j1vqy")
+bus = &"Music"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="6"]
+libraries = {
+"music_animations": ExtResource("4_fol21")
+}

@@ -85,13 +85,15 @@ func _on_hair_color_changed(gender: ArmorData.Gender, hair_color: Color):
 func _on_room_changed(room_index: int):
 	room_name = ROOM_NAMES[room_index]
 	$AnimationPlayer.play("fade_to_black")
+	room.fade_music_out()
 
 
-func load_room(room_name: String):
+func load_room(new_room_name: String):
 	room.queue_free()
-	room = ($ResourcePreloader.get_resource(room_name)).instantiate()
+	room = ($ResourcePreloader.get_resource(new_room_name)).instantiate()
 	add_child(room)
 
 	$CameraGimbal.rotation.y = room.player_position.rotation.y
 	room.position = -room.player_position.position
 	$HunterContainer.rotation = room.player_position.rotation
+	room.play_music()

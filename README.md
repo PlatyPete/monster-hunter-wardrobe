@@ -79,7 +79,7 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 	- [x] Change hair color
 - [ ] Rooms
 	- [x] Room models
-	- [ ] Fade through black when changing rooms
+	- [x] Fade through black when changing rooms
 	- [ ] Add room music
 	- [ ] Match room lighting to the games (currently a rough approximation)
 - [ ] Equipment sets
