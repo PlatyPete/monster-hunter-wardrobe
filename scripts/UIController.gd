@@ -14,7 +14,8 @@ signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
 @export var active_skill_container: VBoxContainer
 @export var material_rows: VBoxContainer
 @export var material_row_scene: PackedScene
-@export var zenni_labels: Array[Label]
+@export var forge_row: Control
+@export var buy_row: Control
 
 @export_group("Female Options")
 @export var f_face_options: OptionButton
@@ -246,20 +247,41 @@ func set_skill_points(skill_points):
 			skill_rows.add_child(skill_row)
 
 
-func set_zenni(armor_indices: Array):
-	var total_zenni: int = 0
-	for armor_category in armor_indices.size():
-		var forge: int = ArmorData.ARMOR[ArmorData.game_version][armor_category][armor_indices[armor_category]].get("forge",0)
-		if forge == 0:
-			zenni_labels[armor_category].set_text("")
-		else:
-			zenni_labels[armor_category].set_text(str(forge))
-			total_zenni += forge
+func set_zenni(gendered_armor_indices: Array):
+	var forge_zenni: Array = []
+	var buy_zenni: Array = []
+	var total_forge: int = 0
+	var total_buy: int = 0
 
-	if total_zenni == 0:
-		zenni_labels[ArmorData.Category.FACE].set_text("")
+	for armor_category in gendered_armor_indices.size():
+		var armor_piece = ArmorData.ARMOR[ArmorData.game_version][armor_category][gendered_armor_indices[armor_category]]
+		var forge: int = armor_piece.get("forge", 0)
+		if forge == 0:
+			forge_zenni.push_back("")
+		else:
+			forge_zenni.push_back(str(forge) + "z")
+			total_forge += forge
+
+		var buy: int = armor_piece.get("buy", 0)
+		if buy == 0:
+			buy_zenni.push_back("")
+		else:
+			buy_zenni.push_back(str(buy) + "z")
+			total_buy += buy
+
+	if total_forge == 0:
+		forge_zenni.push_back("")
 	else:
-		zenni_labels[ArmorData.Category.FACE].set_text(str(total_zenni))
+		forge_zenni.push_back(str(total_forge) + "z")
+
+	forge_row.set_zenni(forge_zenni)
+
+	if total_buy == 0:
+		buy_zenni.push_back("")
+	else:
+		buy_zenni.push_back(str(total_buy) + "z")
+
+	buy_row.set_zenni(buy_zenni)
 
 
 func toggle_armor_rows():
