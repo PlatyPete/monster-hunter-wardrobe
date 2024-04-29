@@ -47,6 +47,10 @@ signal room_changed(room_index: int)
 @export var forge_row: Control
 @export var buy_row: Control
 
+const THEME_NAMES: Array[String] = [
+	"mh1_theme",
+	"mhg_theme"
+]
 const HAIR_COLORS: Array[Color] = [
 	Color("#e59a67"),
 	Color("#bf7a59"),
@@ -131,6 +135,8 @@ func _on_face_selected(face_index: int):
 
 func _on_game_changed(game_index: int):
 	ArmorData.set_game(game_index)
+	var mh_theme = $ResourcePreloader.get_resource(THEME_NAMES[game_index])
+	set_theme(mh_theme)
 	toggle_game_elements()
 	toggle_armor_rows()
 

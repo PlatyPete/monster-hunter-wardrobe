@@ -1,18 +1,18 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c31wgu5mwbrda"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c8oba14s41jq2"]
 
-[ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="1_bopox"]
-[ext_resource type="StyleBox" uid="uid://cru70q4h6io6l" path="res://themes/menu_1a_panel.tres" id="1_o77i1"]
-[ext_resource type="Texture2D" uid="uid://lekm80m1xpue" path="res://textures/menu_1a.png" id="1_x03up"]
-[ext_resource type="Texture2D" uid="uid://dx8oi8whsfumw" path="res://textures/menu_1b.png" id="2_6r3d4"]
-[ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="3_p1srx"]
+[ext_resource type="StyleBox" uid="uid://c1jbye272pqr0" path="res://themes/menu_ga_panel.tres" id="1_rtl0q"]
+[ext_resource type="Texture2D" uid="uid://bl2o2dutl2d55" path="res://textures/menu_gb.png" id="2_mos8x"]
+[ext_resource type="Texture2D" uid="uid://b4k0xn1wxa28k" path="res://textures/menu_ga.png" id="3_le246"]
+[ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="4_fdbx0"]
+[ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="5_8lxea"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbc6b"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qhd2q"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_magrl"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
-texture = ExtResource("2_6r3d4")
+texture = ExtResource("2_mos8x")
 texture_margin_left = 7.0
 texture_margin_top = 7.0
 texture_margin_right = 7.0
@@ -21,12 +21,12 @@ axis_stretch_vertical = 2
 region_rect = Rect2(0, 0, 34, 27)
 modulate_color = Color(1, 1, 1, 0.87451)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yqmvf"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dwtf"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
 content_margin_bottom = 4.0
-texture = ExtResource("1_x03up")
+texture = ExtResource("3_le246")
 texture_margin_left = 7.0
 texture_margin_top = 7.0
 texture_margin_right = 7.0
@@ -39,7 +39,7 @@ modulate_color = Color(1, 1, 1, 0.87451)
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
-texture = ExtResource("3_p1srx")
+texture = ExtResource("4_fdbx0")
 texture_margin_left = 7.0
 texture_margin_top = 7.0
 texture_margin_right = 7.0
@@ -49,7 +49,7 @@ region_rect = Rect2(0, 0, 34, 27)
 modulate_color = Color(1, 1, 1, 0.87451)
 
 [resource]
-default_font = ExtResource("1_bopox")
+default_font = ExtResource("5_8lxea")
 default_font_size = 10
 ColorPicker/constants/sv_height = 80
 ColorPicker/constants/sv_width = 80
@@ -57,13 +57,13 @@ MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
 MarginContainer/constants/margin_top = 4
-Panel/styles/panel = ExtResource("1_o77i1")
-PanelContainer/styles/panel = ExtResource("1_o77i1")
+Panel/styles/panel = ExtResource("1_rtl0q")
+PanelContainer/styles/panel = ExtResource("1_rtl0q")
 TabContainer/constants/icon_max_width = 16
 TabContainer/constants/side_margin = 0
-TabContainer/styles/panel = ExtResource("1_o77i1")
-TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_cbc6b")
-TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_qhd2q")
-TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_yqmvf")
+TabContainer/styles/panel = ExtResource("1_rtl0q")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_87m2a")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_magrl")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
 VSeparator/constants/separation = 0

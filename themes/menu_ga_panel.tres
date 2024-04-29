@@ -1,0 +1,13 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://c1jbye272pqr0"]
+
+[ext_resource type="Texture2D" uid="uid://b4k0xn1wxa28k" path="res://textures/menu_ga.png" id="1_wyn01"]
+
+[resource]
+texture = ExtResource("1_wyn01")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(1, 1, 1, 0.87451)

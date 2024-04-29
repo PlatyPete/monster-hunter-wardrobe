@@ -9,7 +9,7 @@
 
 [node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
 script = ExtResource("1_l04mw")
-table_body = NodePath("VBoxContainer/ScrollContainer/ArmorCheckBoxes")
+table_body = NodePath("VBoxContainer/ScrollContainer/MarginContainer/ArmorCheckBoxes")
 armor_row_scene = ExtResource("2_paffe")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -81,6 +81,12 @@ layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="ArmorCheckBoxes" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="ArmorCheckBoxes" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
