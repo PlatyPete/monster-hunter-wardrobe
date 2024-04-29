@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://jm8whlsji61c"]
+[gd_scene load_steps=14 format=3 uid="uid://jm8whlsji61c"]
 
 [ext_resource type="Script" path="res://scripts/SceneController.gd" id="1_5wnts"]
 [ext_resource type="PackedScene" uid="uid://b6o7vhj2bmhls" path="res://models/pawn_room/pawn_room.tscn" id="1_u2x8g"]
@@ -10,6 +10,68 @@
 [ext_resource type="PackedScene" uid="uid://c81vfemqj2ul3" path="res://models/queen_room/queen_room.tscn" id="7_j68bp"]
 [ext_resource type="PackedScene" uid="uid://cvw7y0racr3ff" path="res://models/rook_room/rook_room.tscn" id="9_fwwcy"]
 [ext_resource type="PackedScene" uid="uid://bq45b0sufjwd4" path="res://ui_elements/ui_container.tscn" id="10_e5p7p"]
+
+[sub_resource type="Animation" id="Animation_wsqqy"]
+resource_name = "fade_to_black"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackOverlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackOverlay:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_501rs"]
+resource_name = "fade_from_black"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackOverlay:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackOverlay:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7q52j"]
+_data = {
+"fade_from_black": SubResource("Animation_501rs"),
+"fade_to_black": SubResource("Animation_wsqqy")
+}
 
 [node name="Scene" type="Node" node_paths=PackedStringArray("room")]
 script = ExtResource("1_5wnts")
@@ -36,3 +98,18 @@ fov = 55.0
 resources = [PackedStringArray("bishop_room", "king_room", "kokoto_house", "pawn_room", "queen_room", "rook_room"), [ExtResource("4_ugrui"), ExtResource("4_xqr6i"), ExtResource("3_6dufj"), ExtResource("1_u2x8g"), ExtResource("7_j68bp"), ExtResource("9_fwwcy")]]
 
 [node name="UIController" parent="." instance=ExtResource("10_e5p7p")]
+
+[node name="BlackOverlay" type="ColorRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7q52j")
+}

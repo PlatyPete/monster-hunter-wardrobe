@@ -13,6 +13,8 @@ const ROOM_NAMES: Array[String] = [
 
 @onready var hunters: Array = $HunterContainer.get_children()
 
+var room_name: String
+
 
 func _ready():
 	for game_index in ArmorData.Game.BOTH:
@@ -47,8 +49,16 @@ func _ready():
 
 	# TODO: set player customization and armor from save file
 
+	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
+
+
+func _on_animation_finished(animation_name: String):
+	match animation_name:
+		"fade_to_black":
+			load_room(room_name)
+			$AnimationPlayer.play("fade_from_black")
 
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
@@ -73,7 +83,8 @@ func _on_hair_color_changed(gender: ArmorData.Gender, hair_color: Color):
 
 
 func _on_room_changed(room_index: int):
-	load_room(ROOM_NAMES[room_index])
+	room_name = ROOM_NAMES[room_index]
+	$AnimationPlayer.play("fade_to_black")
 
 
 func load_room(room_name: String):
