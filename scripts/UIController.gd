@@ -12,6 +12,7 @@ signal room_changed(room_index: int)
 @export var game_options: OptionButton
 @export var room_options: OptionButton
 @export var options_dropdown: MenuButton
+@export var quit_button: Button
 
 @export_group("Armor Menu")
 @export var hair_table: Control
@@ -75,6 +76,7 @@ func _ready():
 	game_options.item_selected.connect(_on_game_changed)
 	room_options.item_selected.connect(_on_room_changed)
 	options_dropdown.get_popup().index_pressed.connect(_on_options_selected)
+	quit_button.pressed.connect(_on_quit_pressed)
 
 	for index in armor_icons.size():
 		tab_container.set_tab_title(index, "")
@@ -173,6 +175,10 @@ func _on_options_selected(option_index: int):
 	match option_index:
 		Option.AUDIO:
 			$AudioOptions.popup_centered()
+
+
+func _on_quit_pressed():
+	get_tree().quit()
 
 
 func _on_room_changed(room_index: int):

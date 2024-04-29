@@ -36,7 +36,7 @@
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_do3is"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -47,6 +47,7 @@ script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
+quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
 hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
 body_table = NodePath("Control/ArmorContainer/TabContainer/B")
 arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
@@ -105,12 +106,20 @@ popup/item_4/id = 4
 popup/item_5/text = "KING_ROOM"
 popup/item_5/id = 5
 
+[node name="Spacer" type="Control" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="OptionsDropdown" type="MenuButton" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 text = "OPTIONS"
 item_count = 1
 popup/item_0/text = "AUDIO"
 popup/item_0/id = 0
+
+[node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "QUIT"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
