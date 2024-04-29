@@ -80,7 +80,7 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 - [ ] Rooms
 	- [x] Room models
 	- [x] Fade through black when changing rooms
-	- [ ] Add room music
+	- [x] Add room music
 	- [ ] Match room lighting to the games (currently a rough approximation)
 - [ ] Equipment sets
 	- [ ] Let users save multiple custom equipment sets (upper limit?)

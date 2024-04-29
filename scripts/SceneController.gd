@@ -2,6 +2,12 @@ extends Node
 
 @export var room: Node3D
 
+const EQUIP_SOUNDS: Array[String] = [
+	"equip_0",
+	"equip_1",
+	"equip_2",
+	"equip_3"
+]
 const ROOM_NAMES: Array[String] = [
 	"kokoto_house",
 	"pawn_room",
@@ -63,6 +69,7 @@ func _on_animation_finished(animation_name: String):
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
 	hunters[gender].equip_armor(game_version, armor_category, armor_index)
+	play_equip_sound()
 
 
 func _on_face_changed(gender: ArmorData.Gender, face_index: int):
@@ -97,3 +104,9 @@ func load_room(new_room_name: String):
 	room.position = -room.player_position.position
 	$HunterContainer.rotation = room.player_position.rotation
 	room.play_music()
+
+
+func play_equip_sound():
+	var equip_sound = $ResourcePreloader.get_resource(EQUIP_SOUNDS[randi() % EQUIP_SOUNDS.size()])
+	$AudioStreamPlayer.set_stream(equip_sound)
+	$AudioStreamPlayer.play()

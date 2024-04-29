@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://jm8whlsji61c"]
+[gd_scene load_steps=18 format=3 uid="uid://jm8whlsji61c"]
 
 [ext_resource type="Script" path="res://scripts/SceneController.gd" id="1_5wnts"]
 [ext_resource type="PackedScene" uid="uid://b6o7vhj2bmhls" path="res://models/pawn_room/pawn_room.tscn" id="1_u2x8g"]
@@ -7,7 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://cfa5juhestr78" path="res://models/male/male.tscn" id="3_tai3g"]
 [ext_resource type="PackedScene" uid="uid://b43to1dh3kk0o" path="res://models/bishop_room/bishop_room.tscn" id="4_ugrui"]
 [ext_resource type="PackedScene" uid="uid://kiwi15cpuk7f" path="res://models/king_room/king_room.tscn" id="4_xqr6i"]
+[ext_resource type="AudioStream" uid="uid://d36kqoc52xuq5" path="res://sounds/equip_0.ogg" id="6_qe6gt"]
+[ext_resource type="AudioStream" uid="uid://dmfwa1dwva3k1" path="res://sounds/equip_1.ogg" id="7_23uj8"]
 [ext_resource type="PackedScene" uid="uid://c81vfemqj2ul3" path="res://models/queen_room/queen_room.tscn" id="7_j68bp"]
+[ext_resource type="AudioStream" uid="uid://bx51gio62ndst" path="res://sounds/equip_2.ogg" id="8_3chf2"]
+[ext_resource type="AudioStream" uid="uid://mf52bpjyhpiw" path="res://sounds/equip_3.ogg" id="9_ce17q"]
 [ext_resource type="PackedScene" uid="uid://cvw7y0racr3ff" path="res://models/rook_room/rook_room.tscn" id="9_fwwcy"]
 [ext_resource type="PackedScene" uid="uid://bq45b0sufjwd4" path="res://ui_elements/ui_container.tscn" id="10_e5p7p"]
 
@@ -95,7 +99,7 @@ fov = 55.0
 [node name="Kokoto House" parent="." instance=ExtResource("3_6dufj")]
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("bishop_room", "king_room", "kokoto_house", "pawn_room", "queen_room", "rook_room"), [ExtResource("4_ugrui"), ExtResource("4_xqr6i"), ExtResource("3_6dufj"), ExtResource("1_u2x8g"), ExtResource("7_j68bp"), ExtResource("9_fwwcy")]]
+resources = [PackedStringArray("bishop_room", "equip_0", "equip_1", "equip_2", "equip_3", "king_room", "kokoto_house", "pawn_room", "queen_room", "rook_room"), [ExtResource("4_ugrui"), ExtResource("6_qe6gt"), ExtResource("7_23uj8"), ExtResource("8_3chf2"), ExtResource("9_ce17q"), ExtResource("4_xqr6i"), ExtResource("3_6dufj"), ExtResource("1_u2x8g"), ExtResource("7_j68bp"), ExtResource("9_fwwcy")]]
 
 [node name="UIController" parent="." instance=ExtResource("10_e5p7p")]
 
@@ -112,3 +116,7 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_7q52j")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -6.0
+bus = &"Sounds"
