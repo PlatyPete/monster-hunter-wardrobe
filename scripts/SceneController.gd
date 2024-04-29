@@ -2,6 +2,15 @@ extends Node
 
 @export var room: Node3D
 
+const ROOM_NAMES: Array[String] = [
+	"kokoto_house",
+	"pawn_room",
+	"rook_room",
+	"bishop_room",
+	"queen_room",
+	"king_room"
+]
+
 @onready var hunters: Array = $HunterContainer.get_children()
 
 
@@ -27,6 +36,7 @@ func _ready():
 	$UIController.gender_changed.connect(_on_gender_changed)
 	$UIController.hair_changed.connect(_on_hair_changed)
 	$UIController.hair_color_changed.connect(_on_hair_color_changed)
+	$UIController.room_changed.connect(_on_room_changed)
 
 	$UIController.toggle_armor_rows()
 	$UIController.toggle_game_elements()
@@ -60,6 +70,10 @@ func _on_hair_changed(gender: ArmorData.Gender, hair_index: int):
 
 func _on_hair_color_changed(gender: ArmorData.Gender, hair_color: Color):
 	hunters[gender].set_hair_color(hair_color)
+
+
+func _on_room_changed(room_index: int):
+	load_room(ROOM_NAMES[room_index])
 
 
 func load_room(room_name: String):

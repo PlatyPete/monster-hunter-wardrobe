@@ -30,3 +30,6 @@ transform = Transform3D(1, 0, 0, 0, 0.993238, -0.116099, 0, 0.116099, 0.993238, 
 spot_range = 3.60784
 spot_attenuation = 0.482968
 spot_angle = 52.27
+
+[node name="Player Position" type="Node3D" parent="." index="5"]
+transform = Transform3D(0.726898, 0, 0.686745, 0, 1, 0, -0.686745, 0, 0.726898, -3.23101, 0, -6.08612)

@@ -14,3 +14,6 @@ environment = SubResource("Environment_naopu")
 [node name="Sun Light" type="DirectionalLight3D" parent="." index="6"]
 transform = Transform3D(0.736912, 0.18165, -0.651125, 0, 0.963219, 0.268718, 0.675989, -0.198022, 0.709807, 0, 0, 0)
 light_energy = 0.5
+
+[node name="Player Position" type="Node3D" parent="." index="7"]
+transform = Transform3D(0.427216, 0, -0.90415, 0, 1, 0, 0.90415, 0, 0.427216, -7.75293, 0, -6.28826)

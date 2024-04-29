@@ -2,45 +2,46 @@ extends Control
 
 signal face_changed(gender: ArmorData.Gender, face_index: int)
 signal gender_changed(gender: ArmorData.Gender)
-signal hair_changed(gender: ArmorData.Gender, )
+signal hair_changed(gender: ArmorData.Gender, hair_index: int)
 signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
+signal room_changed(room_index: int)
 
+@export_group("Toolbar")
 @export var game_options: OptionButton
-@export var female_check: CheckBox
-@export var male_check: CheckBox
-@export var stats_container: Control
-@export var skill_rows: Control
-@export var skill_row_scene: PackedScene
-@export var active_skill_container: VBoxContainer
-@export var material_rows: VBoxContainer
-@export var material_row_scene: PackedScene
-@export var forge_row: Control
-@export var buy_row: Control
+@export var room_options: OptionButton
 
-@export_group("Female Options")
-@export var f_face_options: OptionButton
-@export var f_hair_options: OptionButton
-@export var f_hair_color: ColorPickerButton
-
-@export_group("Male Options")
-@export var m_face_options: OptionButton
-@export var m_hair_options: OptionButton
-@export var m_hair_color: ColorPickerButton
-
-@export_group("Armor Tables")
+@export_group("Armor Menu")
 @export var hair_table: Control
 @export var body_table: Control
 @export var arms_table: Control
 @export var waist_table: Control
 @export var legs_table: Control
+@export var tab_container: TabContainer
+@export var armor_icons: Array[Texture2D]
 
-@export_group("Class Options")
+@export_group("Hunter Tab")
+@export var female_check: CheckBox
+@export var male_check: CheckBox
+@export var f_face_options: OptionButton
+@export var f_hair_options: OptionButton
+@export var f_hair_color: ColorPickerButton
+@export var m_face_options: OptionButton
+@export var m_hair_options: OptionButton
+@export var m_hair_color: ColorPickerButton
 @export var sword_check: CheckBox
 @export var gun_check: CheckBox
 
-@export_group("Icons")
-@export var tab_container: TabContainer
-@export var armor_icons: Array[Texture2D]
+@export_group("Stats Tab")
+@export var stats_container: Control
+@export var skill_rows: Control
+@export var skill_row_scene: PackedScene
+@export var active_skill_container: VBoxContainer
+
+@export_group("Materials Tab")
+@export var material_rows: VBoxContainer
+@export var material_row_scene: PackedScene
+@export var forge_row: Control
+@export var buy_row: Control
 
 const HAIR_COLORS: Array[Color] = [
 	Color("#e59a67"),
@@ -69,6 +70,7 @@ var armor_indices: Array = [
 
 func _ready():
 	game_options.item_selected.connect(_on_game_changed)
+	room_options.item_selected.connect(_on_room_changed)
 
 	for index in armor_icons.size():
 		tab_container.set_tab_title(index, "")
@@ -161,6 +163,10 @@ func _on_hair_selected(hair_index: int):
 
 func _on_hunter_class_changed():
 	toggle_armor_rows()
+
+
+func _on_room_changed(room_index: int):
+	room_changed.emit(room_index)
 
 
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:

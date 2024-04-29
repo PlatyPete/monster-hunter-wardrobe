@@ -15,27 +15,27 @@
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_u84t0"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_k1hrq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_med6v"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_l4gdn"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_e0nat"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ppw2p"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jopmt"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_o0qky"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ekudg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_j6bsv"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_yws1h"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ybbym"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_c1clm"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_tb8bj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_bp1fl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_f87wi"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_d1ffb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_gnucx"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_0a7mu"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_gac1y"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "female_check", "male_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "sword_check", "gun_check", "tab_container")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -44,8 +44,24 @@ grow_vertical = 2
 theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
+room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
+hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
+body_table = NodePath("Control/ArmorContainer/TabContainer/B")
+arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
+waist_table = NodePath("Control/ArmorContainer/TabContainer/W")
+legs_table = NodePath("Control/ArmorContainer/TabContainer/L")
+tab_container = NodePath("Control/ArmorContainer/TabContainer")
+armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
 female_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FGenderCheck")
 male_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MGenderCheck")
+f_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
+f_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
+f_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FColorPickerButton")
+m_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MFaceOptions")
+m_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MHairOption")
+m_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MColorPickerButton")
+sword_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/SwordCheckBox")
+gun_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GunCheckBox")
 stats_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/StatsContainer")
 skill_rows = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer/SkillRows")
 skill_row_scene = ExtResource("3_5y62j")
@@ -54,21 +70,6 @@ material_rows = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxCon
 material_row_scene = ExtResource("4_kqgpw")
 forge_row = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ForgeRow")
 buy_row = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/BuyRow")
-f_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
-f_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
-f_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FColorPickerButton")
-m_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MFaceOptions")
-m_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MHairOption")
-m_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MColorPickerButton")
-hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
-body_table = NodePath("Control/ArmorContainer/TabContainer/B")
-arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
-waist_table = NodePath("Control/ArmorContainer/TabContainer/W")
-legs_table = NodePath("Control/ArmorContainer/TabContainer/L")
-sword_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/SwordCheckBox")
-gun_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GunCheckBox")
-tab_container = NodePath("Control/ArmorContainer/TabContainer")
-armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
@@ -84,6 +85,23 @@ popup/item_0/text = "MONSTER_HUNTER"
 popup/item_0/id = 0
 popup/item_1/text = "MONSTER_HUNTER_G"
 popup/item_1/id = 1
+
+[node name="RoomOptions" type="OptionButton" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+item_count = 6
+selected = 0
+popup/item_0/text = "KOKOTO_HOUSE"
+popup/item_0/id = 0
+popup/item_1/text = "PAWN_ROOM"
+popup/item_1/id = 1
+popup/item_2/text = "ROOK_ROOM"
+popup/item_2/id = 2
+popup/item_3/text = "BISHOP_ROOM"
+popup/item_3/id = 3
+popup/item_4/text = "QUEEN_ROOM"
+popup/item_4/id = 4
+popup/item_5/text = "KING_ROOM"
+popup/item_5/id = 5
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 2
@@ -102,32 +120,32 @@ clip_tabs = false
 
 [node name="H" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_u84t0")
-m_button_group = SubResource("ButtonGroup_med6v")
+f_button_group = SubResource("ButtonGroup_k1hrq")
+m_button_group = SubResource("ButtonGroup_l4gdn")
 
 [node name="B" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_e0nat")
-m_button_group = SubResource("ButtonGroup_jopmt")
+f_button_group = SubResource("ButtonGroup_ppw2p")
+m_button_group = SubResource("ButtonGroup_o0qky")
 
 [node name="A" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ekudg")
-m_button_group = SubResource("ButtonGroup_yws1h")
+f_button_group = SubResource("ButtonGroup_j6bsv")
+m_button_group = SubResource("ButtonGroup_ybbym")
 
 [node name="W" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_c1clm")
-m_button_group = SubResource("ButtonGroup_bp1fl")
+f_button_group = SubResource("ButtonGroup_tb8bj")
+m_button_group = SubResource("ButtonGroup_f87wi")
 
 [node name="L" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_d1ffb")
-m_button_group = SubResource("ButtonGroup_0a7mu")
+f_button_group = SubResource("ButtonGroup_gnucx")
+m_button_group = SubResource("ButtonGroup_gac1y")
 
 [node name="PlayerContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
