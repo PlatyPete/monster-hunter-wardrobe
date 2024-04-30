@@ -110,6 +110,11 @@ func _ready():
 	set_zenni(armor_indices[ArmorData.Gender.FEMALE])
 
 
+func _input(inputEvent: InputEvent):
+	if inputEvent.is_action_pressed("toggle_panels"):
+		$PanelsContainer.set_visible(!$PanelsContainer.is_visible())
+
+
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
 	armor_indices[gender][armor_category] = armor_index
 	stats_container.set_stats(armor_indices[gender])

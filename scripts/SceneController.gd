@@ -2,6 +2,7 @@ extends Node
 
 @export var room: Node3D
 
+const TURN_SPEED: float = 3.5
 const EQUIP_SOUNDS: Array[String] = [
 	"equip_0",
 	"equip_1",
@@ -93,6 +94,12 @@ func _on_room_changed(room_index: int):
 	room_name = ROOM_NAMES[room_index]
 	$AnimationPlayer.play("fade_to_black")
 	room.fade_music_out()
+
+
+func _process(delta: float):
+	var x_vel: float = TURN_SPEED * Input.get_axis("rotate_left", "rotate_right")
+	if x_vel != 0:
+		$HunterContainer.rotate_y(delta * x_vel)
 
 
 func load_room(new_room_name: String):
