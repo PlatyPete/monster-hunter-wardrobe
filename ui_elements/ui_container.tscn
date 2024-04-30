@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=36 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -15,7 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
-[ext_resource type="Theme" uid="uid://c8oba14s41jq2" path="res://themes/mhg_theme.tres" id="16_ftaqj"]
+[ext_resource type="StyleBox" uid="uid://c1jbye272pqr0" path="res://themes/menu_ga_panel.tres" id="16_br0rg"]
+[ext_resource type="Texture2D" uid="uid://bl2o2dutl2d55" path="res://textures/menu_gb.png" id="17_obtn7"]
+[ext_resource type="Texture2D" uid="uid://b4k0xn1wxa28k" path="res://textures/menu_ga.png" id="18_1776h"]
+[ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
+[ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_nwkmp"]
 
@@ -36,6 +40,68 @@
 [sub_resource type="ButtonGroup" id="ButtonGroup_xi40k"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_wng18"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_magrl"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+texture = ExtResource("17_obtn7")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+region_rect = Rect2(0, 0, 34, 27)
+modulate_color = Color(1, 1, 1, 0.87451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dwtf"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+texture = ExtResource("18_1776h")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 34, 27)
+modulate_color = Color(1, 1, 1, 0.87451)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tajf6"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+texture = ExtResource("19_goitf")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+region_rect = Rect2(0, 0, 34, 27)
+modulate_color = Color(1, 1, 1, 0.87451)
+
+[sub_resource type="Theme" id="Theme_7nwv1"]
+default_font = ExtResource("20_5vuvb")
+default_font_size = 10
+ColorPicker/constants/sv_height = 80
+ColorPicker/constants/sv_width = 80
+MarginContainer/constants/margin_bottom = 4
+MarginContainer/constants/margin_left = 4
+MarginContainer/constants/margin_right = 4
+MarginContainer/constants/margin_top = 4
+Panel/styles/panel = ExtResource("16_br0rg")
+PanelContainer/styles/panel = ExtResource("16_br0rg")
+TabContainer/constants/icon_max_width = 16
+TabContainer/constants/side_margin = 0
+TabContainer/styles/panel = ExtResource("16_br0rg")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_87m2a")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_magrl")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
+VSeparator/constants/separation = 0
 
 [node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
@@ -693,4 +759,4 @@ size_flags_vertical = 4
 text = "MUTE"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("mh1_theme", "mhg_theme"), [ExtResource("1_rept1"), ExtResource("16_ftaqj")]]
+resources = [PackedStringArray("mh1_theme", "mhg_theme"), [ExtResource("1_rept1"), SubResource("Theme_7nwv1")]]

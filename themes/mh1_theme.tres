@@ -57,7 +57,6 @@ MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
 MarginContainer/constants/margin_top = 4
-Panel/styles/panel = ExtResource("1_o77i1")
 PanelContainer/styles/panel = ExtResource("1_o77i1")
 TabContainer/constants/icon_max_width = 16
 TabContainer/constants/side_margin = 0

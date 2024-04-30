@@ -7,15 +7,16 @@ size_flags_horizontal = 3
 script = ExtResource("1_nl6m7")
 
 [node name="CheckBox" type="CheckBox" parent="."]
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 7.0
 text = "Armor"
 
 [node name="VSeparator" type="VSeparator" parent="."]
 layout_mode = 2
 
 [node name="Defense" type="Label" parent="."]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "24"
@@ -25,6 +26,7 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="FireRes" type="Label" parent="."]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
@@ -34,6 +36,7 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="WaterRes" type="Label" parent="."]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
@@ -43,6 +46,7 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="ThunderRes" type="Label" parent="."]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"
@@ -52,6 +56,7 @@ horizontal_alignment = 2
 layout_mode = 2
 
 [node name="DragonRes" type="Label" parent="."]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "-1"

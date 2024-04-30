@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjl1qf7m37ans"]
+[gd_scene load_steps=8 format=3 uid="uid://bjl1qf7m37ans"]
 
 [ext_resource type="Script" path="res://scripts/ArmorTable.gd" id="1_l04mw"]
 [ext_resource type="PackedScene" uid="uid://hh82ts8ouwhe" path="res://ui_elements/armor_row.tscn" id="2_paffe"]
 [ext_resource type="Texture2D" uid="uid://b2jm283suyn81" path="res://icons/fire.png" id="3_6o0ql"]
+[ext_resource type="Texture2D" uid="uid://cgbnx8uet754o" path="res://icons/interface_icons_2.png" id="3_bty1x"]
 [ext_resource type="Texture2D" uid="uid://c05wu4ensk3eq" path="res://icons/water.png" id="4_7u3n2"]
 [ext_resource type="Texture2D" uid="uid://cjg06ciub3ywr" path="res://icons/thunder.png" id="5_ebcop"]
 [ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="6_vd6pg"]
 
 [node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
+offset_right = 276.0
+offset_bottom = 35.0
+size_flags_horizontal = 3
 script = ExtResource("1_l04mw")
 table_body = NodePath("VBoxContainer/ScrollContainer/MarginContainer/ArmorCheckBoxes")
 armor_row_scene = ExtResource("2_paffe")
@@ -20,58 +24,75 @@ layout_mode = 2
 size_flags_vertical = 0
 
 [node name="Name Label" type="Label" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 7.0
 text = "NAME"
 
 [node name="VSeparator" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 
-[node name="Defense" type="Label" parent="VBoxContainer/ArmorHeader"]
+[node name="Defense" type="CenterContainer" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
 size_flags_horizontal = 3
-text = "DEFENSE_STAT"
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="VBoxContainer/ArmorHeader/Defense"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="VBoxContainer/ArmorHeader/Defense/Control"]
+texture = ExtResource("3_bty1x")
+region_enabled = true
+region_rect = Rect2(32, 175, 20, 20)
 
 [node name="VSeparator2" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 
 [node name="Fire Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("3_6o0ql")
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="VSeparator3" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 
 [node name="Water Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("4_7u3n2")
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="VSeparator4" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 
 [node name="Thunder Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("5_ebcop")
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="VSeparator5" type="VSeparator" parent="VBoxContainer/ArmorHeader"]
 layout_mode = 2
 
 [node name="Dragon Icon" type="TextureRect" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 texture = ExtResource("6_vd6pg")
-stretch_mode = 4
+stretch_mode = 5
+
+[node name="Spacer" type="Control" parent="VBoxContainer/ArmorHeader"]
+custom_minimum_size = Vector2(8, 0)
+layout_mode = 2
 
 [node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
 layout_mode = 2
