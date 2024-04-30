@@ -1,0 +1,1673 @@
+keys,en,ja,zh
+[SKILLS],[Skills],[スキル],[技能]
+ALCHEMY,Alchemy,錬金術,炼金术
+ALLURING_HIDE,Alluring Hide,魅惑色の柔皮,魅惑色的柔皮
+AMBITIOUS_PIERCING,Ambitious Piercing,凄腕のピアス,超凡耳饰
+AMMO_MIXER_ACTIVATED,Ammo Mixer,最大数弾生産,最大数弹生产
+AMMO_MIXER_SKILL,Ammo Mixer,弾調合,弹调合
+ANCIENT_POTION,Ancient Potion,いにしえの秘薬,古代的秘药
+ANTI_THEFT_MH1,Stealing Negated,盗み無効,偷盗无效
+ANTI_THEFT_MHG,Anti-Theft,盗み無効,偷盗无效
+ANTISEPTIC_STONE,Antiseptic Stone,抗菌石,抗菌石
+APP_TITLE,Monster Hunter Armor Wardrobe,,怪物猎人防具展柜
+ARMOR,Armor,防具,防具
+ARMOR_CODE_COPY,Copy this armor code to the armor builder at https://www.mh1g.info/armor. Or copy the code from the builder into the input here and press Ok.,,复制下方防具组合代码到 https://www.mh1g.info/armor 处的防具配置组合工具导出粘贴使用，或从前述组合工具中复制代码到此处进行导入。
+ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with
+restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
+ARMS,Arms,腕,腕
+ATTACK_STAT,Attack,攻撃,攻击
+ATTACK_UP_L,Attack Up [L],攻撃力UP【大】,攻击力UP【大】
+ATTACK_UP_M,Attack Up [M],攻撃力UP【中】,攻击力UP【中】
+ATTACK_UP_S,Attack Up [S],攻撃力UP【小】,攻击力UP【小】
+ATTACK_UP_SKILL,Attack,攻撃,攻击
+AUDIO,Audio,音響,
+AUDIO_OPTIONS,Audio Options,音響の選択肢,
+AUROROS_GAUNTLETS,Auroros Gauntlets,暁丸【篭手】,晓丸【笼手】
+AUROROS_GAUNTLETS_HAKU,Auroros Gauntlets Haku,暁丸・覇【篭手】,晓丸・霸【笼手】
+AUROROS_GAUNTLETS_MAI,Auroros Gauntlets Mai,暁丸・羅【篭手】,晓丸・罗【笼手】
+AUROROS_GAUNTLETS_TEN,Auroros Gauntlets Ten,暁丸・皇【篭手】,晓丸・皇【笼手】
+AUROROS_HELM,Auroros Helm,暁丸【兜】,晓丸【兜】
+AUROROS_HELM_HAKU,Auroros Helm Haku,暁丸・覇【兜】,晓丸・霸【兜】
+AUROROS_HELM_MAI,Auroros Helm Mai,暁丸・羅【兜】,晓丸・罗【兜】
+AUROROS_HELM_TEN,Auroros Helm Ten,暁丸・皇【兜】,晓丸・皇【兜】
+AUROROS_PANTS,Auroros Pants,暁丸【具足】,晓丸【具足】
+AUROROS_PANTS_HAKU,Auroros Pants Haku,暁丸・覇【具足】,晓丸・霸【具足】
+AUROROS_PANTS_MAI,Auroros Pants Mai,暁丸・羅【具足】,晓丸・罗【具足】
+AUROROS_PANTS_TEN,Auroros Pants Ten,暁丸・皇【具足】,晓丸・皇【具足】
+AUROROS_TASSET,Auroros Tasset,暁丸【腰当て】,晓丸【腰当】
+AUROROS_TASSET_HAKU,Auroros Tasset Haku,暁丸・覇【腰当て】,晓丸・霸【腰当】
+AUROROS_TASSET_MAI,Auroros Tasset Mai,暁丸・羅【腰当て】,晓丸・罗【腰当】
+AUROROS_TASSET_TEN,Auroros Tasset Ten,暁丸・皇【腰当て】,晓丸・皇【腰当】
+AUROROS_TORSO,Auroros Torso,暁丸【胴当て】,晓丸【胴当】
+AUROROS_TORSO_HAKU,Auroros Torso Haku,暁丸・覇【胴当て】,晓丸・霸【胴当】
+AUROROS_TORSO_MAI,Auroros Torso Mai,暁丸・羅【胴当て】,晓丸・罗【胴当】
+AUROROS_TORSO_TEN,Auroros Torso Ten,暁丸・皇【胴当て】,晓丸・皇【胴当】
+AUTO_GUARD_ACTIVATED,Auto-Guard,オートガード,全自动防御
+AUTO_GUARD_SKILL,Auto-Guard,自動防御,自动防御
+AUTO_MAP,Auto-Map,地図不要,地图常备
+AUTOMATIC_MARKING,Automatic Marking,自動マーキング,自动标示
+AUTOTRACKER,Autotracker,自動マーキング,自动标示
+AZURE_LAO_SHAN_CLAW,Azure Lao-Shan Claw,老山龍の蒼大爪,老山龍的苍大爪
+AZURE_LAO_SHAN_SCALE,Azure Lao-Shan Scale,老山龍の蒼鱗,老山龍的苍鳞
+AZURE_LAO_SHAN_SHELL,Azure Lao-Shan Shell,老山龍の蒼甲殻,老山龍的苍甲壳
+AZURE_LAO_SHAN_SPINE,Azure Lao-Shan Spine,老山龍の蒼背甲,老山龍的苍背甲
+AZURE_RATHALOS_CARAPACE,Azure Rathalos Carapace,蒼火竜の堅殻,苍火龙的坚壳
+AZURE_RATHALOS_CLAW,Azure Rathalos Claw,蒼火竜の翼爪,苍火龙的翼爪
+AZURE_RATHALOS_PLATE,Azure Rathalos Plate,蒼火竜の逆鱗,苍火龙的逆鳞
+AZURE_RATHALOS_RUBY,Azure Rathalos Ruby,蒼火竜の紅玉,苍火龙的红玉
+AZURE_RATHALOS_SCALE,Azure Rathalos Scale,蒼火竜の鱗,苍火龙的鳞
+AZURE_RATHALOS_SCALE_PLUS,Azure Rathalos Scale+,蒼火竜の上鱗,苍火龙的上鳞
+AZURE_RATHALOS_SHELL,Azure Rathalos Shell,蒼火竜の甲殻,苍火龙的甲壳
+AZURE_RATHALOS_TAIL,Azure Rathalos Tail,蒼火竜の尻尾,苍火龙的尻尾
+AZURE_RATHALOS_WEBBING,Azure Rathalos Webbing,蒼火竜の翼膜,苍火龙的翼膜
+AZURE_RATHALOS_WING,Azure Rathalos Wing,蒼火竜の翼,苍火龙的翼
+BACKPACKING_EXPERT,Backpacking Expert,運搬の達人,搬运达人
+BACKPACKING_SKILL,Backpacking,運搬,搬运
+BAD_LUCK,Bad Luck,不運,不运
+BASARIOS_CARAPACE,Basarios Carapace,岩竜の堅殻,岩龙的坚壳
+BASARIOS_COIN,Basarios Coin,岩竜のコイン,岩龙的硬币
+BASARIOS_SHELL,Basarios Shell,岩竜の甲殻,岩龙的甲壳
+BASARIOS_TEARS,Basarios Tears,岩竜の涙,岩龙的泪
+BASARIOS_WING,Basarios Wing,岩竜の翼,岩龙的翼
+BATTLE_CAP,Battle Cap,バトルキャップ,战斗软帽
+BATTLE_CAP_PLUS,Battle Cap+,バトルＧキャップ,战斗Ｇ软帽
+BATTLE_CAP_S,Battle Cap S,バトルＳキャップ,战斗Ｓ软帽
+BATTLE_CAP_U,Battle Cap U,バトルＵキャップ,战斗Ｕ软帽
+BATTLE_COAT,Battle Coat,バトルコート,战斗围腰
+BATTLE_COAT_PLUS,Battle Coat+,バトルＧコート,战斗Ｇ围腰
+BATTLE_COAT_S,Battle Coat S,バトルＳコート,战斗Ｓ围腰
+BATTLE_COAT_U,Battle Coat U,バトルＵコート,战斗Ｕ围腰
+BATTLE_GREAVES,Battle Greaves,バトルグリーヴ,战斗胫甲
+BATTLE_GREAVES_PLUS,Battle Greaves+,バトルＧグリーヴ,战斗Ｇ胫甲
+BATTLE_GREAVES_S,Battle Greaves S,バトルＳグリーヴ,战斗Ｓ胫甲
+BATTLE_GREAVES_U,Battle Greaves U,バトルＵグリーヴ,战斗Ｕ胫甲
+BATTLE_GUARDS,Battle Guards,バトルガード,战斗护臂
+BATTLE_GUARDS_PLUS,Battle Guards+,バトルＧガード,战斗Ｇ护臂
+BATTLE_GUARDS_S,Battle Guards S,バトルＳガード,战斗Ｓ护臂
+BATTLE_GUARDS_U,Battle Guards U,バトルＵガード,战斗Ｕ护臂
+BATTLE_HELM,Battle Helm,バトルヘルム,战斗头铠
+BATTLE_HELM_PLUS,Battle Helm+,バトルＧヘルム,战斗Ｇ头铠
+BATTLE_HELM_S,Battle Helm S,バトルＳヘルム,战斗Ｓ头铠
+BATTLE_HELM_U,Battle Helm U,バトルＵヘルム,战斗Ｕ头铠
+BATTLE_LEGGINGS,Battle Leggings,バトルレギンス,战斗护胫
+BATTLE_LEGGINGS_PLUS,Battle Leggings+,バトルＧレギンス,战斗Ｇ护胫
+BATTLE_LEGGINGS_S,Battle Leggings S,バトルＳレギンス,战斗Ｓ护胫
+BATTLE_LEGGINGS_U,Battle Leggings U,バトルＵレギンス,战斗Ｕ护胫
+BATTLE_MAIL,Battle Mail,バトルメイル,战斗铠甲
+BATTLE_MAIL_PLUS,Battle Mail+,バトルＧメイル,战斗Ｇ铠甲
+BATTLE_MAIL_S,Battle Mail S,バトルＳメイル,战斗Ｓ铠甲
+BATTLE_MAIL_U,Battle Mail U,バトルＵメイル,战斗Ｕ铠甲
+BATTLE_TASSET,Battle Tasset,バトルフォールド,战斗腰甲
+BATTLE_TASSET_PLUS,Battle Tasset+,バトルＧフォールド,战斗Ｇ腰甲
+BATTLE_TASSET_S,Battle Tasset S,バトルＳフォールド,战斗Ｓ腰甲
+BATTLE_TASSET_U,Battle Tasset U,バトルＵフォールド,战斗Ｕ腰甲
+BATTLE_VAMBRACES,Battle Vambraces,バトルアーム,战斗臂甲
+BATTLE_VAMBRACES_PLUS,Battle Vambraces+,バトルＧアーム,战斗Ｇ臂甲
+BATTLE_VAMBRACES_S,Battle Vambraces S,バトルＳアーム,战斗Ｓ臂甲
+BATTLE_VAMBRACES_U,Battle Vambraces U,バトルＵアーム,战斗Ｕ臂甲
+BATTLE_VEST,Battle Vest,バトルレジスト,战斗轻甲
+BATTLE_VEST_PLUS,Battle Vest+,バトルＧレジスト,战斗Ｇ轻甲
+BATTLE_VEST_S,Battle Vest S,バトルＳレジスト,战斗Ｓ轻甲
+BATTLE_VEST_U,Battle Vest U,バトルＵレジスト,战斗Ｕ轻甲
+BISHOP_ROOM,Bishop Room,ビショップ,主教客房
+BLACK_BELT_GREAVES,Black Belt Greaves,クロオビグリーヴ,黑带胫甲
+BLACK_BELT_HELM,Black Belt Helm,クロオビヘルム,黑带头铠
+BLACK_BELT_MAIL,Black Belt Mail,クロオビメイル,黑带铠甲
+BLACK_BELT_TASSET,Black Belt Tasset,クロオビフォールド,黑带腰甲
+BLACK_BELT_VAMBRACES,Black Belt Vambraces,クロオビアーム,黑带臂甲
+BLACK_DIABLOS_SHELL,Black Diablos Shell,黒角竜の甲殻,黑角龙的甲壳
+BLACK_DIABLOS_SPINE,Black Diablos Spine,黒角竜の背甲,黑角龙的背甲
+BLACK_DIABLOS_TAIL,Black Diablos Tail,黒角竜の尻尾,黑角龙的尻尾
+BLACK_GRAVIOS_CARAPACE,Black Gravios Carapace,黒鎧竜の堅殻,黑铠龙的坚壳
+BLACK_GRAVIOS_HEAD,Black Gravios Head,黒鎧竜の頭,黑铠龙的头
+BLACK_GRAVIOS_SHELL,Black Gravios Shell,黒鎧竜の甲殻,黑铠龙的甲壳
+BLACK_GRAVIOS_WING,Black Gravios Wing,黒鎧竜の翼,黑铠龙的翼
+BLACK_PIERCING,Black Piercing,ブラックピアス,幽玄耳饰
+BLACK_PIERCING_PLUS,Black Piercing+,ブラックＧピアス,幽玄Ｇ耳饰
+BLACK_PIERCING_S,Black Piercing S,ブラックＳピアス,幽玄Ｓ耳饰
+BLADEMASTER,Blademaster,剣士,剑士
+BLUE_KUT_KU_EAR,Blue Kut-Ku Ear,青怪鳥の耳,青怪鸟的耳
+BLUE_KUT_KU_SHELL,Blue Kut-Ku Shell,黒角竜の背甲,黑角龙的背甲
+BLUE_KUT_KU_WEBBING,Blue Kut-Ku Webbing,青怪鳥の翼膜,青怪鸟的翼膜
+BLUE_PANTS,Blue Pants,ブルージャージー,蓝色束裤
+BLUE_PANTS_PLUS,Blue Pants+,ブルーＧジャージー,蓝色Ｇ束裤
+BLUE_PANTS_S,Blue Pants S,ブルーＳジャージー,蓝色Ｓ束裤
+BLUE_PIERCING,Blue Piercing,ブルーピアス,苍流耳饰
+BLUE_PIERCING_PLUS,Blue Piercing+,ブルーＧピアス,苍流Ｇ耳饰
+BLUE_PIERCING_S,Blue Piercing S,ブルーＳピアス,苍流Ｓ耳饰
+BLUNT_SKILL,Blunt,なまくら,钝刀
+BOMBER_ACTIVATED,Bomber,ボマー,炸弹客
+BOMBER_SKILL,Bomber,爆弾強化,爆弹强化
+BONE,Bone,堅竜骨,坚龙骨
+BONE_CAP,Bone Cap,ボーンキャップ,骸骨软帽
+BONE_CAP_PLUS,Bone Cap+,ボーンＧキャップ,骸骨Ｇ软帽
+BONE_CAP_S,Bone Cap S,ボーンＳキャップ,骸骨Ｓ软帽
+BONE_CAP_U,Bone Cap U,ボーンＵキャップ,骸骨Ｕ软帽
+BONE_COAT,Bone Coat,ボーンコート,骸骨围腰
+BONE_COAT_PLUS,Bone Coat+,ボーンＧコート,骸骨Ｇ围腰
+BONE_COAT_S,Bone Coat S,ボーンＳコート,骸骨Ｓ围腰
+BONE_COAT_U,Bone Coat U,ボーンＵコート,骸骨Ｕ围腰
+BONE_GREAVES,Bone Greaves,ボーングリーヴ,骸骨胫甲
+BONE_GREAVES_PLUS,Bone Greaves+,ボーンＧグリーヴ,骸骨Ｇ胫甲
+BONE_GREAVES_S,Bone Greaves S,ボーンＳグリーヴ,骸骨Ｓ胫甲
+BONE_GREAVES_U,Bone Greaves U,ボーンＵグリーヴ,骸骨Ｕ胫甲
+BONE_GUARDS,Bone Guards,ボーンガード,骸骨护臂
+BONE_GUARDS_PLUS,Bone Guards+,ボーンＧガード,骸骨Ｇ护臂
+BONE_GUARDS_S,Bone Guards S,ボーンＳガード,骸骨Ｓ护臂
+BONE_GUARDS_U,Bone Guards U,ボーンＵガード,骸骨Ｕ护臂
+BONE_HELM,Bone Helm,ボーンヘルム,骸骨头铠
+BONE_HELM_PLUS,Bone Helm+,ボーンＧヘルム,骸骨Ｇ头铠
+BONE_HELM_S,Bone Helm S,ボーンＳヘルム,骸骨Ｓ头铠
+BONE_HELM_U,Bone Helm U,ボーンＵヘルム,骸骨Ｕ头铠
+BONE_LEGGINGS,Bone Leggings,ボーンレギンス,骸骨护胫
+BONE_LEGGINGS_PLUS,Bone Leggings+,ボーンＧレギンス,骸骨Ｇ护胫
+BONE_LEGGINGS_S,Bone Leggings S,ボーンＳレギンス,骸骨Ｓ护胫
+BONE_LEGGINGS_U,Bone Leggings U,ボーンＵレギンス,骸骨Ｕ护胫
+BONE_MAIL,Bone Mail,ボーンメイル,骸骨铠甲
+BONE_MAIL_PLUS,Bone Mail+,ボーンＧメイル,骸骨Ｇ铠甲
+BONE_MAIL_S,Bone Mail S,ボーンＳメイル,骸骨Ｓ铠甲
+BONE_MAIL_U,Bone Mail U,ボーンＵメイル,骸骨Ｕ铠甲
+BONE_TASSET,Bone Tasset,ボーンフォールド,骸骨腰甲
+BONE_TASSET_PLUS,Bone Tasset+,ボーンＧフォールド,骸骨Ｇ腰甲
+BONE_TASSET_S,Bone Tasset S,ボーンＳフォールド,骸骨Ｓ腰甲
+BONE_TASSET_U,Bone Tasset U,ボーンＵフォールド,骸骨Ｕ腰甲
+BONE_VAMBRACES,Bone Vambraces,ボーンアーム,骸骨臂甲
+BONE_VAMBRACES_PLUS,Bone Vambraces+,ボーンＧアーム,骸骨Ｇ臂甲
+BONE_VAMBRACES_S,Bone Vambraces S,ボーンＳアーム,骸骨Ｓ臂甲
+BONE_VAMBRACES_U,Bone Vambraces U,ボーンＵアーム,骸骨Ｕ臂甲
+BONE_VEST,Bone Vest,ボーンレジスト,骸骨轻甲
+BONE_VEST_PLUS,Bone Vest+,ボーンＧレジスト,骸骨Ｇ轻甲
+BONE_VEST_S,Bone Vest S,ボーンＳレジスト,骸骨Ｓ轻甲
+BONE_VEST_U,Bone Vest U,ボーンＵレジスト,骸骨Ｕ轻甲
+BOOTS,Boots,ブーツ,脚装备
+BOREALIS_CHEST,Borealis Chest,凛【胸当て】,凛【胸当】
+BOREALIS_CHEST_HAKU,Borealis Chest Haku,凛・覇【胸当て】,凛・霸【胸当】
+BOREALIS_CHEST_MAI,Borealis Chest Mai,凛・羅【胸当て】,凛・罗【胸当】
+BOREALIS_CHEST_TEN,Borealis Chest Ten,凛・皇【胸当て】,凛・皇【胸当】
+BOREALIS_CROWN,Borealis Crown,凛【鉢金】,凛【钵金】
+BOREALIS_CROWN_HAKU,Borealis Crown Haku,凛・覇【鉢金】,凛・霸【钵金】
+BOREALIS_CROWN_MAI,Borealis Crown Mai,凛・羅【鉢金】,凛・罗【钵金】
+BOREALIS_CROWN_TEN,Borealis Crown Ten,凛・皇【鉢金】,凛・皇【钵金】
+BOREALIS_GAUNTLETS,Borealis Gauntlets,凛【篭手】,凛【笼手】
+BOREALIS_GAUNTLETS_HAKU,Borealis Gauntlets Haku,凛・覇【篭手】,凛・霸【笼手】
+BOREALIS_GAUNTLETS_MAI,Borealis Gauntlets Mai,凛・羅【篭手】,凛・罗【笼手】
+BOREALIS_GAUNTLETS_TEN,Borealis Gauntlets Ten,凛・皇【篭手】,凛・皇【笼手】
+BOREALIS_PANTS,Borealis Pants,凛【袴】,凛【裤】
+BOREALIS_PANTS_HAKU,Borealis Pants Haku,凛・覇【袴】,凛・霸【裤】
+BOREALIS_PANTS_MAI,Borealis Pants Mai,凛・羅【袴】,凛・罗【裤】
+BOREALIS_PANTS_TEN,Borealis Pants Ten,凛・皇【袴】,凛・皇【裤】
+BOREALIS_TASSET,Borealis Tasset,凛【腰当て】,凛【腰当】
+BOREALIS_TASSET_HAKU,Borealis Tasset Haku,凛・覇【腰当て】,凛・霸【腰当】
+BOREALIS_TASSET_MAI,Borealis Tasset Mai,凛・羅【腰当て】,凛・罗【腰当】
+BOREALIS_TASSET_TEN,Borealis Tasset Ten,凛・皇【腰当て】,凛・皇【腰当】
+BULLFANGO_HEAD,Bullfango Head,ファンゴの頭,大野猪的头
+BULLFANGO_HIDE,Bullfango Hide,ファンゴの毛皮,大野猪的毛皮
+BULLFANGO_MASK,Bullfango Mask,ブルファンゴフェイク,大野猪伪装头
+BULLFANGO_MASK_PLUS,Bullfango Mask+,ブルＧフェイク,大野猪Ｇ伪装头
+BULLFANGO_MASK_S,Bullfango Mask S,ブルＳフェイク,大野猪Ｓ伪装头
+BUYING_PRICE,Buy,買い値,
+CANCEL,Cancel,止める,
+CARBALITE_ORE,Carbalite Ore,カブレライト鉱石,灵鹤石
+CEPHADROME_TOP_FIN,Cephadrome Top Fin,砂竜の背ビレ,砂龙的背鳍
+CEPHALOS_CAP,Cephalos Cap,ガレオスキャップ,砂龙软帽
+CEPHALOS_CAP_PLUS,Cephalos Cap+,ガレオスＧキャップ,砂龙Ｇ软帽
+CEPHALOS_CAP_S,Cephalos Cap S,ガレオスＳキャップ,砂龙Ｓ软帽
+CEPHALOS_CAP_U,Cephalos Cap U,ガレオスＵキャップ,砂龙Ｕ软帽
+CEPHALOS_COAT,Cephalos Coat,ガレオスコート,砂龙围腰
+CEPHALOS_COAT_PLUS,Cephalos Coat+,ガレオスＧコート,砂龙Ｇ围腰
+CEPHALOS_COAT_S,Cephalos Coat S,ガレオスＳコート,砂龙Ｓ围腰
+CEPHALOS_COAT_U,Cephalos Coat U,ガレオスＵコート,砂龙Ｕ围腰
+CEPHALOS_COIN,Cephalos Coin,砂竜のコイン,砂龙的硬币
+CEPHALOS_FIN,Cephalos Fin,砂竜のヒレ,砂龙的鳍
+CEPHALOS_GREAVES,Cephalos Greaves,ガレオスグリーヴ,砂龙胫甲
+CEPHALOS_GREAVES_PLUS,Cephalos Greaves+,ガレオスＧグリーヴ,砂龙Ｇ胫甲
+CEPHALOS_GREAVES_S,Cephalos Greaves S,ガレオスＳグリーヴ,砂龙Ｓ胫甲
+CEPHALOS_GREAVES_U,Cephalos Greaves U,ガレオスＵグリーヴ,砂龙Ｕ胫甲
+CEPHALOS_GUARDS,Cephalos Guards,ガレオスガード,砂龙护臂
+CEPHALOS_GUARDS_PLUS,Cephalos Guards+,ガレオスＧガード,砂龙Ｇ护臂
+CEPHALOS_GUARDS_S,Cephalos Guards S,ガレオスＳガード,砂龙Ｓ护臂
+CEPHALOS_GUARDS_U,Cephalos Guards U,ガレオスＵガード,砂龙Ｕ护臂
+CEPHALOS_HELM,Cephalos Helm,ガレオスヘルム,砂龙头铠
+CEPHALOS_HELM_PLUS,Cephalos Helm+,ガレオスＧヘルム,砂龙Ｇ头铠
+CEPHALOS_HELM_S,Cephalos Helm S,ガレオスＳヘルム,砂龙Ｓ头铠
+CEPHALOS_HELM_U,Cephalos Helm U,ガレオスＵヘルム,砂龙Ｕ头铠
+CEPHALOS_LEGGINGS,Cephalos Leggings,ガレオスレギンス,砂龙护胫
+CEPHALOS_LEGGINGS_PLUS,Cephalos Leggings+,ガレオスＧレギンス,砂龙Ｇ护胫
+CEPHALOS_LEGGINGS_S,Cephalos Leggings S,ガレオスＳレギンス,砂龙Ｓ护胫
+CEPHALOS_LEGGINGS_U,Cephalos Leggings U,ガレオスＵレギンス,砂龙Ｕ护胫
+CEPHALOS_MAIL,Cephalos Mail,ガレオスメイル,砂龙铠甲
+CEPHALOS_MAIL_PLUS,Cephalos Mail+,ガレオスＧメイル,砂龙Ｇ铠甲
+CEPHALOS_MAIL_S,Cephalos Mail S,ガレオスＳメイル,砂龙Ｓ铠甲
+CEPHALOS_MAIL_U,Cephalos Mail U,ガレオスＵメイル,砂龙Ｕ铠甲
+CEPHALOS_SCALE,Cephalos Scale,砂竜の鱗,砂龙的鳞
+CEPHALOS_SCALE_PLUS,Cephalos Scale+,砂竜の上鱗,砂龙的上鳞
+CEPHALOS_TASSET,Cephalos Tasset,ガレオスフォールド,砂龙腰甲
+CEPHALOS_TASSET_PLUS,Cephalos Tasset+,ガレオスＧフォールド,砂龙Ｇ腰甲
+CEPHALOS_TASSET_S,Cephalos Tasset S,ガレオスＳフォールド,砂龙Ｓ腰甲
+CEPHALOS_TASSET_U,Cephalos Tasset U,ガレオスＵフォールド,砂龙Ｕ腰甲
+CEPHALOS_VAMBRACES,Cephalos Vambraces,ガレオスアーム,砂龙臂甲
+CEPHALOS_VAMBRACES_PLUS,Cephalos Vambraces+,ガレオスＧアーム,砂龙Ｇ臂甲
+CEPHALOS_VAMBRACES_S,Cephalos Vambraces S,ガレオスＳアーム,砂龙Ｓ臂甲
+CEPHALOS_VAMBRACES_U,Cephalos Vambraces U,ガレオスＵアーム,砂龙Ｕ臂甲
+CEPHALOS_VEST,Cephalos Vest,ガレオスレジスト,砂龙轻甲
+CEPHALOS_VEST_PLUS,Cephalos Vest+,ガレオスＧレジスト,砂龙Ｇ轻甲
+CEPHALOS_VEST_S,Cephalos Vest S,ガレオスＳレジスト,砂龙Ｓ轻甲
+CEPHALOS_VEST_U,Cephalos Vest U,ガレオスＵレジスト,砂龙Ｕ轻甲
+CHAIN_BELT,Chain Belt,チェーンライトベルト,轻链腰带
+CHAIN_BELT_PLUS,Chain Belt+,Ｃ・ライトＧベルト,轻链Ｇ腰带
+CHAIN_BELT_S,Chain Belt S,Ｃ・ライトＳベルト,轻链Ｓ腰带
+CHAIN_HELM,Chain Helm,チェーンヘルム,锁链头铠
+CHAIN_HELM_PLUS,Chain Helm+,チェーンＧヘルム,锁链Ｇ头铠
+CHAIN_HELM_S,Chain Helm S,チェーンＳヘルム,锁链Ｓ头铠
+CHAIN_MAIL,Chain Mail,チェーンメイル,锁链铠甲
+CHAIN_MAIL_PLUS,Chain Mail+,チェーンＧメイル,锁链Ｇ铠甲
+CHAIN_MAIL_S,Chain Mail S,チェーンＳメイル,锁链Ｓ铠甲
+CHAIN_VAMBRACES,Chain Vambraces,チェーンアーム,锁链臂甲
+CHAIN_VAMBRACES_PLUS,Chain Vambraces+,チェーンＧアーム,锁链Ｇ臂甲
+CHAIN_VAMBRACES_S,Chain Vambraces S,チェーンＳアーム,锁链Ｓ臂甲
+CHINESE,Chinese (Simplified),中国語,汉语
+CHROME_METAL_BOOTS,Chrome Metal Boots,クロムメタルブーツ,合金靴・阳
+CHROME_METAL_BOOTS_PLUS,Chrome Metal Boots+,クロムメタルＧブーツ,合金Ｇ靴・阳
+CHROME_METAL_BOOTS_S,Chrome Metal Boots S,クロムメタルＳブーツ,合金Ｓ靴・阳
+CHROME_METAL_COAT,Chrome Metal Coat,クロムメタルコイル,合金扣带・阳
+CHROME_METAL_COAT_PLUS,Chrome Metal Coat+,クロムメタルＧコイル,合金Ｇ扣带・阳
+CHROME_METAL_COAT_S,Chrome Metal Coat S,クロムメタルＳコイル,合金Ｓ扣带・阳
+CLUST_S_ADD,Clust S Add,拡散弾追加,扩散弹追加
+CLUST_S_ADD_1,Clust S Add 1,拡散弾ＬＶ１追加,扩散弹LV1追加
+CLUST_S_ADD_2,Clust S Add 2,拡散弾ＬＶ1&2追加,扩散弹LV1&2追加
+CLUST_S_ADD_3,Clust S Add 3,拡散弾全レベル追加,扩散弹全等级追加
+COLD_DOUBLED,Cold Doubled,寒さ倍加【×2】,寒冷倍加【×2】
+COLD_HALVED,Cold Halved,寒さ半減,寒冷半减
+COLD_NEGATED_MH1,Anti-Cold,寒さ無効,寒冷无效
+COLD_NEGATED_MHG,Cold Negated,寒さ無効,寒冷无效
+COLD_RES,Cold Res,耐寒,耐寒
+COLD_X_1_5,Cold x1.5,寒さ倍加【×1.5】,寒冷倍加【×1.5】
+COMBINE_SUCCESS,Combine Success,調合成功率,调合成功率
+COMBINE_SUCCESS_MINUS_10,Combine Success -10%,調合成功率-10%,调合成功率-10%
+COMBINE_SUCCESS_MINUS_15,Combine Success -15%,調合成功率-15%,调合成功率-15%
+COMBINE_SUCCESS_MINUS_5,Combine Success -5%,調合成功率-5%,调合成功率-5%
+COMBINE_SUCCESS_PLUS_10,Combine Success +10%,調合成功率+10%,调合成功率+10%
+COMBINE_SUCCESS_PLUS_20,Combine Success +20%,調合成功率+20%,调合成功率+20%
+COMBINE_SUCCESS_PLUS_5,Combine Success +5%,調合成功率+5%,调合成功率+5%
+COMMENDATION,Commendation,勇気の証,勇气之证
+CORAL_CEPHALOS_FIN,Coral Cephalos Fin,砂竜の桃ヒレ,砂龙的桃鳍
+CORAL_CEPHALOS_SCALE,Coral Cephalos Scale,砂竜の紫鱗,砂龙的紫鳞
+COST,Cost,価格,费用
+CRAG_S_ADD,Crag S Add,榴弾追加,榴弹追加
+CRAG_S_ADD_1,Crag S Add 1,徹甲榴弾ＬＶ１追加,彻甲榴弹LV1追加
+CRAG_S_ADD_2,Crag S Add 2,徹甲榴弾ＬＶ1&2追加,彻甲榴弹LV1&2追加
+CRAG_S_ADD_3,Crag S Add 3,徹甲榴弾全レベル追加,彻甲榴弹全等级追加
+CREAM_PANTS,Cream Pants,クリームジャージー,米色束裤
+CRIMSON_HORN,Crimson Horn,真紅の角,真红之角
+DARK_METAL_BOOTS,Dark Metal Boots,ダークメタルブーツ,合金靴・暗
+DARK_METAL_BOOTS_PLUS,Dark Metal Boots+,ダークメタルＧブーツ,合金Ｇ靴・暗
+DARK_METAL_BOOTS_S,Dark Metal Boots S,ダークメタルＳブーツ,合金Ｓ靴・暗
+DEFENSE_MINUS_10,Defense -10,防御-10,防御-10
+DEFENSE_MINUS_15,Defense -15,防御-15,防御-15
+DEFENSE_MINUS_20,Defense -20,防御-20,防御-20
+DEFENSE_PLUS_10,Defense + 10,防御力+10,防御力+10
+DEFENSE_PLUS_10,Defense +10,防御+10,防御+10
+DEFENSE_PLUS_15,Defense +15,防御+15,防御+15
+DEFENSE_PLUS_20,Defense +20,防御+20,防御+20
+DEFENSE_PLUS_5,Defense + 5,防御力+5,防御力+5
+DEFENSE_SKILL,Defense,防御,防御
+DEFENSE_STAT,Defense,防御,防御
+DEMONIC_PROTECTION,Demonic Protection,悪霊の加護,恶灵的加护
+DETECT,Detect,探知,探知
+DEVILS_WHIM,Devil's Whim,悪魔の気まぐれ,恶魔的反覆无常
+DIABLO_CAP,Diablo Cap,ディアブロキャップ,角龙软帽
+DIABLO_CAP_PLUS,Diablo Cap+,ディアブロＧキャップ,角龙Ｇ软帽
+DIABLO_CAP_S,Diablo Cap S,ディアブロＳキャップ,角龙Ｓ软帽
+DIABLO_CAP_U,Diablo Cap U,ディアブロＵキャップ,角龙Ｕ软帽
+DIABLO_GUARDS,Diablo Guards,ディアブロガード,角龙护臂
+DIABLO_GUARDS_PLUS,Diablo Guards+,ディアブロＧガード,角龙Ｇ护臂
+DIABLO_GUARDS_S,Diablo Guards S,ディアブロＳガード,角龙Ｓ护臂
+DIABLO_GUARDS_U,Diablo Guards U,ディアブロＵガード,角龙Ｕ护臂
+DIABLO_HELM,Diablo Helm,ディアブロヘルム,角龙头铠
+DIABLO_HELM_PLUS,Diablo Helm+,ディアブロＧヘルム,角龙Ｇ头铠
+DIABLO_HELM_S,Diablo Helm S,ディアブロＳヘルム,角龙Ｓ头铠
+DIABLO_HELM_U,Diablo Helm U,ディアブロＵヘルム,角龙Ｕ头铠
+DIABLO_MAIL,Diablo Mail,ディアブロメイル,角龙铠甲
+DIABLO_MAIL_PLUS,Diablo Mail+,ディアブロＧメイル,角龙Ｇ铠甲
+DIABLO_MAIL_S,Diablo Mail S,ディアブロＳメイル,角龙Ｓ铠甲
+DIABLO_MAIL_U,Diablo Mail U,ディアブロＵメイル,角龙Ｕ铠甲
+DIABLO_VAMBRACES,Diablo Vambraces,ディアブロアーム,角龙臂甲
+DIABLO_VAMBRACES_PLUS,Diablo Vambraces+,ディアブロＧアーム,角龙Ｇ臂甲
+DIABLO_VAMBRACES_S,Diablo Vambraces S,ディアブロＳアーム,角龙Ｓ臂甲
+DIABLO_VAMBRACES_U,Diablo Vambraces U,ディアブロＵアーム,角龙Ｕ臂甲
+DIABLO_VEST,Diablo Vest,ディアブロレジスト,角龙轻甲
+DIABLO_VEST_PLUS,Diablo Vest+,ディアブロＧレジスト,角龙Ｇ轻甲
+DIABLO_VEST_S,Diablo Vest S,ディアブロＳレジスト,角龙Ｓ轻甲
+DIABLO_VEST_U,Diablo Vest U,ディアブロＵレジスト,角龙Ｕ轻甲
+DIABLOS_CARAPACE,Diablos Carapace,黒角竜の甲殻,黑角龙的甲壳
+DIABLOS_SHELL,Diablos Shell,角竜の甲殻,角龙的甲壳
+DIABLOS_SPINE,Diablos Spine,角竜の背甲,角龙的背甲
+DIABLOS_THORACIC,Diablos Thoracic,角竜の堅甲,角龙的坚甲
+DISASTER,Disaster,災難,灾难
+DISC_STONE,Disc Stone,円盤石,圆盘石
+DIVINE_PROTECTION,Divine Protection,精霊の加護,精灵的加护
+DIVINE_TOOLSAVER,Divine Toolsaver,神のきまぐれ,神的反复无常
+DIVINE_WHIM,Divine Whim,神の気まぐれ,神的反覆无常
+DRAGON_MINUS_10_MH1,Dragon - 10,龍耐性－10,龍耐性－10
+DRAGON_MINUS_10_MHG,Dragon Res -10,龍耐性-10,龍耐性-10
+DRAGON_MINUS_3_MHG,Dragon Res -3,龍耐性-3,龍耐性-3
+DRAGON_MINUS_5_MHG,Dragon Res -5,龍耐性-5,龍耐性-5
+DRAGON_PLUS_10_MHG,Dragon Res +10,龍耐性+10,龍耐性+10
+DRAGON_PLUS_25_MH1,Dragon + 25,龍耐性＋25,龍耐性＋25
+DRAGON_PLUS_3_MHG,Dragon Res +3,龍耐性+3,龍耐性+3
+DRAGON_PLUS_5_MHG,Dragon Res +5,龍耐性+5,龍耐性+5
+DRAGON_RESISTANCE,Dragon Resistance,龍耐性,龍耐性
+DRAGON_SEED,Dragon Seed,龍殺しの実,杀龍果
+DRAGONCLAW,Dragonclaw,ドラゴンクロウ,邪龍之爪
+DRAGONCLAW_PLUS,Dragonclaw+,ドラゴンＧクロウ,邪龍Ｇ之爪
+DRAGONCLAW_S,Dragonclaw S,ドラゴンＳクロウ,邪龍Ｓ之爪
+DRAGONFACE,Dragonface,ドラゴンフェイス,邪龍之面
+DRAGONFACE_PLUS,Dragonface+,ドラゴンＧフェイス,邪龍Ｇ之面
+DRAGONFACE_S,Dragonface S,ドラゴンＳフェイス,邪龍Ｓ之面
+DRAGONFEET,Dragonfeet,ドラゴンフット,邪龍之足
+DRAGONFEET_PLUS,Dragonfeet+,ドラゴンＧフット,邪龍Ｇ之足
+DRAGONFEET_S,Dragonfeet S,ドラゴンＳフット,邪龍Ｓ之足
+DRAGONFIST,Dragonfist,ドラゴンフィスト,邪龍之拳
+DRAGONFIST_PLUS,Dragonfist+,ドラゴンＧフィスト,邪龍Ｇ之拳
+DRAGONFIST_S,Dragonfist S,ドラゴンＳフィスト,邪龍Ｓ之拳
+DRAGONHEAD,Dragonhead,ドラゴンヘッド,邪龍之首
+DRAGONHEAD_PLUS,Dragonhead+,ドラゴンＧヘッド,邪龍Ｇ之首
+DRAGONHEAD_S,Dragonhead S,ドラゴンＳヘッド,邪龍Ｓ之首
+DRAGONHIDE,Dragonhide,ドラゴンハイド,邪龍之皮
+DRAGONHIDE_PLUS,Dragonhide+,ドラゴンＧハイド,邪龍Ｇ之皮
+DRAGONHIDE_S,Dragonhide S,ドラゴンＳハイド,邪龍Ｓ之皮
+DRAGONITE_ORE,Dragonite Ore,ドラグライト鉱石,辉龙石
+DRAGONLEGS,Dragonlegs,ドラゴンレグス,邪龍之胫
+DRAGONLEGS_PLUS,Dragonlegs+,ドラゴンＧレグス,邪龍Ｇ之胫
+DRAGONLEGS_S,Dragonlegs S,ドラゴンＳレグス,邪龍Ｓ之胫
+DRAGONSKIN,Dragonskin,ドラゴンスキン,邪龍之肤
+DRAGONSKIN_PLUS,Dragonskin+,ドラゴンＧスキン,邪龍Ｇ之肤
+DRAGONSKIN_S,Dragonskin S,ドラゴンＳスキン,邪龍Ｓ之肤
+DRAGONTAIL,Dragontail,ドラゴンテイル,邪龍之尾
+DRAGONTAIL_PLUS,Dragontail+,ドラゴンＧテイル,邪龍Ｇ之尾
+DRAGONTAIL_S,Dragontail S,ドラゴンＳテイル,邪龍Ｓ之尾
+DRAGONWINGS,Dragonwings,ドラゴンウィング,邪龍之翼
+DRAGONWINGS_PLUS,Dragonwings+,ドラゴンＧウィング,邪龍Ｇ之翼
+DRAGONWINGS_S,Dragonwings S,ドラゴンＳウィング,邪龍Ｓ之翼
+EARLY_BIRD_PIERCING,Early Bird Piercing,ハヤテのピアス,疾风耳饰
+EARPLUGS_HIGH,High Grade Earplugs,高級耳栓,高级耳栓
+EARPLUGS_LOW,Earplugs,耳栓,耳栓
+EARPLUGS_SKILL,Earplugs,聴覚保護,听觉保护
+EARTH_CRYSTAL,Earth Crystal,大地の結晶,大地的结晶
+EATING_PLUS_1,Eating +1,まんぷく+1,饱腹+1
+EATING_PLUS_2,Eating +2,まんぷく+2,饱腹+2
+EGG_TICKET,Egg Ticket,たまご券,蛋券
+ELECTRO_SAC,Electro Sac,電気袋,电气袋
+ELEMENT_RES_MINUS_10,Element Res -10,各耐性-10,各耐性-10
+ELEMENT_RES_MINUS_3,Element Res -3,各耐性-3,各耐性-3
+ELEMENT_RES_MINUS_5,Element Res -5,各耐性-5,各耐性-5
+ELEMENT_RES_PLUS_10,Element Res +10,各耐性+10,各耐性+10
+ELEMENT_RES_PLUS_3,Element Res +3,各耐性+3,各耐性+3
+ELEMENT_RES_PLUS_5,Element Res +5,各耐性+5,各耐性+5
+ELEMENT_RES_UP,Element Res Up,全耐性ＵＰ,全耐性UP
+ENABLE_ARMOR_RESTRICTIONS,Enable Armor Restrictions,,启用防具类型限制
+ENGLISH,English,英語,英语
+ESP,ESP,心眼,心眼
+EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
+FACE,Face,,面容
+FACE_1,Face 1,,面容1
+FACE_10,Face 10,,面容10
+FACE_11,Face 11,,面容11
+FACE_12,Face 12,,面容12
+FACE_13,Face 13,,面容13
+FACE_14,Face 14,,面容14
+FACE_15,Face 15,,面容15
+FACE_16,Face 16,,面容16
+FACE_17,Face 17,,面容17
+FACE_18,Face 18,,面容18
+FACE_19,Face 19,,面容19
+FACE_2,Face 2,,面容2
+FACE_20,Face 20,,面容20
+FACE_21,Face 21,,面容21
+FACE_22,Face 22,,面容22
+FACE_23,Face 23,,面容23
+FACE_24,Face 24,,面容24
+FACE_3,Face 3,,面容3
+FACE_4,Face 4,,面容4
+FACE_5,Face 5,,面容5
+FACE_6,Face 6,,面容6
+FACE_7,Face 7,,面容7
+FACE_8,Face 8,,面容8
+FACE_9,Face 9,,面容9
+FARSIGHT,Farsight,地図常備,地图常备
+FATALIS_CRIMSON_CHEST_SHELL,Fatalis' Crimson Chest Shell,黒龍の紅胸殻,黑龍的红胸壳
+FATALIS_CRIMSON_HORN,Fatalis' Crimson Horn,黒龍の紅角,黑龍的红角
+FATALIS_CRIMSON_SCALE,Fatalis' Crimson Scale,黒龍の紅鱗,黑龍的红鳞
+FATALIS_CRIMSON_SHELL,Fatalis' Crimson Shell,黒龍の紅殻,黑龍的红壳
+FATALIS_CRIMSON_WING,Fatalis' Crimson Wing,黒龍の紅翼,黑龍的红翼
+FATALIS_CRIMSONCLAW,Fatalis Crimsonclaw,ミラバルカンクロウ,魔龍之爪
+FATALIS_CRIMSONFACE,Fatalis Crimsonface,ミラバルカンフェイス,魔龍之面
+FATALIS_CRIMSONFEET,Fatalis Crimsonfeet,ミラバルカンフット,魔龍之足
+FATALIS_CRIMSONFIST,Fatalis Crimsonfist,ミラバルカンフィスト,魔龍之拳
+FATALIS_CRIMSONHEAD,Fatalis Crimsonhead,ミラバルカンヘッド,魔龍之首
+FATALIS_CRIMSONHIDE,Fatalis Crimsonhide,ミラバルカンハイド,魔龍之皮
+FATALIS_CRIMSONLEGS,Fatalis Crimsonlegs,ミラバルカンレグス,魔龍之胫
+FATALIS_CRIMSONSKIN,Fatalis Crimsonskin,ミラバルカンスキン,魔龍之肤
+FATALIS_CRIMSONTAIL,Fatalis Crimsontail,ミラバルカンテイル,魔龍之尾
+FATALIS_CRIMSONWING,Fatalis Crimsonwing,ミラバルカンウィング,魔龍之翼
+FATALIS_CRUST,Fatalis' Crust,黒龍の堅殻,黑龍的坚壳
+FATALIS_CRUST_PLUS,Fatalis' Crust+,黒龍の堅胸殻,黑龍的坚胸壳
+FATALIS_DEVIL_EYE,Fatalis' Devil Eye,黒龍の魔眼,黑龍的魔眼
+FATALIS_EVIL_EYE,Fatalis' Evil Eye,黒龍の邪眼,黑龍的邪眼
+FATALIS_EYE,Fatalis' Eye,黒龍の眼,黑龍的眼
+FATALIS_EYE_PLUS,Fatalis' Eye+,黒龍の鋭眼,黑龍的锐眼
+FATALIS_GORE,Fatalis' Gore,黒龍の鋭角,黑龍的锐角
+FATALIS_HEAVY_CHEST_SHELL,Fatalis' Heavy Chest Shell,黒龍の重胸殻,黑龍的重胸壳
+FATALIS_HEAVY_SHELL,Fatalis' Heavy Shell,黒龍の重殻,黑龍的重壳
+FATALIS_HORN,Fatalis' Horn,黒龍の角,黑龍的角
+FATALIS_RIGID_WING,Fatalis' Rigid Wing,黒龍の剛翼,黑龍的刚翼
+FATALIS_SCALE,Fatalis' Scale,黒龍の鱗,黑龍的鳞
+FATALIS_SCALE_PLUS,Fatalis' Scale+,黒龍の上鱗,黑龍的上鳞
+FATALIS_SHARD,Fatalis' Shard,黒龍の厚鱗,黑龍的厚鳞
+FATALIS_SHELL,Fatalis' Shell,黒龍の甲殻,黑龍的甲壳
+FATALIS_SPIKE,Fatalis' Spike,黒龍の尖角,黑龍的尖角
+FATALIS_WEBBING,Fatalis' Webbing,黒龍の翼膜,黑龍的翼膜
+FATALIS_WING,Fatalis' Wing,黒龍の翼,黑龍的翼
+FATE,Fate,運気,运气
+FEMALE,Female,女性,女性
+FIRE_MINUS_10_MH1,Fire - 10,火耐性－10,火耐性－10
+FIRE_MINUS_10_MHG,Fire Res -10,火耐性-10,火耐性-10
+FIRE_MINUS_3_MHG,Fire Res -3,火耐性-3,火耐性-3
+FIRE_MINUS_5_MHG,Fire Res -5,火耐性-5,火耐性-5
+FIRE_PLUS_10_MHG,Fire Res +10,火耐性+10,火耐性+10
+FIRE_PLUS_25_MH1,Fire + 25,火耐性＋25,火耐性＋25
+FIRE_PLUS_3_MHG,Fire Res +3,火耐性+3,火耐性+3
+FIRE_PLUS_5_MHG,Fire Res +5,火耐性+5,火耐性+5
+FIRE_RESISTANCE,Fire Resistance,火耐性,火耐性
+FIRECELL_STONE,Firecell Stone,獄炎石,狱炎石
+FIRESTONE,Firestone,紅蓮石,红莲石
+FISHER,Fisher,釣り,垂钓
+FISHING_MASTER,Fishing Master,釣り名人,垂钓名人
+FLABBY_HIDE,Flabby Hide,ブヨブヨした皮,柔软的皮
+FLUTE_MASTER,Flute Master,笛吹き名人,吹笛名人
+FLUTE_SKILL,Flute,笛,笛
+FORGING_PRICE,Forge,生産価格,
+GATHERING,Gathering,採取,采取
+GATHERING_MINUS_1,Gathering -1,採取-1,采取-1
+GATHERING_MINUS_2,Gathering -2,採取-2,采取-2
+GATHERING_PLUS_1,Gathering +1,採取+1,采取+1
+GATHERING_PLUS_2,Gathering +2,採取+2,采取+2
+GAUNTLETS,Gauntlets,篭手,腕装备
+GENDROME_HIDE,Gendrome Hide,ドスゲネポスの皮,黄速龙王的皮
+GENESIS_GAUNTLETS,Genesis Gauntlets,曙丸【篭手】,曙丸【笼手】
+GENESIS_GAUNTLETS_HAKU,Genesis Gauntlets Haku,曙丸・覇【篭手】,曙丸・霸【笼手】
+GENESIS_GAUNTLETS_MAI,Genesis Gauntlets Mai,曙丸・羅【篭手】,曙丸・罗【笼手】
+GENESIS_GAUNTLETS_TEN,Genesis Gauntlets Ten,曙丸・皇【篭手】,曙丸・皇【笼手】
+GENESIS_HEADPIECE,Genesis Headpiece,曙丸【烏帽子】,曙丸【乌帽子】
+GENESIS_HEADPIECE_HAKU,Genesis Headpiece Haku,曙丸・覇【烏帽子】,曙丸・霸【乌帽子】
+GENESIS_HEADPIECE_MAI,Genesis Headpiece Mai,曙丸・羅【烏帽子】,曙丸・罗【乌帽子】
+GENESIS_HEADPIECE_TEN,Genesis Headpiece Ten,曙丸・皇【烏帽子】,曙丸・皇【乌帽子】
+GENESIS_PANTS,Genesis Pants,曙丸【具足】,曙丸【具足】
+GENESIS_PANTS_HAKU,Genesis Pants Haku,曙丸・覇【具足】,曙丸・霸【具足】
+GENESIS_PANTS_MAI,Genesis Pants Mai,曙丸・羅【具足】,曙丸・罗【具足】
+GENESIS_PANTS_TEN,Genesis Pants Ten,曙丸・皇【具足】,曙丸・皇【具足】
+GENESIS_TASSET,Genesis Tasset,曙丸【腰当て】,曙丸【腰当】
+GENESIS_TASSET_HAKU,Genesis Tasset Haku,曙丸・覇【腰当て】,曙丸・霸【腰当】
+GENESIS_TASSET_MAI,Genesis Tasset Mai,曙丸・羅【腰当て】,曙丸・罗【腰当】
+GENESIS_TASSET_TEN,Genesis Tasset Ten,曙丸・皇【腰当て】,曙丸・皇【腰当】
+GENESIS_TORSO,Genesis Torso,曙丸【胴当て】,曙丸【胴当】
+GENESIS_TORSO_HAKU,Genesis Torso Haku,曙丸・覇【胴当て】,曙丸・霸【胴当】
+GENESIS_TORSO_MAI,Genesis Torso Mai,曙丸・羅【胴当て】,曙丸・罗【胴当】
+GENESIS_TORSO_TEN,Genesis Torso Ten,曙丸・皇【胴当て】,曙丸・皇【胴当】
+GENPREY_CAP,Genprey Cap,ゲネポスキャップ,黄速龙软帽
+GENPREY_CAP_PLUS,Genprey Cap+,ゲネポスＧキャップ,黄速龙Ｇ软帽
+GENPREY_CAP_S,Genprey Cap S,ゲネポスＳキャップ,黄速龙Ｓ软帽
+GENPREY_COAT,Genprey Coat,ゲネポスコート,黄速龙围腰
+GENPREY_COAT_PLUS,Genprey Coat+,ゲネポスＧコート,黄速龙Ｇ围腰
+GENPREY_COAT_S,Genprey Coat S,ゲネポスＳコート,黄速龙Ｓ围腰
+GENPREY_GREAVES,Genprey Greaves,ゲネポスグリーヴ,黄速龙胫甲
+GENPREY_GREAVES_PLUS,Genprey Greaves+,ゲネポスＧグリーヴ,黄速龙Ｇ胫甲
+GENPREY_GREAVES_S,Genprey Greaves S,ゲネポスＳグリーヴ,黄速龙Ｓ胫甲
+GENPREY_GUARDS,Genprey Guards,ゲネポスガード,黄速龙护臂
+GENPREY_GUARDS_PLUS,Genprey Guards+,ゲネポスＧガード,黄速龙Ｇ护臂
+GENPREY_GUARDS_S,Genprey Guards S,ゲネポスＳガード,黄速龙Ｓ护臂
+GENPREY_HELM,Genprey Helm,ゲネポスヘルム,黄速龙头铠
+GENPREY_HELM_PLUS,Genprey Helm+,ゲネポスＧヘルム,黄速龙Ｇ头铠
+GENPREY_HELM_S,Genprey Helm S,ゲネポスＳヘルム,黄速龙Ｓ头铠
+GENPREY_HIDE,Genprey Hide,ゲネポスの皮,黄速龙的皮
+GENPREY_HIDE_PLUS,Genprey Hide+,ゲネポスの上皮,黄速龙的上皮
+GENPREY_LEGGINGS,Genprey Leggings,ゲネポスレギンス,黄速龙护胫
+GENPREY_LEGGINGS_PLUS,Genprey Leggings+,ゲネポスＧレギンス,黄速龙Ｇ护胫
+GENPREY_LEGGINGS_S,Genprey Leggings S,ゲネポスＳレギンス,黄速龙Ｓ护胫
+GENPREY_MAIL,Genprey Mail,ゲネポスメイル,黄速龙铠甲
+GENPREY_MAIL_PLUS,Genprey Mail+,ゲネポスＧメイル,黄速龙Ｇ铠甲
+GENPREY_MAIL_S,Genprey Mail S,ゲネポスＳメイル,黄速龙Ｓ铠甲
+GENPREY_SCALE,Genprey Scale,ゲネポスの鱗,黄速龙的鳞
+GENPREY_SCALE_PLUS,Genprey Scale+,ゲネポスの上鱗,黄速龙的上鳞
+GENPREY_TASSET,Genprey Tasset,ゲネポスフォールド,黄速龙腰甲
+GENPREY_TASSET_PLUS,Genprey Tasset+,ゲネポスＧフォールド,黄速龙Ｇ腰甲
+GENPREY_TASSET_S,Genprey Tasset S,ゲネポスＳフォールド,黄速龙Ｓ腰甲
+GENPREY_VAMBRACES,Genprey Vambraces,ゲネポスアーム,黄速龙臂甲
+GENPREY_VAMBRACES_PLUS,Genprey Vambraces+,ゲネポスＧアーム,黄速龙Ｇ臂甲
+GENPREY_VAMBRACES_S,Genprey Vambraces S,ゲネポスＳアーム,黄速龙Ｓ臂甲
+GENPREY_VEST,Genprey Vest,ゲネポスレジスト,黄速龙轻甲
+GENPREY_VEST_PLUS,Genprey Vest+,ゲネポスＧレジスト,黄速龙Ｇ轻甲
+GENPREY_VEST_S,Genprey Vest S,ゲネポスＳレジスト,黄速龙Ｓ轻甲
+GLUTTONY,Gluttony,食いしん坊,贪吃鬼
+GLYPH_CHEST,Glyph Chest,艶【胸当て】,艳【胸当】
+GLYPH_CHEST_HAKU,Glyph Chest Haku,艶・覇【胸当て】,艳・霸【胸当】
+GLYPH_CHEST_MAI,Glyph Chest Mai,艶・羅【胸当て】,艳・罗【胸当】
+GLYPH_CHEST_TEN,Glyph Chest Ten,艶・皇【胸当て】,艳・皇【胸当】
+GLYPH_CROWN,Glyph Crown,艶【鉢金】,艳【钵金】
+GLYPH_CROWN_HAKU,Glyph Crown Haku,艶・覇【鉢金】,艳・霸【钵金】
+GLYPH_CROWN_MAI,Glyph Crown Mai,艶・羅【鉢金】,艳・罗【钵金】
+GLYPH_CROWN_TEN,Glyph Crown Ten,艶・皇【鉢金】,艳・皇【钵金】
+GLYPH_GAUNTLETS,Glyph Gauntlets,艶【篭手】,艳【笼手】
+GLYPH_GAUNTLETS_HAKU,Glyph Gauntlets Haku,艶・覇【篭手】,艳・霸【笼手】
+GLYPH_GAUNTLETS_MAI,Glyph Gauntlets Mai,艶・羅【篭手】,艳・罗【笼手】
+GLYPH_GAUNTLETS_TEN,Glyph Gauntlets Ten,艶・皇【篭手】,艳・皇【笼手】
+GLYPH_PANTS,Glyph Pants,艶【袴】,艳【裤】
+GLYPH_PANTS_HAKU,Glyph Pants Haku,艶・覇【袴】,艳・霸【裤】
+GLYPH_PANTS_MAI,Glyph Pants Mai,艶・羅【袴】,艳・罗【裤】
+GLYPH_PANTS_TEN,Glyph Pants Ten,艶・皇【袴】,艳・皇【裤】
+GLYPH_TASSET,Glyph Tasset,艶【腰当て】,艳【腰当】
+GLYPH_TASSET_HAKU,Glyph Tasset Haku,艶・覇【腰当て】,艳・霸【腰当】
+GLYPH_TASSET_MAI,Glyph Tasset Mai,艶・羅【腰当て】,艳・罗【腰当】
+GLYPH_TASSET_TEN,Glyph Tasset Ten,艶・皇【腰当て】,艳・皇【腰当】
+GOLD_RATHIAN_CLAW,Gold Rathian Claw,金火竜の翼爪,金火龙的翼爪
+GOLD_RATHIAN_PLATE,Gold Rathian Plate,金火竜の逆鱗,金火龙的逆鳞
+GOLD_RATHIAN_RUBY,Gold Rathian Ruby,金火竜の紅玉,金火龙的红玉
+GOLD_RATHIAN_SCALE,Gold Rathian Scale,金火竜の鱗,金火龙的鳞
+GOLD_RATHIAN_SHELL,Gold Rathian Shell,金火竜の甲殻,金火龙的甲壳
+GOLD_RATHIAN_SPIKE,Gold Rathian Spike,金火竜の棘,金火龙的棘
+GOLDEN_MOON_CAP,Golden Moon Cap,ゴールドルナキャップ,金月软帽
+GOLDEN_MOON_COAT,Golden Moon Coat,ゴールドルナコート,金月围腰
+GOLDEN_MOON_GREAVES,Golden Moon Greaves,ゴールドルナグリーヴ,金月胫甲
+GOLDEN_MOON_GUARDS,Golden Moon Guards,ゴールドルナガード,金月护臂
+GOLDEN_MOON_HELM,Golden Moon Helm,ゴールドルナヘルム,金月头铠
+GOLDEN_MOON_LEGGINGS,Golden Moon Leggings,ゴールドルナレギンス,金月护胫
+GOLDEN_MOON_MAIL,Golden Moon Mail,ゴールドルナメイル,金月铠甲
+GOLDEN_MOON_TASSET,Golden Moon Tasset,ゴールドルナコイル,金月扣带
+GOLDEN_MOON_VAMBRACES,Golden Moon Vambraces,ゴールドルナアーム,金月臂甲
+GOLDEN_MOON_VEST,Golden Moon Vest,ゴールドルナレジスト,金月轻甲
+GOOD_FORTUNE,Good Fortune,幸運,幸运
+GOOD_LUCK,Good Luck,幸運,幸运
+GRAVIOS_CAP,Gravios Cap,グラビドキャップ,铠龙软帽
+GRAVIOS_CAP_PLUS,Gravios Cap+,グラビドＧキャップ,铠龙Ｇ软帽
+GRAVIOS_CAP_S,Gravios Cap S,グラビドＳキャップ,铠龙Ｓ软帽
+GRAVIOS_CAP_U,Gravios Cap U,グラビドＵキャップ,铠龙Ｕ软帽
+GRAVIOS_CARAPACE,Gravios Carapace,鎧竜の堅殻,铠龙的坚壳
+GRAVIOS_COAT,Gravios Coat,グラビドコート,铠龙围腰
+GRAVIOS_COAT_PLUS,Gravios Coat+,グラビドＧコート,铠龙Ｇ围腰
+GRAVIOS_COAT_S,Gravios Coat S,グラビドＳコート,铠龙Ｓ围腰
+GRAVIOS_COAT_U,Gravios Coat U,グラビドＵコート,铠龙Ｕ围腰
+GRAVIOS_COIN,Gravios Coin,鎧竜のコイン,铠龙的硬币
+GRAVIOS_GREAVES,Gravios Greaves,グラビドグリーヴ,铠龙胫甲
+GRAVIOS_GREAVES_PLUS,Gravios Greaves+,グラビドＧグリーヴ,铠龙Ｇ胫甲
+GRAVIOS_GREAVES_S,Gravios Greaves S,グラビドＳグリーヴ,铠龙Ｓ胫甲
+GRAVIOS_GREAVES_U,Gravios Greaves U,グラビドＵグリーヴ,铠龙Ｕ胫甲
+GRAVIOS_GUARDS,Gravios Guards,グラビドガード,铠龙护臂
+GRAVIOS_GUARDS_PLUS,Gravios Guards+,グラビドＧガード,铠龙Ｇ护臂
+GRAVIOS_GUARDS_S,Gravios Guards S,グラビドＳガード,铠龙Ｓ护臂
+GRAVIOS_GUARDS_U,Gravios Guards U,グラビドＵガード,铠龙Ｕ护臂
+GRAVIOS_HEAVY_SHELL,Gravios Heavy Shell,鎧竜の重殻,铠龙的重壳
+GRAVIOS_HELM,Gravios Helm,グラビドヘルム,铠龙头铠
+GRAVIOS_HELM_PLUS,Gravios Helm+,グラビドＧヘルム,铠龙Ｇ头铠
+GRAVIOS_HELM_S,Gravios Helm S,グラビドＳヘルム,铠龙Ｓ头铠
+GRAVIOS_HELM_U,Gravios Helm U,グラビドＵヘルム,铠龙Ｕ头铠
+GRAVIOS_JAW,Gravios Jaw,鎧竜の顎,铠龙的颚
+GRAVIOS_LEGGINGS,Gravios Leggings,グラビドレギンス,铠龙护胫
+GRAVIOS_LEGGINGS_PLUS,Gravios Leggings+,グラビドＧレギンス,铠龙Ｇ护胫
+GRAVIOS_LEGGINGS_S,Gravios Leggings S,グラビドＳレギンス,铠龙Ｓ护胫
+GRAVIOS_LEGGINGS_U,Gravios Leggings U,グラビドＵレギンス,铠龙Ｕ护胫
+GRAVIOS_MAIL,Gravios Mail,グラビドメイル,铠龙铠甲
+GRAVIOS_MAIL_PLUS,Gravios Mail+,グラビドＧメイル,铠龙Ｇ铠甲
+GRAVIOS_MAIL_S,Gravios Mail S,グラビドＳメイル,铠龙Ｓ铠甲
+GRAVIOS_MAIL_U,Gravios Mail U,グラビドＵメイル,铠龙Ｕ铠甲
+GRAVIOS_SHELL,Gravios Shell,鎧竜の甲殻,铠龙的甲壳
+GRAVIOS_TASSET,Gravios Tasset,グラビドフォールド,铠龙腰甲
+GRAVIOS_TASSET_PLUS,Gravios Tasset+,グラビドＧフォールド,铠龙Ｇ腰甲
+GRAVIOS_TASSET_S,Gravios Tasset S,グラビドＳフォールド,铠龙Ｓ腰甲
+GRAVIOS_TASSET_U,Gravios Tasset U,グラビドＵフォールド,铠龙Ｕ腰甲
+GRAVIOS_VAMBRACES,Gravios Vambraces,グラビドアーム,铠龙臂甲
+GRAVIOS_VAMBRACES_PLUS,Gravios Vambraces+,グラビドＧアーム,铠龙Ｇ臂甲
+GRAVIOS_VAMBRACES_S,Gravios Vambraces S,グラビドＳアーム,铠龙Ｓ臂甲
+GRAVIOS_VAMBRACES_U,Gravios Vambraces U,グラビドＵアーム,铠龙Ｕ臂甲
+GRAVIOS_VEST,Gravios Vest,グラビドレジスト,铠龙轻甲
+GRAVIOS_VEST_PLUS,Gravios Vest+,グラビドＧレジスト,铠龙Ｇ轻甲
+GRAVIOS_VEST_S,Gravios Vest S,グラビドＳレジスト,铠龙Ｓ轻甲
+GRAVIOS_VEST_U,Gravios Vest U,グラビドＵレジスト,铠龙Ｕ轻甲
+GRAVIOS_WING,Gravios Wing,鎧竜の翼,铠龙的翼
+GREAT_LOBSTERSHELL,Great Lobstershell,エビの巨大殻,虾之巨大壳
+GREAT_SWORD_TICKET,Great Sword Ticket,大剣チケット,大剑券
+GREEN_PANTS,Green Pants,グリーンジャージー,绿色束裤
+GREEN_PANTS_PLUS,Green Pants+,グリーンＧジャージー,绿色Ｇ束裤
+GREEN_PANTS_S,Green Pants S,グリーンＳジャージー,绿色Ｓ束裤
+GREEN_PLESIOTH_FIN,Green Plesioth Fin,翠水竜のヒレ,翠水龙的鳍
+GREEN_PLESIOTH_SCALE,Green Plesioth Scale,翠水竜の鱗,翠水龙的鳞
+GUARD,Guard,ガード性能,防御性能
+GUARD_MINUS_1,Guard -1,ガード性能-1,防御性能-1
+GUARD_MINUS_2,Guard -2,ガード性能-2,防御性能-2
+GUARD_PLUS_1,Guard +1,ガード性能+1,防御性能+1
+GUARD_PLUS_2,Guard +2,ガード性能+2,防御性能+2
+GUARD_UP,Guard Up,ガード強化,防御强化
+GUILD_KNIGHT_BOOTS,Guild Knight Boots,ギルドナイトブーツ,公会骑士长筒靴
+GUILD_KNIGHT_BOOTS_PLUS,Guild Knight Boots+,ギルドナイトＧブーツ,公会骑士Ｇ长筒靴
+GUILD_KNIGHT_BOOTS_S,Guild Knight Boots S,ギルドナイトＳブーツ,公会骑士Ｓ长筒靴
+GUILD_KNIGHT_COAT,Guild Knight Coat,ギルドナイトコイル,公会骑士扣带
+GUILD_KNIGHT_COAT_PLUS,Guild Knight Coat+,ギルドナイトＧコイル,公会骑士Ｇ扣带
+GUILD_KNIGHT_COAT_S,Guild Knight Coat S,ギルドナイトＳコイル,公会骑士Ｓ扣带
+GUILD_KNIGHT_FEATHER,Guild Knight Feather,ギルドナイトフェザー,公会骑士羽帽
+GUILD_KNIGHT_FEATHER_PLUS,Guild Knight Feather+,ギルドナイトＧロポス,公会骑士Ｇ冠帽
+GUILD_KNIGHT_FEATHER_S,Guild Knight Feather S,ギルドナイトＳロポス,公会骑士Ｓ冠帽
+GUILD_KNIGHT_GLOVES,Guild Knight Gloves,ギルドナイトグローブ,公会骑士手套
+GUILD_KNIGHT_GLOVES_PLUS,Guild Knight Gloves+,ギルドナイトＧグラブ,公会骑士Ｇ手套
+GUILD_KNIGHT_GLOVES_S,Guild Knight Gloves S,ギルドナイトＳグラブ,公会骑士Ｓ手套
+GUILD_KNIGHT_KILT,Guild Knight Kilt,ギルドナイトスカート,公会骑士围腰
+GUILD_KNIGHT_KILT_PLUS,Guild Knight Kilt+,ギルドナイトＧコート,公会骑士Ｇ围腰
+GUILD_KNIGHT_KILT_S,Guild Knight Kilt S,ギルドナイトＳコート,公会骑士Ｓ围腰
+GUILD_KNIGHT_MASK,Guild Knight Mask,ギルドナイトマスク,公会骑士面具
+GUILD_KNIGHT_MASK_PLUS,Guild Knight Mask+,ギルドナイトＧマスク,公会骑士Ｇ面具
+GUILD_KNIGHT_MASK_S,Guild Knight Mask S,ブルーＳピアス,苍流Ｓ耳饰
+GUILD_KNIGHT_SLEEVES,Guild Knight Sleeves,ギルドナイトカフス,公会骑士袖扣
+GUILD_KNIGHT_SLEEVES_PLUS,Guild Knight Sleeves+,ギルドナイトＧカフス,公会骑士Ｇ袖扣
+GUILD_KNIGHT_SLEEVES_S,Guild Knight Sleeves S,ギルドナイトＳカフス,公会骑士Ｓ袖扣
+GUILD_KNIGHT_SUIT,Guild Knight Suit,ギルドナイトスーツ,公会骑士制服
+GUILD_KNIGHT_SUIT_PLUS,Guild Knight Suit+,ギルドナイトＧスーツ,公会骑士Ｇ制服
+GUILD_KNIGHT_SUIT_S,Guild Knight Suit S,ギルドナイトＳスーツ,公会骑士Ｓ制服
+GUILD_KNIGHT_TIGHTS,Guild Knight Tights,ギルドナイトタイツ,公会骑士紧身裤
+GUILD_KNIGHT_TIGHTS_PLUS,Guild Knight Tights+,ギルドナイトＧタイツ,公会骑士Ｇ紧身裤
+GUILD_KNIGHT_TIGHTS_S,Guild Knight Tights S,ギルドナイトＳタイツ,公会骑士Ｓ紧身裤
+GUILD_KNIGHT_VEST,Guild Knight Vest,ギルドナイトベスト,公会骑士马甲
+GUILD_KNIGHT_VEST_PLUS,Guild Knight Vest+,ギルドナイトＧベスト,公会骑士Ｇ马甲
+GUILD_KNIGHT_VEST_S,Guild Knight Vest S,ギルドナイトＳベスト,公会骑士Ｓ马甲
+GUILD_TICKET,Guild Ticket,ギルドチケット,公会券
+GUILDMASTER_PIERCING,Guildmaster Piercing,ギルドマスターピアス,公会首领耳饰
+GUNNER,Gunner,ガンナー,射手
+GUNNER_TICKET,Gunner Ticket,ガンナーチケット,射手券
+GUNPOWDER,Gunpowder,爆薬,爆药
+GYPCEROS_CAP,Gypceros Cap,ゲリョスキャップ,毒怪鸟软帽
+GYPCEROS_CAP_PLUS,Gypceros Cap+,ゲリョスＧキャップ,毒怪鸟Ｇ软帽
+GYPCEROS_CAP_S,Gypceros Cap S,ゲリョスＳキャップ,毒怪鸟Ｓ软帽
+GYPCEROS_CAP_U,Gypceros Cap U,ゲリョスＵキャップ,毒怪鸟Ｕ软帽
+GYPCEROS_COAT,Gypceros Coat,ゲリョスコート,毒怪鸟围腰
+GYPCEROS_COAT_PLUS,Gypceros Coat+,ゲリョスＧコート,毒怪鸟Ｇ围腰
+GYPCEROS_COAT_S,Gypceros Coat S,ゲリョスＳコート,毒怪鸟Ｓ围腰
+GYPCEROS_COAT_U,Gypceros Coat U,ゲリョスＵコート,毒怪鸟Ｕ围腰
+GYPCEROS_GREAVES,Gypceros Greaves,ゲリョスグリーヴ,毒怪鸟胫甲
+GYPCEROS_GREAVES_PLUS,Gypceros Greaves+,ゲリョスＧグリーヴ,毒怪鸟Ｇ胫甲
+GYPCEROS_GREAVES_S,Gypceros Greaves S,ゲリョスＳグリーヴ,毒怪鸟Ｓ胫甲
+GYPCEROS_GREAVES_U,Gypceros Greaves U,ゲリョスＵグリーヴ,毒怪鸟Ｕ胫甲
+GYPCEROS_GUARDS,Gypceros Guards,ゲリョスガード,毒怪鸟护臂
+GYPCEROS_GUARDS_PLUS,Gypceros Guards+,ゲリョスＧガード,毒怪鸟Ｇ护臂
+GYPCEROS_GUARDS_S,Gypceros Guards S,ゲリョスＳガード,毒怪鸟Ｓ护臂
+GYPCEROS_GUARDS_U,Gypceros Guards U,ゲリョスＵガード,毒怪鸟Ｕ护臂
+GYPCEROS_HELM,Gypceros Helm,ゲリョスヘルム,毒怪鸟头铠
+GYPCEROS_HELM_PLUS,Gypceros Helm+,ゲリョスＧヘルム,毒怪鸟Ｇ头铠
+GYPCEROS_HELM_S,Gypceros Helm S,ゲリョスＳヘルム,毒怪鸟Ｓ头铠
+GYPCEROS_HELM_U,Gypceros Helm U,ゲリョスＵヘルム,毒怪鸟Ｕ头铠
+GYPCEROS_LEGGINGS,Gypceros Leggings,ゲリョスレギンス,毒怪鸟护胫
+GYPCEROS_LEGGINGS_PLUS,Gypceros Leggings+,ゲリョスＧレギンス,毒怪鸟Ｇ护胫
+GYPCEROS_LEGGINGS_S,Gypceros Leggings S,ゲリョスＳレギンス,毒怪鸟Ｓ护胫
+GYPCEROS_LEGGINGS_U,Gypceros Leggings U,ゲリョスＵレギンス,毒怪鸟Ｕ护胫
+GYPCEROS_MAIL,Gypceros Mail,ゲリョスメイル,毒怪鸟铠甲
+GYPCEROS_MAIL_PLUS,Gypceros Mail+,ゲリョスＧメイル,毒怪鸟Ｇ铠甲
+GYPCEROS_MAIL_S,Gypceros Mail S,ゲリョスＳメイル,毒怪鸟Ｓ铠甲
+GYPCEROS_MAIL_U,Gypceros Mail U,ゲリョスＵメイル,毒怪鸟Ｕ铠甲
+GYPCEROS_TASSET,Gypceros Tasset,ゲリョスフォールド,毒怪鸟腰甲
+GYPCEROS_TASSET_PLUS,Gypceros Tasset+,ゲリョスＧフォールド,毒怪鸟Ｇ腰甲
+GYPCEROS_TASSET_S,Gypceros Tasset S,ゲリョスＳフォールド,毒怪鸟Ｓ腰甲
+GYPCEROS_TASSET_U,Gypceros Tasset U,ゲリョスＵフォールド,毒怪鸟Ｕ腰甲
+GYPCEROS_VAMBRACES,Gypceros Vambraces,ゲリョスアーム,毒怪鸟臂甲
+GYPCEROS_VAMBRACES_PLUS,Gypceros Vambraces+,ゲリョスＧアーム,毒怪鸟Ｇ臂甲
+GYPCEROS_VAMBRACES_S,Gypceros Vambraces S,ゲリョスＳアーム,毒怪鸟Ｓ臂甲
+GYPCEROS_VAMBRACES_U,Gypceros Vambraces U,ゲリョスＵアーム,毒怪鸟Ｕ臂甲
+GYPCEROS_VEST,Gypceros Vest,ゲリョスレジスト,毒怪鸟轻甲
+GYPCEROS_VEST_PLUS,Gypceros Vest+,ゲリョスＧレジスト,毒怪鸟Ｇ轻甲
+GYPCEROS_VEST_S,Gypceros Vest S,ゲリョスＳレジスト,毒怪鸟Ｓ轻甲
+GYPCEROS_VEST_U,Gypceros Vest U,ゲリョスＵレジスト,毒怪鸟Ｕ轻甲
+HAIR_1,Hair 1,,发型1
+HAIR_10,Hair 10,,发型10
+HAIR_2,Hair 2,,发型2
+HAIR_3,Hair 3,,发型3
+HAIR_4,Hair 4,,发型4
+HAIR_5,Hair 5,,发型5
+HAIR_6,Hair 6,,发型6
+HAIR_7,Hair 7,,发型7
+HAIR_8,Hair 8,,发型8
+HAIR_9,Hair 9,,发型9
+HAIR_COLOR,Hair Color,,发色
+HAIR_OPTION,Hair,,发型
+HAMMER_TICKET,Hammer Ticket,ハンマーチケット,大锤券
+HANDICRAFT,Handicraft,匠,匠
+HEAD,Head,頭,头
+HEADGEAR,Headgear,兜,头装备
+HEALTH_MINUS_10,Health -10,体力-10,体力-10
+HEALTH_MINUS_20,Health -20,体力-20,体力-20
+HEALTH_MINUS_30,Health -30,体力-30,体力-30
+HEALTH_PLUS_10,Health +10,体力+10,体力+10
+HEALTH_PLUS_20,Health +20,体力+20,体力+20
+HEALTH_PLUS_30,Health +30,体力+30,体力+30
+HEALTH_RECOVERY_ITEMS_IMPROVED,Health Recovery Items Improved,体力回復アイテム強化,体力回复道具强化
+HEALTH_SKILL,Health,体力,体力
+HEALTH_STAT,Health,体力,体力
+HEAT_DOUBLED,Heat Doubled,暑さ倍加【×2】,暑热倍加【×2】
+HEAT_HALVED,Heat Halved,暑さ半減,暑热半减
+HEAT_NEGATED_MH1,Anti-Heat,暑さ無効,暑热无效
+HEAT_NEGATED_MHG,Heat Negated,暑さ無効,暑热无效
+HEAT_RES,Heat Res,耐暑,耐暑
+HEAT_X_1_5,Heat x1.5,暑さ倍加【×1.5】,暑热倍加【×1.5】
+HEAVENS_GAUNTLET,Heaven's Gauntlet,天上天下無双手甲 ,天上天下无双手甲
+HELP,Help,,帮助
+HELP_COPY,Press and hold the right mouse button to rotate the hunter and angle the camera up and down. Press and hold the middle mouse button to zoom in and out. Your armor set and hunter options are auto-saved and will be automatically loaded when you next open the app.,,长按鼠标右键左右旋转猎人或上下移动视角。长按鼠标中键上下缩放界面。当前防具组合与猎人设定选项将被自动保存，重新运行此应用时将自动加载。
+HI_METAL_CAP,Hi-Metal Cap,ハイメタキャップ,精炼矿石软帽
+HI_METAL_CAP_PLUS,Hi-Metal Cap+,ハイメタＧキャップ,精炼矿石Ｇ软帽
+HI_METAL_CAP_S,Hi-Metal Cap S,ハイメタＳキャップ,精炼矿石Ｓ软帽
+HI_METAL_CAP_U,Hi-Metal Cap U,ハイメタＵキャップ,精炼矿石Ｕ软帽
+HI_METAL_COAT,Hi-Metal Coat,ハイメタコート,精炼矿石围腰
+HI_METAL_COAT_PLUS,Hi-Metal Coat+,ハイメタＧコート,精炼矿石Ｇ围腰
+HI_METAL_COAT_S,Hi-Metal Coat S,ハイメタＳコート,精炼矿石Ｓ围腰
+HI_METAL_COAT_U,Hi-Metal Coat U,ハイメタＵコート,精炼矿石Ｕ围腰
+HI_METAL_GREAVES,Hi-Metal Greaves,ハイメタグリーヴ,精炼矿石胫甲
+HI_METAL_GREAVES_PLUS,Hi-Metal Greaves+,ハイメタＧグリーヴ,精炼矿石Ｇ胫甲
+HI_METAL_GREAVES_S,Hi-Metal Greaves S,ハイメタＳグリーヴ,精炼矿石Ｓ胫甲
+HI_METAL_GREAVES_U,Hi-Metal Greaves U,ハイメタＵグリーヴ,精炼矿石Ｕ胫甲
+HI_METAL_GUARDS,Hi-Metal Guards,ハイメタガード,精炼矿石护臂
+HI_METAL_GUARDS_PLUS,Hi-Metal Guards+,ハイメタＧガード,精炼矿石Ｇ护臂
+HI_METAL_GUARDS_S,Hi-Metal Guards S,ハイメタＳガード,精炼矿石Ｓ护臂
+HI_METAL_GUARDS_U,Hi-Metal Guards U,ハイメタＵガード,精炼矿石Ｕ护臂
+HI_METAL_HELM,Hi-Metal Helm,ハイメタヘルム,精炼矿石头铠
+HI_METAL_HELM_PLUS,Hi-Metal Helm+,ハイメタＧヘルム,精炼矿石Ｇ头铠
+HI_METAL_HELM_S,Hi-Metal Helm S,ハイメタＳヘルム,精炼矿石Ｓ头铠
+HI_METAL_HELM_U,Hi-Metal Helm U,ハイメタＵヘルム,精炼矿石Ｕ头铠
+HI_METAL_LEGGINGS,Hi-Metal Leggings,ハイメタレギンス,精炼矿石护胫
+HI_METAL_LEGGINGS_PLUS,Hi-Metal Leggings+,ハイメタＧレギンス,精炼矿石Ｇ护胫
+HI_METAL_LEGGINGS_S,Hi-Metal Leggings S,ハイメタＳレギンス,精炼矿石Ｓ护胫
+HI_METAL_LEGGINGS_U,Hi-Metal Leggings U,ハイメタＵレギンス,精炼矿石Ｕ护胫
+HI_METAL_MAIL,Hi-Metal Mail,ハイメタメイル,精炼矿石铠甲
+HI_METAL_MAIL_PLUS,Hi-Metal Mail+,ハイメタＧメイル,精炼矿石Ｇ铠甲
+HI_METAL_MAIL_S,Hi-Metal Mail S,ハイメタＳメイル,精炼矿石Ｓ铠甲
+HI_METAL_MAIL_U,Hi-Metal Mail U,ハイメタＵメイル,精炼矿石Ｕ铠甲
+HI_METAL_TASSET,Hi-Metal Tasset,ハイメタフォールド,精炼矿石腰甲
+HI_METAL_TASSET_PLUS,Hi-Metal Tasset+,ハイメタＧフォールド,精炼矿石Ｇ腰甲
+HI_METAL_TASSET_S,Hi-Metal Tasset S,ハイメタＳフォールド,精炼矿石Ｓ腰甲
+HI_METAL_TASSET_U,Hi-Metal Tasset U,ハイメタＵフォールド,精炼矿石Ｕ腰甲
+HI_METAL_VAMBRACES,Hi-Metal Vambraces,ハイメタアーム,精炼矿石臂甲
+HI_METAL_VAMBRACES_PLUS,Hi-Metal Vambraces+,ハイメタＧアーム,精炼矿石Ｇ臂甲
+HI_METAL_VAMBRACES_S,Hi-Metal Vambraces S,ハイメタＳアーム,精炼矿石Ｓ臂甲
+HI_METAL_VAMBRACES_U,Hi-Metal Vambraces U,ハイメタＵアーム,精炼矿石Ｕ臂甲
+HI_METAL_VEST,Hi-Metal Vest,ハイメタレジスト,精炼矿石轻甲
+HI_METAL_VEST_PLUS,Hi-Metal Vest+,ハイメタＧレジスト,精炼矿石Ｇ轻甲
+HI_METAL_VEST_S,Hi-Metal Vest S,ハイメタＳレジスト,精炼矿石Ｓ轻甲
+HI_METAL_VEST_U,Hi-Metal Vest U,ハイメタＵレジスト,精炼矿石Ｕ轻甲
+HIDE_BELT,Hide Belt,ハイドベルト,韧皮腰带
+HIDE_BELT_PLUS,Hide Belt+,ハイドＧベルト,韧皮Ｇ腰带
+HIDE_BELT_S,Hide Belt S,ハイドＳベルト,韧皮Ｓ腰带
+HIGH_SPEED_DAMAGE_RECOVERY,High Speed Damage Recovery,ダメージ高速回復,伤害高速回复
+HORNET_CAP,Hornet Cap,タロスキャップ,爬虫软帽
+HORNET_CAP_PLUS,Hornet Cap+,タロスＧキャップ,爬虫Ｇ软帽
+HORNET_CAP_S,Hornet Cap S,タロスＳキャップ,爬虫Ｓ软帽
+HORNET_COAT,Hornet Coat,タロスコート,爬虫围腰
+HORNET_COAT_PLUS,Hornet Coat+,タロスＧコート,爬虫Ｇ围腰
+HORNET_COAT_S,Hornet Coat S,タロスＳコート,爬虫Ｓ围腰
+HORNET_GREAVES,Hornet Greaves,タロスグリーヴ,爬虫胫甲
+HORNET_GREAVES_PLUS,Hornet Greaves+,タロスＧグリーヴ,爬虫Ｇ胫甲
+HORNET_GREAVES_S,Hornet Greaves S,タロスＳグリーヴ,爬虫Ｓ胫甲
+HORNET_GUARDS,Hornet Guards,タロスガード,爬虫护臂
+HORNET_GUARDS_PLUS,Hornet Guards+,タロスＧガード,爬虫Ｇ护臂
+HORNET_GUARDS_S,Hornet Guards S,タロスＳガード,爬虫Ｓ护臂
+HORNET_HELM,Hornet Helm,タロスヘルム,爬虫头铠
+HORNET_HELM_PLUS,Hornet Helm+,タロスＧヘルム,爬虫Ｇ头铠
+HORNET_HELM_S,Hornet Helm S,タロスＳヘルム,爬虫Ｓ头铠
+HORNET_LEGGINGS,Hornet Leggings,タロスレギンス,爬虫护胫
+HORNET_LEGGINGS_PLUS,Hornet Leggings+,タロスＧレギンス,爬虫Ｇ护胫
+HORNET_LEGGINGS_S,Hornet Leggings S,タロスＳレギンス,爬虫Ｓ护胫
+HORNET_MAIL,Hornet Mail,タロスメイル,爬虫铠甲
+HORNET_MAIL_PLUS,Hornet Mail+,タロスＧメイル,爬虫Ｇ铠甲
+HORNET_MAIL_S,Hornet Mail S,タロスＳメイル,爬虫Ｓ铠甲
+HORNET_TASSET,Hornet Tasset,タロスフォールド,爬虫腰甲
+HORNET_TASSET_PLUS,Hornet Tasset+,タロスＧフォールド,爬虫Ｇ腰甲
+HORNET_TASSET_S,Hornet Tasset S,タロスＳフォールド,爬虫Ｓ腰甲
+HORNET_VAMBRACES,Hornet Vambraces,タロスアーム,爬虫臂甲
+HORNET_VAMBRACES_PLUS,Hornet Vambraces+,タロスＧアーム,爬虫Ｇ臂甲
+HORNET_VAMBRACES_S,Hornet Vambraces S,タロスＳアーム,爬虫Ｓ臂甲
+HORNET_VEST,Hornet Vest,タロスレジスト,爬虫轻甲
+HORNET_VEST_PLUS,Hornet Vest+,タロスＧレジスト,爬虫Ｇ轻甲
+HORNET_VEST_S,Hornet Vest S,タロスＳレジスト,爬虫Ｓ轻甲
+HORNETAUR_BLADEFIN,Hornetaur Bladefin,カンタロスの刃羽,爬虫的刃羽
+HORNETAUR_CARAPACE,Hornetaur Carapace,カンタロスの堅殻,爬虫的坚壳
+HORNETAUR_HEAD,Hornetaur Head,カンタロスの頭,爬虫的头
+HORNETAUR_RAZORWING,Hornetaur Razorwing,カンタロスの斬羽,爬虫的斩羽
+HORNETAUR_SHELL,Hornetaur Shell,カンタロスの甲殻,爬虫的甲壳
+HORNETAUR_WING,Hornetaur Wing,カンタロスの羽,爬虫的羽
+HUNGER,Hunger,はらへり,饥饿
+HUNGER_DOUBLED_MH1,Hunger x1.5 (x2),はらへり倍加,饥饿倍加
+HUNGER_DOUBLED_MHG,Double Hunger,はらへり倍加×2,饥饿倍加×2
+HUNGER_HALVED,Hunger Halved,はらへり半減,饥饿半减
+HUNGER_NEGATED,Hunger Negated,はらへり無効,饥饿无效
+HUNGER_X_1_5,Hunger x1.5,はらへり倍加×1.5,饥饿倍加×1.5
+HUNTER,Hunter,ハンター,猎人
+HUNTERS_CAP,Hunter's Cap,ハンターキャップ,猎人软帽
+HUNTERS_CAP_PLUS,Hunter's Cap+,ハンターＧキャップ,猎人Ｇ软帽
+HUNTERS_CAP_S,Hunter's Cap S,ハンターＳキャップ,猎人Ｓ软帽
+HUNTERS_CAP_U,Hunter's Cap U,ハンターＵキャップ,猎人Ｕ软帽
+HUNTERS_COAT,Hunter's Coat,ハンターコート,猎人围腰
+HUNTERS_COAT_PLUS,Hunter's Coat+,ハンターＧコート,猎人Ｇ围腰
+HUNTERS_COAT_S,Hunter's Coat S,ハンターＳコート,猎人Ｓ围腰
+HUNTERS_COAT_U,Hunter's Coat U,ハンターＵコート,猎人Ｕ围腰
+HUNTERS_GREAVES,Hunter's Greaves,ハンターグリーヴ,猎人胫甲
+HUNTERS_GREAVES_PLUS,Hunter's Greaves+,ハンターＧグリーヴ,猎人Ｇ胫甲
+HUNTERS_GREAVES_S,Hunter's Greaves S,ハンターＳグリーヴ,猎人Ｓ胫甲
+HUNTERS_GREAVES_U,Hunter's Greaves U,ハンターＵグリーヴ,猎人Ｕ胫甲
+HUNTERS_GUARDS,Hunter's Guards,ハンターガード,猎人护臂
+HUNTERS_GUARDS_PLUS,Hunter's Guards+,ハンターＧガード,猎人Ｇ护臂
+HUNTERS_GUARDS_S,Hunter's Guards S,ハンターＳガード,猎人Ｓ护臂
+HUNTERS_GUARDS_U,Hunter's Guards U,ハンターＵガード,猎人Ｕ护臂
+HUNTERS_HELM,Hunter's Helm,ハンターヘルム,猎人头铠
+HUNTERS_HELM_PLUS,Hunter's Helm+,ハンターＧヘルム,猎人Ｇ头铠
+HUNTERS_HELM_S,Hunter's Helm S,ハンターＳヘルム,猎人Ｓ头铠
+HUNTERS_HELM_U,Hunter's Helm U,ハンターＵヘルム,猎人Ｕ头铠
+HUNTERS_LEGGINGS,Hunter's Leggings,ハンターレギンス,猎人护胫
+HUNTERS_LEGGINGS_PLUS,Hunter's Leggings+,ハンターＧレギンス,猎人Ｇ护胫
+HUNTERS_LEGGINGS_S,Hunter's Leggings S,ハンターＳレギンス,猎人Ｓ护胫
+HUNTERS_LEGGINGS_U,Hunter's Leggings U,ハンターＵレギンス,猎人Ｕ护胫
+HUNTERS_MAIL,Hunter's Mail,ハンターメイル,猎人铠甲
+HUNTERS_MAIL_PLUS,Hunter's Mail+,ハンターＧメイル,猎人Ｇ铠甲
+HUNTERS_MAIL_S,Hunter's Mail S,ハンターＳメイル,猎人Ｓ铠甲
+HUNTERS_MAIL_U,Hunter's Mail U,ハンターＵメイル,猎人Ｕ铠甲
+HUNTERS_TASSET,Hunter's Tasset,ハンターフォールド,猎人腰甲
+HUNTERS_TASSET_PLUS,Hunter's Tasset+,ハンターＧフォールド,猎人Ｇ腰甲
+HUNTERS_TASSET_S,Hunter's Tasset S,ハンターＳフォールド,猎人Ｓ腰甲
+HUNTERS_TASSET_U,Hunter's Tasset U,ハンターＵフォールド,猎人Ｕ腰甲
+HUNTERS_VAMBRACES,Hunter's Vambraces,ハンターアーム,猎人臂甲
+HUNTERS_VAMBRACES_PLUS,Hunter's Vambraces+,ハンターＧアーム,猎人Ｇ臂甲
+HUNTERS_VAMBRACES_S,Hunter's Vambraces S,ハンターＳアーム,猎人Ｓ臂甲
+HUNTERS_VAMBRACES_U,Hunter's Vambraces U,ハンターＵアーム,猎人Ｕ臂甲
+HUNTERS_VEST,Hunter's Vest,ハンターレジスト,猎人轻甲
+HUNTERS_VEST_PLUS,Hunter's Vest+,ハンターＧレジスト,猎人Ｇ轻甲
+HUNTERS_VEST_S,Hunter's Vest S,ハンターＳレジスト,猎人Ｓ轻甲
+HUNTERS_VEST_U,Hunter's Vest U,ハンターＵレジスト,猎人Ｕ轻甲
+HUSKBERRY,Huskberry,カラの実,空心果
+IMPORT_EXPORT_ARMOR,Import/Export Armor,,导入/导出防具组合
+IODROME_HIDE,Iodrome Hide,ドスイーオスの皮,红速龙王的皮
+IOPREY_CAP,Ioprey Cap,イーオスキャップ,红速龙软帽
+IOPREY_CAP_PLUS,Ioprey Cap+,イーオスＧキャップ,红速龙Ｇ软帽
+IOPREY_CAP_S,Ioprey Cap S,イーオスＳキャップ,红速龙Ｓ软帽
+IOPREY_COAT,Ioprey Coat,イーオスコート,红速龙围腰
+IOPREY_COAT_PLUS,Ioprey Coat+,イーオスＧコート,红速龙Ｇ围腰
+IOPREY_COAT_S,Ioprey Coat S,イーオスＳコート,红速龙Ｓ围腰
+IOPREY_GREAVES,Ioprey Greaves,イーオスグリーヴ,红速龙胫甲
+IOPREY_GREAVES_PLUS,Ioprey Greaves+,イーオスＧグリーヴ,红速龙Ｇ胫甲
+IOPREY_GREAVES_S,Ioprey Greaves S,イーオスＳグリーヴ,红速龙Ｓ胫甲
+IOPREY_GUARDS,Ioprey Guards,イーオスガード,红速龙护臂
+IOPREY_GUARDS_PLUS,Ioprey Guards+,イーオスＧガード,红速龙Ｇ护臂
+IOPREY_GUARDS_S,Ioprey Guards S,イーオスＳガード,红速龙Ｓ护臂
+IOPREY_HELM,Ioprey Helm,イーオスヘルム,红速龙头铠
+IOPREY_HELM_PLUS,Ioprey Helm+,イーオスＧヘルム,红速龙Ｇ头铠
+IOPREY_HELM_S,Ioprey Helm S,イーオスＳヘルム,红速龙Ｓ头铠
+IOPREY_HIDE,Ioprey Hide,イーオスの皮,红速龙的皮
+IOPREY_HIDE_PLUS,Ioprey Hide+,イーオスの上皮,红速龙的上皮
+IOPREY_LEGGINGS,Ioprey Leggings,イーオスレギンス,红速龙护胫
+IOPREY_LEGGINGS_PLUS,Ioprey Leggings+,イーオスＧレギンス,红速龙Ｇ护胫
+IOPREY_LEGGINGS_S,Ioprey Leggings S,イーオスＳレギンス,红速龙Ｓ护胫
+IOPREY_MAIL,Ioprey Mail,イーオスメイル,红速龙铠甲
+IOPREY_MAIL_PLUS,Ioprey Mail+,イーオスＧメイル,红速龙Ｇ铠甲
+IOPREY_MAIL_S,Ioprey Mail S,イーオスＳメイル,红速龙Ｓ铠甲
+IOPREY_SCALE,Ioprey Scale,イーオスの鱗,红速龙的鳞
+IOPREY_SCALE_PLUS,Ioprey Scale+,イーオスの上鱗,红速龙的上鳞
+IOPREY_TASSET,Ioprey Tasset,イーオスフォールド,红速龙腰甲
+IOPREY_TASSET_PLUS,Ioprey Tasset+,イーオスＧフォールド,红速龙Ｇ腰甲
+IOPREY_TASSET_S,Ioprey Tasset S,イーオスＳフォールド,红速龙Ｓ腰甲
+IOPREY_VAMBRACES,Ioprey Vambraces,イーオスアーム,红速龙臂甲
+IOPREY_VAMBRACES_PLUS,Ioprey Vambraces+,イーオスＧアーム,红速龙Ｇ臂甲
+IOPREY_VAMBRACES_S,Ioprey Vambraces S,イーオスＳアーム,红速龙Ｓ臂甲
+IOPREY_VEST,Ioprey Vest,イーオスレジスト,红速龙轻甲
+IOPREY_VEST_PLUS,Ioprey Vest+,イーオスＧレジスト,红速龙Ｇ轻甲
+IOPREY_VEST_S,Ioprey Vest S,イーオスＳレジスト,红速龙Ｓ轻甲
+IRON_BELT,Iron Belt,アイアンベルト,铁制腰带
+IRON_BELT_PLUS,Iron Belt+,アイアンＧベルト,铁制Ｇ腰带
+IRON_BELT_S,Iron Belt S,アイアンＳベルト,铁制Ｓ腰带
+IRON_ORE,Iron Ore,鉄鉱石,铁矿石
+JAPANESE,Japanese,日本語,日语
+JEWEL_TICKET,Jewel Ticket,宝石券,宝石券
+JOINER_GRASSHOPPER,Joiner Grasshopper,のりこねバッタ,粘着蝗虫
+KELBI_HIDE,Kelbi Hide,ケルビの皮,精灵鹿的皮
+KHEZU_CAP,Khezu Cap,フルフルキャップ,电龙软帽
+KHEZU_CAP_PLUS,Khezu Cap+,フルフルＧキャップ,电龙Ｇ软帽
+KHEZU_CAP_S,Khezu Cap S,フルフルＳキャップ,电龙Ｓ软帽
+KHEZU_CAP_U,Khezu Cap U,フルフルＵキャップ,电龙Ｕ软帽
+KHEZU_COAT,Khezu Coat,フルフルコート,电龙围腰
+KHEZU_COAT_PLUS,Khezu Coat+,フルフルＧコート,电龙Ｇ围腰
+KHEZU_COAT_S,Khezu Coat S,フルフルＳコート,电龙Ｓ围腰
+KHEZU_COAT_U,Khezu Coat U,フルフルＵコート,电龙Ｕ围腰
+KHEZU_COIN,Khezu Coin,フルフルのコイン,电龙的硬币
+KHEZU_GREAVES,Khezu Greaves,フルフルグリーヴ,电龙胫甲
+KHEZU_GREAVES_PLUS,Khezu Greaves+,フルフルＧグリーヴ,电龙Ｇ胫甲
+KHEZU_GREAVES_S,Khezu Greaves S,フルフルＳグリーヴ,电龙Ｓ胫甲
+KHEZU_GREAVES_U,Khezu Greaves U,フルフルＵグリーヴ,电龙Ｕ胫甲
+KHEZU_GUARDS,Khezu Guards,フルフルガード,电龙护臂
+KHEZU_GUARDS_PLUS,Khezu Guards+,フルフルＧガード,电龙Ｇ护臂
+KHEZU_GUARDS_S,Khezu Guards S,フルフルＳガード,电龙Ｓ护臂
+KHEZU_GUARDS_U,Khezu Guards U,フルフルＵガード,电龙Ｕ护臂
+KHEZU_HELM,Khezu Helm,フルフルヘルム,电龙头铠
+KHEZU_HELM_PLUS,Khezu Helm+,フルフルＧヘルム,电龙Ｇ头铠
+KHEZU_HELM_S,Khezu Helm S,フルフルＳヘルム,电龙Ｓ头铠
+KHEZU_HELM_U,Khezu Helm U,フルフルＵヘルム,电龙Ｕ头铠
+KHEZU_HIDE_TAN,Khezu Hide - Tan,真珠色の柔皮,珍珠色的柔皮
+KHEZU_LEGGINGS,Khezu Leggings,フルフルレギンス,电龙护胫
+KHEZU_LEGGINGS_PLUS,Khezu Leggings+,フルフルＧレギンス,电龙Ｇ护胫
+KHEZU_LEGGINGS_S,Khezu Leggings S,フルフルＳレギンス,电龙Ｓ护胫
+KHEZU_LEGGINGS_U,Khezu Leggings U,フルフルＵレギンス,电龙Ｕ护胫
+KHEZU_MAIL,Khezu Mail,フルフルメイル,电龙铠甲
+KHEZU_MAIL_PLUS,Khezu Mail+,フルフルＧメイル,电龙Ｇ铠甲
+KHEZU_MAIL_S,Khezu Mail S,フルフルＳメイル,电龙Ｓ铠甲
+KHEZU_MAIL_U,Khezu Mail U,フルフルＵメイル,电龙Ｕ铠甲
+KHEZU_TASSET,Khezu Tasset,フルフルフォールド,电龙腰甲
+KHEZU_TASSET_PLUS,Khezu Tasset+,フルフルＧフォールド,电龙Ｇ腰甲
+KHEZU_TASSET_S,Khezu Tasset S,フルフルＳフォールド,电龙Ｓ腰甲
+KHEZU_TASSET_U,Khezu Tasset U,フルフルＵフォールド,电龙Ｕ腰甲
+KHEZU_VAMBRACES,Khezu Vambraces,フルフルアーム,电龙臂甲
+KHEZU_VAMBRACES_PLUS,Khezu Vambraces+,フルフルＧアーム,电龙Ｇ臂甲
+KHEZU_VAMBRACES_S,Khezu Vambraces S,フルフルＳアーム,电龙Ｓ臂甲
+KHEZU_VAMBRACES_U,Khezu Vambraces U,フルフルＵアーム,电龙Ｕ臂甲
+KHEZU_VEST,Khezu Vest,フルフルレジスト,电龙轻甲
+KHEZU_VEST_PLUS,Khezu Vest+,フルフルＧレジスト,电龙Ｇ轻甲
+KHEZU_VEST_S,Khezu Vest S,フルフルＳレジスト,电龙Ｓ轻甲
+KHEZU_VEST_U,Khezu Vest U,フルフルＵレジスト,电龙Ｕ轻甲
+KING_ROOM,King Room,キング,国王套房
+KING_SCARAB,King Scarab,王族カナブン,王族花金龟
+KO_DOUBLED_MH1,Faint x 2,気絶倍加,气绝倍加
+KO_DOUBLED_MHG,Stun Doubled,気絶倍加,气绝倍加
+KO_HALVED_MH1,Faint Halved,気絶確率半減,气绝概率半减
+KO_HALVED_MHG,Stun Halved,気絶確率半減,气绝概率半减
+KO_NEGATED_MH1,Faint Negated,気絶無効,气绝无效
+KO_NEGATED_MHG,Stun Negated,気絶無効,气绝无效
+KO_SKILL_MHG,Stun,気絶,气绝
+KOKOTO_HOUSE,Kokoto House,ココット村の家,
+KUT_KU_CARAPACE,Kut-Ku Carapace,怪鳥の堅殻,怪鸟的坚壳
+KUT_KU_COAT,Kut-Ku Coat,クックコート,怪鸟围腰
+KUT_KU_COAT_PLUS,Kut-Ku Coat+,クックＧコート,怪鸟Ｇ围腰
+KUT_KU_COAT_S,Kut-Ku Coat S,クックＳコート,怪鸟Ｓ围腰
+KUT_KU_COAT_U,Kut-Ku Coat U,クックＵコート,怪鸟Ｕ围腰
+KUT_KU_COIN,Kut-Ku Coin,怪鳥のコイン,怪鸟的硬币
+KUT_KU_EAR,Kut-Ku Ear,怪鳥の耳,怪鸟的耳
+KUT_KU_GUARDS,Kut-Ku Guards,クックガード,怪鸟护臂
+KUT_KU_GUARDS_PLUS,Kut-Ku Guards+,クックＧガード,怪鸟Ｇ护臂
+KUT_KU_GUARDS_S,Kut-Ku Guards S,クックＳガード,怪鸟Ｓ护臂
+KUT_KU_GUARDS_U,Kut-Ku Guards U,クックＵガード,怪鸟Ｕ护臂
+KUT_KU_MAIL,Kut-Ku Mail,クックメイル,怪鸟铠甲
+KUT_KU_MAIL_PLUS,Kut-Ku Mail+,クックＧメイル,怪鸟Ｇ铠甲
+KUT_KU_MAIL_S,Kut-Ku Mail S,クックＳメイル,怪鸟Ｓ铠甲
+KUT_KU_MAIL_U,Kut-Ku Mail U,クックＵメイル,怪鸟Ｕ铠甲
+KUT_KU_SCALE,Kut-Ku Scale,怪鳥の鱗,怪鸟的鳞
+KUT_KU_SHELL,Kut-Ku Shell,怪鳥の甲殻,怪鸟的甲壳
+KUT_KU_TASSET,Kut-Ku Tasset,クックフォールド,怪鸟腰甲
+KUT_KU_TASSET_PLUS,Kut-Ku Tasset+,クックＧフォールド,怪鸟Ｇ腰甲
+KUT_KU_TASSET_S,Kut-Ku Tasset S,クックＳフォールド,怪鸟Ｓ腰甲
+KUT_KU_TASSET_U,Kut-Ku Tasset U,クックＵフォールド,怪鸟Ｕ腰甲
+KUT_KU_VAMBRACES,Kut-Ku Vambraces,クックアーム,怪鸟臂甲
+KUT_KU_VAMBRACES_PLUS,Kut-Ku Vambraces+,クックＧアーム,怪鸟Ｇ臂甲
+KUT_KU_VAMBRACES_S,Kut-Ku Vambraces S,クックＳアーム,怪鸟Ｓ臂甲
+KUT_KU_VAMBRACES_U,Kut-Ku Vambraces U,クックＵアーム,怪鸟Ｕ臂甲
+KUT_KU_VEST,Kut-Ku Vest,クックレジスト,怪鸟轻甲
+KUT_KU_VEST_PLUS,Kut-Ku Vest+,クックＧレジスト,怪鸟Ｇ轻甲
+KUT_KU_VEST_S,Kut-Ku Vest S,クックＳレジスト,怪鸟Ｓ轻甲
+KUT_KU_VEST_U,Kut-Ku Vest U,クックＵレジスト,怪鸟Ｕ轻甲
+KUT_KU_WEBBING,Kut-Ku Webbing,怪鳥の翼膜,怪鸟的翼膜
+KUT_KU_WING,Kut-Ku Wing,怪鳥の翼,怪鸟的翼
+LANCE_TICKET,Lance Ticket,ランスチケット,长枪券
+LAO_SHAN_CARAPACE,Lao-Shan Carapace,老山龍の堅殻,老山龍的坚壳
+LAO_SHAN_CLAW,Lao-Shan Claw,老山龍の爪,老山龍的爪
+LAO_SHAN_HEAVY_SHELL,Lao-Shan Heavy Shell,老山龍の重甲,老山龍的重甲
+LAO_SHAN_SCALE,Lao-Shan Scale,老山龍の鱗,老山龍的鳞
+LAO_SHAN_SCALE_PLUS,Lao-Shan Scale+,老山龍の上鱗,老山龍的上鳞
+LAO_SHAN_SHELL,Lao-Shan Shell,老山龍の甲殻,老山龍的甲壳
+LAO_SHAN_SPINE,Lao-Shan Spine,老山龍の背甲,老山龍的背甲
+LAO_SHAN_THORACIC,Lao-Shan Thoracic,老山龍の堅甲,老山龍的坚甲
+LEATHER_ARMOR,Leather Armor,レザーライトメイル,轻革铠甲
+LEATHER_ARMOR_PLUS,Leather Armor+,レザーライトＧメイル,轻革Ｇ铠甲
+LEATHER_ARMOR_S,Leather Armor S,レザーライトＳメイル,轻革Ｓ铠甲
+LEATHER_ARMOR_U,Leather Armor U,レザーライトＵメイル,轻革Ｕ铠甲
+LEATHER_BELT,Leather Belt,レザーライトベルト,轻革腰带
+LEATHER_BELT_PLUS,Leather Belt+,レザーライトＧベルト,轻革Ｇ腰带
+LEATHER_BELT_S,Leather Belt S,レザーライトＳベルト,轻革Ｓ腰带
+LEATHER_BELT_U,Leather Belt U,レザーライトＵベルト,轻革Ｕ腰带
+LEATHER_HELM,Leather Helm,レザーライトヘルム,轻革头铠
+LEATHER_HELM_PLUS,Leather Helm+,レザーライトＧヘルム,轻革Ｇ头铠
+LEATHER_HELM_S,Leather Helm S,レザーライトＳヘルム,轻革Ｓ头铠
+LEATHER_HELM_U,Leather Helm U,レザーライトＵヘルム,轻革Ｕ头铠
+LEATHER_VAMBRACES,Leather Vambraces,レザーライトアーム,轻革臂甲
+LEATHER_VAMBRACES_PLUS,Leather Vambraces+,レザーライトＧアーム,轻革Ｇ臂甲
+LEATHER_VAMBRACES_S,Leather Vambraces S,レザーライトＳアーム,轻革Ｓ臂甲
+LEATHER_VAMBRACES_U,Leather Vambraces U,レザーライトＵアーム,轻革Ｕ臂甲
+LEGS,Legs,脚,脚
+LG_BONE_HUSK,Lg Bone Husk,カラ骨【大】,空心骨【大】
+LG_LOBSTERSHELL,Lg Lobstershell,エビの大殻,虾之大壳
+LG_MONSTER_BONE,Lg Monster Bone,竜骨【大】,龙骨【大】
+LIFE_PIERCING,Life Piercing,命のピアス,命之耳饰
+LIFECRYSTALS,Lifecrystals,生命の粉,生命之粉
+LIFEPOWDER,Lifepowder,生命の粉塵,生命之粉尘
+LIGHT_BELT,Light Belt,スキンライトベルト,轻皮腰带
+LIGHT_BELT_PLUS,Light Belt+,レザーライトＧベルト,轻革Ｇ腰带
+LIGHT_BELT_S,Light Belt S,スキンライトＳベルト,轻皮Ｓ腰带
+LIGHTCRYSTAL,Lightcrystal,ライトクリスタル,光水晶
+LIGHTNING_BUG,Lightning Bug,雷光虫,雷光虫
+LOBSTER_GUARDS,Lobster Guards,キングロブスタガード,帝王龙虾护臂
+LOBSTER_GUARDS_PLUS,Lobster Guards+,Ｋ・ロブスタＧガード,帝王龙虾Ｇ护臂
+LOBSTER_GUARDS_S,Lobster Guards S,Ｋ・ロブスタＳガード,帝王龙虾Ｓ护臂
+LOBSTER_HELM,Lobster Helm,キングロブスタヘルム,帝王龙虾头铠
+LOBSTER_HELM_PLUS,Lobster Helm+,Ｋ・ロブスタＧヘルム,帝王龙虾Ｇ头铠
+LOBSTER_HELM_S,Lobster Helm S,Ｋ・ロブスタＳヘルム,帝王龙虾Ｓ头铠
+LOBSTER_MAIL,Lobster Mail,キングロブスタシェル,帝王龙虾之壳
+LOBSTER_MAIL_PLUS,Lobster Mail+,Ｋ・ロブスタＧシェル,帝王龙虾Ｇ之壳
+LOBSTER_MAIL_S,Lobster Mail S,Ｋ・ロブスタＳシェル,帝王龙虾Ｓ之壳
+LOBSTER_VAMBRACES,Lobster Vambraces,キングロブスタアーム,帝王龙虾臂甲
+LOBSTER_VAMBRACES_PLUS,Lobster Vambraces+,Ｋ・ロブスタＧアーム,帝王龙虾Ｇ臂甲
+LOBSTER_VAMBRACES_S,Lobster Vambraces S,Ｋ・ロブスタＳアーム,帝王龙虾Ｓ臂甲
+LOBSTER_VEST,Lobster Vest,キングロブスタスキン,帝王龙虾之皮
+LOBSTER_VEST_PLUS,Lobster Vest+,Ｋ・ロブスタＧスキン,帝王龙虾Ｇ之皮
+LOBSTER_VEST_S,Lobster Vest S,Ｋ・ロブスタＳスキン,帝王龙虾Ｓ之皮
+LONG_KUT_KU_EAR,Long Kut-Ku Ear,怪鳥の地獄耳,怪鸟的地狱耳
+LUCKY_METAL_BOOTS,Lucky Metal Boots,ラッキーメタルブーツ,合金靴・运
+MACHALITE_ORE,Machalite Ore,マカライト鉱石,燕雀石
+MAIDENS_HAT,Maiden's Hat,メイドカチューシャ,女仆发箍
+MAIDENS_HAT_PLUS,Maiden's Hat+,メイドＧカチューシャ,女仆Ｇ发箍
+MAIDENS_HAT_S,Maiden's Hat S,イエローＳピアス,金雷Ｓ耳饰
+MAIDENS_SKIRT,Maiden's Skirt,メイドスカート,女仆短裙
+MAIDENS_SKIRT_PLUS,Maiden's Skirt+,メイドＧスカート,女仆Ｇ短裙
+MAIDENS_SKIRT_S,Maiden's Skirt S,メイドＳスカート,女仆Ｓ短裙
+MAIDENS_SLEEVES,Maiden's Sleeves,メイドカフス,女仆褶袖
+MAIDENS_SLEEVES_PLUS,Maiden's Sleeves+,メイドＧカフス,女仆Ｇ褶袖
+MAIDENS_SLEEVES_S,Maiden's Sleeves S,メイドＳカフス,女仆Ｓ褶袖
+MAIDENS_STOCKINGS,Maiden's Stockings,メイドストッキング,女仆长筒袜
+MAIDENS_STOCKINGS_PLUS,Maiden's Stockings+,メイドＧストッキング,女仆Ｇ长筒袜
+MAIDENS_STOCKINGS_S,Maiden's Stockings S,メイドＳストッキング,女仆Ｓ长筒袜
+MAIDENS_VEST,Maiden's Vest,メイドベスト,女仆背心
+MAIDENS_VEST_PLUS,Maiden's Vest+,メイドＧベスト,女仆Ｇ背心
+MAIDENS_VEST_S,Maiden's Vest S,メイドＳベスト,女仆Ｓ背心
+MAIL_ARMOR,Mail,胸当て,胴装备
+MAJESTIC_HORN,Majestic Horn,上質なねじれた角,优质的弯角
+MALE,Male,男性,男性
+MAP,Map,地図,地图
+MASTER_VOLUME,Master,音量,
+MASTERS_SKULL,Master’s Skull,達人のドクロ,达人的髑髅
+MATERIALS,Materials,生産に必要な素材,所需素材
+MED_MONSTER_BONE,Med Monster Bone,竜骨【中】,龙骨【中】
+MONOBLOS_CAP,Monoblos Cap,モノブロスキャップ,一角龙软帽
+MONOBLOS_CAP_S,Monoblos Cap S,モノブロスＳキャップ,一角龙Ｓ软帽
+MONOBLOS_COIN,Monoblos Coin,真紅のコイン,真红的硬币
+MONOBLOS_GUARDS,Monoblos Guards,モノブロスガード,一角龙护臂
+MONOBLOS_GUARDS_S,Monoblos Guards S,モノブロスＳガード,一角龙Ｓ护臂
+MONOBLOS_HEART,Monoblos Heart,モノブロスハート,一角龙的心脏
+MONOBLOS_HELM,Monoblos Helm,モノブロスヘルム,一角龙头铠
+MONOBLOS_HELM_S,Monoblos Helm S,モノブロスＳヘルム,一角龙Ｓ头铠
+MONOBLOS_MAIL,Monoblos Mail,モノブロスメイル,一角龙铠甲
+MONOBLOS_MAIL_S,Monoblos Mail S,モノブロスＳメイル,一角龙Ｓ铠甲
+MONOBLOS_SHELL,Monoblos Shell,一角竜の甲殻,一角龙的甲壳
+MONOBLOS_SPINE,Monoblos Spine,一角竜の背甲,一角龙的背甲
+MONOBLOS_VAMBRACES,Monoblos Vambraces,モノブロスアーム,一角龙臂甲
+MONOBLOS_VAMBRACES_S,Monoblos Vambraces S,モノブロスＳアーム,一角龙Ｓ臂甲
+MONOBLOS_VEST,Monoblos Vest,モノブロスレジスト,一角龙轻甲
+MONOBLOS_VEST_S,Monoblos Vest S,モノブロスＳレジスト,一角龙Ｓ轻甲
+MONODEVIL_CAP,Monodevil Cap,モノデビルキャップ,白一角龙软帽
+MONODEVIL_CAP_S,Monodevil Cap S,モノデビルＳキャップ,白一角龙Ｓ软帽
+MONODEVIL_GUARDS,Monodevil Guards,モノデビルガード,白一角龙护臂
+MONODEVIL_GUARDS_S,Monodevil Guards S,モノデビルＳガード,白一角龙Ｓ护臂
+MONODEVIL_HELM,Monodevil Helm,モノデビルヘルム,白一角龙头铠
+MONODEVIL_HELM_S,Monodevil Helm S,モノデビルＳヘルム,白一角龙Ｓ头铠
+MONODEVIL_MAIL,Monodevil Mail,モノデビルメイル,白一角龙铠甲
+MONODEVIL_MAIL_S,Monodevil Mail S,モノデビルＳメイル,白一角龙Ｓ铠甲
+MONODEVIL_VAMBRACES,Monodevil Vambraces,モノデビルアーム,白一角龙臂甲
+MONODEVIL_VAMBRACES_S,Monodevil Vambraces S,モノデビルＳアーム,白一角龙Ｓ臂甲
+MONODEVIL_VEST,Monodevil Vest,モノデビルレジスト,白一角龙轻甲
+MONODEVIL_VEST_S,Monodevil Vest S,モノデビルＳレジスト,白一角龙Ｓ轻甲
+MONSTER_BONE_PLUS,Monster Bone+,堅竜骨,坚龙骨
+MONSTER_FLUID,Monster Fluid,モンスターの体液,怪物的体液
+MONSTER_HUNTER,Monster Hunter,モンスターハンター,怪物猎人
+MONSTER_HUNTER_G,Monster Hunter G,モンスターハンターG,怪物猎人G
+MOSS_BREASTPLATE,Moss Breastplate,モスブレスト,苔猪胸
+MOSS_BREASTPLATE_PLUS,Moss Breastplate+,モスＧブレスト,苔猪Ｇ胸
+MOSS_BREASTPLATE_S,Moss Breastplate S,モスＳブレスト,苔猪Ｓ胸
+MOSSWINE_HEAD,Mosswine Head,モスの頭,苔猪的头
+MOSSWINE_HIDE,Mosswine Hide,モスの苔皮,苔猪的皮
+MOSSWINE_MASK,Mosswine Mask,モスフェイク,苔猪伪装头
+MOSSWINE_MASK_PLUS,Mosswine Mask+,モスＧフェイク,苔猪Ｇ伪装头
+MOSSWINE_MASK_S,Mosswine Mask S,モスＳフェイク,苔猪Ｓ伪装头
+MUSIC,Music,音楽,
+MUTE,Mute,ミュート,
+NAME,Name,名称,
+NO_MAP,No Map,地図無効,地图无效
+NO_SKILL,No Skill,スキル無し,
+NONE,None,なし,无
+NORMAL_S_ADD,Normal S Add,通常弾追加,通常弹追加
+NORMAL_S_ADD_1,Normal S Add 1,通常弾ＬＶ１追加,通常弹LV1追加
+NORMAL_S_ADD_ALL,Normal S Add All,通常弾全レベル追加,通常弹全等级追加
+NORMAL_S_UP_ACTIVATED,Normal S Up,通常弾攻撃力UP,通常弹攻击力UP
+NORMAL_S_UP_SKILL,Normal S Up,通常弾強化,通常弹强化
+NOVACRYSTAL,Novacrystal,ノヴァクリスタル,耀水晶
+OK,OK,OK,OK
+ONE_HANDED_SWORD_TICKET,One-handed Sword Ticket,片手剣チケット,片手剑券
+OPTIONS,Options,選択肢,
+PALE_BONE,Pale Bone,アルビノの中落ち,白化的脊肉
+PALE_KHEZU_STEAK,Pale Khezu Steak,アルビノの霜降り,白化的雪花肉
+PARALYSIS_DOUBLED_MH1,Stun x 2,麻痺倍加,麻痹倍加
+PARALYSIS_DOUBLED_MHG,Paralysis Doubled,麻痺倍加,麻痹倍加
+PARALYSIS_HALVED_MH1,Stun Halved,麻痺半減,麻痹半减
+PARALYSIS_HALVED_MHG,Paralysis Halved,麻痺半減,麻痹半减
+PARALYSIS_NEGATED_MH1,Stun Negated,麻痺無効,麻痹无效
+PARALYSIS_NEGATED_MHG,Paralysis Negated,麻痺無効,麻痹无效
+PARALYSIS_SKILL,Paralysis,麻痺,麻痹
+PAWN_ROOM,Pawn Room,ポーン,步卒小屋
+PELLET_S_ADD_1,Pellet S Add 1,散弾ＬＶ１追加,散弹LV1追加
+PELLET_S_ADD_2,Pellet S Add 2,散弾ＬＶ1&2追加,散弹LV1&2追加
+PELLET_S_ADD_3,Pellet S Add 3,散弾全レベル追加,散弹全等级追加
+PELLET_S_ADD_SKILL,Pellet S Add,散弾追加,散弹追加
+PELLET_S_UP_ACTIVATED,Pellet S Up,散弾攻撃力UP,散弹攻击力UP
+PELLET_S_UP_SKILL,Pellet S Up,散弾強化,散弹强化
+PERSONAL_FRILLS,Personal Frills,プライベートフリル,便服褶边裙
+PERSONAL_FRILLS_PLUS,Personal Frills+,プライベートＧフリル,便服Ｇ褶边裙
+PERSONAL_FRILLS_S,Personal Frills S,プライベートＳフリル,便服Ｓ褶边裙
+PERSONAL_HAT,Personal Hat,プライベートグラス,便服眼镜
+PERSONAL_HAT_PLUS,Personal Hat+,プライベートＧグラス,便服Ｇ眼镜
+PERSONAL_HAT_S,Personal Hat S,プライベートＳグラス,便服Ｓ眼镜
+PERSONAL_SLEEVES,Personal Sleeves,プライベートカフス,便服褶袖
+PERSONAL_SLEEVES_PLUS,Personal Sleeves+,プライベートＧカフス,便服Ｇ褶袖
+PERSONAL_SLEEVES_S,Personal Sleeves S,プライベートＳカフス,便服Ｓ褶袖
+PERSONAL_TIGHTS,Personal Tights,プライベートタイツ,便服紧身袜
+PERSONAL_TIGHTS_PLUS,Personal Tights+,プライベートＧタイツ,便服Ｇ紧身袜
+PERSONAL_TIGHTS_S,Personal Tights S,プライベートＳタイツ,便服Ｓ紧身袜
+PERSONAL_VEST,Personal Vest,プライベートベスト,便服背心
+PERSONAL_VEST_PLUS,Personal Vest+,プライベートＧベスト,便服Ｇ背心
+PERSONAL_VEST_S,Personal Vest S,プライベートＳベスト,便服Ｓ背心
+PIERCE_S_ADD_1,Pierce S Add 1,貫通弾ＬＶ１追加,贯通弹LV1追加
+PIERCE_S_ADD_2,Pierce S Add 2,貫通弾ＬＶ1&2追加,贯通弹LV1&2追加
+PIERCE_S_ADD_3,Pierce S Add 3,貫通弾全レベル追加,贯通弹全等级追加
+PIERCE_S_ADD_SKILL,Pierce S Add,貫通弾追加,贯通弹追加
+PIERCE_S_UP_ACTIVATED,Pierce S Up,貫通弾攻撃力UP,贯通弹攻击力UP
+PIERCE_S_UP_SKILL,Pierce S Up,貫通弾強化,贯通弹强化
+PINK_METAL_BOOTS,Pink Metal Boots,ピンクメタルブーツ,合金靴・艳
+PINK_METAL_BOOTS_PLUS,Pink Metal Boots+,ピンクメタルＧブーツ,合金Ｇ靴・艳
+PINK_METAL_BOOTS_S,Pink Metal Boots S,ピンクメタルＳブーツ,合金Ｓ靴・艳
+PINK_RATHIAN_CARAPACE,Pink Rathian Carapace,雌火竜の堅殻,雌火龙的坚壳
+PINK_RATHIAN_CLAW,Pink Rathian Claw,桜火竜の翼爪,樱火龙的翼爪
+PINK_RATHIAN_PLATE,Pink Rathian Plate,桜火竜の逆鱗,樱火龙的逆鳞
+PINK_RATHIAN_RUBY,Pink Rathian Ruby,桜火竜の紅玉,樱火龙的红玉
+PINK_RATHIAN_SCALE,Pink Rathian Scale,桜火竜の鱗,樱火龙的鳞
+PINK_RATHIAN_SCALE_PLUS,Pink Rathian Scale+,桜火竜の上鱗,樱火龙的上鳞
+PINK_RATHIAN_SHELL,Pink Rathian Shell,桜火竜の甲殻,樱火龙的甲壳
+PINK_RATHIAN_SPIKE,Pink Rathian Spike,桜火竜の棘,樱火龙的棘
+PLESIOTH_CAP,Plesioth Cap,ガノスキャップ,水龙软帽
+PLESIOTH_CAP_PLUS,Plesioth Cap+,ガノスＧキャップ,水龙Ｇ软帽
+PLESIOTH_CAP_S,Plesioth Cap S,ガノスＳキャップ,水龙Ｓ软帽
+PLESIOTH_CAP_U,Plesioth Cap U,ガノスＵキャップ,水龙Ｕ软帽
+PLESIOTH_COIN,Plesioth Coin,水竜のコイン,水龙的硬币
+PLESIOTH_FIN,Plesioth Fin,水竜のヒレ,水龙的鳍
+PLESIOTH_GREAVES,Plesioth Greaves,ガノスグリーヴ,水龙胫甲
+PLESIOTH_GREAVES_PLUS,Plesioth Greaves+,ガノスＧグリーヴ,水龙Ｇ胫甲
+PLESIOTH_GREAVES_S,Plesioth Greaves S,ガノスＳグリーヴ,水龙Ｓ胫甲
+PLESIOTH_GREAVES_U,Plesioth Greaves U,ガノスＵグリーヴ,水龙Ｕ胫甲
+PLESIOTH_GUARDS,Plesioth Guards,ガノスガード,水龙护臂
+PLESIOTH_GUARDS_PLUS,Plesioth Guards+,ガノスＧガード,水龙Ｇ护臂
+PLESIOTH_GUARDS_S,Plesioth Guards S,ガノスＳガード,水龙Ｓ护臂
+PLESIOTH_GUARDS_U,Plesioth Guards U,ガノスＵガード,水龙Ｕ护臂
+PLESIOTH_HELM,Plesioth Helm,ガノスヘルム,水龙头铠
+PLESIOTH_HELM_PLUS,Plesioth Helm+,ガノスＧヘルム,水龙Ｇ头铠
+PLESIOTH_HELM_S,Plesioth Helm S,ガノスＳヘルム,水龙Ｓ头铠
+PLESIOTH_HELM_U,Plesioth Helm U,ガノスＵヘルム,水龙Ｕ头铠
+PLESIOTH_LEGGINGS,Plesioth Leggings,ガノスレギンス,水龙护胫
+PLESIOTH_LEGGINGS_PLUS,Plesioth Leggings+,ガノスＧレギンス,水龙Ｇ护胫
+PLESIOTH_LEGGINGS_S,Plesioth Leggings S,ガノスＳレギンス,水龙Ｓ护胫
+PLESIOTH_LEGGINGS_U,Plesioth Leggings U,ガノスＵレギンス,水龙Ｕ护胫
+PLESIOTH_MAIL,Plesioth Mail,ガノスメイル,水龙铠甲
+PLESIOTH_MAIL_PLUS,Plesioth Mail+,ガノスＧメイル,水龙Ｇ铠甲
+PLESIOTH_MAIL_S,Plesioth Mail S,ガノスＳメイル,水龙Ｓ铠甲
+PLESIOTH_MAIL_U,Plesioth Mail U,ガノスＵメイル,水龙Ｕ铠甲
+PLESIOTH_SCALE,Plesioth Scale,水竜の鱗,水龙的鳞
+PLESIOTH_SCALE_PLUS,Plesioth Scale+,水竜の上鱗,水龙的上鳞
+PLESIOTH_TOP_FIN,Plesioth Top Fin,水竜の背ビレ,水龙的背鳍
+PLESIOTH_VAMBRACES,Plesioth Vambraces,ガノスアーム,水龙臂甲
+PLESIOTH_VAMBRACES_PLUS,Plesioth Vambraces+,ガノスＧアーム,水龙Ｇ臂甲
+PLESIOTH_VAMBRACES_S,Plesioth Vambraces S,ガノスＳアーム,水龙Ｓ臂甲
+PLESIOTH_VAMBRACES_U,Plesioth Vambraces U,ガノスＵアーム,水龙Ｕ臂甲
+PLESIOTH_VEST,Plesioth Vest,ガノスレジスト,水龙轻甲
+PLESIOTH_VEST_PLUS,Plesioth Vest+,ガノスＧレジスト,水龙Ｇ轻甲
+PLESIOTH_VEST_S,Plesioth Vest S,ガノスＳレジスト,水龙Ｓ轻甲
+PLESIOTH_VEST_U,Plesioth Vest U,ガノスＵレジスト,水龙Ｕ轻甲
+POISON_DOUBLED,Poison Doubled,毒倍加【×2】,毒倍加【×2】
+POISON_HALVED,Poison Halved,毒半減,毒半减
+POISON_NEGATED,Poison Negated,毒無効,毒无效
+POISON_QUADRUPLED,Poison Quadrupled,毒倍加【×4】,毒倍加【×4】
+POISON_SKILL,Poison,毒,毒
+POISON_TRIPLED,Poison Tripled,毒倍加【×3】,毒倍加【×3】
+POISON_X_2,Poison x 2,毒倍加,毒倍加
+POISONOUS_BIRD_COIN,Poisonous Bird Coin,毒怪鳥のコイン,毒怪鸟的硬币
+POWER_PIERCING,Power Piercing,力のピアス,力之耳饰
+PROTECTION_PIERCING,Protection Piercing,護りのピアス,守护耳饰
+PROTECTION_SKILL,Protection,加護,加护
+PROVOCATION,Provocation,挑発,挑衅
+PSYCHIC,Psychic,千里眼,千里眼
+PURECRYSTAL,Purecrystal,ピュアクリスタル,纯水晶
+PURPLE_RUBBERY_HIDE,Purple Rubbery Hide,ゴム質の紫皮,橡胶质的紫皮
+QUEEN_ROOM,Queen Room,クイーン,王后套房
+QUIT,Quit,抜ける,
+RAPID_FIRE,Rapid Fire,連射,连射
+RATH_HEART_CAP,Rath Heart Cap,リオハートキャップ,樱火龙软帽
+RATH_HEART_CAP_PLUS,Rath Heart Cap+,リオハートＧキャップ,樱火龙Ｇ软帽
+RATH_HEART_CAP_S,Rath Heart Cap S,リオハートＳキャップ,樱火龙Ｓ软帽
+RATH_HEART_COAT,Rath Heart Coat,リオハートコート,樱火龙围腰
+RATH_HEART_COAT_PLUS,Rath Heart Coat+,リオハートＧコート,樱火龙Ｇ围腰
+RATH_HEART_COAT_S,Rath Heart Coat S,リオハートＳコート,樱火龙Ｓ围腰
+RATH_HEART_GREAVES,Rath Heart Greaves,リオハートグリーヴ,樱火龙胫甲
+RATH_HEART_GREAVES_PLUS,Rath Heart Greaves+,リオハートＧグリーヴ,樱火龙Ｇ胫甲
+RATH_HEART_GREAVES_S,Rath Heart Greaves S,リオハートＳグリーヴ,樱火龙Ｓ胫甲
+RATH_HEART_GUARDS,Rath Heart Guards,リオハートガード,樱火龙护臂
+RATH_HEART_GUARDS_PLUS,Rath Heart Guards+,リオハートＧガード,樱火龙Ｇ护臂
+RATH_HEART_GUARDS_S,Rath Heart Guards S,リオハートＳガード,樱火龙Ｓ护臂
+RATH_HEART_HELM,Rath Heart Helm,リオハートヘルム,樱火龙头铠
+RATH_HEART_HELM_PLUS,Rath Heart Helm+,リオハートＧヘルム,樱火龙Ｇ头铠
+RATH_HEART_HELM_S,Rath Heart Helm S,リオハートＳヘルム,樱火龙Ｓ头铠
+RATH_HEART_LEGGINGS,Rath Heart Leggings,リオハートレギンス,樱火龙护胫
+RATH_HEART_LEGGINGS_PLUS,Rath Heart Leggings+,リオハートＧレギンス,樱火龙Ｇ护胫
+RATH_HEART_LEGGINGS_S,Rath Heart Leggings S,リオハートＳレギンス,樱火龙Ｓ护胫
+RATH_HEART_MAIL,Rath Heart Mail,リオハートメイル,樱火龙铠甲
+RATH_HEART_MAIL_PLUS,Rath Heart Mail+,リオハートＧメイル,樱火龙Ｇ铠甲
+RATH_HEART_MAIL_S,Rath Heart Mail S,リオハートＳメイル,樱火龙Ｓ铠甲
+RATH_HEART_TASSET,Rath Heart Tasset,リオハートコイル,樱火龙腰甲
+RATH_HEART_TASSET_PLUS,Rath Heart Tasset+,リオハートＧコイル,樱火龙Ｇ腰甲
+RATH_HEART_TASSET_S,Rath Heart Tasset S,リオハートＳコイル,樱火龙Ｓ腰甲
+RATH_HEART_VAMBRACES,Rath Heart Vambraces,リオハートアーム,樱火龙臂甲
+RATH_HEART_VAMBRACES_PLUS,Rath Heart Vambraces+,リオハートＧアーム,樱火龙Ｇ臂甲
+RATH_HEART_VAMBRACES_S,Rath Heart Vambraces S,リオハートＳアーム,樱火龙Ｓ臂甲
+RATH_HEART_VEST,Rath Heart Vest,リオハートレジスト,樱火龙轻甲
+RATH_HEART_VEST_PLUS,Rath Heart Vest+,リオハートＧレジスト,樱火龙Ｇ轻甲
+RATH_HEART_VEST_S,Rath Heart Vest S,リオハートＳレジスト,樱火龙Ｓ轻甲
+RATH_METAL_TASSET,Rath Metal Tasset,リオメタルフォールド,龙金腰甲
+RATH_SOUL_CAP,Rath Soul Cap,リオソウルキャップ,苍火龙软帽
+RATH_SOUL_CAP_PLUS,Rath Soul Cap+,リオソウルＧキャップ,苍火龙Ｇ软帽
+RATH_SOUL_CAP_S,Rath Soul Cap S,リオソウルＳキャップ,苍火龙Ｓ软帽
+RATH_SOUL_COAT,Rath Soul Coat,リオソウルコート,苍火龙围腰
+RATH_SOUL_COAT_PLUS,Rath Soul Coat+,リオソウルＧコート,苍火龙Ｇ围腰
+RATH_SOUL_COAT_S,Rath Soul Coat S,リオソウルＳコート,苍火龙Ｓ围腰
+RATH_SOUL_GREAVES,Rath Soul Greaves,リオソウルグリーヴ,苍火龙胫甲
+RATH_SOUL_GREAVES_PLUS,Rath Soul Greaves+,リオソウルＧグリーヴ,苍火龙Ｇ胫甲
+RATH_SOUL_GREAVES_S,Rath Soul Greaves S,リオソウルＳグリーヴ,苍火龙Ｓ胫甲
+RATH_SOUL_GUARDS,Rath Soul Guards,リオソウルガード,苍火龙护臂
+RATH_SOUL_GUARDS_PLUS,Rath Soul Guards+,リオソウルＧガード,苍火龙Ｇ护臂
+RATH_SOUL_GUARDS_S,Rath Soul Guards S,リオソウルＳガード,苍火龙Ｓ护臂
+RATH_SOUL_HELM,Rath Soul Helm,リオソウルヘルム,苍火龙头铠
+RATH_SOUL_HELM_PLUS,Rath Soul Helm+,リオソウルＧヘルム,苍火龙Ｇ头铠
+RATH_SOUL_HELM_S,Rath Soul Helm S,リオソウルＳヘルム,苍火龙Ｓ头铠
+RATH_SOUL_LEGGINGS,Rath Soul Leggings,リオソウルレギンス,苍火龙护胫
+RATH_SOUL_LEGGINGS_PLUS,Rath Soul Leggings+,リオソウルＧレギンス,苍火龙Ｇ护胫
+RATH_SOUL_LEGGINGS_S,Rath Soul Leggings S,リオソウルＳレギンス,苍火龙Ｓ护胫
+RATH_SOUL_MAIL,Rath Soul Mail,リオソウルメイル,苍火龙铠甲
+RATH_SOUL_MAIL_PLUS,Rath Soul Mail+,リオソウルＧメイル,苍火龙Ｇ铠甲
+RATH_SOUL_MAIL_S,Rath Soul Mail S,リオソウルＳメイル,苍火龙Ｓ铠甲
+RATH_SOUL_TASSET,Rath Soul Tasset,リオソウルコイル,苍火龙腰甲
+RATH_SOUL_TASSET_PLUS,Rath Soul Tasset+,リオソウルＧコイル,苍火龙Ｇ腰甲
+RATH_SOUL_TASSET_S,Rath Soul Tasset S,リオソウルＳコイル,苍火龙Ｓ腰甲
+RATH_SOUL_VAMBRACES,Rath Soul Vambraces,リオソウルアーム,苍火龙臂甲
+RATH_SOUL_VAMBRACES_PLUS,Rath Soul Vambraces+,リオソウルＧアーム,苍火龙Ｇ臂甲
+RATH_SOUL_VAMBRACES_S,Rath Soul Vambraces S,リオソウルＳアーム,苍火龙Ｓ臂甲
+RATH_SOUL_VEST,Rath Soul Vest,リオソウルレジスト,苍火龙轻甲
+RATH_SOUL_VEST_PLUS,Rath Soul Vest+,リオソウルＧレジスト,苍火龙Ｇ轻甲
+RATH_SOUL_VEST_S,Rath Soul Vest S,リオソウルＳレジスト,苍火龙Ｓ轻甲
+RATHALOS_CAP,Rathalos Cap,レウスキャップ,雄火龙软帽
+RATHALOS_CAP_PLUS,Rathalos Cap+,レウスＧキャップ,雄火龙Ｇ软帽
+RATHALOS_CAP_S,Rathalos Cap S,レウスＳキャップ,雄火龙Ｓ软帽
+RATHALOS_CARAPACE,Rathalos Carapace,火竜の堅殻,火龙的坚壳
+RATHALOS_COAT,Rathalos Coat,レウスコート,雄火龙围腰
+RATHALOS_COAT_PLUS,Rathalos Coat+,レウスＧコート,雄火龙Ｇ围腰
+RATHALOS_COAT_S,Rathalos Coat S,レウスＳコート,雄火龙Ｓ围腰
+RATHALOS_COIN,Rathalos Coin,火竜のコイン,火龙的硬币
+RATHALOS_GREAVES,Rathalos Greaves,レウスグリーヴ,雄火龙胫甲
+RATHALOS_GREAVES_PLUS,Rathalos Greaves+,レウスＧグリーヴ,雄火龙Ｇ胫甲
+RATHALOS_GREAVES_S,Rathalos Greaves S,レウスＳグリーヴ,雄火龙Ｓ胫甲
+RATHALOS_GUARDS,Rathalos Guards,レウスガード,雄火龙护臂
+RATHALOS_GUARDS_PLUS,Rathalos Guards+,レウスＧガード,雄火龙Ｇ护臂
+RATHALOS_GUARDS_S,Rathalos Guards S,レウスＳガード,雄火龙Ｓ护臂
+RATHALOS_HELM,Rathalos Helm,レウスヘルム,雄火龙头铠
+RATHALOS_HELM_PLUS,Rathalos Helm+,レウスＧヘルム,雄火龙Ｇ头铠
+RATHALOS_HELM_S,Rathalos Helm S,レウスＳヘルム,雄火龙Ｓ头铠
+RATHALOS_LEGGINGS,Rathalos Leggings,レウスレギンス,雄火龙护胫
+RATHALOS_LEGGINGS_PLUS,Rathalos Leggings+,レウスＧレギンス,雄火龙Ｇ护胫
+RATHALOS_LEGGINGS_S,Rathalos Leggings S,レウスＳレギンス,雄火龙Ｓ护胫
+RATHALOS_MAIL,Rathalos Mail,レウスメイル,雄火龙铠甲
+RATHALOS_MAIL_PLUS,Rathalos Mail+,レウスＧメイル,雄火龙Ｇ铠甲
+RATHALOS_MAIL_S,Rathalos Mail S,レウスＳメイル,雄火龙Ｓ铠甲
+RATHALOS_PLATE,Rathalos Plate,火竜の逆鱗,火龙的逆鳞
+RATHALOS_RUBY,Rathalos Ruby,火竜の紅玉,火龙的红玉
+RATHALOS_SCALE,Rathalos Scale,火竜の鱗,火龙的鳞
+RATHALOS_SCALE_PLUS,Rathalos Scale+,火竜の上鱗,火龙的上鳞
+RATHALOS_SHELL,Rathalos Shell,火竜の甲殻,火龙的甲壳
+RATHALOS_TAIL,Rathalos Tail,火竜の尻尾,火龙的尻尾
+RATHALOS_TASSET,Rathalos Tasset,レウスフォールド,雄火龙腰甲
+RATHALOS_TASSET_PLUS,Rathalos Tasset+,レウスＧフォールド,雄火龙Ｇ腰甲
+RATHALOS_TASSET_S,Rathalos Tasset S,レウスＳフォールド,雄火龙Ｓ腰甲
+RATHALOS_VAMBRACES,Rathalos Vambraces,レウスアーム,雄火龙臂甲
+RATHALOS_VAMBRACES_PLUS,Rathalos Vambraces+,レウスＧアーム,雄火龙Ｇ臂甲
+RATHALOS_VAMBRACES_S,Rathalos Vambraces S,レウスＳアーム,雄火龙Ｓ臂甲
+RATHALOS_VEST,Rathalos Vest,レウスレジスト,雄火龙轻甲
+RATHALOS_VEST_PLUS,Rathalos Vest+,レウスＧレジスト,雄火龙Ｇ轻甲
+RATHALOS_VEST_S,Rathalos Vest S,レウスＳレジスト,雄火龙Ｓ轻甲
+RATHALOS_WEBBING,Rathalos Webbing,火竜の翼膜,火龙的翼膜
+RATHALOS_WING,Rathalos Wing,火竜の翼,火龙的翼
+RATHIAN_CAP,Rathian Cap,レイアキャップ,雌火龙软帽
+RATHIAN_CAP_PLUS,Rathian Cap+,レイアＧキャップ,雌火龙Ｇ软帽
+RATHIAN_CAP_S,Rathian Cap S,レイアＳキャップ,雌火龙Ｓ软帽
+RATHIAN_CARAPACE,Rathian Carapace,雌火竜の堅殻,雌火龙的坚壳
+RATHIAN_CLAW,Rathian Claw,雌火竜の翼爪,雌火龙的翼爪
+RATHIAN_COAT,Rathian Coat,レイアコート,雌火龙围腰
+RATHIAN_COAT_PLUS,Rathian Coat+,レイアＧコート,雌火龙Ｇ围腰
+RATHIAN_COAT_S,Rathian Coat S,レイアＳコート,雌火龙Ｓ围腰
+RATHIAN_COIN,Rathian Coin,雌火竜のコイン,雌火龙的硬币
+RATHIAN_GREAVES,Rathian Greaves,レイアグリーヴ,雌火龙胫甲
+RATHIAN_GREAVES_PLUS,Rathian Greaves+,レイアＧグリーヴ,雌火龙Ｇ胫甲
+RATHIAN_GREAVES_S,Rathian Greaves S,レイアＳグリーヴ,雌火龙Ｓ胫甲
+RATHIAN_GUARDS,Rathian Guards,レイアガード,雌火龙护臂
+RATHIAN_GUARDS_PLUS,Rathian Guards+,レイアＧガード,雌火龙Ｇ护臂
+RATHIAN_GUARDS_S,Rathian Guards S,レイアＳガード,雌火龙Ｓ护臂
+RATHIAN_HELM,Rathian Helm,レイアヘルム,雌火龙头铠
+RATHIAN_HELM_PLUS,Rathian Helm+,レイアＧヘルム,雌火龙Ｇ头铠
+RATHIAN_HELM_S,Rathian Helm S,レイアＳヘルム,雌火龙Ｓ头铠
+RATHIAN_LEGGINGS,Rathian Leggings,レイアレギンス,雌火龙护胫
+RATHIAN_LEGGINGS_PLUS,Rathian Leggings+,レイアＧレギンス,雌火龙Ｇ护胫
+RATHIAN_LEGGINGS_S,Rathian Leggings S,レイアＳレギンス,雌火龙Ｓ护胫
+RATHIAN_MAIL,Rathian Mail,レイアメイル,雌火龙铠甲
+RATHIAN_MAIL_PLUS,Rathian Mail+,レイアＧメイル,雌火龙Ｇ铠甲
+RATHIAN_MAIL_S,Rathian Mail S,レイアＳメイル,雌火龙Ｓ铠甲
+RATHIAN_PLATE,Rathian Plate,雌火竜の逆鱗,雌火龙的逆鳞
+RATHIAN_RUBY,Rathian Ruby,雌火竜の紅玉,雌火龙的红玉
+RATHIAN_SCALE,Rathian Scale,雌火竜の鱗,雌火龙的鳞
+RATHIAN_SCALE_PLUS,Rathian Scale+,雌火竜の上鱗,雌火龙的上鳞
+RATHIAN_SHELL,Rathian Shell,雌火竜の甲殻,雌火龙的甲壳
+RATHIAN_SPIKE,Rathian Spike,雌火竜の棘,雌火龙的棘
+RATHIAN_TASSET,Rathian Tasset,レイアフォールド,雌火龙腰甲
+RATHIAN_TASSET_PLUS,Rathian Tasset+,レイアＧフォールド,雌火龙Ｇ腰甲
+RATHIAN_TASSET_S,Rathian Tasset S,レイアＳフォールド,雌火龙Ｓ腰甲
+RATHIAN_VAMBRACES,Rathian Vambraces,レイアアーム,雌火龙臂甲
+RATHIAN_VAMBRACES_PLUS,Rathian Vambraces+,レイアＧアーム,雌火龙Ｇ臂甲
+RATHIAN_VAMBRACES_S,Rathian Vambraces S,レイアＳアーム,雌火龙Ｓ臂甲
+RATHIAN_VEST,Rathian Vest,レイアレジスト,雌火龙轻甲
+RATHIAN_VEST_PLUS,Rathian Vest+,レイアＧレジスト,雌火龙Ｇ轻甲
+RATHIAN_VEST_S,Rathian Vest S,レイアＳレジスト,雌火龙Ｓ轻甲
+RECOIL_PLUS_1,Recoil +1,反動軽減+1,反动轻减+1
+RECOIL_PLUS_2,Recoil +2,反動軽減+2,反动轻减+2
+RECOIL_SKILL,Recoil,反動,反动
+RECOVERY_ITEMS_SKILL,Recovery Items,回復,回复
+RECOVERY_ITEMS_STRENGTHENED,Recovery Items Strengthened,体力回復アイテム強化,体力回复道具强化
+RECOVERY_ITEMS_WEAKENED,Recovery Items Weakened,体力回復アイテム弱化,体力回复道具弱化
+RECOVERY_SPEED_MINUS_1,Recovery Spd -1,ダメージ回復速度-1,伤害回复速度-1
+RECOVERY_SPEED_MINUS_2,Recovery Spd -2,ダメージ回復速度-2,伤害回复速度-2
+RECOVERY_SPEED_PLUS_1,Recovery Spd +1,ダメージ回復速度+1,伤害回复速度+1
+RECOVERY_SPEED_PLUS_2,Recovery Spd +2,ダメージ回復速度+2,伤害回复速度+2
+RECOVERY_SPEED_SKILL,Recovery Speed,回復速度,回复速度
+RED_BOREALIS_PANTS,Red Borealis Pants,紅凛【袴】,红凛【裤】
+RED_BOREALIS_PANTS_HAKU,Red Borealis Pants Haku,紅凛・覇【袴】,红凛・霸【裤】
+RED_BOREALIS_PANTS_MAI,Red Borealis Pants Mai,紅凛・羅【袴】,红凛・罗【裤】
+RED_BOREALIS_TASSET,Red Borealis Tasset,紅凛【腰当て】,红凛【腰当】
+RED_BOREALIS_TASSET_HAKU,Red Borealis Tasset Haku,紅凛・覇【腰当て】,红凛・霸【腰当】
+RED_BOREALIS_TASSET_MAI,Red Borealis Tasset Mai,紅凛・羅【腰当て】,红凛・罗【腰当】
+RED_GLYPH_PANTS,Red Glyph Pants,紅艶【袴】,红艳【裤】
+RED_GLYPH_PANTS_HAKU,Red Glyph Pants Haku,紅艶・覇【袴】,红艳・霸【裤】
+RED_GLYPH_PANTS_MAI,Red Glyph Pants Mai,紅艶・羅【袴】,红艳・罗【裤】
+RED_GLYPH_TASSET,Red Glyph Tasset,紅艶【腰当て】,红艳【腰当】
+RED_GLYPH_TASSET_HAKU,Red Glyph Tasset Haku,紅艶・覇【腰当て】,红艳・霸【腰当】
+RED_GLYPH_TASSET_MAI,Red Glyph Tasset Mai,紅艶・羅【腰当て】,红艳・罗【腰当】
+RED_PIERCING,Red Piercing,レッドピアス,赤炎耳饰
+RED_PIERCING_PLUS,Red Piercing+,レッドＧピアス,赤炎Ｇ耳饰
+RED_PIERCING_S,Red Piercing S,レッドＳピアス,赤炎Ｓ耳饰
+RELOAD_MINUS_1,Reload -1,装填速度-1,装填速度-1
+RELOAD_MINUS_2,Reload -2,装填速度-2,装填速度-2
+RELOAD_MINUS_3,Reload -3,装填速度-3,装填速度-3
+RELOAD_PLUS_1,Reload +1,装填速度+1,装填速度+1
+RELOAD_PLUS_2,Reload +2,装填速度+2,装填速度+2
+RELOAD_PLUS_3,Reload +3,装填速度+3,装填速度+3
+RELOAD_SPEED,Reload Speed,装填,装填
+ROOK_ROOM,Rook Room,ルーク,战车客房
+RUBBERY_HIDE,Rubbery Hide,ゴム質の皮,橡胶质的皮
+RUBBERY_HIDE_PLUS,Rubbery Hide+,ゴム質の上皮,橡胶质的上皮
+SENSE,Sense,気配,气息
+SHARP_SWORD,Sharp Sword,業物,利刃
+SHARPEN_SPEED_HALVED,Sharpen Speed Halved,砥石性能半減,砥石性能半减
+SHARPEN_SPEED_INCREASED,Sharpen Speed Increased,砥石使用高速化,砥石使用高速化
+SHARPENER_SKILL,Sharpener,研ぎ師,研磨师
+SHARPNESS_DOWN,Sharpness Down,斬れ味レベル-1,锋利度等级-1
+SHARPNESS_RESTORATION_PLUS_25,Sharpness Restoration + 25%,斬れ味回復＋25%,锋利度回复＋25%
+SHARPNESS_RESTORATION_PLUS_50,Sharpness Restoration + 50%,斬れ味回復＋50%,锋利度回复＋50%
+SHARPNESS_SKILL,Sharpness,斬れ味,利度
+SHARPNESS_UP,Sharpness Up,斬れ味レベル+1,锋利度等级+1
+SHINOBI_BELT_BLACK,Shinobi Belt 'Black',忍の帯・黒,忍之带・黑
+SHINOBI_BELT_EARTH,Shinobi Belt 'Earth',忍の帯・地,忍之带・地
+SHINOBI_BELT_HEAVEN,Shinobi Belt 'Heaven',忍の帯・天,忍之带・天
+SHINOBI_BELT_MOON,Shinobi Belt 'Moon',忍の帯・陰,忍之带・阴
+SHINOBI_BELT_SUN,Shinobi Belt 'Sun',忍の帯・陽,忍之带・阳
+SHINOBI_BELT_WHITE,Shinobi Belt 'White',忍の帯・白,忍之带・白
+SHINOBI_BOOTS_BLACK,Shinobi Boots 'Black',忍の足袋・黒,忍之足袋・黑
+SHINOBI_BOOTS_EARTH,Shinobi Boots 'Earth',忍の足袋・地,忍之足袋・地
+SHINOBI_BOOTS_HEAVEN,Shinobi Boots 'Heaven',忍の足袋・天,忍之足袋・天
+SHINOBI_BOOTS_MOON,Shinobi Boots 'Moon',忍の足袋・陰,忍之足袋・阴
+SHINOBI_BOOTS_SUN,Shinobi Boots 'Sun',忍の足袋・陽,忍之足袋・阳
+SHINOBI_BOOTS_WHITE,Shinobi Boots 'White',忍の足袋・白,忍之足袋・白
+SHINOBI_KOTE_BLACK,Shinobi Kote 'Black',忍の篭手・黒,忍之笼手・黑
+SHINOBI_KOTE_EARTH,Shinobi Kote 'Earth',忍の篭手・地,忍之笼手・地
+SHINOBI_KOTE_HEAVEN,Shinobi Kote 'Heaven',忍の篭手・天,忍之笼手・天
+SHINOBI_KOTE_MOON,Shinobi Kote 'Moon',忍の篭手・陰,忍之笼手・阴
+SHINOBI_KOTE_SUN,Shinobi Kote 'Sun',忍の篭手・陽,忍之笼手・阳
+SHINOBI_KOTE_WHITE,Shinobi Kote 'White',忍の篭手・白,忍之笼手・白
+SHINOBI_MASK_BLACK,Shinobi Mask 'Black',忍の面・黒,忍之面・黑
+SHINOBI_MASK_EARTH,Shinobi Mask 'Earth',忍の面・地,忍之面・地
+SHINOBI_MASK_HEAVEN,Shinobi Mask 'Heaven',忍の面・天,忍之面・天
+SHINOBI_MASK_MOON,Shinobi Mask 'Moon',忍の面・陰,忍之面・阴
+SHINOBI_MASK_SUN,Shinobi Mask 'Sun',忍の面・陽,忍之面・阳
+SHINOBI_MASK_WHITE,Shinobi Mask 'White',忍の面・白,忍之面・白
+SHINOBI_SUIT_BLACK,Shinobi Suit 'Black',忍の装束・黒,忍之装束・黑
+SHINOBI_SUIT_EARTH,Shinobi Suit 'Earth',忍の装束・地,忍之装束・地
+SHINOBI_SUIT_HEAVEN,Shinobi Suit 'Heaven',忍の装束・天,忍之装束・天
+SHINOBI_SUIT_MOON,Shinobi Suit 'Moon',忍の装束・陰,忍之装束・阴
+SHINOBI_SUIT_SUN,Shinobi Suit 'Sun',忍の装束・陽,忍之装束・阳
+SHINOBI_SUIT_WHITE,Shinobi Suit 'White',忍の装束・白,忍之装束・白
+SILVER_BOOTS,Silver Boots,シルバーメタルブーツ,合金靴・曜
+SILVER_BOOTS_PLUS,Silver Boots+,Ｓ・メタルＧブーツ,合金Ｇ靴・曜
+SILVER_BOOTS_S,Silver Boots S,Ｓ・メタルＳブーツ,合金Ｓ靴・曜
+SILVER_HORN,Silver Horn,白銀の角,白银之角
+SILVER_RATHALOS_CLAW,Silver Rathalos Claw,銀火竜の翼爪,银火龙的翼爪
+SILVER_RATHALOS_PLATE,Silver Rathalos Plate,銀火竜の逆鱗,银火龙的逆鳞
+SILVER_RATHALOS_RUBY,Silver Rathalos Ruby,銀火竜の紅玉,银火龙的红玉
+SILVER_RATHALOS_SCALE,Silver Rathalos Scale,銀火竜の鱗,银火龙的鳞
+SILVER_RATHALOS_SHELL,Silver Rathalos Shell,銀火竜の甲殻,银火龙的甲壳
+SILVER_RATHALOS_TAIL,Silver Rathalos Tail,銀火竜の尻尾,银火龙的尻尾
+SILVER_RATHALOS_WEBBING,Silver Rathalos Webbing,銀火竜の翼膜,银火龙的翼膜
+SILVER_RATHALOS_WING,Silver Rathalos Wing,銀火竜の翼,银火龙的翼
+SILVER_SOL_CAP,Silver Sol Cap,シルバーソルキャップ,银日软帽
+SILVER_SOL_COAT,Silver Sol Coat,シルバーソルコート,银日围腰
+SILVER_SOL_GREAVES,Silver Sol Greaves,シルバーソルグリーヴ,银日胫甲
+SILVER_SOL_GUARDS,Silver Sol Guards,シルバーソルガード,银日护臂
+SILVER_SOL_HELM,Silver Sol Helm,シルバーソルヘルム,银日头铠
+SILVER_SOL_LEGGINGS,Silver Sol Leggings,シルバーソルレギンス,银日护胫
+SILVER_SOL_MAIL,Silver Sol Mail,シルバーソルメイル,银日铠甲
+SILVER_SOL_TASSET,Silver Sol Tasset,シルバーソルコイル,银日扣带
+SILVER_SOL_VAMBRACES,Silver Sol Vambraces,シルバーソルアーム,银日臂甲
+SILVER_SOL_VEST,Silver Sol Vest,シルバーソルレジスト,银日轻甲
+SKILL,Skill,スキル,技能
+SKILLS,Skills,スキル,技能
+SKULL_FACE,Skull Face,スカルフェイス,髑髅面
+SKULL_FACE_PLUS,Skull Face+,スカルＧフェイス,髑髅Ｇ面
+SKULL_FACE_S,Skull Face S,スカルＳフェイス,髑髅Ｓ面
+SLEEP_DOUBLED_MH1,Sleep x 2,睡眠倍加,睡眠倍加
+SLEEP_DOUBLED_MHG,Sleep Doubled,睡眠倍加,睡眠倍加
+SLEEP_HALVED,Sleep Halved,睡眠半減,睡眠半减
+SLEEP_NEGATED,Sleep Negated,睡眠無効,睡眠无效
+SLEEP_SKILL,Sleep,睡眠,睡眠
+SM_BONE_HUSK,Sm Bone Husk,カラ骨【小】,空心骨【小】
+SM_LOBSTERSHELL,Sm Lobstershell,エビの小殻,虾之小壳
+SM_MONSTER_BONE,Sm Monster Bone,竜骨【小】,龙骨【小】
+SNAKEBEE_LARVA,Snakebee Larva,ツチハチノコ,土蜂幼虫
+SOLID_BLOS_HORN,Solid Blos Horn,堅牢なねじれた角,坚牢的弯角
+SOUND_EFFECTS,Sound,音響効果,
+SPECTRES_WHIM,Spectre's Whim,悪霊の気まぐれ,恶灵的反覆无常
+SPEED_EATER,Speed Eater,拾い食い,拣食
+SPEED_GATHERING_ACTIVATED,Speed Gathering & Carving,高速剥ぎ取り＆採取,高速剥取＆采取
+SPEED_GATHERING_SKILL,Speed Gathering,高速収集,高速收集
+SPIRITS_WHIM,Spirit's Whim,精霊の気まぐれ,精灵的反覆无常
+SPLENDID_BEAK,Splendid Beak,立派なクチバシ,气派的喙
+STAMINA_STAT,Stamina,体力,耐力
+STATS,Stats,性能,
+STATUS_ATTACK_UP,Status Attack Up,状態異常攻撃強化,状态异常攻击强化
+STATUS_SKILL,Status,特殊攻撃,特殊攻击
+STEALTH,Stealth,隠密,隐密
+STEEL_BELT,Steel Belt,スティールベルト,钢制腰带
+STEEL_BELT_PLUS,Steel Belt+,スティールＧベルト,钢制Ｇ腰带
+STEEL_BELT_S,Steel Belt S,スティールＳベルト,钢制Ｓ腰带
+STEEL_MAIL,Steel Mail,スティールメイル,钢制铠甲
+STEEL_MAIL_PLUS,Steel Mail+,スティールＧメイル,钢制Ｇ铠甲
+STEEL_MAIL_S,Steel Mail S,スティールＳメイル,钢制Ｓ铠甲
+STEEL_VAMBRACES,Steel Vambraces,スティールアーム,钢制臂甲
+STEEL_VAMBRACES_PLUS,Steel Vambraces+,スティールＧアーム,钢制Ｇ臂甲
+STEEL_VAMBRACES_S,Steel Vambraces S,スティールＳアーム,钢制Ｓ臂甲
+STRONG_GRAVIOS_WING,Strong Gravios Wing,鎧竜の剛翼,铠龙的刚翼
+SURE_SHOT_PIERCING,Sure Shot Piercing,剛弾のピアス,刚弹耳饰
+SWORD_SAINT_PIERCING,Sword Saint Piercing,剣聖のピアス,剑圣耳饰
+SWORDSMANSHIP,Swordsmanship,剣術,剑术
+TASSETS,Tassets,腰当て,腰装备
+TECHNIQUE_PIERCING,Technique Piercing,技のピアス,技之耳饰
+THROW_ACTIVATED,Throw,投擲技術UP,投掷技术UP
+THROW_SKILL,Throw,投擲,投掷
+THUNDER_MINUS_10_MH1,Thunder - 10,雷耐性－10,雷耐性－10
+THUNDER_MINUS_10_MHG,Thunder Res -10,雷耐性-10,雷耐性-10
+THUNDER_MINUS_3_MHG,Thunder Res -3,雷耐性-3,雷耐性-3
+THUNDER_MINUS_5_MHG,Thunder Res -5,雷耐性-5,雷耐性-5
+THUNDER_PLUS_10_MHG,Thunder Res +10,雷耐性+10,雷耐性+10
+THUNDER_PLUS_25_MH1,Thunder + 25,雷耐性＋25,雷耐性＋25
+THUNDER_PLUS_3_MHG,Thunder Res +3,雷耐性+3,雷耐性+3
+THUNDER_PLUS_5_MHG,Thunder Res +5,雷耐性+5,雷耐性+5
+THUNDER_RESISTANCE,Thunder Resistance,雷耐性,雷耐性
+THUNDER_SAC,Thunder Sac,電撃袋,电击袋
+TOOLSAVER,Toolsaver,精霊のきまぐれ,精灵的反复无常
+TORSO,Torso,胴,胴
+TORSO_PLUS_1,Torso +1,胴系統＋１,胴系统＋１
+TORSO_PLUS_2,Torso +2,胴系統＋２,胴系统＋２
+TORSO_UP,Torso Up,胴系統倍加,胴系统倍加
+TOTAL,Total,,总计
+TRAINING_CENTER_ONLY,Training center only,訓練所専用,训练所专用
+TWISTED_BLACK_BLOS_HORN,Twisted Black Blos Horn,黒巻き角,黑卷角
+TWISTED_HORN,Twisted Horn,ねじれた角,弯曲的角
+UNION_ORE,Union Ore,ユニオン鉱石,白鸠石
+UNKNOWN_SKULL,Unknown Skull,なぞの頭骨,谜之头骨
+VELOCIDROME_HEAD,Velocidrome Head,ドスランポスの頭,蓝速龙王的头
+VELOCIPREY_CAP,Velociprey Cap,ランポスキャップ,蓝速龙软帽
+VELOCIPREY_CAP_PLUS,Velociprey Cap+,ランポスＧキャップ,蓝速龙Ｇ软帽
+VELOCIPREY_CAP_S,Velociprey Cap S,ランポスＳキャップ,蓝速龙Ｓ软帽
+VELOCIPREY_CAP_U,Velociprey Cap U,ランポスＵキャップ,蓝速龙Ｕ软帽
+VELOCIPREY_COAT,Velociprey Coat,ランポスコート,蓝速龙围腰
+VELOCIPREY_COAT_PLUS,Velociprey Coat+,ランポスＧコート,蓝速龙Ｇ围腰
+VELOCIPREY_COAT_S,Velociprey Coat S,ランポスＳコート,蓝速龙Ｓ围腰
+VELOCIPREY_COAT_U,Velociprey Coat U,ランポスＵコート,蓝速龙Ｕ围腰
+VELOCIPREY_FANG,Velociprey Fang,ランポスの牙,蓝速龙的牙
+VELOCIPREY_GREAVES,Velociprey Greaves,ランポスグリーヴ,蓝速龙胫甲
+VELOCIPREY_GREAVES_PLUS,Velociprey Greaves+,ランポスＧグリーヴ,蓝速龙Ｇ胫甲
+VELOCIPREY_GREAVES_S,Velociprey Greaves S,ランポスＳグリーヴ,蓝速龙Ｓ胫甲
+VELOCIPREY_GREAVES_U,Velociprey Greaves U,ランポスＵグリーヴ,蓝速龙Ｕ胫甲
+VELOCIPREY_GUARDS,Velociprey Guards,ランポスガード,蓝速龙护臂
+VELOCIPREY_GUARDS_PLUS,Velociprey Guards+,ランポスＧガード,蓝速龙Ｇ护臂
+VELOCIPREY_GUARDS_S,Velociprey Guards S,ランポスＳガード,蓝速龙Ｓ护臂
+VELOCIPREY_GUARDS_U,Velociprey Guards U,ランポスＵガード,蓝速龙Ｕ护臂
+VELOCIPREY_HELM,Velociprey Helm,ランポスヘルム,蓝速龙头铠
+VELOCIPREY_HELM_PLUS,Velociprey Helm+,ランポスＧヘルム,蓝速龙Ｇ头铠
+VELOCIPREY_HELM_S,Velociprey Helm S,ランポスＳヘルム,蓝速龙Ｓ头铠
+VELOCIPREY_HELM_U,Velociprey Helm U,ランポスＵヘルム,蓝速龙Ｕ头铠
+VELOCIPREY_HIDE,Velociprey Hide,ランポスの皮,蓝速龙的皮
+VELOCIPREY_HIDE_PLUS,Velociprey Hide+,ランポスの上皮,蓝速龙的上皮
+VELOCIPREY_LEGGINGS,Velociprey Leggings,ランポスレギンス,蓝速龙护胫
+VELOCIPREY_LEGGINGS_PLUS,Velociprey Leggings+,ランポスＧレギンス,蓝速龙Ｇ护胫
+VELOCIPREY_LEGGINGS_S,Velociprey Leggings S,ランポスＳレギンス,蓝速龙Ｓ护胫
+VELOCIPREY_LEGGINGS_U,Velociprey Leggings U,ランポスＵレギンス,蓝速龙Ｕ护胫
+VELOCIPREY_MAIL,Velociprey Mail,ランポスメイル,蓝速龙铠甲
+VELOCIPREY_MAIL_PLUS,Velociprey Mail+,ランポスＧメイル,蓝速龙Ｇ铠甲
+VELOCIPREY_MAIL_S,Velociprey Mail S,ランポスＳメイル,蓝速龙Ｓ铠甲
+VELOCIPREY_MAIL_U,Velociprey Mail U,ランポスＵメイル,蓝速龙Ｕ铠甲
+VELOCIPREY_MASK,Velociprey Mask,ランポスフェイク,蓝速龙伪装头
+VELOCIPREY_MASK_PLUS,Velociprey Mask+,ランポスＧフェイク,蓝速龙Ｇ伪装头
+VELOCIPREY_MASK_S,Velociprey Mask S,ランポスＳフェイク,蓝速龙Ｓ伪装头
+VELOCIPREY_SCALE,Velociprey Scale,ランポスの鱗,蓝速龙的鳞
+VELOCIPREY_SCALE_PLUS,Velociprey Scale+,ランポスの上鱗,蓝速龙的上鳞
+VELOCIPREY_TASSET,Velociprey Tasset,ランポスフォールド,蓝速龙腰甲
+VELOCIPREY_TASSET_PLUS,Velociprey Tasset+,ランポスＧフォールド,蓝速龙Ｇ腰甲
+VELOCIPREY_TASSET_S,Velociprey Tasset S,ランポスＳフォールド,蓝速龙Ｓ腰甲
+VELOCIPREY_TASSET_U,Velociprey Tasset U,ランポスＵフォールド,蓝速龙Ｕ腰甲
+VELOCIPREY_VAMBRACES,Velociprey Vambraces,ランポスアーム,蓝速龙臂甲
+VELOCIPREY_VAMBRACES_PLUS,Velociprey Vambraces+,ランポスＧアーム,蓝速龙Ｇ臂甲
+VELOCIPREY_VAMBRACES_S,Velociprey Vambraces S,ランポスＳアーム,蓝速龙Ｓ臂甲
+VELOCIPREY_VAMBRACES_U,Velociprey Vambraces U,ランポスＵアーム,蓝速龙Ｕ臂甲
+VELOCIPREY_VEST,Velociprey Vest,ランポスレジスト,蓝速龙轻甲
+VELOCIPREY_VEST_PLUS,Velociprey Vest+,ランポスＧレジスト,蓝速龙Ｇ轻甲
+VELOCIPREY_VEST_S,Velociprey Vest S,ランポスＳレジスト,蓝速龙Ｓ轻甲
+VELOCIPREY_VEST_U,Velociprey Vest U,ランポスＵレジスト,蓝速龙Ｕ轻甲
+VERY_GOOD_LUCK,Very Good Luck,激運,激运
+VESPOID_ABDOMEN,Vespoid Abdomen,女王虫の尻尾,女王虫的尻尾
+VESPOID_BLADEFIN,Vespoid Bladefin,ランゴスタの刃羽,巨蜂的刃羽
+VESPOID_CAP,Vespoid Cap,ランゴキャップ,巨蜂软帽
+VESPOID_CAP_PLUS,Vespoid Cap+,ランゴＧキャップ,巨蜂Ｇ软帽
+VESPOID_CAP_S,Vespoid Cap S,ランゴＳキャップ,巨蜂Ｓ软帽
+VESPOID_CARAPACE,Vespoid Carapace,ランゴスタの堅殻,巨蜂的坚壳
+VESPOID_COAT,Vespoid Coat,ランゴコート,巨蜂围腰
+VESPOID_COAT_PLUS,Vespoid Coat+,ランゴＧコート,巨蜂Ｇ围腰
+VESPOID_COAT_S,Vespoid Coat S,ランゴＳコート,巨蜂Ｓ围腰
+VESPOID_GREAVES,Vespoid Greaves,ランゴグリーヴ,巨蜂胫甲
+VESPOID_GREAVES_PLUS,Vespoid Greaves+,ランゴＧグリーヴ,巨蜂Ｇ胫甲
+VESPOID_GREAVES_S,Vespoid Greaves S,ランゴＳグリーヴ,巨蜂Ｓ胫甲
+VESPOID_GUARDS,Vespoid Guards,ランゴガード,巨蜂护臂
+VESPOID_GUARDS_PLUS,Vespoid Guards+,ランゴＧガード,巨蜂Ｇ护臂
+VESPOID_GUARDS_S,Vespoid Guards S,ランゴＳガード,巨蜂Ｓ护臂
+VESPOID_HELM,Vespoid Helm,ランゴヘルム,巨蜂头铠
+VESPOID_HELM_PLUS,Vespoid Helm+,ランゴＧヘルム,巨蜂Ｇ头铠
+VESPOID_HELM_S,Vespoid Helm S,ランゴＳヘルム,巨蜂Ｓ头铠
+VESPOID_LEGGINGS,Vespoid Leggings,ランゴレギンス,巨蜂护胫
+VESPOID_LEGGINGS_PLUS,Vespoid Leggings+,ランゴＧレギンス,巨蜂Ｇ护胫
+VESPOID_LEGGINGS_S,Vespoid Leggings S,ランゴＳレギンス,巨蜂Ｓ护胫
+VESPOID_MAIL,Vespoid Mail,ランゴメイル,巨蜂铠甲
+VESPOID_MAIL_PLUS,Vespoid Mail+,ランゴＧメイル,巨蜂Ｇ铠甲
+VESPOID_MAIL_S,Vespoid Mail S,ランゴＳメイル,巨蜂Ｓ铠甲
+VESPOID_RAZORWING,Vespoid Razorwing,ランゴスタの斬羽,巨蜂的斩羽
+VESPOID_SHELL,Vespoid Shell,ランゴスタの甲殻,巨蜂的甲壳
+VESPOID_TASSET,Vespoid Tasset,ランゴフォールド,巨蜂腰甲
+VESPOID_TASSET_PLUS,Vespoid Tasset+,ランゴＧフォールド,巨蜂Ｇ腰甲
+VESPOID_TASSET_S,Vespoid Tasset S,ランゴＳフォールド,巨蜂Ｓ腰甲
+VESPOID_VAMBRACES,Vespoid Vambraces,ランゴアーム,巨蜂臂甲
+VESPOID_VAMBRACES_PLUS,Vespoid Vambraces+,ランゴＧアーム,巨蜂Ｇ臂甲
+VESPOID_VAMBRACES_S,Vespoid Vambraces S,ランゴＳアーム,巨蜂Ｓ臂甲
+VESPOID_VEST,Vespoid Vest,ランゴレジスト,巨蜂轻甲
+VESPOID_VEST_PLUS,Vespoid Vest+,ランゴＧレジスト,巨蜂Ｇ轻甲
+VESPOID_VEST_S,Vespoid Vest S,ランゴＳレジスト,巨蜂Ｓ轻甲
+VESPOID_WING,Vespoid Wing,ランゴスタの羽,巨蜂的羽
+WAIST,Waist,腰,腰
+WATER_MINUS_10_MH1,Water - 10,水耐性－10,水耐性－10
+WATER_MINUS_10_MHG,Water Res -10,水耐性-10,水耐性-10
+WATER_MINUS_3_MHG,Water Res -3,水耐性-3,水耐性-3
+WATER_MINUS_5_MHG,Water Res -5,水耐性-5,水耐性-5
+WATER_PLUS_10_MHG,Water Res +10,水耐性+10,水耐性+10
+WATER_PLUS_25_MH1,Water + 25,水耐性＋25,水耐性＋25
+WATER_PLUS_3_MHG,Water Res +3,水耐性+3,水耐性+3
+WATER_PLUS_5_MHG,Water Res +5,水耐性+5,水耐性+5
+WATER_RESISTANCE,Water Resistance,水耐性,水耐性
+WHETSTONE,Whetstone,砥石,砥石
+WHIM_SKILL,Whim,気まぐれ,反覆无常
+WHITE_MONOBLOS_SHELL,White Monoblos Shell,白一角竜の甲殻,白一角龙的甲壳
+WHITE_MONOBLOS_SPINE,White Monoblos Spine,白一角竜の背甲,白一角龙的背甲
+WHITE_VELOCIPREY_HIDE,White Velociprey Hide,ランポスの白皮,蓝速龙的白皮
+WHITE_VELOCIPREY_SCALE,White Velociprey Scale,ランポスの白鱗,蓝速龙的白鳞
+WIDE_AREA_ANTIDOTE_MH1,Wide Area Antidote,「解毒薬」広域化,「解毒药」广域化
+WIDE_AREA_ANTIDOTE_MHG,Wide Area Antidote,【解毒薬】広域化,【解毒药】广域化
+WIDE_AREA_ANTIDOTE_SKILL,Wide Area Antidote,広域解毒,广域解毒
+WIDE_AREA_ARMOR_SEED,Wide Area Armor Seed,「忍耐の種」広域化,「忍耐之种」广域化
+WIDE_AREA_DRUG_ACTIVATED,Wide Area Drug,怪力・忍耐の種広域化,怪力・忍耐之种广域化
+WIDE_AREA_DRUG_SKILL,Wide Area Drug,種広域化,种广域化
+WIDE_AREA_HERB,Herb Wide Area,【薬草】広域化,【药草】广域化
+WIDE_AREA_POTION_MH1,Wide Area Potion,「回復薬」広域化,「回复药」广域化
+WIDE_AREA_POTION_MHG,Potion Wide Area,【回復薬】広域化,【回复药】广域化
+WIDE_AREA_POWER_SEED,Wide Area Power Seed,「怪力の種」広域化,「怪力之种」广域化
+WIDE_AREA_RECOVERY_SKILL,Wide Area Recovery,広域回復,广域回复
+WIND_PRESSURE_HIGH,High Wind Pressure,風圧【大】無効,风压【大】无效
+WIND_PRESSURE_LOW,Low Wind Pressure,風圧【小】無効,风压【小】无效
+WIND_PRESSURE_MH1,Anti-Wind,風圧無効,风压无效
+WIND_PRESSURE_SKILL,Wind Pressure,風圧,风压
+WYVERN_MARROW,Wyvern Marrow,火竜の骨髄,火龙的骨髓
+WYVERN_REX_MAIL,Wyvern Rex Mail,Ｗレックスメイル,Ｗ・ＲＥＸ铠甲
+YELLOW_PIERCING,Yellow Piercing,イエローピアス,金雷耳饰
+YELLOW_PIERCING_PLUS,Yellow Piercing+,イエローＧピアス,金雷Ｇ耳饰
+YELLOW_PIERCING_S,Yellow Piercing S,イエローＳピアス,金雷Ｓ耳饰

@@ -17,25 +17,25 @@
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
 [ext_resource type="Theme" uid="uid://c8oba14s41jq2" path="res://themes/mhg_theme.tres" id="16_ftaqj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_phow0"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_nwkmp"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jxo6g"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_afej6"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wjhrk"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_v128r"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_fax38"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_w8wkn"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_5a1tw"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ky11f"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1bkv1"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_bdi2j"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_edkf3"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_aqpw0"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_lsshr"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_m1xjx"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_3bevg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_xi40k"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_kgm71"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wng18"]
 
 [node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
@@ -49,31 +49,31 @@ game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
 quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
-hair_table = NodePath("Control/ArmorContainer/TabContainer/H")
-body_table = NodePath("Control/ArmorContainer/TabContainer/B")
-arms_table = NodePath("Control/ArmorContainer/TabContainer/A")
-waist_table = NodePath("Control/ArmorContainer/TabContainer/W")
-legs_table = NodePath("Control/ArmorContainer/TabContainer/L")
-tab_container = NodePath("Control/ArmorContainer/TabContainer")
+hair_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/H")
+body_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/B")
+arms_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/A")
+waist_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/W")
+legs_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/L")
+tab_container = NodePath("PanelsContainer/ArmorContainer/TabContainer")
 armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
-female_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FGenderCheck")
-male_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MGenderCheck")
-f_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
-f_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
-f_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FColorPickerButton")
-m_face_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MFaceOptions")
-m_hair_options = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MHairOption")
-m_hair_color = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MColorPickerButton")
-sword_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/SwordCheckBox")
-gun_check = NodePath("Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GunCheckBox")
-stats_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/StatsContainer")
-skill_rows = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer/SkillRows")
+female_check = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FGenderCheck")
+male_check = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MGenderCheck")
+f_face_options = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FFaceOptions")
+f_hair_options = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FHairOption")
+f_hair_color = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/FColorPickerButton")
+m_face_options = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MFaceOptions")
+m_hair_options = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MHairOption")
+m_hair_color = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer/MColorPickerButton")
+sword_check = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/SwordCheckBox")
+gun_check = NodePath("PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GunCheckBox")
+stats_container = NodePath("PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/StatsContainer")
+skill_rows = NodePath("PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer/SkillRows")
 skill_row_scene = ExtResource("3_5y62j")
-active_skill_container = NodePath("Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills")
-material_rows = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer/MaterialRows")
+active_skill_container = NodePath("PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills")
+material_rows = NodePath("PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer/MaterialRows")
 material_row_scene = ExtResource("4_kqgpw")
-forge_row = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ForgeRow")
-buy_row = NodePath("Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/BuyRow")
+forge_row = NodePath("PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ForgeRow")
+buy_row = NodePath("PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/BuyRow")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
@@ -122,51 +122,51 @@ popup/item_0/id = 0
 layout_mode = 2
 text = "QUIT"
 
-[node name="Control" type="Control" parent="."]
+[node name="PanelsContainer" type="Control" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ArmorContainer" type="MarginContainer" parent="Control"]
+[node name="ArmorContainer" type="MarginContainer" parent="PanelsContainer"]
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
 offset_right = 153.0
 grow_vertical = 2
 
-[node name="TabContainer" type="TabContainer" parent="Control/ArmorContainer"]
+[node name="TabContainer" type="TabContainer" parent="PanelsContainer/ArmorContainer"]
 layout_mode = 2
 clip_tabs = false
 
-[node name="H" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_phow0")
-m_button_group = SubResource("ButtonGroup_jxo6g")
+f_button_group = SubResource("ButtonGroup_nwkmp")
+m_button_group = SubResource("ButtonGroup_afej6")
 
-[node name="B" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_wjhrk")
-m_button_group = SubResource("ButtonGroup_fax38")
+f_button_group = SubResource("ButtonGroup_v128r")
+m_button_group = SubResource("ButtonGroup_w8wkn")
 
-[node name="A" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_5a1tw")
-m_button_group = SubResource("ButtonGroup_1bkv1")
+f_button_group = SubResource("ButtonGroup_ky11f")
+m_button_group = SubResource("ButtonGroup_bdi2j")
 
-[node name="W" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_edkf3")
-m_button_group = SubResource("ButtonGroup_lsshr")
+f_button_group = SubResource("ButtonGroup_aqpw0")
+m_button_group = SubResource("ButtonGroup_m1xjx")
 
-[node name="L" parent="Control/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
+[node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_3bevg")
-m_button_group = SubResource("ButtonGroup_kgm71")
+f_button_group = SubResource("ButtonGroup_xi40k")
+m_button_group = SubResource("ButtonGroup_wng18")
 
-[node name="PlayerContainer" type="MarginContainer" parent="Control"]
+[node name="PlayerContainer" type="MarginContainer" parent="PanelsContainer"]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -176,37 +176,37 @@ offset_left = -148.0
 grow_horizontal = 0
 grow_vertical = 2
 
-[node name="TabContainer" type="TabContainer" parent="Control/PlayerContainer"]
+[node name="TabContainer" type="TabContainer" parent="PanelsContainer/PlayerContainer"]
 layout_mode = 2
 tab_alignment = 2
 clip_tabs = false
 
-[node name="HUNTER" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+[node name="HUNTER" type="MarginContainer" parent="PanelsContainer/PlayerContainer/TabContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/HUNTER"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER"]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
 columns = 2
 
-[node name="FGenderCheck" type="CheckBox" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="FGenderCheck" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_pressed = true
 button_group = ExtResource("4_5mdki")
 text = "FEMALE"
 
-[node name="MGenderCheck" type="CheckBox" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="MGenderCheck" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 button_group = ExtResource("4_5mdki")
 text = "MALE"
 
-[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="Label" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "FACE"
 
-[node name="FFaceOptions" type="OptionButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="FFaceOptions" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 24
@@ -260,7 +260,7 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="MFaceOptions" type="OptionButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="MFaceOptions" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -315,11 +315,11 @@ popup/item_22/id = 22
 popup/item_23/text = "24"
 popup/item_23/id = 23
 
-[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="Label2" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
-text = "HAIR"
+text = "HAIR_OPTION"
 
-[node name="FHairOption" type="OptionButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="FHairOption" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 alignment = 2
 item_count = 10
@@ -345,7 +345,7 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="MHairOption" type="OptionButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="MHairOption" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 alignment = 2
@@ -372,61 +372,61 @@ popup/item_8/id = 8
 popup/item_9/text = "10"
 popup/item_9/id = 9
 
-[node name="Label3" type="Label" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="Label3" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "HAIR_COLOR"
 
-[node name="FColorPickerButton" type="ColorPickerButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="FColorPickerButton" type="ColorPickerButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
-[node name="MColorPickerButton" type="ColorPickerButton" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
+[node name="MColorPickerButton" type="ColorPickerButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
-[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
 
-[node name="SwordCheckBox" type="CheckBox" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
+[node name="SwordCheckBox" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
 button_pressed = true
 button_group = ExtResource("5_govkv")
 text = "BLADEMASTER"
 
-[node name="GunCheckBox" type="CheckBox" parent="Control/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
+[node name="GunCheckBox" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
 button_group = ExtResource("5_govkv")
 text = "GUNNER"
 
-[node name="STATS" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+[node name="STATS" type="MarginContainer" parent="PanelsContainer/PlayerContainer/TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS"]
 layout_mode = 2
 
-[node name="StatsContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" instance=ExtResource("11_p35ui")]
+[node name="StatsContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer" instance=ExtResource("11_p35ui")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer"]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="Label" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 10.0
 text = "SKILL"
 
-[node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -435,10 +435,10 @@ texture = ExtResource("3_i40es")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator2" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator2" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -447,10 +447,10 @@ texture = ExtResource("4_lfb81")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator3" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator3" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -459,10 +459,10 @@ texture = ExtResource("5_inf15")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator4" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator4" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect4" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="TextureRect4" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -471,10 +471,10 @@ texture = ExtResource("6_c5vbq")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator5" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator5" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="TextureRect5" type="TextureRect" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="TextureRect5" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -483,55 +483,55 @@ texture = ExtResource("7_asrhl")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator6" type="VSeparator" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="VSeparator6" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 text = "TOTAL"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer" groups=["mhg_elements"]]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="SkillRows" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer"]
+[node name="SkillRows" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
+[node name="Label" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer"]
 layout_mode = 2
 text = "[SKILLS]"
 
-[node name="ActivatedSkills" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer"]
+[node name="ActivatedSkills" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills"]
+[node name="Label" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/STATS/VBoxContainer/ActivatedSkills"]
 layout_mode = 2
 text = "NO_SKILL"
 
-[node name="MATERIALS" type="MarginContainer" parent="Control/PlayerContainer/TabContainer"]
+[node name="MATERIALS" type="MarginContainer" parent="PanelsContainer/PlayerContainer/TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS"]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="Label" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 10.0
-text = "MATERIAL"
+text = "NAME"
 
-[node name="VSeparator" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -540,10 +540,10 @@ texture = ExtResource("3_i40es")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator2" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator2" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureRect2" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect2" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -552,10 +552,10 @@ texture = ExtResource("4_lfb81")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator3" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator3" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureRect3" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect3" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -564,10 +564,10 @@ texture = ExtResource("5_inf15")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator4" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator4" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureRect4" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect4" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -576,10 +576,10 @@ texture = ExtResource("6_c5vbq")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator5" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator5" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="TextureRect5" type="TextureRect" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="TextureRect5" type="TextureRect" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -588,34 +588,37 @@ texture = ExtResource("7_asrhl")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VSeparator6" type="VSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="VSeparator6" type="VSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
+[node name="Label2" type="Label" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 text = "TOTAL"
 
-[node name="HSeparator" type="HSeparator" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 horizontal_scroll_mode = 0
 
-[node name="MaterialRows" type="VBoxContainer" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer"]
+[node name="MaterialRows" type="VBoxContainer" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ForgeRow" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer" instance=ExtResource("14_wcwcn")]
+[node name="HSeparator2" type="HSeparator" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer"]
 layout_mode = 2
-row_title = "FORGE"
 
-[node name="BuyRow" parent="Control/PlayerContainer/TabContainer/MATERIALS/VBoxContainer" instance=ExtResource("14_wcwcn")]
+[node name="ForgeRow" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer" instance=ExtResource("14_wcwcn")]
 layout_mode = 2
-row_title = "BUY"
+row_title = "FORGING_PRICE"
+
+[node name="BuyRow" parent="PanelsContainer/PlayerContainer/TabContainer/MATERIALS/VBoxContainer" instance=ExtResource("14_wcwcn")]
+layout_mode = 2
+row_title = "BUYING_PRICE"
 
 [node name="AudioOptions" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("master_volume", "master_mute", "music_volume", "music_mute", "sound_volume", "sound_mute")]
 title = "AUDIO_OPTIONS"
@@ -640,7 +643,7 @@ columns = 3
 
 [node name="Label" type="Label" parent="AudioOptions/GridContainer"]
 layout_mode = 2
-text = "MASTER"
+text = "MASTER_VOLUME"
 
 [node name="MasterVolume" type="HSlider" parent="AudioOptions/GridContainer"]
 layout_mode = 2
@@ -674,7 +677,7 @@ text = "MUTE"
 
 [node name="Label2" type="Label" parent="AudioOptions/GridContainer"]
 layout_mode = 2
-text = "SOUND EFFECTS"
+text = "SOUND_EFFECTS"
 
 [node name="SoundVolume" type="HSlider" parent="AudioOptions/GridContainer"]
 layout_mode = 2

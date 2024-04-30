@@ -92,7 +92,7 @@ columns = 9
 [node name="Label" type="Label" parent="GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "DEFENSE"
+text = "DEFENSE_STAT"
 horizontal_alignment = 1
 
 [node name="VSeparator" type="VSeparator" parent="GridContainer"]
