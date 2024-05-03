@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=37 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="5_inf15"]
 [ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="6_c5vbq"]
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
+[ext_resource type="PackedScene" uid="uid://cetnfqk176o72" path="res://ui_elements/armor_set_buttons.tscn" id="11_kqfdl"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
@@ -21,25 +22,25 @@
 [ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
 [ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_nwkmp"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_6o1db"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_afej6"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_2f8sl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_v128r"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_j2oej"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_w8wkn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_r1cw7"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ky11f"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_dj6kk"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_bdi2j"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4m8rc"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_aqpw0"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_8rloj"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_m1xjx"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ebgr7"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_xi40k"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_xjmdo"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wng18"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_sm8xd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
 
@@ -205,32 +206,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_nwkmp")
-m_button_group = SubResource("ButtonGroup_afej6")
+f_button_group = SubResource("ButtonGroup_6o1db")
+m_button_group = SubResource("ButtonGroup_2f8sl")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_v128r")
-m_button_group = SubResource("ButtonGroup_w8wkn")
+f_button_group = SubResource("ButtonGroup_j2oej")
+m_button_group = SubResource("ButtonGroup_r1cw7")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ky11f")
-m_button_group = SubResource("ButtonGroup_bdi2j")
+f_button_group = SubResource("ButtonGroup_dj6kk")
+m_button_group = SubResource("ButtonGroup_4m8rc")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_aqpw0")
-m_button_group = SubResource("ButtonGroup_m1xjx")
+f_button_group = SubResource("ButtonGroup_8rloj")
+m_button_group = SubResource("ButtonGroup_ebgr7")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_xi40k")
-m_button_group = SubResource("ButtonGroup_wng18")
+f_button_group = SubResource("ButtonGroup_xjmdo")
+m_button_group = SubResource("ButtonGroup_sm8xd")
 
 [node name="PlayerContainer" type="MarginContainer" parent="PanelsContainer"]
 layout_mode = 1
@@ -759,4 +760,4 @@ size_flags_vertical = 4
 text = "MUTE"
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("mh1_theme", "mhg_theme"), [ExtResource("1_rept1"), SubResource("Theme_7nwv1")]]
+resources = [PackedStringArray("armor_set_buttons", "mh1_theme", "mhg_theme"), [ExtResource("11_kqfdl"), ExtResource("1_rept1"), SubResource("Theme_7nwv1")]]

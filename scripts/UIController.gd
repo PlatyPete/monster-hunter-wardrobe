@@ -2,11 +2,10 @@ extends Control
 
 enum Option { AUDIO }
 
-signal face_changed(gender: ArmorData.Gender, face_index: int)
-signal gender_changed(gender: ArmorData.Gender)
-signal hair_changed(gender: ArmorData.Gender, hair_index: int)
-signal hair_color_changed(gender: ArmorData.Gender, hair_color: Color)
+signal armor_selected
 signal room_changed(room_index: int)
+
+@export var hunters: Array[Node3D]
 
 @export_group("Toolbar")
 @export var game_options: OptionButton
@@ -70,11 +69,6 @@ const HAIR_COLORS: Array[Color] = [
 	Color("#ff9600")
 ]
 
-var armor_indices: Array = [
-	[0,0,0,0,0],
-	[0,0,0,0,0]
-]
-
 
 func _ready():
 	game_options.item_selected.connect(_on_game_changed)
@@ -107,7 +101,12 @@ func _ready():
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
-	set_zenni(armor_indices[ArmorData.Gender.FEMALE])
+	set_zenni(ArmorData.Gender.FEMALE)
+
+	# TODO: set player customization and armor from save file
+	for gender in ArmorData.Gender.BOTH:
+		var hair_color: Color = get_hair_color(gender)
+		hunters[gender].set_hair_color(hair_color)
 
 
 func _input(inputEvent: InputEvent):
@@ -116,26 +115,32 @@ func _input(inputEvent: InputEvent):
 
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
-	armor_indices[gender][armor_category] = armor_index
-	stats_container.set_stats(armor_indices[gender])
+	var armor_indices: Array = hunters[gender].get_armor_indices(game_version)
+	hunters[gender].set_armor_index(game_version, armor_category, armor_index)
+
+	stats_container.set_stats(armor_indices)
 	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
 	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
 
 	if game_version == ArmorData.Game.MH1:
-		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices[gender])
+		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices)
 		set_active_skills(armor_skills)
 	else:
-		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices[gender])
+		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices)
 		set_active_skills(armor_skills.activated_skills)
 		set_skill_points(armor_skills.skill_points)
 
-	var materials: Dictionary = ArmorData.get_armor_materials(armor_indices[gender])
+	var materials: Dictionary = ArmorData.get_armor_materials(armor_indices)
 	set_materials(materials)
 
-	set_zenni(armor_indices[gender])
+	set_zenni(gender)
+
+	hunters[gender].equip_armor(game_version, armor_category, armor_index)
+	armor_selected.emit()
+
 
 func _on_face_selected(face_index: int):
-	face_changed.emit(get_gender(), face_index)
+	hunters[get_gender()].set_model(ArmorData.Category.FACE, face_index)
 
 
 func _on_game_changed(game_index: int):
@@ -167,15 +172,16 @@ func _on_gender_changed():
 
 	toggle_armor_rows()
 
-	gender_changed.emit(gender)
+	hunters[gender].show()
+	hunters[(gender + 1) % 2].hide()
 
 
 func _on_hair_color_changed(new_color: Color):
-	hair_color_changed.emit(get_gender(), new_color)
+	hunters[get_gender()].set_hair_color(new_color)
 
 
 func _on_hair_selected(hair_index: int):
-	hair_changed.emit(get_gender(), hair_index)
+	hunters[get_gender()].set_hair(hair_index)
 
 
 func _on_hunter_class_changed():
@@ -280,14 +286,15 @@ func set_skill_points(skill_points):
 			skill_rows.add_child(skill_row)
 
 
-func set_zenni(gendered_armor_indices: Array):
+func set_zenni(gender: ArmorData.Gender):
+	var armor_indices: Array = hunters[gender].get_armor_indices(ArmorData.game_version)
 	var forge_zenni: Array = []
 	var buy_zenni: Array = []
 	var total_forge: int = 0
 	var total_buy: int = 0
 
-	for armor_category in gendered_armor_indices.size():
-		var armor_piece = ArmorData.ARMOR[ArmorData.game_version][armor_category][gendered_armor_indices[armor_category]]
+	for armor_category in armor_indices.size():
+		var armor_piece = ArmorData.ARMOR[ArmorData.game_version][armor_category][armor_indices[armor_category]]
 		var forge: int = armor_piece.get("forge", 0)
 		if forge == 0:
 			forge_zenni.push_back("")

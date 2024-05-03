@@ -46,12 +46,20 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 		print("The selected armor is not valid for this gender")
 
 
+func get_armor_indices(game_version: ArmorData.Game) -> Array:
+	return armor_indices.slice(game_version, ArmorData.Category.FACE + game_version * ArmorData.Category.FACE)
+
+
 func get_models_in_category(model_category: ArmorData.Category):
 	return models[model_category]
 
 
 func is_armor_equipped(model_category: ArmorData.Category) -> bool:
-	return armor_indices[ArmorData.FACE * ArmorData.game_version + model_category] != 0
+	return armor_indices[ArmorData.Category.FACE * ArmorData.game_version + model_category] != 0
+
+
+func set_armor_index(game_version: ArmorData.Game, armor_category: ArmorData.Category, armor_index: int):
+	armor_indices[ArmorData.Category.FACE * game_version + armor_category] = armor_index
 
 
 func set_base_model(model_category: ArmorData.Category):

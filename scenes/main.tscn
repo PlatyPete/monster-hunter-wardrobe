@@ -101,7 +101,8 @@ fov = 55.0
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 resources = [PackedStringArray("bishop_room", "equip_0", "equip_1", "equip_2", "equip_3", "king_room", "kokoto_house", "pawn_room", "queen_room", "rook_room"), [ExtResource("4_ugrui"), ExtResource("6_qe6gt"), ExtResource("7_23uj8"), ExtResource("8_3chf2"), ExtResource("9_ce17q"), ExtResource("4_xqr6i"), ExtResource("3_6dufj"), ExtResource("1_u2x8g"), ExtResource("7_j68bp"), ExtResource("9_fwwcy")]]
 
-[node name="UIController" parent="." instance=ExtResource("10_e5p7p")]
+[node name="UIController" parent="." node_paths=PackedStringArray("hunters") instance=ExtResource("10_e5p7p")]
+hunters = [NodePath("../HunterContainer/Hunter F"), NodePath("../HunterContainer/Hunter M")]
 
 [node name="BlackOverlay" type="ColorRect" parent="."]
 visible = false
