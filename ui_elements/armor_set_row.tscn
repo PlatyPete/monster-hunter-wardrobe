@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cetnfqk176o72"]
+
+[ext_resource type="Script" path="res://scripts/ArmorSetRow.gd" id="1_cn78f"]
+[ext_resource type="Texture2D" uid="uid://cgbnx8uet754o" path="res://icons/interface_icons_2.png" id="2_escdj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tcmmq"]
+atlas = ExtResource("2_escdj")
+region = Rect2(238, 162, 16, 16)
+
+[node name="Control" type="HBoxContainer"]
+offset_right = 100.0
+offset_bottom = 31.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource("1_cn78f")
+
+[node name="EquipButton" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "EQUIP"
+alignment = 0
+
+[node name="SetName" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "NAME"
+
+[node name="OverwriteButton" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "OVERWRITE"
+
+[node name="DeleteButton" type="TextureButton" parent="."]
+layout_mode = 2
+tooltip_text = "DELETE"
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_tcmmq")
+stretch_mode = 5

@@ -408,6 +408,7 @@ ELEMENT_RES_PLUS_5,Element Res +5,各耐性+5,各耐性+5
 ELEMENT_RES_UP,Element Res Up,全耐性ＵＰ,全耐性UP
 ENABLE_ARMOR_RESTRICTIONS,Enable Armor Restrictions,,启用防具类型限制
 ENGLISH,English,英語,英语
+EQUIP,Equip,,
 ESP,ESP,心眼,心眼
 EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
 FACE,Face,,面容
@@ -1144,6 +1145,7 @@ NOVACRYSTAL,Novacrystal,ノヴァクリスタル,耀水晶
 OK,OK,OK,OK
 ONE_HANDED_SWORD_TICKET,One-handed Sword Ticket,片手剣チケット,片手剑券
 OPTIONS,Options,選択肢,
+OVERWRITE,Overwrite,,
 PALE_BONE,Pale Bone,アルビノの中落ち,白化的脊肉
 PALE_KHEZU_STEAK,Pale Khezu Steak,アルビノの霜降り,白化的雪花肉
 PARALYSIS_DOUBLED_MH1,Stun x 2,麻痺倍加,麻痹倍加

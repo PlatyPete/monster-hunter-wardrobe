@@ -21,6 +21,8 @@ signal room_changed(room_index: int)
 @export var legs_table: Control
 @export var tab_container: TabContainer
 @export var armor_icons: Array[Texture2D]
+@export var armor_sets_container: VBoxContainer
+@export var add_set_button: Button
 
 @export_group("Hunter Tab")
 @export var female_check: CheckBox
@@ -80,6 +82,8 @@ func _ready():
 		tab_container.set_tab_title(index, "")
 		tab_container.set_tab_icon(index, armor_icons[index])
 
+	add_set_button.pressed.connect(_on_add_set_button_pressed)
+
 	female_check.pressed.connect(_on_gender_changed)
 	male_check.pressed.connect(_on_gender_changed)
 
@@ -112,6 +116,32 @@ func _ready():
 func _input(inputEvent: InputEvent):
 	if inputEvent.is_action_pressed("toggle_panels"):
 		$PanelsContainer.set_visible(!$PanelsContainer.is_visible())
+
+
+func _on_add_set_button_pressed():
+	var gender: ArmorData.Gender = get_gender()
+	var armor_set_row = ($ResourcePreloader.get_resource("armor_set_row")).instantiate()
+	armor_set_row.set_armor(hunters[gender].get_armor_indices(ArmorData.game_version))
+	armor_sets_container.add_child(armor_set_row)
+
+	armor_set_row.armor_set_pressed.connect(_on_armor_set_pressed)
+	armor_set_row.overwrite_pressed.connect(_on_armor_set_overwrite_pressed.bind(armor_set_row))
+
+	match gender:
+		ArmorData.Gender.FEMALE:
+			armor_set_row.add_to_group("female_elements")
+		ArmorData.Gender.MALE:
+			armor_set_row.add_to_group("male_elements")
+
+
+func _on_armor_set_overwrite_pressed(armor_set_row):
+	armor_set_row.set_armor(hunters[get_gender()].get_armor_indices(ArmorData.game_version))
+
+
+func _on_armor_set_pressed(armor_indices: Array):
+	var gender: ArmorData.Gender = get_gender()
+	for armor_category in armor_indices.size():
+		equip_armor(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
 
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
@@ -356,11 +386,21 @@ func toggle_armor_rows():
 	var scene_tree: SceneTree = get_tree()
 	match gender:
 		ArmorData.Gender.FEMALE:
+			for female_elements in scene_tree.get_nodes_in_group("female_elements"):
+				female_elements.show()
+			for male_elements in scene_tree.get_nodes_in_group("male_elements"):
+				male_elements.hide()
+
 			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
 				f_armor_row.toggle_by_filters(hunter_class)
 			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
 				m_armor_row.hide()
 		ArmorData.Gender.MALE:
+			for female_elements in scene_tree.get_nodes_in_group("female_elements"):
+				female_elements.hide()
+			for male_elements in scene_tree.get_nodes_in_group("male_elements"):
+				male_elements.show()
+
 			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
 				f_armor_row.hide()
 			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
