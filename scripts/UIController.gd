@@ -223,6 +223,31 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 	return armor_piece
 
 
+func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
+	var armor_data = ArmorData.ARMOR[game_version][armor_category][armor_index]
+	match armor_data.get("hunter_class", ArmorData.HunterClass.BOTH):
+		ArmorData.HunterClass.SWORD:
+			sword_check.set_pressed(true)
+			toggle_armor_rows()
+		ArmorData.HunterClass.GUN:
+			gun_check.set_pressed(true)
+			toggle_armor_rows()
+
+	match armor_category:
+		ArmorData.Category.HAIR:
+			hair_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.BODY:
+			body_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.ARMS:
+			arms_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.WAIST:
+			waist_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.LEGS:
+			legs_table.equip_armor(game_version, gender, armor_index)
+		_:
+			return
+
+
 func get_gender() -> ArmorData.Gender:
 	return ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
 

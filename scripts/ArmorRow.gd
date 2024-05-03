@@ -17,6 +17,11 @@ func _on_pressed():
 	armor_selected.emit(game_version, armor_category, gender, armor_index)
 
 
+func equip_armor():
+	$CheckBox.set_pressed(true)
+	$CheckBox.pressed.emit()
+
+
 func set_all_data(new_game_version: ArmorData.Game, new_armor_category: ArmorData.Category, new_gender: ArmorData.Gender, new_armor_index: int, armor_data):
 	armor_category = new_armor_category
 	gender = new_gender
