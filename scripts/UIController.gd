@@ -254,9 +254,9 @@ func add_armor_set_row(game_version: ArmorData.Game, gender: ArmorData.Gender, h
 
 	match gender:
 		ArmorData.Gender.FEMALE:
-			armor_set_row.add_to_group("female_elements")
+			armor_set_row.add_to_group("f_armor_rows")
 		ArmorData.Gender.MALE:
-			armor_set_row.add_to_group("male_elements")
+			armor_set_row.add_to_group("m_armor_rows")
 
 
 func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
@@ -531,21 +531,11 @@ func toggle_armor_rows():
 	var scene_tree: SceneTree = get_tree()
 	match gender:
 		ArmorData.Gender.FEMALE:
-			for female_elements in scene_tree.get_nodes_in_group("female_elements"):
-				female_elements.show()
-			for male_elements in scene_tree.get_nodes_in_group("male_elements"):
-				male_elements.hide()
-
 			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
 				f_armor_row.toggle_by_filters(hunter_class)
 			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
 				m_armor_row.hide()
 		ArmorData.Gender.MALE:
-			for female_elements in scene_tree.get_nodes_in_group("female_elements"):
-				female_elements.hide()
-			for male_elements in scene_tree.get_nodes_in_group("male_elements"):
-				male_elements.show()
-
 			for f_armor_row in scene_tree.get_nodes_in_group("f_armor_rows"):
 				f_armor_row.hide()
 			for m_armor_row in scene_tree.get_nodes_in_group("m_armor_rows"):
