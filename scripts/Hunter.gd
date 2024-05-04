@@ -47,7 +47,7 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 
 
 func get_armor_indices(game_version: ArmorData.Game) -> Array:
-	return armor_indices.slice(game_version, ArmorData.Category.FACE + game_version * ArmorData.Category.FACE)
+	return armor_indices.slice(game_version * ArmorData.Category.FACE, ArmorData.Category.FACE + game_version * ArmorData.Category.FACE)
 
 
 func get_models_in_category(model_category: ArmorData.Category):
