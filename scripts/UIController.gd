@@ -120,18 +120,12 @@ func _input(inputEvent: InputEvent):
 
 func _on_add_set_button_pressed():
 	var gender: ArmorData.Gender = get_gender()
-	var armor_set_row = ($ResourcePreloader.get_resource("armor_set_row")).instantiate()
-	armor_set_row.set_armor(hunters[gender].get_armor_indices(ArmorData.game_version))
-	armor_sets_container.add_child(armor_set_row)
+	add_armor_set_row(ArmorData.game_version, gender, get_hunter_class(), hunters[gender].get_armor_indices(ArmorData.game_version), "")
+	save_armor_sets()
 
-	armor_set_row.armor_set_pressed.connect(_on_armor_set_pressed)
-	armor_set_row.overwrite_pressed.connect(_on_armor_set_overwrite_pressed.bind(armor_set_row))
 
-	match gender:
-		ArmorData.Gender.FEMALE:
-			armor_set_row.add_to_group("female_elements")
-		ArmorData.Gender.MALE:
-			armor_set_row.add_to_group("male_elements")
+func _on_armor_set_name_changed(armor_set_row):
+	save_armor_sets()
 
 
 func _on_armor_set_overwrite_pressed(armor_set_row):
@@ -166,11 +160,14 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 	set_zenni(gender)
 
 	hunters[gender].equip_armor(game_version, armor_category, armor_index)
+	save_hunter_settings()
+
 	armor_selected.emit()
 
 
 func _on_face_selected(face_index: int):
 	hunters[get_gender()].set_model(ArmorData.Category.FACE, face_index)
+	save_hunter_settings()
 
 
 func _on_game_changed(game_index: int):
@@ -182,36 +179,18 @@ func _on_game_changed(game_index: int):
 
 
 func _on_gender_changed():
-	var gender: ArmorData.Gender = get_gender()
-
-	match gender:
-		ArmorData.Gender.FEMALE:
-			f_face_options.show()
-			m_face_options.hide()
-			f_hair_options.show()
-			m_hair_options.hide()
-			f_hair_color.show()
-			m_hair_color.hide()
-		ArmorData.Gender.MALE:
-			f_face_options.hide()
-			m_face_options.show()
-			f_hair_options.hide()
-			m_hair_options.show()
-			f_hair_color.hide()
-			m_hair_color.show()
-
-	toggle_armor_rows()
-
-	hunters[gender].show()
-	hunters[(gender + 1) % 2].hide()
+	toggle_gender_options(get_gender())
+	save_hunter_settings()
 
 
 func _on_hair_color_changed(new_color: Color):
 	hunters[get_gender()].set_hair_color(new_color)
+	save_hunter_settings()
 
 
 func _on_hair_selected(hair_index: int):
 	hunters[get_gender()].set_hair(hair_index)
+	save_hunter_settings()
 
 
 func _on_hunter_class_changed():
@@ -253,6 +232,27 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 	return armor_piece
 
 
+func add_armor_set_row(game_version: ArmorData.Game, gender: ArmorData.Gender, hunter_class: ArmorData.HunterClass, armor_indices: Array, set_name: String):
+	var armor_set_row = ($ResourcePreloader.get_resource("armor_set_row")).instantiate()
+	armor_set_row.gender = gender
+	armor_set_row.hunter_class = hunter_class
+	armor_set_row.set_armor(armor_indices)
+	if set_name:
+		armor_set_row.set_set_name(set_name)
+
+	armor_sets_container.add_child(armor_set_row)
+
+	armor_set_row.armor_set_pressed.connect(_on_armor_set_pressed)
+	armor_set_row.overwrite_pressed.connect(_on_armor_set_overwrite_pressed.bind(armor_set_row))
+	armor_set_row.set_name_changed.connect(_on_armor_set_name_changed.bind(armor_set_row))
+
+	match gender:
+		ArmorData.Gender.FEMALE:
+			armor_set_row.add_to_group("female_elements")
+		ArmorData.Gender.MALE:
+			armor_set_row.add_to_group("male_elements")
+
+
 func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
 	var armor_data = ArmorData.ARMOR[game_version][armor_category][armor_index]
 	match armor_data.get("hunter_class", ArmorData.HunterClass.BOTH):
@@ -278,8 +278,30 @@ func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Categor
 			return
 
 
+func get_face_index(gender: ArmorData.Gender) -> int:
+	match gender:
+		ArmorData.Gender.FEMALE:
+			return f_face_options.get_selected()
+		ArmorData.Gender.MALE:
+			return m_face_options.get_selected()
+
+	print("Invalid gender for face", gender)
+	return -1
+
+
 func get_gender() -> ArmorData.Gender:
 	return ArmorData.Gender.FEMALE if female_check.is_pressed() else ArmorData.Gender.MALE
+
+
+func get_hair_index(gender: ArmorData.Gender) -> int:
+	match gender:
+		ArmorData.Gender.FEMALE:
+			return f_hair_options.get_selected()
+		ArmorData.Gender.MALE:
+			return m_hair_options.get_selected()
+
+	print("Invalid gender for hair option", gender)
+	return -1
 
 
 func get_hair_color(gender: ArmorData.Gender) -> Color:
@@ -297,6 +319,63 @@ func get_hunter_class() -> ArmorData.HunterClass:
 	return ArmorData.HunterClass.SWORD if sword_check.is_pressed() else ArmorData.HunterClass.GUN
 
 
+func load_settings(settings: Dictionary):
+	var gender: ArmorData.Gender = get_gender()
+	if settings.hunter.has("gender") and gender != settings.hunter.gender:
+		gender = set_gender(settings.hunter.gender)
+
+	for gender_index in ArmorData.Gender.BOTH:
+		var gender_key: String = SaveData.HUNTER_GENDER_CATEGORIES[gender_index]
+		if settings[gender_key].has("face"):
+			set_face_index(gender_index, int(settings[gender_key].face))
+		if settings[gender_key].has("hair"):
+			set_hair_index(gender_index, int(settings[gender_key].hair))
+		if settings[gender_key].has("hair_color"):
+			set_hair_color(gender_index, settings[gender_key].hair_color)
+
+		if settings[gender_key].has("armor_indices"):
+			hunters[gender_index].armor_indices = settings[gender_key].armor_indices
+			var game_armor_indices: Array = hunters[gender_index].get_armor_indices(ArmorData.game_version)
+			for armor_category in game_armor_indices.size():
+				equip_armor(ArmorData.game_version, armor_category, gender_index, game_armor_indices[armor_category])
+
+		for armor_set in settings.armor_sets[gender_key]:
+			add_armor_set_row(armor_set.game_version, gender_index, armor_set.hunter_class, armor_set.armor_indices, armor_set.name)
+
+
+func save_armor_sets():
+	var settings: Dictionary = {
+		"armor_sets": {}
+	}
+	for gender_index in ArmorData.Gender.BOTH:
+		settings.armor_sets[SaveData.HUNTER_GENDER_CATEGORIES[gender_index]] = []
+
+	for armor_set_row in armor_sets_container.get_children():
+		settings.armor_sets[SaveData.HUNTER_GENDER_CATEGORIES[armor_set_row.gender]].push_back(armor_set_row.to_save_format())
+
+	SaveData.save_user_data(settings)
+
+
+func save_hunter_settings():
+	var gender: ArmorData.Gender = get_gender()
+	var gender_key: String = str(gender)
+
+	var settings: Dictionary = {
+		"hunter": {
+			"gender": gender,
+			"hunter_class": get_hunter_class()
+		}
+	}
+	settings.hunter[SaveData.HUNTER_GENDER_CATEGORIES[gender]] = {
+		"face": get_face_index(gender),
+		"hair": get_hair_index(gender),
+		"hair_color": get_hair_color(gender),
+		"armor_indices": hunters[gender].armor_indices
+	}
+
+	SaveData.save_user_data(settings)
+
+
 func set_active_skills(skill_names: Array):
 	for child in active_skill_container.get_children():
 		child.queue_free()
@@ -305,6 +384,54 @@ func set_active_skills(skill_names: Array):
 		var skill_label: Label = Label.new()
 		skill_label.set_text(skill_name)
 		active_skill_container.add_child(skill_label)
+
+
+func set_face_index(gender: ArmorData.Gender, face_index):
+	match gender:
+		ArmorData.Gender.FEMALE:
+			f_face_options.select(face_index)
+		ArmorData.Gender.MALE:
+			m_face_options.select(face_index)
+		_:
+			print("Invalid gender for face", gender)
+
+	hunters[gender].set_model(ArmorData.Category.FACE, face_index)
+
+
+func set_gender(gender: ArmorData.Gender) -> ArmorData.Gender:
+	match gender:
+		ArmorData.Gender.FEMALE:
+			female_check.set_pressed(true)
+		ArmorData.Gender.MALE:
+			male_check.set_pressed(true)
+
+	toggle_gender_options(gender)
+
+	return gender
+
+
+func set_hair_index(gender: ArmorData.Gender, hair_index):
+	match gender:
+		ArmorData.Gender.FEMALE:
+			f_hair_options.select(hair_index)
+		ArmorData.Gender.MALE:
+			m_hair_options.select(hair_index)
+		_:
+			print("Invalid gender for hair option", gender)
+
+	hunters[gender].set_hair(hair_index)
+
+
+func set_hair_color(gender: ArmorData.Gender, hair_color: Color):
+	match gender:
+		ArmorData.Gender.FEMALE:
+			f_hair_color.set_pick_color(hair_color)
+		ArmorData.Gender.MALE:
+			m_hair_color.set_pick_color(hair_color)
+		_:
+			print("Invalid gender for hair color", gender)
+
+	hunters[gender].set_hair_color(hair_color)
 
 
 func set_materials(materials):
@@ -412,3 +539,26 @@ func toggle_game_elements():
 	var scene_tree: SceneTree = get_tree()
 	for node in scene_tree.get_nodes_in_group("mhg_elements"):
 		node.set_visible(show_mhg_elements)
+
+
+func toggle_gender_options(gender: ArmorData.Gender):
+	match gender:
+		ArmorData.Gender.FEMALE:
+			f_face_options.show()
+			m_face_options.hide()
+			f_hair_options.show()
+			m_hair_options.hide()
+			f_hair_color.show()
+			m_hair_color.hide()
+		ArmorData.Gender.MALE:
+			f_face_options.hide()
+			m_face_options.show()
+			f_hair_options.hide()
+			m_hair_options.show()
+			f_hair_color.hide()
+			m_hair_color.show()
+
+	toggle_armor_rows()
+
+	hunters[gender].show()
+	hunters[(gender + 1) % 2].hide()

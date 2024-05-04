@@ -43,6 +43,10 @@ func _ready():
 	$UIController.toggle_game_elements()
 
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
+
+	var settings = SaveData.load_user_data()
+	$UIController.load_settings(settings)
+
 	# TODO: get room to load from save file
 	load_room("kokoto_house")
 

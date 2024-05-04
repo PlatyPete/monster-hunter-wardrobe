@@ -22,25 +22,25 @@
 [ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
 [ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_l7h4e"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_5we5q"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_dd16m"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_k4jeh"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_sli12"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_6a5jq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_vn6j0"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ad8lg"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_qj0pl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wjnpl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_kqsw2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_w5bce"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ersdb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_7hpk2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_h45px"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_8mheb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_nj88m"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wqfkb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_l4jmd"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_tfwbd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
 
@@ -208,32 +208,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_l7h4e")
-m_button_group = SubResource("ButtonGroup_dd16m")
+f_button_group = SubResource("ButtonGroup_5we5q")
+m_button_group = SubResource("ButtonGroup_k4jeh")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_sli12")
-m_button_group = SubResource("ButtonGroup_vn6j0")
+f_button_group = SubResource("ButtonGroup_6a5jq")
+m_button_group = SubResource("ButtonGroup_ad8lg")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_qj0pl")
-m_button_group = SubResource("ButtonGroup_kqsw2")
+f_button_group = SubResource("ButtonGroup_wjnpl")
+m_button_group = SubResource("ButtonGroup_w5bce")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ersdb")
-m_button_group = SubResource("ButtonGroup_h45px")
+f_button_group = SubResource("ButtonGroup_7hpk2")
+m_button_group = SubResource("ButtonGroup_8mheb")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_nj88m")
-m_button_group = SubResource("ButtonGroup_l4jmd")
+f_button_group = SubResource("ButtonGroup_wqfkb")
+m_button_group = SubResource("ButtonGroup_tfwbd")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false

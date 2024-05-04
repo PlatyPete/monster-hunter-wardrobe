@@ -19,29 +19,35 @@ const SAVE_FILE_PATH: String = "user://save.cfg"
 
 
 func load_user_data(category: String = "") -> Dictionary:
-	var user_data: Dictionary = {}
+	# Initialize the categories as empty Dictionaries, so we use the default values in the controls
+	var user_data: Dictionary = {
+		"armor_sets": {},
+		"audio": {},
+		"hunter": {}
+	}
+	for gender in ArmorData.Gender.BOTH:
+		user_data[HUNTER_GENDER_CATEGORIES[gender]] = {}
+		user_data.armor_sets[HUNTER_GENDER_CATEGORIES[gender]] = []
 
 	var save_file: ConfigFile = ConfigFile.new()
 	var load_error = save_file.load(SAVE_FILE_PATH)
 	if load_error == OK:
-		user_data.audio = {}
 		for setting_key in AUDIO_SETTING_KEYS:
-			user_data.audio[setting_key] = save_file.get_value("audio", setting_key)
+			if save_file.has_section_key("audio", setting_key):
+				user_data.audio[setting_key] = save_file.get_value("audio", setting_key)
 
-		user_data.hunter = {
-			"gender": save_file.get_value("hunter", "gender", ArmorData.Gender.FEMALE),
-			"hunter_class": save_file.get_value("hunter", "hunter_class", ArmorData.HunterClass.SWORD)
-		}
+		if save_file.has_section_key("hunter", "gender"):
+			user_data.hunter.gender = save_file.get_value("hunter", "gender")
+		if save_file.has_section_key("hunter", "hunter_class"):
+			user_data.hunter.hunter_class = save_file.get_value("hunter", "hunter_class")
+
 		for gender in ArmorData.Gender.BOTH:
-			user_data[HUNTER_GENDER_CATEGORIES[gender]] = {}
 			for setting_key in HUNTER_SETTING_KEYS:
-				user_data[HUNTER_GENDER_CATEGORIES[gender]][setting_key] = save_file.get_value(HUNTER_GENDER_CATEGORIES[gender], setting_key, "")
-	else:
-		# Provide the categories as empty Dictionaries, so we use the default values in the controls
-		user_data.audio = {}
-		user_data.hunter = {}
-		for gender in ArmorData.Gender.BOTH:
-			user_data[HUNTER_GENDER_CATEGORIES[gender]] = {}
+				if save_file.has_section_key(HUNTER_GENDER_CATEGORIES[gender], setting_key):
+					user_data[HUNTER_GENDER_CATEGORIES[gender]][setting_key] = save_file.get_value(HUNTER_GENDER_CATEGORIES[gender], setting_key)
+
+			if save_file.has_section_key("armor_sets", HUNTER_GENDER_CATEGORIES[gender]):
+				user_data.armor_sets[HUNTER_GENDER_CATEGORIES[gender]] = save_file.get_value("armor_sets", HUNTER_GENDER_CATEGORIES[gender])
 
 	if category.length() != 0:
 		return user_data.get(category, {})
@@ -51,6 +57,7 @@ func load_user_data(category: String = "") -> Dictionary:
 
 func save_user_data(settings: Dictionary):
 	var save_file: ConfigFile = ConfigFile.new()
+	save_file.load(SAVE_FILE_PATH)
 
 	if settings.has("audio"):
 		for setting_key in AUDIO_SETTING_KEYS:
