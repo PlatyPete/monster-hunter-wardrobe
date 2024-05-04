@@ -73,7 +73,8 @@ func set_base_model(model_category: ArmorData.Category):
 
 func set_hair(new_hair_index: int):
 	hair_index = new_hair_index
-	set_model(ArmorData.Category.HAIR, new_hair_index)
+	if not is_armor_equipped(ArmorData.Category.HAIR):
+		set_model(ArmorData.Category.HAIR, new_hair_index)
 
 
 func set_hair_color(new_hair_color: Color):
