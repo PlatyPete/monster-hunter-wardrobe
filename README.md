@@ -82,10 +82,9 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 	- [x] Fade through black when changing rooms
 	- [x] Add room music
 	- [ ] Match room lighting to the games (currently a rough approximation)
-- [ ] Equipment sets
-	- [ ] Let users save multiple custom equipment sets (upper limit?)
+- [x] Equipment sets
+	- [x] Let users save multiple custom equipment sets (upper limit?)
 - [ ] Gamepad controls
 - [ ] User options:
 	- [ ] "Original" vs high-definition rendering
-- [ ] Save data
-	- [ ] Detect save files from the old app, and convert before using their data
+- [x] Save data
