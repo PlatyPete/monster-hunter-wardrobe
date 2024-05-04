@@ -47,8 +47,7 @@ func _ready():
 	var settings = SaveData.load_user_data()
 	$UIController.load_settings(settings)
 
-	# TODO: get room to load from save file
-	load_room("kokoto_house")
+	load_room(settings.general.room_name)
 
 
 func _on_animation_finished(animation_name: String):
@@ -83,6 +82,13 @@ func load_room(new_room_name: String):
 	room.position = -room.player_position.position
 	$HunterContainer.rotation = room.player_position.rotation
 	room.play_music()
+
+	var settings: Dictionary = {
+		"general": {
+			"room_name": new_room_name
+		}
+	}
+	SaveData.save_user_data(settings)
 
 
 func play_equip_sound():

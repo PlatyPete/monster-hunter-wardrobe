@@ -21,6 +21,9 @@ const SAVE_FILE_PATH: String = "user://save.cfg"
 func load_user_data(category: String = "") -> Dictionary:
 	# Initialize the categories as empty Dictionaries, so we use the default values in the controls
 	var user_data: Dictionary = {
+		"general": {
+			"room_name": "kokoto_house"
+		},
 		"armor_sets": {},
 		"audio": {},
 		"hunter": {}
@@ -32,6 +35,9 @@ func load_user_data(category: String = "") -> Dictionary:
 	var save_file: ConfigFile = ConfigFile.new()
 	var load_error = save_file.load(SAVE_FILE_PATH)
 	if load_error == OK:
+		if save_file.has_section_key("general", "room_name"):
+			user_data.general.room_name = save_file.get_value("general", "room_name")
+
 		for setting_key in AUDIO_SETTING_KEYS:
 			if save_file.has_section_key("audio", setting_key):
 				user_data.audio[setting_key] = save_file.get_value("audio", setting_key)
@@ -58,6 +64,10 @@ func load_user_data(category: String = "") -> Dictionary:
 func save_user_data(settings: Dictionary):
 	var save_file: ConfigFile = ConfigFile.new()
 	save_file.load(SAVE_FILE_PATH)
+
+	if settings.has("general"):
+		if settings.general.has("room_name"):
+			save_file.set_value("general", "room_name", settings.general.room_name)
 
 	if settings.has("audio"):
 		for setting_key in AUDIO_SETTING_KEYS:
