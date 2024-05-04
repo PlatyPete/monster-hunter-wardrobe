@@ -37,6 +37,8 @@ func load_user_data(category: String = "") -> Dictionary:
 	if load_error == OK:
 		if save_file.has_section_key("general", "room_name"):
 			user_data.general.room_name = save_file.get_value("general", "room_name")
+		if save_file.has_section_key("general", "game_version"):
+			user_data.general.game_version = save_file.get_value("general", "game_version")
 
 		for setting_key in AUDIO_SETTING_KEYS:
 			if save_file.has_section_key("audio", setting_key):
@@ -68,6 +70,8 @@ func save_user_data(settings: Dictionary):
 	if settings.has("general"):
 		if settings.general.has("room_name"):
 			save_file.set_value("general", "room_name", settings.general.room_name)
+		if settings.general.has("game_version"):
+			save_file.set_value("general", "game_version", settings.general.game_version)
 
 	if settings.has("audio"):
 		for setting_key in AUDIO_SETTING_KEYS:

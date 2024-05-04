@@ -124,7 +124,7 @@ func _on_add_set_button_pressed():
 	save_armor_sets()
 
 
-func _on_armor_set_name_changed(armor_set_row):
+func _on_armor_set_name_changed():
 	save_armor_sets()
 
 
@@ -171,11 +171,16 @@ func _on_face_selected(face_index: int):
 
 
 func _on_game_changed(game_index: int):
-	ArmorData.set_game(game_index)
-	var mh_theme = $ResourcePreloader.get_resource(THEME_NAMES[game_index])
-	set_theme(mh_theme)
+	set_game(game_index)
 	toggle_game_elements()
 	toggle_armor_rows()
+
+	var settings: Dictionary = {
+		"general": {
+			"game_version": game_index
+		}
+	}
+	SaveData.save_user_data(settings)
 
 
 func _on_gender_changed():
@@ -232,19 +237,20 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 	return armor_piece
 
 
-func add_armor_set_row(game_version: ArmorData.Game, gender: ArmorData.Gender, hunter_class: ArmorData.HunterClass, armor_indices: Array, set_name: String):
+func add_armor_set_row(game_version: ArmorData.Game, gender: ArmorData.Gender, hunter_class: ArmorData.HunterClass, armor_indices: Array, armor_set_name: String):
 	var armor_set_row = ($ResourcePreloader.get_resource("armor_set_row")).instantiate()
 	armor_set_row.gender = gender
 	armor_set_row.hunter_class = hunter_class
+	armor_set_row.game_version = game_version
 	armor_set_row.set_armor(armor_indices)
-	if set_name:
-		armor_set_row.set_set_name(set_name)
+	if armor_set_name:
+		armor_set_row.set_set_name(armor_set_name)
 
 	armor_sets_container.add_child(armor_set_row)
 
 	armor_set_row.armor_set_pressed.connect(_on_armor_set_pressed)
 	armor_set_row.overwrite_pressed.connect(_on_armor_set_overwrite_pressed.bind(armor_set_row))
-	armor_set_row.set_name_changed.connect(_on_armor_set_name_changed.bind(armor_set_row))
+	armor_set_row.set_name_changed.connect(_on_armor_set_name_changed)
 
 	match gender:
 		ArmorData.Gender.FEMALE:
@@ -320,6 +326,10 @@ func get_hunter_class() -> ArmorData.HunterClass:
 
 
 func load_settings(settings: Dictionary):
+	if settings.general.has("game_version"):
+		game_options.select(settings.general.game_version)
+		set_game(settings.general.game_version)
+
 	var gender: ArmorData.Gender = get_gender()
 	if settings.hunter.has("gender") and gender != settings.hunter.gender:
 		gender = set_gender(settings.hunter.gender)
@@ -342,6 +352,9 @@ func load_settings(settings: Dictionary):
 		for armor_set in settings.armor_sets[gender_key]:
 			add_armor_set_row(armor_set.game_version, gender_index, armor_set.hunter_class, armor_set.armor_indices, armor_set.name)
 
+	toggle_game_elements()
+	toggle_armor_rows()
+
 
 func save_armor_sets():
 	var settings: Dictionary = {
@@ -358,7 +371,6 @@ func save_armor_sets():
 
 func save_hunter_settings():
 	var gender: ArmorData.Gender = get_gender()
-	var gender_key: String = str(gender)
 
 	var settings: Dictionary = {
 		"hunter": {
@@ -396,6 +408,12 @@ func set_face_index(gender: ArmorData.Gender, face_index):
 			print("Invalid gender for face", gender)
 
 	hunters[gender].set_model(ArmorData.Category.FACE, face_index)
+
+
+func set_game(game_version: ArmorData.Game):
+	ArmorData.set_game(game_version)
+	var mh_theme = $ResourcePreloader.get_resource(THEME_NAMES[game_version])
+	set_theme(mh_theme)
 
 
 func set_gender(gender: ArmorData.Gender) -> ArmorData.Gender:
