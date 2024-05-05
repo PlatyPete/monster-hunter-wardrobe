@@ -1609,7 +1609,14 @@ var SKILL_SETS = [
 	{"armor": Array(["","VESPOID_MAIL_PLUS","HORNET_VAMBRACES_PLUS","HORNET_TASSET_PLUS","VESPOID_GREAVES_PLUS"]),"skills": Array(["DRAGON_PLUS_25_MH1"])},
 	{"armor": Array(["","VESPOID_MAIL_PLUS","VESPOID_VAMBRACES_PLUS","HORNET_TASSET_PLUS","HORNET_GREAVES_PLUS"]),"skills": Array(["DRAGON_PLUS_25_MH1"])},
 	{"armor": Array(["","VESPOID_VEST_PLUS","HORNET_GUARDS_PLUS","VESPOID_COAT_PLUS","HORNET_LEGGINGS_PLUS"]),"skills": Array(["DRAGON_PLUS_25_MH1"])}
-]
+].map(func(armor_set):
+	armor_set.armor_indices = [ 0, 0, 0, 0, 0 ]
+	for armor_category in armor_set.armor.size():
+		var armor_index: int = get_armor_index_by_name(Game.MH1, armor_category, armor_set.armor[armor_category])
+		armor_set.armor_indices[armor_category] = armor_index
+
+	return armor_set
+)
 var SKILL_LEVELS = {
 	"HEALTH_SKILL": Array([ "HEALTH_MINUS_30","HEALTH_MINUS_20","HEALTH_MINUS_10","HEALTH_PLUS_10","HEALTH_PLUS_20","HEALTH_PLUS_30" ]),
 	"DEFENSE_SKILL": Array([ "DEFENSE_MINUS_20","DEFENSE_MINUS_15","DEFENSE_MINUS_10","DEFENSE_PLUS_10","DEFENSE_PLUS_15","DEFENSE_PLUS_20" ]),
@@ -1820,7 +1827,7 @@ const ARMS_SKIN: Array[int] = [
 	0,0, # 45
 	0,0,
 	0,0,
-	1,1,
+	0,1,
 	1,1,
 	0,1, # 50
 	0,0,
@@ -1973,6 +1980,14 @@ const FACE_SKIN_MAP: Array = [
 ]
 
 var game_version: Game = Game.MH1
+
+
+func get_armor_index_by_name(game_version: Game, armor_category: Category, armor_name: String) -> int:
+	for armor_index in ARMOR[game_version][armor_category].size():
+		if ARMOR[game_version][armor_category][armor_index].name == armor_name:
+			return armor_index
+
+	return 0
 
 
 func does_armor_set_have_skills(armor_names: Array, skill_set_pieces: Array) -> bool:
