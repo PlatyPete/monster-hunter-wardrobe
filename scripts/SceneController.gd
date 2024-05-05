@@ -39,9 +39,6 @@ func _ready():
 	$UIController.armor_selected.connect(_on_armor_selected)
 	$UIController.room_changed.connect(_on_room_changed)
 
-	$UIController.toggle_armor_rows()
-	$UIController.toggle_game_elements()
-
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
 
 	var settings = SaveData.load_user_data()

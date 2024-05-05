@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlw0xy08hm8el"]
+
+[ext_resource type="Script" path="res://scripts/MH1ArmorSetRow.gd" id="1_fe7md"]
+
+[node name="MH1ArmorSetRow" type="HBoxContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fe7md")
+
+[node name="ArmorButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 0
+
+[node name="VSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+
+[node name="Skills" type="Label" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3

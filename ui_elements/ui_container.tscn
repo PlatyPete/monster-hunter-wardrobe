@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=39 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -17,30 +17,32 @@
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
 [ext_resource type="PackedScene" uid="uid://cetnfqk176o72" path="res://ui_elements/armor_set_row.tscn" id="16_7vcp1"]
 [ext_resource type="StyleBox" uid="uid://c1jbye272pqr0" path="res://themes/menu_ga_panel.tres" id="16_br0rg"]
+[ext_resource type="Script" path="res://scripts/MH1ArmorSets.gd" id="16_m85vc"]
+[ext_resource type="PackedScene" uid="uid://dlw0xy08hm8el" path="res://ui_elements/mh_1_armor_set_row.tscn" id="17_8nb1a"]
 [ext_resource type="Texture2D" uid="uid://bl2o2dutl2d55" path="res://textures/menu_gb.png" id="17_obtn7"]
 [ext_resource type="Texture2D" uid="uid://b4k0xn1wxa28k" path="res://textures/menu_ga.png" id="18_1776h"]
 [ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
 [ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_5we5q"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_4v8ho"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_k4jeh"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_bfyvq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_6a5jq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_2c5jy"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ad8lg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_3j2se"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wjnpl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_du2ph"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_w5bce"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_pr46o"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_7hpk2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_k03ro"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_8mheb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_fwb8p"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wqfkb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_glvm2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_tfwbd"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_hxgva"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
 
@@ -104,7 +106,7 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
 VSeparator/constants/separation = 0
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -114,6 +116,7 @@ theme = ExtResource("1_rept1")
 script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
+mh1_armor_sets_button = NodePath("PanelContainer/HBoxContainer/SkilledArmorSetsButton")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
 quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
 hair_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/H")
@@ -176,6 +179,10 @@ popup/item_4/id = 4
 popup/item_5/text = "KING_ROOM"
 popup/item_5/id = 5
 
+[node name="SkilledArmorSetsButton" type="Button" parent="PanelContainer/HBoxContainer"]
+layout_mode = 2
+text = "SKILLED_ARMOR_SETS"
+
 [node name="Spacer" type="Control" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -208,32 +215,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_5we5q")
-m_button_group = SubResource("ButtonGroup_k4jeh")
+f_button_group = SubResource("ButtonGroup_4v8ho")
+m_button_group = SubResource("ButtonGroup_bfyvq")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_6a5jq")
-m_button_group = SubResource("ButtonGroup_ad8lg")
+f_button_group = SubResource("ButtonGroup_2c5jy")
+m_button_group = SubResource("ButtonGroup_3j2se")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_wjnpl")
-m_button_group = SubResource("ButtonGroup_w5bce")
+f_button_group = SubResource("ButtonGroup_du2ph")
+m_button_group = SubResource("ButtonGroup_pr46o")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_7hpk2")
-m_button_group = SubResource("ButtonGroup_8mheb")
+f_button_group = SubResource("ButtonGroup_k03ro")
+m_button_group = SubResource("ButtonGroup_fwb8p")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_wqfkb")
-m_button_group = SubResource("ButtonGroup_tfwbd")
+f_button_group = SubResource("ButtonGroup_glvm2")
+m_button_group = SubResource("ButtonGroup_hxgva")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false
@@ -781,6 +788,47 @@ value = 1.0
 layout_mode = 2
 size_flags_vertical = 4
 text = "MUTE"
+
+[node name="MH1ArmorSets" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("armor_sets_container")]
+title = "ARMOR_SETS"
+size = Vector2i(480, 320)
+min_size = Vector2i(480, 320)
+cancel_button_text = "CANCEL"
+script = ExtResource("16_m85vc")
+armor_sets_container = NodePath("VBoxContainer/ScrollContainer/ArmorSetRows")
+armor_set_row_scene = ExtResource("17_8nb1a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MH1ArmorSets"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 312.0
+offset_bottom = 199.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MH1ArmorSets/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ARMOR"
+
+[node name="VSeparator" type="VSeparator" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SKILLS"
+
+[node name="HSeparator" type="HSeparator" parent="MH1ArmorSets/VBoxContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MH1ArmorSets/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ArmorSetRows" type="VBoxContainer" parent="MH1ArmorSets/VBoxContainer/ScrollContainer"]
+layout_mode = 2
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 resources = [PackedStringArray("armor_set_row", "mh1_theme", "mhg_theme"), [ExtResource("16_7vcp1"), ExtResource("1_rept1"), SubResource("Theme_7nwv1")]]

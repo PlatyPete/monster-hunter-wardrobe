@@ -58,10 +58,6 @@ func is_armor_equipped(model_category: ArmorData.Category) -> bool:
 	return armor_indices[ArmorData.Category.FACE * ArmorData.game_version + model_category] != 0
 
 
-func set_armor_index(game_version: ArmorData.Game, armor_category: ArmorData.Category, armor_index: int):
-	armor_indices[ArmorData.Category.FACE * game_version + armor_category] = armor_index
-
-
 func set_base_model(model_category: ArmorData.Category):
 	match model_category:
 		ArmorData.Category.HAIR:

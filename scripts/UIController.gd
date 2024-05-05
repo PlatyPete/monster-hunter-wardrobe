@@ -10,6 +10,7 @@ signal room_changed(room_index: int)
 @export_group("Toolbar")
 @export var game_options: OptionButton
 @export var room_options: OptionButton
+@export var mh1_armor_sets_button: Button
 @export var options_dropdown: MenuButton
 @export var quit_button: Button
 
@@ -75,8 +76,11 @@ const HAIR_COLORS: Array[Color] = [
 func _ready():
 	game_options.item_selected.connect(_on_game_changed)
 	room_options.item_selected.connect(_on_room_changed)
+	mh1_armor_sets_button.pressed.connect($MH1ArmorSets.popup_centered)
 	options_dropdown.get_popup().index_pressed.connect(_on_options_selected)
 	quit_button.pressed.connect(_on_quit_pressed)
+
+	$MH1ArmorSets.armor_set_pressed.connect(_on_mh1_armor_set_pressed)
 
 	for index in armor_icons.size():
 		tab_container.set_tab_title(index, "")
@@ -136,33 +140,15 @@ func _on_armor_set_pressed(armor_indices: Array):
 	var gender: ArmorData.Gender = get_gender()
 	for armor_category in armor_indices.size():
 		equip_armor(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
+		select_armor_row(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
+
+	update_armor_stats(ArmorData.game_version, gender)
 
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
-	var armor_indices: Array = hunters[gender].get_armor_indices(game_version)
-	hunters[gender].set_armor_index(game_version, armor_category, armor_index)
-
-	stats_container.set_stats(armor_indices)
-	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
-	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
-
-	if game_version == ArmorData.Game.MH1:
-		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices)
-		set_active_skills(armor_skills)
-	else:
-		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices)
-		set_active_skills(armor_skills.activated_skills)
-		set_skill_points(armor_skills.skill_points)
-
-	var materials: Dictionary = ArmorData.get_armor_materials(armor_indices)
-	set_materials(materials)
-
-	set_zenni(gender)
-
-	hunters[gender].equip_armor(game_version, armor_category, armor_index)
+	equip_armor(game_version, armor_category, gender, armor_index)
+	update_armor_stats(game_version, gender)
 	save_hunter_settings()
-
-	armor_selected.emit()
 
 
 func _on_face_selected(face_index: int):
@@ -200,6 +186,17 @@ func _on_hair_selected(hair_index: int):
 
 func _on_hunter_class_changed():
 	toggle_armor_rows()
+
+
+func _on_mh1_armor_set_pressed(armor_set_index: int):
+	var gender: ArmorData.Gender = get_gender()
+	for armor_category in ArmorData.SKILL_SETS[armor_set_index].armor_indices.size():
+		var armor_index = ArmorData.SKILL_SETS[armor_set_index].armor_indices[armor_category]
+		if armor_index != 0:
+			equip_armor(ArmorData.Game.MH1, armor_category, gender, armor_index)
+			select_armor_row(ArmorData.Game.MH1, armor_category, gender, armor_index)
+
+	update_armor_stats(ArmorData.Game.MH1, gender)
 
 
 func _on_options_selected(option_index: int):
@@ -269,19 +266,12 @@ func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Categor
 			gun_check.set_pressed(true)
 			toggle_armor_rows()
 
-	match armor_category:
-		ArmorData.Category.HAIR:
-			hair_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.BODY:
-			body_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.ARMS:
-			arms_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.WAIST:
-			waist_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.LEGS:
-			legs_table.equip_armor(game_version, gender, armor_index)
-		_:
-			return
+	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
+	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
+
+	hunters[gender].equip_armor(game_version, armor_category, armor_index)
+
+	armor_selected.emit()
 
 
 func get_face_index(gender: ArmorData.Gender) -> int:
@@ -352,6 +342,7 @@ func load_settings(settings: Dictionary):
 		for armor_set in settings.armor_sets[gender_key]:
 			add_armor_set_row(armor_set.game_version, gender_index, armor_set.hunter_class, armor_set.armor_indices, armor_set.name)
 
+	update_armor_stats(ArmorData.game_version, get_gender())
 	toggle_game_elements()
 	toggle_armor_rows()
 
@@ -386,6 +377,22 @@ func save_hunter_settings():
 	}
 
 	SaveData.save_user_data(settings)
+
+
+func select_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
+	match armor_category:
+		ArmorData.Category.HAIR:
+			hair_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.BODY:
+			body_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.ARMS:
+			arms_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.WAIST:
+			waist_table.equip_armor(game_version, gender, armor_index)
+		ArmorData.Category.LEGS:
+			legs_table.equip_armor(game_version, gender, armor_index)
+		_:
+			return
 
 
 func set_active_skills(skill_names: Array):
@@ -548,6 +555,8 @@ func toggle_game_elements():
 	for node in scene_tree.get_nodes_in_group("mhg_elements"):
 		node.set_visible(show_mhg_elements)
 
+	mh1_armor_sets_button.set_visible(not show_mhg_elements)
+
 
 func toggle_gender_options(gender: ArmorData.Gender):
 	match gender:
@@ -570,3 +579,21 @@ func toggle_gender_options(gender: ArmorData.Gender):
 
 	hunters[gender].show()
 	hunters[(gender + 1) % 2].hide()
+
+
+func update_armor_stats(game_version: ArmorData.Game, gender: ArmorData.Gender):
+	var armor_indices: Array = hunters[gender].get_armor_indices(game_version)
+	stats_container.set_stats(armor_indices)
+
+	if game_version == ArmorData.Game.MH1:
+		var armor_skills: Array = ArmorData.get_armor_set_skills_1(armor_indices)
+		set_active_skills(armor_skills)
+	else:
+		var armor_skills: Dictionary = ArmorData.get_armor_set_skills_g(armor_indices)
+		set_active_skills(armor_skills.activated_skills)
+		set_skill_points(armor_skills.skill_points)
+
+	var materials: Dictionary = ArmorData.get_armor_materials(armor_indices)
+	set_materials(materials)
+
+	set_zenni(gender)
