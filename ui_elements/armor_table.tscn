@@ -8,12 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://cjg06ciub3ywr" path="res://icons/thunder.png" id="5_ebcop"]
 [ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="6_vd6pg"]
 
-[node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body")]
+[node name="ArmorTable" type="MarginContainer" node_paths=PackedStringArray("table_body", "scroll_container")]
 offset_right = 276.0
 offset_bottom = 35.0
 size_flags_horizontal = 3
 script = ExtResource("1_l04mw")
 table_body = NodePath("VBoxContainer/ScrollContainer/MarginContainer/ArmorCheckBoxes")
+scroll_container = NodePath("VBoxContainer/ScrollContainer")
 armor_row_scene = ExtResource("2_paffe")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]

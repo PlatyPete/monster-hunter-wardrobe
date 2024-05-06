@@ -28,7 +28,6 @@ func _ready():
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
 
 	var settings = SaveData.load_user_data()
-	$UIController.load_settings(settings)
 
 	load_room(settings.general.room_name)
 	var room_index: int = ROOM_NAMES.find(settings.general.room_name)

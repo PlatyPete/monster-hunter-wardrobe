@@ -15,11 +15,7 @@ signal room_changed(room_index: int)
 @export var quit_button: Button
 
 @export_group("Armor Menu")
-@export var hair_table: Control
-@export var body_table: Control
-@export var arms_table: Control
-@export var waist_table: Control
-@export var legs_table: Control
+@export var armor_tables: Array[Control]
 @export var tab_container: TabContainer
 @export var armor_icons: Array[Texture2D]
 @export var armor_sets_container: VBoxContainer
@@ -123,6 +119,8 @@ func _ready():
 
 					armor_index += 1
 
+	var settings = SaveData.load_user_data()
+	load_settings(settings)
 
 
 func _input(inputEvent: InputEvent):
@@ -144,15 +142,21 @@ func _on_armor_set_name_changed():
 
 func _on_armor_set_overwrite_pressed(armor_set_row):
 	armor_set_row.set_armor(hunters[get_gender()].get_armor_indices(ArmorData.game_version))
+	save_armor_sets()
 
 
 func _on_armor_set_pressed(armor_indices: Array):
 	var gender: ArmorData.Gender = get_gender()
 	for armor_category in armor_indices.size():
 		equip_armor(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
-		select_armor_row(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
+		armor_tables[armor_category].equip_armor(ArmorData.game_version, gender, armor_indices[armor_category])
 
 	update_armor_stats(ArmorData.game_version, gender)
+
+	for armor_table in armor_tables:
+		armor_table.scroll_to_selected()
+
+	save_hunter_settings()
 
 
 func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
@@ -204,9 +208,15 @@ func _on_mh1_armor_set_pressed(armor_set_index: int):
 		var armor_index = ArmorData.SKILL_SETS[armor_set_index].armor_indices[armor_category]
 		if armor_index != 0:
 			equip_armor(ArmorData.Game.MH1, armor_category, gender, armor_index)
-			select_armor_row(ArmorData.Game.MH1, armor_category, gender, armor_index)
+			armor_tables[armor_category].equip_armor(ArmorData.Game.MH1, gender, armor_index)
 
 	update_armor_stats(ArmorData.Game.MH1, gender)
+
+	# We have to scroll the armor tables after toggling row visibility
+	for armor_table in armor_tables:
+		armor_table.scroll_to_selected()
+
+	save_hunter_settings()
 
 
 func _on_options_selected(option_index: int):
@@ -226,19 +236,10 @@ func _on_room_changed(room_index: int):
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
 	var armor_piece
 
-	match armor_category:
-		ArmorData.Category.HAIR:
-			armor_piece = hair_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-		ArmorData.Category.BODY:
-			armor_piece = body_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-		ArmorData.Category.ARMS:
-			armor_piece = arms_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-		ArmorData.Category.WAIST:
-			armor_piece = waist_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-		ArmorData.Category.LEGS:
-			armor_piece = legs_table.add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-		_:
-			return null
+	if armor_category < armor_tables.size():
+		armor_piece = armor_tables[armor_category].add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
+	else:
+		return null
 
 	armor_piece.armor_selected.connect(_on_armor_selected)
 	return armor_piece
@@ -353,6 +354,7 @@ func load_settings(settings: Dictionary):
 			var game_armor_indices: Array = hunters[gender_index].get_armor_indices(ArmorData.game_version)
 			for armor_category in game_armor_indices.size():
 				equip_armor(ArmorData.game_version, armor_category, gender_index, game_armor_indices[armor_category])
+				armor_tables[armor_category].equip_armor(ArmorData.game_version, gender_index, game_armor_indices[armor_category])
 
 		for armor_set in settings.armor_sets[gender_key]:
 			add_armor_set_row(armor_set.game_version, gender_index, armor_set.hunter_class, armor_set.armor_indices, armor_set.name)
@@ -392,22 +394,6 @@ func save_hunter_settings():
 	}
 
 	SaveData.save_user_data(settings)
-
-
-func select_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int):
-	match armor_category:
-		ArmorData.Category.HAIR:
-			hair_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.BODY:
-			body_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.ARMS:
-			arms_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.WAIST:
-			waist_table.equip_armor(game_version, gender, armor_index)
-		ArmorData.Category.LEGS:
-			legs_table.equip_armor(game_version, gender, armor_index)
-		_:
-			return
 
 
 func set_active_skills(skill_names: Array):

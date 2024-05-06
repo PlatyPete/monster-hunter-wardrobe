@@ -24,25 +24,25 @@
 [ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
 [ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_4v8ho"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_kp1qh"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_bfyvq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_feoic"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_2c5jy"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_jjb6p"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_3j2se"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_x38fa"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_du2ph"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_mimeg"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_pr46o"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_n47nn"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_k03ro"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_yamr2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_fwb8p"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_sc724"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_glvm2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_6xmwg"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_hxgva"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_mtnus"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
 
@@ -106,7 +106,7 @@ TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
 VSeparator/constants/separation = 0
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "quit_button", "hair_table", "body_table", "arms_table", "waist_table", "legs_table", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -119,11 +119,7 @@ room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
 mh1_armor_sets_button = NodePath("PanelContainer/HBoxContainer/SkilledArmorSetsButton")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
 quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
-hair_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/H")
-body_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/B")
-arms_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/A")
-waist_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/W")
-legs_table = NodePath("PanelsContainer/ArmorContainer/TabContainer/L")
+armor_tables = [NodePath("PanelsContainer/ArmorContainer/TabContainer/H"), NodePath("PanelsContainer/ArmorContainer/TabContainer/B"), NodePath("PanelsContainer/ArmorContainer/TabContainer/A"), NodePath("PanelsContainer/ArmorContainer/TabContainer/W"), NodePath("PanelsContainer/ArmorContainer/TabContainer/L")]
 tab_container = NodePath("PanelsContainer/ArmorContainer/TabContainer")
 armor_icons = Array[Texture2D]([ExtResource("3_i40es"), ExtResource("4_lfb81"), ExtResource("5_inf15"), ExtResource("6_c5vbq"), ExtResource("7_asrhl")])
 armor_sets_container = NodePath("PanelsContainer/ArmorContainer/TabContainer/ARMOR_SETS/VBoxContainer/ScrollContainer/ArmorSetRows")
@@ -215,32 +211,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_4v8ho")
-m_button_group = SubResource("ButtonGroup_bfyvq")
+f_button_group = SubResource("ButtonGroup_kp1qh")
+m_button_group = SubResource("ButtonGroup_feoic")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_2c5jy")
-m_button_group = SubResource("ButtonGroup_3j2se")
+f_button_group = SubResource("ButtonGroup_jjb6p")
+m_button_group = SubResource("ButtonGroup_x38fa")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_du2ph")
-m_button_group = SubResource("ButtonGroup_pr46o")
+f_button_group = SubResource("ButtonGroup_mimeg")
+m_button_group = SubResource("ButtonGroup_n47nn")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_k03ro")
-m_button_group = SubResource("ButtonGroup_fwb8p")
+f_button_group = SubResource("ButtonGroup_yamr2")
+m_button_group = SubResource("ButtonGroup_sc724")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_glvm2")
-m_button_group = SubResource("ButtonGroup_hxgva")
+f_button_group = SubResource("ButtonGroup_6xmwg")
+m_button_group = SubResource("ButtonGroup_mtnus")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false
