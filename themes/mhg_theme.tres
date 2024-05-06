@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://c8oba14s41jq2"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://b7x47c32i4rdn"]
 
 [ext_resource type="StyleBox" uid="uid://c1jbye272pqr0" path="res://themes/menu_ga_panel.tres" id="1_rtl0q"]
 [ext_resource type="Texture2D" uid="uid://bl2o2dutl2d55" path="res://textures/menu_gb.png" id="2_mos8x"]
@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="4_fdbx0"]
 [ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="5_8lxea"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbc6b"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_magrl"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugbuc"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
@@ -21,7 +21,7 @@ axis_stretch_vertical = 2
 region_rect = Rect2(0, 0, 34, 27)
 modulate_color = Color(1, 1, 1, 0.87451)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dwtf"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c3y1n"]
 content_margin_left = 8.0
 content_margin_top = 8.0
 content_margin_right = 8.0
@@ -51,18 +51,23 @@ modulate_color = Color(1, 1, 1, 0.87451)
 [resource]
 default_font = ExtResource("5_8lxea")
 default_font_size = 10
+AcceptDialog/styles/panel = ExtResource("1_rtl0q")
 ColorPicker/constants/sv_height = 80
 ColorPicker/constants/sv_width = 80
 MarginContainer/constants/margin_bottom = 4
 MarginContainer/constants/margin_left = 4
 MarginContainer/constants/margin_right = 4
 MarginContainer/constants/margin_top = 4
+Panel/styles/panel = ExtResource("1_rtl0q")
 PanelContainer/styles/panel = ExtResource("1_rtl0q")
+PopupDialog/styles/panel = ExtResource("1_rtl0q")
+PopupMenu/styles/panel = ExtResource("1_rtl0q")
+PopupPanel/styles/panel = ExtResource("1_rtl0q")
 TabContainer/constants/icon_max_width = 16
 TabContainer/constants/side_margin = 0
 TabContainer/styles/panel = ExtResource("1_rtl0q")
-TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_87m2a")
-TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_magrl")
-TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_cbc6b")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_ugbuc")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_c3y1n")
 TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
 VSeparator/constants/separation = 0
