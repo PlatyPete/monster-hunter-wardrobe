@@ -109,7 +109,20 @@ func _ready():
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
-	set_zenni(ArmorData.Gender.FEMALE)
+	for game_index in ArmorData.Game.BOTH:
+		for gender_index in ArmorData.Gender.BOTH:
+			for armor_category in ArmorData.ARMOR[game_index].size():
+				var armor_index: int = 0
+				for armor_piece in ArmorData.ARMOR[game_index][armor_category]:
+					# Only add an armor row if this armor piece is valid for the current gender
+					if not armor_piece.has("gender") or armor_piece.gender == gender_index:
+						if not add_armor_row(game_index, armor_category, gender_index, armor_index, armor_piece):
+							# If we pass an invalid armor category to the add_armor_row method, it will return null
+							print("No armor row created")
+							break
+
+					armor_index += 1
+
 
 
 func _input(inputEvent: InputEvent):
