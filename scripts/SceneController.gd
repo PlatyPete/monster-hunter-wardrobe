@@ -45,6 +45,11 @@ func _ready():
 	$UIController.load_settings(settings)
 
 	load_room(settings.general.room_name)
+	var room_index: int = ROOM_NAMES.find(settings.general.room_name)
+	if room_index == -1:
+		print("Room not found in ROOM_NAMES: ", settings.general.room_name)
+	else:
+		$UIController.room_options.select(room_index)
 
 
 func _on_animation_finished(animation_name: String):
