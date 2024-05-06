@@ -111,11 +111,6 @@ func _ready():
 
 	set_zenni(ArmorData.Gender.FEMALE)
 
-	# TODO: set player customization and armor from save file
-	for gender in ArmorData.Gender.BOTH:
-		var hair_color: Color = get_hair_color(gender)
-		hunters[gender].set_hair_color(hair_color)
-
 
 func _input(inputEvent: InputEvent):
 	if inputEvent.is_action_pressed("toggle_panels"):
@@ -124,7 +119,9 @@ func _input(inputEvent: InputEvent):
 
 func _on_add_set_button_pressed():
 	var gender: ArmorData.Gender = get_gender()
-	add_armor_set_row(ArmorData.game_version, gender, get_hunter_class(), hunters[gender].get_armor_indices(ArmorData.game_version), "")
+	var armor_indices: Array = hunters[gender].get_armor_indices(ArmorData.game_version)
+	var hunter_class: ArmorData.HunterClass = ArmorData.get_hunter_class_from_indices(armor_indices)
+	add_armor_set_row(ArmorData.game_version, gender, hunter_class, armor_indices, "")
 	save_armor_sets()
 
 
@@ -330,8 +327,13 @@ func load_settings(settings: Dictionary):
 			set_face_index(gender_index, int(settings[gender_key].face))
 		if settings[gender_key].has("hair"):
 			set_hair_index(gender_index, int(settings[gender_key].hair))
+
 		if settings[gender_key].has("hair_color"):
 			set_hair_color(gender_index, settings[gender_key].hair_color)
+		else:
+			# Use the default color from the picker
+			var hair_color: Color = get_hair_color(gender)
+			hunters[gender].set_hair_color(hair_color)
 
 		if settings[gender_key].has("armor_indices"):
 			hunters[gender_index].armor_indices = settings[gender_key].armor_indices

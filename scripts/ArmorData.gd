@@ -1982,9 +1982,9 @@ const FACE_SKIN_MAP: Array = [
 var game_version: Game = Game.MH1
 
 
-func get_armor_index_by_name(game_version: Game, armor_category: Category, armor_name: String) -> int:
-	for armor_index in ARMOR[game_version][armor_category].size():
-		if ARMOR[game_version][armor_category][armor_index].name == armor_name:
+func get_armor_index_by_name(given_game_version: Game, armor_category: Category, armor_name: String) -> int:
+	for armor_index in ARMOR[given_game_version][armor_category].size():
+		if ARMOR[given_game_version][armor_category][armor_index].name == armor_name:
 			return armor_index
 
 	return 0
@@ -2123,6 +2123,19 @@ func get_base_model_index(model_category: Category, gender: Gender, skin_index: 
 
 	print("Invalid base model category ", model_category)
 	return 0
+
+
+func get_hunter_class_from_indices(armor_indices: Array) -> HunterClass:
+	var hunter_class: HunterClass = HunterClass.BOTH
+	for armor_category in armor_indices.size():
+		var armor_data: Dictionary = ARMOR[game_version][armor_category][armor_indices[armor_category]]
+		if armor_data.has("hunter_class") and armor_data.hunter_class != hunter_class:
+			if hunter_class == HunterClass.BOTH:
+				hunter_class = armor_data.hunter_class
+			else:
+				return HunterClass.BOTH
+
+	return hunter_class
 
 
 func get_rarity_color(rarity: int) -> Color:
