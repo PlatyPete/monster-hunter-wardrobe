@@ -107,7 +107,7 @@ func _ready():
 
 	for game_index in ArmorData.Game.BOTH:
 		for gender_index in ArmorData.Gender.BOTH:
-			for armor_category in ArmorData.ARMOR[game_index].size():
+			for armor_category in ArmorData.CATEGORY_COUNT:
 				var armor_index: int = 0
 				for armor_piece in ArmorData.ARMOR[game_index][armor_category]:
 					# Only add an armor row if this armor piece is valid for the current gender
@@ -147,7 +147,7 @@ func _on_armor_set_overwrite_pressed(armor_set_row):
 
 func _on_armor_set_pressed(armor_indices: Array):
 	var gender: ArmorData.Gender = get_gender()
-	for armor_category in armor_indices.size():
+	for armor_category in ArmorData.CATEGORY_COUNT:
 		equip_armor(ArmorData.game_version, armor_category, gender, armor_indices[armor_category])
 		armor_tables[armor_category].equip_armor(ArmorData.game_version, gender, armor_indices[armor_category])
 
@@ -204,7 +204,7 @@ func _on_hunter_class_changed():
 
 func _on_mh1_armor_set_pressed(armor_set_index: int):
 	var gender: ArmorData.Gender = get_gender()
-	for armor_category in ArmorData.SKILL_SETS[armor_set_index].armor_indices.size():
+	for armor_category in ArmorData.CATEGORY_COUNT:
 		var armor_index = ArmorData.SKILL_SETS[armor_set_index].armor_indices[armor_category]
 		if armor_index != 0:
 			equip_armor(ArmorData.Game.MH1, armor_category, gender, armor_index)
@@ -236,7 +236,7 @@ func _on_room_changed(room_index: int):
 func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
 	var armor_piece
 
-	if armor_category < armor_tables.size():
+	if armor_category < ArmorData.CATEGORY_COUNT:
 		armor_piece = armor_tables[armor_category].add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
 	else:
 		return null
@@ -352,7 +352,7 @@ func load_settings(settings: Dictionary):
 		if settings[gender_key].has("armor_indices"):
 			hunters[gender_index].armor_indices = settings[gender_key].armor_indices
 			var game_armor_indices: Array = hunters[gender_index].get_armor_indices(ArmorData.game_version)
-			for armor_category in game_armor_indices.size():
+			for armor_category in ArmorData.CATEGORY_COUNT:
 				equip_armor(ArmorData.game_version, armor_category, gender_index, game_armor_indices[armor_category])
 				armor_tables[armor_category].equip_armor(ArmorData.game_version, gender_index, game_armor_indices[armor_category])
 
@@ -501,7 +501,7 @@ func set_zenni(gender: ArmorData.Gender):
 	var total_forge: int = 0
 	var total_buy: int = 0
 
-	for armor_category in armor_indices.size():
+	for armor_category in ArmorData.CATEGORY_COUNT:
 		var armor_piece = ArmorData.ARMOR[ArmorData.game_version][armor_category][armor_indices[armor_category]]
 		var forge: int = armor_piece.get("forge", 0)
 		if forge == 0:

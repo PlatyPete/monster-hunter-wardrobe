@@ -13,4 +13,4 @@ func set_zenni(zenni: Array):
 	$ArmsZenni.set_text(zenni[ArmorData.Category.ARMS])
 	$WaistZenni.set_text(zenni[ArmorData.Category.WAIST])
 	$LegsZenni.set_text(zenni[ArmorData.Category.LEGS])
-	$TotalZenni.set_text(zenni[ArmorData.Category.FACE])
+	$TotalZenni.set_text(zenni[ArmorData.CATEGORY_COUNT])

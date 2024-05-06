@@ -16,7 +16,7 @@ func set_stats(armor_indices: Array):
 	var defense: int = 0
 	var resistances: Array[int] = [0,0,0,0,0]
 
-	for category_index in armor_labels.size():
+	for category_index in ArmorData.CATEGORY_COUNT:
 		var armor_piece = ArmorData.ARMOR[ArmorData.game_version][category_index][armor_indices[category_index]]
 
 		armor_labels[category_index].set_text(armor_piece.name)

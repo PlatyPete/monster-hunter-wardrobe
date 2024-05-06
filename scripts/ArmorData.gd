@@ -9,6 +9,7 @@ enum HunterClass { SWORD, GUN, BOTH }
 
 signal game_changed(game_version: Game)
 
+const CATEGORY_COUNT: int = Category.FACE
 const CATEGORY_NAMES: Array = ["hair","body","arms","waist","legs","face"]
 const GENDER_PREFIXES: Array = ["f_","m_"]
 
@@ -1611,7 +1612,7 @@ var SKILL_SETS = [
 	{"armor": Array(["","VESPOID_VEST_PLUS","HORNET_GUARDS_PLUS","VESPOID_COAT_PLUS","HORNET_LEGGINGS_PLUS"]),"skills": Array(["DRAGON_PLUS_25_MH1"])}
 ].map(func(armor_set):
 	armor_set.armor_indices = [ 0, 0, 0, 0, 0 ]
-	for armor_category in armor_set.armor.size():
+	for armor_category in CATEGORY_COUNT:
 		var armor_index: int = get_armor_index_by_name(Game.MH1, armor_category, armor_set.armor[armor_category])
 		armor_set.armor_indices[armor_category] = armor_index
 
@@ -1991,7 +1992,7 @@ func get_armor_index_by_name(given_game_version: Game, armor_category: Category,
 
 
 func does_armor_set_have_skills(armor_names: Array, skill_set_pieces: Array) -> bool:
-	for category_index in Category.FACE:
+	for category_index in CATEGORY_COUNT:
 		if skill_set_pieces[category_index] and armor_names[category_index] != skill_set_pieces[category_index]:
 			return false
 
@@ -2000,7 +2001,7 @@ func does_armor_set_have_skills(armor_names: Array, skill_set_pieces: Array) -> 
 
 func get_armor_set_skills_1(armor_indices: Array) -> Array:
 	var armor_names: Array = ["", "", "", "", ""]
-	for category_index in armor_indices.size():
+	for category_index in CATEGORY_COUNT:
 		armor_names[category_index] = ARMOR[Game.MH1][category_index][armor_indices[category_index]].name
 
 	for skill_set in SKILL_SETS:
@@ -2013,7 +2014,7 @@ func get_armor_set_skills_1(armor_indices: Array) -> Array:
 func get_armor_set_skills_g(armor_indices: Array) -> Dictionary:
 	var add_torso_up: bool = false
 	var armor_skill_points: Dictionary = {}
-	for category_index in armor_indices.size():
+	for category_index in CATEGORY_COUNT:
 		var armor_piece = ARMOR[Game.MHG][category_index][armor_indices[category_index]]
 		for skill in armor_piece.get("skills", []):
 			if !add_torso_up and skill.k.begins_with("TORSO"):
@@ -2097,7 +2098,7 @@ func does_model_have_skin(armor_category: Category, gender: Gender, model_index:
 
 func get_armor_materials(armor_indices: Array) -> Dictionary:
 	var materials: Dictionary = {}
-	for category_index in armor_indices.size():
+	for category_index in CATEGORY_COUNT:
 		var armor_piece = ARMOR[game_version][category_index][armor_indices[category_index]]
 		for material in armor_piece.get("mats", []):
 			if materials.has(material.m):
@@ -2127,7 +2128,7 @@ func get_base_model_index(model_category: Category, gender: Gender, skin_index: 
 
 func get_hunter_class_from_indices(armor_indices: Array) -> HunterClass:
 	var hunter_class: HunterClass = HunterClass.BOTH
-	for armor_category in armor_indices.size():
+	for armor_category in CATEGORY_COUNT:
 		var armor_data: Dictionary = ARMOR[game_version][armor_category][armor_indices[armor_category]]
 		if armor_data.has("hunter_class") and armor_data.hunter_class != hunter_class:
 			if hunter_class == HunterClass.BOTH:

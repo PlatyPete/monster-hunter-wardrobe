@@ -26,8 +26,8 @@ func _ready():
 
 
 func _on_game_changed(game_version: ArmorData.Game):
-	for model_category in ArmorData.Category.FACE:
-		var armor_index: int = armor_indices[ArmorData.Category.FACE * ArmorData.game_version + model_category]
+	for model_category in ArmorData.CATEGORY_COUNT:
+		var armor_index: int = armor_indices[ArmorData.CATEGORY_COUNT * ArmorData.game_version + model_category]
 		equip_armor(ArmorData.game_version, model_category, armor_index)
 
 
@@ -36,10 +36,10 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 
 	if armor_piece.model_indices[gender] == 0:
 		# Either the None option was picked, or a piercing, which has no model
-		armor_indices[ArmorData.Category.FACE * ArmorData.game_version + armor_category] = 0
+		armor_indices[ArmorData.CATEGORY_COUNT * ArmorData.game_version + armor_category] = 0
 		set_base_model(armor_category)
 	elif not armor_piece.has("gender") or armor_piece.gender == gender:
-		armor_indices[ArmorData.Category.FACE * ArmorData.game_version + armor_category] = armor_index
+		armor_indices[ArmorData.CATEGORY_COUNT * ArmorData.game_version + armor_category] = armor_index
 		set_model(armor_category, armor_piece.model_indices[gender])
 	else:
 		# This shouldn't happen, but I suppose it's possible?
@@ -47,7 +47,7 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 
 
 func get_armor_indices(game_version: ArmorData.Game) -> Array:
-	return armor_indices.slice(game_version * ArmorData.Category.FACE, ArmorData.Category.FACE + game_version * ArmorData.Category.FACE)
+	return armor_indices.slice(game_version * ArmorData.CATEGORY_COUNT, ArmorData.CATEGORY_COUNT + game_version * ArmorData.CATEGORY_COUNT)
 
 
 func get_models_in_category(model_category: ArmorData.Category):
@@ -55,7 +55,7 @@ func get_models_in_category(model_category: ArmorData.Category):
 
 
 func is_armor_equipped(model_category: ArmorData.Category) -> bool:
-	return armor_indices[ArmorData.Category.FACE * ArmorData.game_version + model_category] != 0
+	return armor_indices[ArmorData.CATEGORY_COUNT * ArmorData.game_version + model_category] != 0
 
 
 func set_base_model(model_category: ArmorData.Category):
