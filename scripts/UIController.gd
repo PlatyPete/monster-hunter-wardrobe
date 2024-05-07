@@ -5,14 +5,21 @@ enum Option { VIDEO, AUDIO }
 signal armor_selected
 signal room_changed(room_index: int)
 
+const LOCALES: Array[String] = [
+	"en",
+	"ja",
+	"zh"
+]
+
 @export var hunters: Array[Node3D]
 
 @export_group("Toolbar")
 @export var game_options: OptionButton
 @export var room_options: OptionButton
 @export var mh1_armor_sets_button: Button
-@export var help_button: BaseButton
 @export var options_dropdown: MenuButton
+@export var locale_options: OptionButton
+@export var help_button: BaseButton
 @export var quit_button: Button
 
 @export_group("Armor Menu")
@@ -75,6 +82,7 @@ func _ready():
 	room_options.item_selected.connect(_on_room_changed)
 	mh1_armor_sets_button.pressed.connect($MH1ArmorSets.popup_centered)
 	options_dropdown.get_popup().index_pressed.connect(_on_options_selected)
+	locale_options.item_selected.connect(_on_locale_changed)
 	help_button.pressed.connect($HelpPopup.popup_centered)
 	quit_button.pressed.connect(_on_quit_pressed)
 
@@ -202,6 +210,17 @@ func _on_hair_selected(hair_index: int):
 
 func _on_hunter_class_changed():
 	toggle_armor_rows()
+
+
+func _on_locale_changed(locale_index: int):
+	set_locale(locale_index)
+
+	var settings: Dictionary = {
+		"general": {
+			"locale_index": locale_index
+		}
+	}
+	SaveData.save_user_data(settings)
 
 
 func _on_mh1_armor_set_pressed(armor_set_index: int):
@@ -340,6 +359,17 @@ func load_settings(settings: Dictionary):
 		game_options.select(settings.general.game_version)
 		set_game(settings.general.game_version)
 
+	if settings.general.has("locale_index"):
+		locale_options.select(settings.general.locale_index)
+		set_locale(settings.general.locale_index)
+	else:
+		# If the user's locale matches one we support, set the locale option to that
+		var full_locale: String = TranslationServer.get_locale()
+		var basic_locale: String = full_locale.substr(0, 2)
+		var locale_index: int = LOCALES.find(basic_locale)
+		if locale_index != -1:
+			locale_options.select(locale_index)
+
 	var gender: ArmorData.Gender = get_gender()
 	if settings.hunter.has("gender") and gender != settings.hunter.gender:
 		gender = set_gender(settings.hunter.gender)
@@ -467,6 +497,10 @@ func set_hair_color(gender: ArmorData.Gender, hair_color: Color):
 			print("Invalid gender for hair color", gender)
 
 	hunters[gender].set_hair_color(hair_color)
+
+
+func set_locale(locale_index: int):
+	TranslationServer.set_locale(LOCALES[locale_index])
 
 
 func set_materials(materials):

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=36 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -13,7 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="6_c5vbq"]
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
 [ext_resource type="Texture2D" uid="uid://c56otfej532wf" path="res://icons/icons_white.png" id="10_skm8h"]
+[ext_resource type="Texture2D" uid="uid://cod082e0wo1k" path="res://icons/flag_en.png" id="10_w0ihf"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
+[ext_resource type="Texture2D" uid="uid://bs5h2yqnl0wrc" path="res://icons/flag_ja.png" id="11_vpdij"]
+[ext_resource type="Texture2D" uid="uid://ccsshnv20b0aj" path="res://icons/flag_zh.png" id="12_45uub"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
 [ext_resource type="Script" path="res://scripts/VideoOptions.gd" id="15_fubqk"]
@@ -46,7 +49,7 @@ region = Rect2(64, 128, 32, 32)
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_dh5av"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "help_button", "options_dropdown", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "locale_options", "help_button", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -57,8 +60,9 @@ script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
 mh1_armor_sets_button = NodePath("PanelContainer/HBoxContainer/SkilledArmorSetsButton")
-help_button = NodePath("PanelContainer/HBoxContainer/HelpButton")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
+locale_options = NodePath("PanelContainer/HBoxContainer/LocaleButton")
+help_button = NodePath("PanelContainer/HBoxContainer/HelpButton")
 quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
 armor_tables = [NodePath("PanelsContainer/ArmorContainer/TabContainer/H"), NodePath("PanelsContainer/ArmorContainer/TabContainer/B"), NodePath("PanelsContainer/ArmorContainer/TabContainer/A"), NodePath("PanelsContainer/ArmorContainer/TabContainer/W"), NodePath("PanelsContainer/ArmorContainer/TabContainer/L")]
 tab_container = NodePath("PanelsContainer/ArmorContainer/TabContainer")
@@ -136,6 +140,24 @@ popup/item_0/text = "VIDEO"
 popup/item_0/id = 1
 popup/item_1/text = "AUDIO"
 popup/item_1/id = 0
+
+[node name="LocaleButton" type="OptionButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 16)
+layout_mode = 2
+tooltip_text = "LANGUAGE"
+mouse_default_cursor_shape = 2
+expand_icon = true
+item_count = 3
+selected = 0
+popup/item_0/text = ""
+popup/item_0/icon = ExtResource("10_w0ihf")
+popup/item_0/id = 0
+popup/item_1/text = ""
+popup/item_1/icon = ExtResource("11_vpdij")
+popup/item_1/id = 1
+popup/item_2/text = ""
+popup/item_2/icon = ExtResource("12_45uub")
+popup/item_2/id = 2
 
 [node name="HelpButton" type="TextureButton" parent="PanelContainer/HBoxContainer"]
 custom_minimum_size = Vector2(16, 16)
