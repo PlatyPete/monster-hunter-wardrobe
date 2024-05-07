@@ -84,7 +84,7 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 	- [ ] Match room lighting to the games (currently a rough approximation)
 - [x] Equipment sets
 	- [x] Let users save multiple custom equipment sets (upper limit?)
-- [ ] Gamepad controls
+- [x] Gamepad controls
 - [x] User options:
 	- [x] "Original" vs high-definition rendering
 - [x] Save data

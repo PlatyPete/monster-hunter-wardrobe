@@ -857,7 +857,7 @@ layout_mode = 2
 [node name="HelpPopup" type="AcceptDialog" parent="."]
 title = "HELP"
 initial_position = 2
-size = Vector2i(480, 320)
+size = Vector2i(320, 240)
 dialog_text = "HELP_COPY"
 dialog_autowrap = true
 
