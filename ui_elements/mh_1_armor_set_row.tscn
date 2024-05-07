@@ -13,6 +13,7 @@ script = ExtResource("1_fe7md")
 [node name="ArmorButton" type="Button" parent="."]
 layout_mode = 2
 size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
 alignment = 0
 
 [node name="VSeparator" type="VSeparator" parent="."]

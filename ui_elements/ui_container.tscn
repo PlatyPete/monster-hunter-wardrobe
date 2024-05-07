@@ -86,6 +86,7 @@ layout_mode = 2
 
 [node name="GameOptions" type="OptionButton" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 item_count = 2
 selected = 0
 popup/item_0/text = "MONSTER_HUNTER"
@@ -95,6 +96,7 @@ popup/item_1/id = 1
 
 [node name="RoomOptions" type="OptionButton" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 item_count = 6
 selected = 0
 popup/item_0/text = "KOKOTO_HOUSE"
@@ -112,6 +114,7 @@ popup/item_5/id = 5
 
 [node name="SkilledArmorSetsButton" type="Button" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "SKILLED_ARMOR_SETS"
 
 [node name="Spacer" type="Control" parent="PanelContainer/HBoxContainer"]
@@ -120,6 +123,7 @@ size_flags_horizontal = 3
 
 [node name="OptionsDropdown" type="MenuButton" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "OPTIONS"
 item_count = 2
 popup/item_0/text = "VIDEO"
@@ -129,6 +133,7 @@ popup/item_1/id = 0
 
 [node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 text = "QUIT"
 
 [node name="PanelsContainer" type="Control" parent="."]
@@ -223,12 +228,14 @@ columns = 2
 
 [node name="FGenderCheck" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 button_pressed = true
 button_group = ExtResource("4_5mdki")
 text = "FEMALE"
 
 [node name="MGenderCheck" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 button_group = ExtResource("4_5mdki")
 text = "MALE"
 
@@ -238,6 +245,7 @@ text = "FACE"
 
 [node name="FFaceOptions" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 alignment = 2
 item_count = 24
 selected = 0
@@ -293,6 +301,7 @@ popup/item_23/id = 23
 [node name="MFaceOptions" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
+mouse_default_cursor_shape = 2
 alignment = 2
 item_count = 24
 selected = 0
@@ -351,6 +360,7 @@ text = "HAIR_OPTION"
 
 [node name="FHairOption" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 alignment = 2
 item_count = 10
 selected = 0
@@ -378,6 +388,7 @@ popup/item_9/id = 9
 [node name="MHairOption" type="OptionButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
+mouse_default_cursor_shape = 2
 alignment = 2
 item_count = 10
 selected = 0
@@ -408,12 +419,14 @@ text = "HAIR_COLOR"
 
 [node name="FColorPickerButton" type="ColorPickerButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
 [node name="MColorPickerButton" type="ColorPickerButton" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer/GridContainer"]
 visible = false
 layout_mode = 2
+mouse_default_cursor_shape = 2
 color = Color(0.898039, 0.603922, 0.403922, 1)
 edit_alpha = false
 
@@ -422,12 +435,14 @@ layout_mode = 2
 
 [node name="SwordCheckBox" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 button_pressed = true
 button_group = ExtResource("5_govkv")
 text = "BLADEMASTER"
 
 [node name="GunCheckBox" type="CheckBox" parent="PanelsContainer/PlayerContainer/TabContainer/HUNTER/VBoxContainer"]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 button_group = ExtResource("5_govkv")
 text = "GUNNER"
 
