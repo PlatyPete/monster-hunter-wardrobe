@@ -1,4 +1,4 @@
-extends ConfirmationDialog
+extends Window
 
 signal armor_set_pressed(armor_index: int)
 
