@@ -11,6 +11,7 @@ signal room_changed(room_index: int)
 @export var game_options: OptionButton
 @export var room_options: OptionButton
 @export var mh1_armor_sets_button: Button
+@export var help_button: BaseButton
 @export var options_dropdown: MenuButton
 @export var quit_button: Button
 
@@ -74,6 +75,7 @@ func _ready():
 	room_options.item_selected.connect(_on_room_changed)
 	mh1_armor_sets_button.pressed.connect($MH1ArmorSets.popup_centered)
 	options_dropdown.get_popup().index_pressed.connect(_on_options_selected)
+	help_button.pressed.connect($HelpPopup.popup_centered)
 	quit_button.pressed.connect(_on_quit_pressed)
 
 	$MH1ArmorSets.armor_set_pressed.connect(_on_mh1_armor_set_pressed)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=33 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="5_inf15"]
 [ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="6_c5vbq"]
 [ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="7_asrhl"]
+[ext_resource type="Texture2D" uid="uid://c56otfej532wf" path="res://icons/icons_white.png" id="10_skm8h"]
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
@@ -21,27 +22,31 @@
 [ext_resource type="PackedScene" uid="uid://dlw0xy08hm8el" path="res://ui_elements/mh_1_armor_set_row.tscn" id="17_8nb1a"]
 [ext_resource type="Theme" uid="uid://b7x47c32i4rdn" path="res://themes/mhg_theme.tres" id="19_246gt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_ofdke"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1giod"]
+atlas = ExtResource("10_skm8h")
+region = Rect2(64, 128, 32, 32)
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_m7qpw"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_yo7pg"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_0cmjx"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_1i6qb"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_fkvl2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_uyogl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_b6m2k"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_fsgpk"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_b1ipl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_kblci"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_pg240"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_wspbq"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_btyfy"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_cd3t5"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_erp35"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_aj22s"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_eq0yk"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_moev1"]
 
-[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
+[sub_resource type="ButtonGroup" id="ButtonGroup_dh5av"]
+
+[node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "help_button", "options_dropdown", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -52,6 +57,7 @@ script = ExtResource("2_jy3o4")
 game_options = NodePath("PanelContainer/HBoxContainer/GameOptions")
 room_options = NodePath("PanelContainer/HBoxContainer/RoomOptions")
 mh1_armor_sets_button = NodePath("PanelContainer/HBoxContainer/SkilledArmorSetsButton")
+help_button = NodePath("PanelContainer/HBoxContainer/HelpButton")
 options_dropdown = NodePath("PanelContainer/HBoxContainer/OptionsDropdown")
 quit_button = NodePath("PanelContainer/HBoxContainer/QuitButton")
 armor_tables = [NodePath("PanelsContainer/ArmorContainer/TabContainer/H"), NodePath("PanelsContainer/ArmorContainer/TabContainer/B"), NodePath("PanelsContainer/ArmorContainer/TabContainer/A"), NodePath("PanelsContainer/ArmorContainer/TabContainer/W"), NodePath("PanelsContainer/ArmorContainer/TabContainer/L")]
@@ -131,6 +137,14 @@ popup/item_0/id = 1
 popup/item_1/text = "AUDIO"
 popup/item_1/id = 0
 
+[node name="HelpButton" type="TextureButton" parent="PanelContainer/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+mouse_default_cursor_shape = 2
+texture_normal = SubResource("AtlasTexture_1giod")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
@@ -153,32 +167,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_ofdke")
-m_button_group = SubResource("ButtonGroup_m7qpw")
+f_button_group = SubResource("ButtonGroup_yo7pg")
+m_button_group = SubResource("ButtonGroup_1i6qb")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_0cmjx")
-m_button_group = SubResource("ButtonGroup_fkvl2")
+f_button_group = SubResource("ButtonGroup_uyogl")
+m_button_group = SubResource("ButtonGroup_fsgpk")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_b6m2k")
-m_button_group = SubResource("ButtonGroup_b1ipl")
+f_button_group = SubResource("ButtonGroup_kblci")
+m_button_group = SubResource("ButtonGroup_wspbq")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_pg240")
-m_button_group = SubResource("ButtonGroup_btyfy")
+f_button_group = SubResource("ButtonGroup_cd3t5")
+m_button_group = SubResource("ButtonGroup_aj22s")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_erp35")
-m_button_group = SubResource("ButtonGroup_eq0yk")
+f_button_group = SubResource("ButtonGroup_moev1")
+m_button_group = SubResource("ButtonGroup_dh5av")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false
@@ -817,6 +831,13 @@ size_flags_vertical = 3
 
 [node name="ArmorSetRows" type="VBoxContainer" parent="MH1ArmorSets/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
+
+[node name="HelpPopup" type="AcceptDialog" parent="."]
+title = "HELP"
+initial_position = 2
+size = Vector2i(480, 320)
+dialog_text = "HELP_COPY"
+dialog_autowrap = true
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 resources = [PackedStringArray("armor_set_row", "mh1_theme", "mhg_theme"), [ExtResource("16_7vcp1"), ExtResource("1_rept1"), ExtResource("19_246gt")]]
