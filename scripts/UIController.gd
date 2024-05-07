@@ -1,6 +1,6 @@
 extends Control
 
-enum Option { AUDIO }
+enum Option { VIDEO, AUDIO }
 
 signal armor_selected
 signal room_changed(room_index: int)
@@ -221,12 +221,15 @@ func _on_mh1_armor_set_pressed(armor_set_index: int):
 
 func _on_options_selected(option_index: int):
 	match option_index:
+		Option.VIDEO:
+			$VideoOptions.popup_centered()
 		Option.AUDIO:
 			$AudioOptions.popup_centered()
 
 
 func _on_quit_pressed():
-	get_tree().quit()
+	var tree: SceneTree = get_tree()
+	tree.root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 
 
 func _on_room_changed(room_index: int):
@@ -324,6 +327,10 @@ func get_hair_color(gender: ArmorData.Gender) -> Color:
 
 func get_hunter_class() -> ArmorData.HunterClass:
 	return ArmorData.HunterClass.SWORD if sword_check.is_pressed() else ArmorData.HunterClass.GUN
+
+
+func get_video_style() -> SaveData.Style:
+	return $VideoOptions.style_option.selected
 
 
 func load_settings(settings: Dictionary):

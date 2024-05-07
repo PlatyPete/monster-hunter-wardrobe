@@ -85,6 +85,6 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 - [x] Equipment sets
 	- [x] Let users save multiple custom equipment sets (upper limit?)
 - [ ] Gamepad controls
-- [ ] User options:
-	- [ ] "Original" vs high-definition rendering
+- [x] User options:
+	- [x] "Original" vs high-definition rendering
 - [x] Save data

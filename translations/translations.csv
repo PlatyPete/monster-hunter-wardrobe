@@ -43,6 +43,7 @@ AUROROS_TORSO,Auroros Torso,暁丸【胴当て】,晓丸【胴当】
 AUROROS_TORSO_HAKU,Auroros Torso Haku,暁丸・覇【胴当て】,晓丸・霸【胴当】
 AUROROS_TORSO_MAI,Auroros Torso Mai,暁丸・羅【胴当て】,晓丸・罗【胴当】
 AUROROS_TORSO_TEN,Auroros Torso Ten,暁丸・皇【胴当て】,晓丸・皇【胴当】
+AUTO,Auto,,
 AUTO_GUARD_ACTIVATED,Auto-Guard,オートガード,全自动防御
 AUTO_GUARD_SKILL,Auto-Guard,自動防御,自动防御
 AUTO_MAP,Auto-Map,地図不要,地图常备
@@ -346,6 +347,7 @@ DIABLOS_SPINE,Diablos Spine,角竜の背甲,角龙的背甲
 DIABLOS_THORACIC,Diablos Thoracic,角竜の堅甲,角龙的坚甲
 DISASTER,Disaster,災難,灾难
 DISC_STONE,Disc Stone,円盤石,圆盘石
+DISPLAY_STYLE,Display Style,,
 DIVINE_PROTECTION,Divine Protection,精霊の加護,精灵的加护
 DIVINE_TOOLSAVER,Divine Toolsaver,神のきまぐれ,神的反复无常
 DIVINE_WHIM,Divine Whim,神の気まぐれ,神的反覆无常
@@ -1243,6 +1245,7 @@ POWER_PIERCING,Power Piercing,力のピアス,力之耳饰
 PROTECTION_PIERCING,Protection Piercing,護りのピアス,守护耳饰
 PROTECTION_SKILL,Protection,加護,加护
 PROVOCATION,Provocation,挑発,挑衅
+PS2,PS2,,
 PSYCHIC,Psychic,千里眼,千里眼
 PURECRYSTAL,Purecrystal,ピュアクリスタル,纯水晶
 PURPLE_RUBBERY_HIDE,Purple Rubbery Hide,ゴム質の紫皮,橡胶质的紫皮
@@ -1638,6 +1641,8 @@ VESPOID_VEST,Vespoid Vest,ランゴレジスト,巨蜂轻甲
 VESPOID_VEST_PLUS,Vespoid Vest+,ランゴＧレジスト,巨蜂Ｇ轻甲
 VESPOID_VEST_S,Vespoid Vest S,ランゴＳレジスト,巨蜂Ｓ轻甲
 VESPOID_WING,Vespoid Wing,ランゴスタの羽,巨蜂的羽
+VIDEO,Video,,
+VIDEO_OPTIONS,Video,,
 WAIST,Waist,腰,腰
 WATER_MINUS_10_MH1,Water - 10,水耐性－10,水耐性－10
 WATER_MINUS_10_MHG,Water Res -10,水耐性-10,水耐性-10

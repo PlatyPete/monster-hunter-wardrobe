@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=31 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -15,96 +15,31 @@
 [ext_resource type="PackedScene" uid="uid://c16ivf6w2xk68" path="res://ui_elements/stats_container.tscn" id="11_p35ui"]
 [ext_resource type="PackedScene" uid="uid://dl5lxnchq4552" path="res://ui_elements/zenni_row.tscn" id="14_wcwcn"]
 [ext_resource type="Script" path="res://scripts/AudioOptions.gd" id="15_2jh1n"]
+[ext_resource type="Script" path="res://scripts/VideoOptions.gd" id="15_fubqk"]
 [ext_resource type="PackedScene" uid="uid://cetnfqk176o72" path="res://ui_elements/armor_set_row.tscn" id="16_7vcp1"]
-[ext_resource type="StyleBox" uid="uid://c1jbye272pqr0" path="res://themes/menu_ga_panel.tres" id="16_br0rg"]
 [ext_resource type="Script" path="res://scripts/MH1ArmorSets.gd" id="16_m85vc"]
 [ext_resource type="PackedScene" uid="uid://dlw0xy08hm8el" path="res://ui_elements/mh_1_armor_set_row.tscn" id="17_8nb1a"]
-[ext_resource type="Texture2D" uid="uid://bl2o2dutl2d55" path="res://textures/menu_gb.png" id="17_obtn7"]
-[ext_resource type="Texture2D" uid="uid://b4k0xn1wxa28k" path="res://textures/menu_ga.png" id="18_1776h"]
-[ext_resource type="Texture2D" uid="uid://ddiuegr5legkh" path="res://textures/menu_gray.png" id="19_goitf"]
-[ext_resource type="FontFile" uid="uid://bqho28snibblu" path="res://fonts/Noto_Sans/NotoSansJP-Regular.otf" id="20_5vuvb"]
+[ext_resource type="Theme" uid="uid://b7x47c32i4rdn" path="res://themes/mhg_theme.tres" id="19_246gt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_kp1qh"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ofdke"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_feoic"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_m7qpw"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_jjb6p"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_0cmjx"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_x38fa"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_fkvl2"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_mimeg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_b6m2k"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_n47nn"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_b1ipl"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_yamr2"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_pg240"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_sc724"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_btyfy"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_6xmwg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_erp35"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_mtnus"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_87m2a"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_magrl"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-texture = ExtResource("17_obtn7")
-texture_margin_left = 7.0
-texture_margin_top = 7.0
-texture_margin_right = 7.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 2
-region_rect = Rect2(0, 0, 34, 27)
-modulate_color = Color(1, 1, 1, 0.87451)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3dwtf"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-texture = ExtResource("18_1776h")
-texture_margin_left = 7.0
-texture_margin_top = 7.0
-texture_margin_right = 7.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-region_rect = Rect2(0, 0, 34, 27)
-modulate_color = Color(1, 1, 1, 0.87451)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tajf6"]
-content_margin_left = 8.0
-content_margin_top = 8.0
-content_margin_right = 8.0
-texture = ExtResource("19_goitf")
-texture_margin_left = 7.0
-texture_margin_top = 7.0
-texture_margin_right = 7.0
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-region_rect = Rect2(0, 0, 34, 27)
-modulate_color = Color(1, 1, 1, 0.87451)
-
-[sub_resource type="Theme" id="Theme_7nwv1"]
-default_font = ExtResource("20_5vuvb")
-default_font_size = 10
-ColorPicker/constants/sv_height = 80
-ColorPicker/constants/sv_width = 80
-MarginContainer/constants/margin_bottom = 4
-MarginContainer/constants/margin_left = 4
-MarginContainer/constants/margin_right = 4
-MarginContainer/constants/margin_top = 4
-Panel/styles/panel = ExtResource("16_br0rg")
-PanelContainer/styles/panel = ExtResource("16_br0rg")
-TabContainer/constants/icon_max_width = 16
-TabContainer/constants/side_margin = 0
-TabContainer/styles/panel = ExtResource("16_br0rg")
-TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_87m2a")
-TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_magrl")
-TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_3dwtf")
-TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_tajf6")
-VSeparator/constants/separation = 0
+[sub_resource type="ButtonGroup" id="ButtonGroup_eq0yk"]
 
 [node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
@@ -186,9 +121,11 @@ size_flags_horizontal = 3
 [node name="OptionsDropdown" type="MenuButton" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
 text = "OPTIONS"
-item_count = 1
-popup/item_0/text = "AUDIO"
-popup/item_0/id = 0
+item_count = 2
+popup/item_0/text = "VIDEO"
+popup/item_0/id = 1
+popup/item_1/text = "AUDIO"
+popup/item_1/id = 0
 
 [node name="QuitButton" type="Button" parent="PanelContainer/HBoxContainer"]
 layout_mode = 2
@@ -211,32 +148,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_kp1qh")
-m_button_group = SubResource("ButtonGroup_feoic")
+f_button_group = SubResource("ButtonGroup_ofdke")
+m_button_group = SubResource("ButtonGroup_m7qpw")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_jjb6p")
-m_button_group = SubResource("ButtonGroup_x38fa")
+f_button_group = SubResource("ButtonGroup_0cmjx")
+m_button_group = SubResource("ButtonGroup_fkvl2")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_mimeg")
-m_button_group = SubResource("ButtonGroup_n47nn")
+f_button_group = SubResource("ButtonGroup_b6m2k")
+m_button_group = SubResource("ButtonGroup_b1ipl")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_yamr2")
-m_button_group = SubResource("ButtonGroup_sc724")
+f_button_group = SubResource("ButtonGroup_pg240")
+m_button_group = SubResource("ButtonGroup_btyfy")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_6xmwg")
-m_button_group = SubResource("ButtonGroup_mtnus")
+f_button_group = SubResource("ButtonGroup_erp35")
+m_button_group = SubResource("ButtonGroup_eq0yk")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false
@@ -713,32 +650,69 @@ row_title = "FORGING_PRICE"
 layout_mode = 2
 row_title = "BUYING_PRICE"
 
+[node name="VideoOptions" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("style_option")]
+title = "VIDEO_OPTIONS"
+position = Vector2i(0, 36)
+size = Vector2i(204, 105)
+cancel_button_text = "CANCEL"
+script = ExtResource("15_fubqk")
+style_option = NodePath("MarginContainer/GridContainer/StyleOptions")
+
+[node name="MarginContainer" type="MarginContainer" parent="VideoOptions"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 197.0
+offset_bottom = 65.0
+
+[node name="GridContainer" type="GridContainer" parent="VideoOptions/MarginContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="VideoOptions/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DISPLAY_STYLE"
+
+[node name="StyleOptions" type="OptionButton" parent="VideoOptions/MarginContainer/GridContainer"]
+layout_mode = 2
+tooltip_text = "PS2: 640 x 480
+Auto: scales to window"
+item_count = 2
+selected = 0
+popup/item_0/text = "PS2"
+popup/item_0/id = 0
+popup/item_1/text = "AUTO"
+popup/item_1/id = 1
+
 [node name="AudioOptions" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("master_volume", "master_mute", "music_volume", "music_mute", "sound_volume", "sound_mute")]
 title = "AUDIO_OPTIONS"
 initial_position = 1
-size = Vector2i(320, 129)
+size = Vector2i(320, 158)
 min_size = Vector2i(256, 70)
 cancel_button_text = "CANCEL"
 script = ExtResource("15_2jh1n")
-master_volume = NodePath("GridContainer/MasterVolume")
-master_mute = NodePath("GridContainer/MasterMute")
-music_volume = NodePath("GridContainer/MusicVolume")
-music_mute = NodePath("GridContainer/MusicMute")
-sound_volume = NodePath("GridContainer/SoundVolume")
-sound_mute = NodePath("GridContainer/SoundMute")
+master_volume = NodePath("MarginContainer/GridContainer/MasterVolume")
+master_mute = NodePath("MarginContainer/GridContainer/MasterMute")
+music_volume = NodePath("MarginContainer/GridContainer/MusicVolume")
+music_mute = NodePath("MarginContainer/GridContainer/MusicMute")
+sound_volume = NodePath("MarginContainer/GridContainer/SoundVolume")
+sound_mute = NodePath("MarginContainer/GridContainer/SoundMute")
 
-[node name="GridContainer" type="GridContainer" parent="AudioOptions"]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 312.0
-offset_bottom = 88.0
+[node name="MarginContainer" type="MarginContainer" parent="AudioOptions"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 313.0
+offset_bottom = 118.0
+
+[node name="GridContainer" type="GridContainer" parent="AudioOptions/MarginContainer"]
+layout_mode = 2
 columns = 3
 
-[node name="Label" type="Label" parent="AudioOptions/GridContainer"]
+[node name="Label" type="Label" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "MASTER_VOLUME"
 
-[node name="MasterVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+[node name="MasterVolume" type="HSlider" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -746,16 +720,16 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="MasterMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+[node name="MasterMute" type="CheckBox" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 text = "MUTE"
 
-[node name="Label3" type="Label" parent="AudioOptions/GridContainer"]
+[node name="Label3" type="Label" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "MUSIC"
 
-[node name="MusicVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+[node name="MusicVolume" type="HSlider" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -763,16 +737,16 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="MusicMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+[node name="MusicMute" type="CheckBox" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 text = "MUTE"
 
-[node name="Label2" type="Label" parent="AudioOptions/GridContainer"]
+[node name="Label2" type="Label" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 text = "SOUND_EFFECTS"
 
-[node name="SoundVolume" type="HSlider" parent="AudioOptions/GridContainer"]
+[node name="SoundVolume" type="HSlider" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -780,51 +754,54 @@ max_value = 1.0
 step = 0.01
 value = 1.0
 
-[node name="SoundMute" type="CheckBox" parent="AudioOptions/GridContainer"]
+[node name="SoundMute" type="CheckBox" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
 size_flags_vertical = 4
 text = "MUTE"
 
-[node name="MH1ArmorSets" type="ConfirmationDialog" parent="." node_paths=PackedStringArray("armor_sets_container")]
+[node name="MH1ArmorSets" type="AcceptDialog" parent="." node_paths=PackedStringArray("armor_sets_container")]
 title = "ARMOR_SETS"
+position = Vector2i(0, 36)
 size = Vector2i(480, 320)
 min_size = Vector2i(480, 320)
-cancel_button_text = "CANCEL"
 script = ExtResource("16_m85vc")
-armor_sets_container = NodePath("VBoxContainer/ScrollContainer/ArmorSetRows")
+armor_sets_container = NodePath("MarginContainer/VBoxContainer/ScrollContainer/ArmorSetRows")
 armor_set_row_scene = ExtResource("17_8nb1a")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MH1ArmorSets"]
-offset_left = 8.0
-offset_top = 8.0
-offset_right = 312.0
-offset_bottom = 199.0
+[node name="MarginContainer" type="MarginContainer" parent="MH1ArmorSets"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 473.0
+offset_bottom = 280.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MH1ArmorSets/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MH1ArmorSets/MarginContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MH1ArmorSets/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MH1ArmorSets/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "ARMOR"
 
-[node name="VSeparator" type="VSeparator" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="MH1ArmorSets/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="MH1ArmorSets/VBoxContainer/HBoxContainer"]
+[node name="Label2" type="Label" parent="MH1ArmorSets/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "SKILLS"
 
-[node name="HSeparator" type="HSeparator" parent="MH1ArmorSets/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="MH1ArmorSets/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="MH1ArmorSets/VBoxContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="MH1ArmorSets/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ArmorSetRows" type="VBoxContainer" parent="MH1ArmorSets/VBoxContainer/ScrollContainer"]
+[node name="ArmorSetRows" type="VBoxContainer" parent="MH1ArmorSets/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
-resources = [PackedStringArray("armor_set_row", "mh1_theme", "mhg_theme"), [ExtResource("16_7vcp1"), ExtResource("1_rept1"), SubResource("Theme_7nwv1")]]
+resources = [PackedStringArray("armor_set_row", "mh1_theme", "mhg_theme"), [ExtResource("16_7vcp1"), ExtResource("1_rept1"), ExtResource("19_246gt")]]

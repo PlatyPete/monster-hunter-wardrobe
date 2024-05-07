@@ -16,6 +16,7 @@ run/main_scene="res://scenes/main.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="mh_armor_wardrobe"
 config/project_settings_override="user://settings.cfg"
+config/auto_accept_quit=false
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/image="res://textures/loading.png"
 config/icon="res://icons/icon.png"

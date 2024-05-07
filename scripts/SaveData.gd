@@ -1,5 +1,7 @@
 extends Node
 
+enum Style { PS2, AUTO }
+
 const AUDIO_SETTING_KEYS: Array[String] = [
 	"master_volume",
 	"master_mute",
@@ -16,6 +18,21 @@ const HUNTER_SETTING_KEYS: Array[String] = [
 	"armor_indices"
 ]
 const SAVE_FILE_PATH: String = "user://save.cfg"
+
+
+func _ready():
+	var project_override: ConfigFile = ConfigFile.new()
+	var file_path: String = ProjectSettings.get_setting("application/config/project_settings_override")
+	if project_override.load(file_path) != OK:
+		# Set defaults and save config file
+		project_override.save(file_path)
+
+
+func get_style_setting() -> Style:
+	if ProjectSettings.get_setting("display/window/stretch/mode") == "disabled":
+		return Style.AUTO
+
+	return Style.PS2
 
 
 func load_user_data(category: String = "") -> Dictionary:
@@ -61,6 +78,33 @@ func load_user_data(category: String = "") -> Dictionary:
 		return user_data.get(category, {})
 
 	return user_data
+
+
+func save_video_settings(settings: Dictionary):
+	var project_override: ConfigFile = ConfigFile.new()
+	var file_path: String = ProjectSettings.get_setting("application/config/project_settings_override")
+
+	if project_override.load(file_path) != OK:
+		# The file has been corrupted or deleted since the app started
+		return
+
+	if settings.has("style"):
+		var window_size: Vector2i = DisplayServer.window_get_size()
+
+		match settings.style:
+			Style.PS2:
+				# PS2 is the default Style setting, so we favor the defaults
+				if project_override.has_section_key("display", "window/stretch/mode"):
+					project_override.erase_section_key("display", "window/stretch/mode")
+
+				project_override.set_value("display", "window/size/window_width_override", window_size.x)
+				project_override.set_value("display", "window/size/window_height_override", window_size.y)
+			Style.AUTO:
+				project_override.set_value("display", "window/stretch/mode", "disabled")
+				project_override.set_value("display", "window/size/window_width_override", window_size.x)
+				project_override.set_value("display", "window/size/window_height_override", window_size.y)
+
+	project_override.save(file_path)
 
 
 func save_user_data(settings: Dictionary):

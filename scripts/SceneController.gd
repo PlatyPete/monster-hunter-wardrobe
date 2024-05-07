@@ -37,6 +37,15 @@ func _ready():
 		$UIController.room_options.select(room_index)
 
 
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		var video_settings: Dictionary = {
+			"style": $UIController.get_video_style()
+		}
+		SaveData.save_video_settings(video_settings)
+		get_tree().quit()
+
+
 func _on_animation_finished(animation_name: String):
 	match animation_name:
 		"fade_to_black":
