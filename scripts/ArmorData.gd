@@ -10,14 +10,18 @@ enum HunterClass { SWORD, GUN, BOTH }
 signal game_changed(game_version: Game)
 
 const CATEGORY_COUNT: int = Category.FACE
-const CATEGORY_NAMES: Array = ["hair","body","arms","waist","legs","face"]
-const GENDER_PREFIXES: Array = ["f_","m_"]
+const CATEGORY_NAMES: Array[String] = ["hair","body","arms","waist","legs","face"]
+const GENDER_PREFIXES: Array[String] = ["f_","m_"]
 
-const RARITY_COLORS: Array = [
+const RARITY_COLORS: Array[Color] = [
 	Color("#63bd85"), # 4
 	Color("#e7515a"), # 5
 	Color("#a5beff"), # 6
 	Color("#f69b61")  # 7
+]
+const SKILL_COLORS: Array[Color] = [
+	Color("#e7515a"),
+	Color("#9dddf7")
 ]
 
 const ARMOR = [
@@ -1622,18 +1626,18 @@ var SKILL_LEVELS = {
 	"HEALTH_SKILL": Array([ "HEALTH_MINUS_30","HEALTH_MINUS_20","HEALTH_MINUS_10","HEALTH_PLUS_10","HEALTH_PLUS_20","HEALTH_PLUS_30" ]),
 	"DEFENSE_SKILL": Array([ "DEFENSE_MINUS_20","DEFENSE_MINUS_15","DEFENSE_MINUS_10","DEFENSE_PLUS_10","DEFENSE_PLUS_15","DEFENSE_PLUS_20" ]),
 	"ELEMENT_RES_UP": Array([ "ELEMENT_RES_MINUS_10","ELEMENT_RES_MINUS_5","ELEMENT_RES_MINUS_3","ELEMENT_RES_PLUS_3","ELEMENT_RES_PLUS_5","ELEMENT_RES_PLUS_10" ]),
-	"FIRE_RESISTANCE": Array([ "FIRE_MINUS_10","FIRE_MINUS_5","FIRE_MINUS_3","FIRE_PLUS_3","FIRE_PLUS_5","FIRE_PLUS_10" ]),
-	"WATER_RESISTANCE": Array([ "WATER_MINUS_10","WATER_MINUS_5","WATER_MINUS_3","WATER_PLUS_3","WATER_PLUS_5","WATER_PLUS_10" ]),
-	"THUNDER_RESISTANCE": Array([ "THUNDER_MINUS_10","THUNDER_MINUS_5","THUNDER_MINUS_3","THUNDER_PLUS_3","THUNDER_PLUS_5","THUNDER_PLUS_10" ]),
-	"DRAGON_RESISTANCE": Array([ "DRAGON_MINUS_10","DRAGON_MINUS_5","DRAGON_MINUS_3","DRAGON_PLUS_3","DRAGON_PLUS_5","DRAGON_PLUS_10" ]),
+	"FIRE_RESISTANCE": Array([ "FIRE_MINUS_10_MHG","FIRE_MINUS_5_MHG","FIRE_MINUS_3_MHG","FIRE_PLUS_3_MHG","FIRE_PLUS_5_MHG","FIRE_PLUS_10_MHG" ]),
+	"WATER_RESISTANCE": Array([ "WATER_MINUS_10_MHG","WATER_MINUS_5_MHG","WATER_MINUS_3_MHG","WATER_PLUS_3_MHG","WATER_PLUS_5_MHG","WATER_PLUS_10_MHG" ]),
+	"THUNDER_RESISTANCE": Array([ "THUNDER_MINUS_10_MHG","THUNDER_MINUS_5_MHG","THUNDER_MINUS_3_MHG","THUNDER_PLUS_3_MHG","THUNDER_PLUS_5_MHG","THUNDER_PLUS_10_MHG" ]),
+	"DRAGON_RESISTANCE": Array([ "DRAGON_MINUS_10_MHG","DRAGON_MINUS_5_MHG","DRAGON_MINUS_3_MHG","DRAGON_PLUS_3_MHG","DRAGON_PLUS_5_MHG","DRAGON_PLUS_10_MHG" ]),
 	"RELOAD_SPEED": Array([ "RELOAD_MINUS_3","RELOAD_MINUS_2","RELOAD_MINUS_1","RELOAD_PLUS_1","RELOAD_PLUS_2","RELOAD_PLUS_3" ]),
 	"RECOVERY_SPEED_SKILL": Array([ "RECOVERY_SPEED_MINUS_2","","RECOVERY_SPEED_MINUS_1","RECOVERY_SPEED_PLUS_1","","RECOVERY_SPEED_PLUS_2" ]),
 	"COMBINE_SUCCESS": Array([ "COMBINE_SUCCESS_MINUS_15","COMBINE_SUCCESS_MINUS_10","COMBINE_SUCCESS_MINUS_5","COMBINE_SUCCESS_PLUS_5","COMBINE_SUCCESS_PLUS_10","COMBINE_SUCCESS_PLUS_20" ]),
 	"POISON_SKILL": Array([ "POISON_QUADRUPLED","POISON_TRIPLED","POISON_DOUBLED","POISON_HALVED","POISON_NEGATED","" ]),
 	"FATE": Array([ "DISASTER","","BAD_LUCK","GOOD_LUCK","VERY_GOOD_LUCK","" ]),
 	"HUNGER": Array([ "HUNGER_DOUBLED_MHG","","HUNGER_X_1_5","HUNGER_HALVED","HUNGER_NEGATED","" ]),
-	"HEAT_RES": Array([ "HEAT_DOUBLED","","HEAT_1_5","HEAT_HALVED","HEAT_NEGATED_MHG","" ]),
-	"COLD_RES": Array([ "COLD_DOUBLED","","COLD_1_5","COLD_HALVED","COLD_NEGATED_MHG","" ]),
+	"HEAT_RES": Array([ "HEAT_DOUBLED","","HEAT_X_1_5","HEAT_HALVED","HEAT_NEGATED_MHG","" ]),
+	"COLD_RES": Array([ "COLD_DOUBLED","","COLD_X_1_5","COLD_HALVED","COLD_NEGATED_MHG","" ]),
 	"NORMAL_S_ADD": Array([ "","","","NORMAL_S_ADD_1","NORMAL_S_ADD_ALL","" ]),
 	"PIERCE_S_ADD": Array([ "","","","PIERCE_S_ADD_1","PIERCE_S_ADD_2","PIERCE_S_ADD_3" ]),
 	"PELLET_S_ADD": Array([ "","","","PELLET_S_ADD_1","PELLET_S_ADD_2","PELLET_S_ADD_3" ]),
@@ -1644,9 +1648,9 @@ var SKILL_LEVELS = {
 	"WHIM_SKILL": Array([ "","DEVILS_WHIM","SPECTRES_WHIM","SPIRITS_WHIM","DIVINE_WHIM","" ]),
 	"GATHERING": Array([ "","GATHERING_MINUS_2","GATHERING_MINUS_1","GATHERING_PLUS_1","GATHERING_PLUS_2","" ]),
 	"KO_SKILL_MHG": Array([ "","","KO_DOUBLED_MHG","KO_HALVED_MHG","KO_NEGATED_MHG","" ]),
-	"SLEEP_SKILL": Array([ "","","SLEEP_DOUBLED","SLEEP_HALVED","SLEEP_NEGATED","" ]),
+	"SLEEP_SKILL": Array([ "","","SLEEP_DOUBLED_MHG","SLEEP_HALVED","SLEEP_NEGATED","" ]),
 	"PARALYSIS_SKILL": Array([ "","","PARALYSIS_DOUBLED_MHG","PARALYSIS_HALVED_MHG","PARALYSIS_NEGATED_MHG","" ]),
-	"WIND_PRESSURE_SKILL": Array([ "","","","LOW_WIND_PRESSURE","HIGH_WIND_PRESSURE","" ]),
+	"WIND_PRESSURE_SKILL": Array([ "","","","WIND_PRESSURE_LOW","WIND_PRESSURE_HIGH","" ]),
 	"RECOIL_SKILL": Array([ "","","","RECOIL_PLUS_1","RECOIL_PLUS_2","" ]),
 	"PSYCHIC": Array([ "","","","DETECT","AUTOTRACKER","" ]),
 	"WIDE_AREA_RECOVERY": Array([ "","","","WIDE_AREA_HERB","WIDE_AREA_POTION_MHG","" ]), # Probably the wrong names
@@ -1667,7 +1671,7 @@ var SKILL_LEVELS = {
 	"PELLET_S_UP_SKILL": Array([ "","","","PELLET_S_UP_ACTIVATED","","" ]),
 	"PIERCE_S_UP_SKILL": Array([ "","","","PIERCE_S_UP_ACTIVATED","","" ]),
 	"THROW_SKILL": Array([ "","","","THROW_ACTIVATED","","" ]),
-	"WIDE_AREA_ANTIDOTE_SKILL": Array([ "","","","WIDE_AREA_ANTIDOTE","","" ]),
+	"WIDE_AREA_ANTIDOTE_SKILL": Array([ "","","","WIDE_AREA_ANTIDOTE_MHG","","" ]),
 	"WIDE_AREA_DRUG_SKILL": Array([ "","","","WIDE_AREA_DRUG_ACTIVATED","","" ]),
 	"BACKPACKING_SKILL": Array([ "","","","BACKPACKING_EXPERT","","" ]),
 	"FLUTE_SKILL": Array([ "","","","FLUTE_MASTER","","" ]),
@@ -2022,7 +2026,8 @@ func get_armor_set_skills_g(armor_indices: Array) -> Dictionary:
 
 			if !armor_skill_points.has(skill.k):
 				armor_skill_points[skill.k] = {
-					"total": skill.q
+					"total": skill.q,
+					"activated": 0
 				}
 			else:
 				armor_skill_points[skill.k].total += skill.q
@@ -2075,6 +2080,7 @@ func get_armor_set_skills_g(armor_indices: Array) -> Dictionary:
 				else:
 					skill_index -= 1
 
+			armor_skill_points[skill_name].activated = 1 if skill_index >= 3 else -1
 			armor_skill_list.push_back(SKILL_LEVELS[skill_name][skill_index])
 
 	return {
