@@ -25,6 +25,8 @@ func set_stats(armor_indices: Array):
 		for res_index in ArmorData.Element.COUNT:
 			resistances[res_index] += armor_resistances[res_index]
 
+		set_rarity_color(category_index, armor_piece.get("rarity", 0))
+
 	defense_label.set_text(str(defense))
 	for res_index in ArmorData.Element.COUNT:
 		resistance_labels[res_index].set_text(str(resistances[res_index]))

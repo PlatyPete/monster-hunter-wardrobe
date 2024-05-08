@@ -301,9 +301,6 @@ func equip_armor(game_version: ArmorData.Game, armor_category: ArmorData.Categor
 			gun_check.set_pressed(true)
 			toggle_armor_rows()
 
-	var armor_piece = ArmorData.ARMOR[game_version][armor_category][armor_index]
-	stats_container.set_rarity_color(armor_category, armor_piece.get("rarity", 0))
-
 	hunters[gender].equip_armor(game_version, armor_category, armor_index)
 
 	armor_selected.emit()
