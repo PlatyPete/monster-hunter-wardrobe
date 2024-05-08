@@ -29,25 +29,25 @@
 atlas = ExtResource("10_skm8h")
 region = Rect2(64, 128, 32, 32)
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_yo7pg"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_jkl3c"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_1i6qb"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_hwuqt"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_uyogl"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_dh5fm"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_fsgpk"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_in6hr"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_kblci"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_54p8x"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_wspbq"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_vtwl3"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_cd3t5"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_nrm1p"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_aj22s"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_yq5rh"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_moev1"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_ghtii"]
 
-[sub_resource type="ButtonGroup" id="ButtonGroup_dh5av"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_rfr51"]
 
 [node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "locale_options", "help_button", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
@@ -189,32 +189,32 @@ clip_tabs = false
 
 [node name="H" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_yo7pg")
-m_button_group = SubResource("ButtonGroup_1i6qb")
+f_button_group = SubResource("ButtonGroup_jkl3c")
+m_button_group = SubResource("ButtonGroup_hwuqt")
 
 [node name="B" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_uyogl")
-m_button_group = SubResource("ButtonGroup_fsgpk")
+f_button_group = SubResource("ButtonGroup_dh5fm")
+m_button_group = SubResource("ButtonGroup_in6hr")
 
 [node name="A" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_kblci")
-m_button_group = SubResource("ButtonGroup_wspbq")
+f_button_group = SubResource("ButtonGroup_54p8x")
+m_button_group = SubResource("ButtonGroup_vtwl3")
 
 [node name="W" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_cd3t5")
-m_button_group = SubResource("ButtonGroup_aj22s")
+f_button_group = SubResource("ButtonGroup_nrm1p")
+m_button_group = SubResource("ButtonGroup_yq5rh")
 
 [node name="L" parent="PanelsContainer/ArmorContainer/TabContainer" instance=ExtResource("3_gq8sg")]
 visible = false
 layout_mode = 2
-f_button_group = SubResource("ButtonGroup_moev1")
-m_button_group = SubResource("ButtonGroup_dh5av")
+f_button_group = SubResource("ButtonGroup_ghtii")
+m_button_group = SubResource("ButtonGroup_rfr51")
 
 [node name="ARMOR_SETS" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer"]
 visible = false

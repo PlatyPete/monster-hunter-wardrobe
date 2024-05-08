@@ -184,6 +184,7 @@ func _on_game_changed(game_index: int):
 	set_game(game_index)
 	toggle_game_elements()
 	toggle_armor_rows()
+	update_armor_stats(game_index, get_gender())
 
 	var settings: Dictionary = {
 		"general": {
