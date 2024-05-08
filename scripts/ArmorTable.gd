@@ -8,16 +8,6 @@ extends Control
 @export var f_button_group: ButtonGroup
 @export var m_button_group: ButtonGroup
 
-var armor_row_indices: Array = [
-	[
-		[],
-		[]
-	],
-	[
-		[],
-		[]
-	]
-]
 var scroll_when_next_shown: bool = false
 
 
@@ -51,16 +41,18 @@ func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Categ
 			new_armor_row.set_button_group(m_button_group)
 			new_armor_row.add_to_group("m_armor_rows")
 
-	armor_row_indices[game_version][gender].push_back(table_body.get_child_count() - 1)
 	return new_armor_row
 
 
 func equip_armor(game_version: ArmorData.Game, gender: ArmorData.Gender, armor_index: int):
-	var armor_row_index: int = armor_row_indices[game_version][gender][armor_index]
-	var armor_row = table_body.get_child(armor_row_index)
-	armor_row.equip_armor()
-	if not is_visible():
-		scroll_when_next_shown = true
+	for child in table_body.get_children():
+		if child.game_version == game_version and child.gender == gender and child.armor_index == armor_index:
+			child.equip_armor()
+			if not is_visible():
+				scroll_when_next_shown = true
+			return
+
+	print("Armor not found: %i, %i, %i" % [game_version, gender, armor_index])
 
 
 func get_selected_armor():
