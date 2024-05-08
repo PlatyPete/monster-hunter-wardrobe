@@ -19,3 +19,8 @@ func set_skill_points(skill_points):
 	$WaistPoints.set_text(str(skill_points.get(str(ArmorData.Category.WAIST), "")))
 	$LegsPoints.set_text(str(skill_points.get(str(ArmorData.Category.LEGS), "")))
 	$TotalPoints.set_text(str(skill_points.total))
+
+	if skill_points.activated == 0:
+		set_modulate(Color.WHITE)
+	else:
+		set_modulate(ArmorData.SKILL_COLORS[(skill_points.activated + 1) / 2])
