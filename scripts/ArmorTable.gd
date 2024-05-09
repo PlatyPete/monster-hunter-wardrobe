@@ -1,5 +1,6 @@
 extends Control
 
+@export var tab_icon: Texture
 @export var table_body: Node
 @export var scroll_container: ScrollContainer
 

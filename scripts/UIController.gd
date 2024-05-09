@@ -25,7 +25,6 @@ const LOCALES: Array[String] = [
 @export_group("Armor Menu")
 @export var armor_tables: Array[Control]
 @export var tab_container: TabContainer
-@export var armor_icons: Array[Texture2D]
 @export var armor_sets_container: VBoxContainer
 @export var add_set_button: Button
 
@@ -88,10 +87,6 @@ func _ready():
 
 	$MH1ArmorSets.armor_set_pressed.connect(_on_mh1_armor_set_pressed)
 
-	for index in armor_icons.size():
-		tab_container.set_tab_title(index, "")
-		tab_container.set_tab_icon(index, armor_icons[index])
-
 	add_set_button.pressed.connect(_on_add_set_button_pressed)
 
 	female_check.pressed.connect(_on_gender_changed)
@@ -115,8 +110,11 @@ func _ready():
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
-	for armor_table in armor_tables:
-		for armor_row in armor_table.table_body.get_children():
+	for category_index in ArmorData.CATEGORY_COUNT:
+		tab_container.set_tab_title(category_index, "")
+		tab_container.set_tab_icon(category_index, armor_tables[category_index].tab_icon)
+
+		for armor_row in armor_tables[category_index].table_body.get_children():
 			armor_row.armor_selected.connect(_on_armor_selected)
 
 	var settings = SaveData.load_user_data()

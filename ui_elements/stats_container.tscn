@@ -1,12 +1,12 @@
 [gd_scene load_steps=11 format=3 uid="uid://c16ivf6w2xk68"]
 
-[ext_resource type="Texture2D" uid="uid://brgi3tkpu2tia" path="res://icons/head.png" id="1_fey57"]
 [ext_resource type="Script" path="res://scripts/StatsContainer.gd" id="1_te0r8"]
-[ext_resource type="Texture2D" uid="uid://63yebswkhos" path="res://icons/body.png" id="2_085ux"]
-[ext_resource type="Texture2D" uid="uid://bj2gsv2flwp6p" path="res://icons/arms.png" id="3_ai768"]
-[ext_resource type="Texture2D" uid="uid://ba3r068wusa10" path="res://icons/waist.png" id="4_rphhp"]
-[ext_resource type="Texture2D" uid="uid://br2yedg4dbkgm" path="res://icons/legs.png" id="5_wlyau"]
+[ext_resource type="Texture2D" uid="uid://bnftwo2xpjkch" path="res://icons/head.tres" id="2_x31q2"]
+[ext_resource type="Texture2D" uid="uid://cc5s6jvnfl2cm" path="res://icons/body.tres" id="3_1bkbs"]
+[ext_resource type="Texture2D" uid="uid://cn7u6ro8ton6n" path="res://icons/arms.tres" id="4_acxwy"]
+[ext_resource type="Texture2D" uid="uid://lm1o2i32uy48" path="res://icons/waist.tres" id="5_jay2t"]
 [ext_resource type="Texture2D" uid="uid://b2jm283suyn81" path="res://icons/fire.png" id="6_j8015"]
+[ext_resource type="Texture2D" uid="uid://dofghj60k1068" path="res://icons/legs.tres" id="6_r4y8a"]
 [ext_resource type="Texture2D" uid="uid://c05wu4ensk3eq" path="res://icons/water.png" id="7_n6row"]
 [ext_resource type="Texture2D" uid="uid://cjg06ciub3ywr" path="res://icons/thunder.png" id="8_i2p06"]
 [ext_resource type="Texture2D" uid="uid://4iiyefbvqlvb" path="res://icons/dragon.png" id="9_iaf3f"]
@@ -26,7 +26,7 @@ columns = 2
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("1_fey57")
+texture = ExtResource("2_x31q2")
 expand_mode = 1
 stretch_mode = 4
 
@@ -38,7 +38,7 @@ text = "NONE"
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("2_085ux")
+texture = ExtResource("3_1bkbs")
 expand_mode = 1
 stretch_mode = 4
 
@@ -50,7 +50,7 @@ text = "NONE"
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("3_ai768")
+texture = ExtResource("4_acxwy")
 expand_mode = 1
 stretch_mode = 4
 
@@ -62,7 +62,7 @@ text = "NONE"
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("4_rphhp")
+texture = ExtResource("5_jay2t")
 expand_mode = 1
 stretch_mode = 4
 
@@ -74,7 +74,7 @@ text = "NONE"
 custom_minimum_size = Vector2(16, 16)
 layout_mode = 2
 size_flags_horizontal = 0
-texture = ExtResource("5_wlyau")
+texture = ExtResource("6_r4y8a")
 expand_mode = 1
 stretch_mode = 4
 
