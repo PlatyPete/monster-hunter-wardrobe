@@ -115,19 +115,9 @@ func _ready():
 	sword_check.pressed.connect(_on_hunter_class_changed)
 	gun_check.pressed.connect(_on_hunter_class_changed)
 
-	for game_index in ArmorData.Game.BOTH:
-		for gender_index in ArmorData.Gender.BOTH:
-			for armor_category in ArmorData.CATEGORY_COUNT:
-				var armor_index: int = 0
-				for armor_piece in ArmorData.ARMOR[game_index][armor_category]:
-					# Only add an armor row if this armor piece is valid for the current gender
-					if not armor_piece.has("gender") or armor_piece.gender == gender_index:
-						if not add_armor_row(game_index, armor_category, gender_index, armor_index, armor_piece):
-							# If we pass an invalid armor category to the add_armor_row method, it will return null
-							print("No armor row created")
-							break
-
-					armor_index += 1
+	for armor_table in armor_tables:
+		for armor_row in armor_table.table_body.get_children():
+			armor_row.armor_selected.connect(_on_armor_selected)
 
 	var settings = SaveData.load_user_data()
 	load_settings(settings)
@@ -256,18 +246,6 @@ func _on_quit_pressed():
 
 func _on_room_changed(room_index: int):
 	room_changed.emit(room_index)
-
-
-func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
-	var armor_piece
-
-	if armor_category < ArmorData.CATEGORY_COUNT:
-		armor_piece = armor_tables[armor_category].add_armor_row(game_version, armor_category, gender, armor_index, armor_data)
-	else:
-		return null
-
-	armor_piece.armor_selected.connect(_on_armor_selected)
-	return armor_piece
 
 
 func add_armor_set_row(game_version: ArmorData.Game, gender: ArmorData.Gender, hunter_class: ArmorData.HunterClass, armor_indices: Array, armor_set_name: String):

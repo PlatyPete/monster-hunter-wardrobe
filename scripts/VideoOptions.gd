@@ -4,7 +4,7 @@ extends ConfirmationDialog
 
 const DEFAULT_VIEWPORT_SIZE: Vector2i = Vector2i(640, 480)
 
-var preserved_style: SaveData.Style
+var preserved_style: int
 
 
 func _ready():

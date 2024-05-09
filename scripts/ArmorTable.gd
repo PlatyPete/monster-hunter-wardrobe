@@ -2,7 +2,6 @@ extends Control
 
 @export var table_body: Node
 @export var scroll_container: ScrollContainer
-@export var armor_row_scene: PackedScene
 
 @export_group("Button Groups")
 @export var f_button_group: ButtonGroup
@@ -12,6 +11,13 @@ var scroll_when_next_shown: bool = false
 
 
 func _ready():
+	for armor_row in table_body.get_children():
+		match armor_row.gender:
+			ArmorData.Gender.FEMALE:
+				armor_row.set_button_group(f_button_group)
+			ArmorData.Gender.MALE:
+				armor_row.set_button_group(m_button_group)
+
 	visibility_changed.connect(_on_visibility_changed)
 
 
@@ -26,24 +32,6 @@ func _on_visibility_changed():
 			armor_row.draw.connect(_on_armor_row_visibility_changed.bind(armor_row), CONNECT_ONE_SHOT)
 
 
-func add_armor_row(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int, armor_data) -> Control:
-	var new_armor_row = armor_row_scene.instantiate()
-
-	table_body.add_child(new_armor_row)
-
-	new_armor_row.set_all_data(game_version, armor_category, gender, armor_index, armor_data);
-
-	match gender:
-		ArmorData.Gender.FEMALE:
-			new_armor_row.set_button_group(f_button_group)
-			new_armor_row.add_to_group("f_armor_rows")
-		ArmorData.Gender.MALE:
-			new_armor_row.set_button_group(m_button_group)
-			new_armor_row.add_to_group("m_armor_rows")
-
-	return new_armor_row
-
-
 func equip_armor(game_version: ArmorData.Game, gender: ArmorData.Gender, armor_index: int):
 	for child in table_body.get_children():
 		if child.game_version == game_version and child.gender == gender and child.armor_index == armor_index:
@@ -52,7 +40,7 @@ func equip_armor(game_version: ArmorData.Game, gender: ArmorData.Gender, armor_i
 				scroll_when_next_shown = true
 			return
 
-	print("Armor not found: %i, %i, %i" % [game_version, gender, armor_index])
+	print("Armor not found: ", game_version, ", ", gender, ", ", armor_index)
 
 
 func get_selected_armor():
