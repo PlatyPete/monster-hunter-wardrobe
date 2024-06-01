@@ -568,12 +568,12 @@ func toggle_armor_rows():
 
 
 func toggle_game_elements():
-	var show_mhg_elements: bool = ArmorData.game_version == ArmorData.Game.MHG
+	var show_mh1_elements: bool = ArmorData.game_version == ArmorData.Game.MH1
 	var scene_tree: SceneTree = get_tree()
+	for node in scene_tree.get_nodes_in_group("mh1_elements"):
+		node.set_visible(show_mh1_elements)
 	for node in scene_tree.get_nodes_in_group("mhg_elements"):
-		node.set_visible(show_mhg_elements)
-
-	mh1_armor_sets_button.set_visible(not show_mhg_elements)
+		node.set_visible(not show_mh1_elements)
 
 
 func toggle_gender_options(gender: ArmorData.Gender):

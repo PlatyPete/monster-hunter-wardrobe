@@ -127,7 +127,7 @@ popup/item_4/id = 4
 popup/item_5/text = "KING_ROOM"
 popup/item_5/id = 5
 
-[node name="SkilledArmorSetsButton" type="Button" parent="PanelContainer/HBoxContainer"]
+[node name="SkilledArmorSetsButton" type="Button" parent="PanelContainer/HBoxContainer" groups=["mh1_elements"]]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "SKILLED_ARMOR_SETS"
@@ -177,16 +177,14 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "QUIT"
 
-[node name="PanelsContainer" type="Control" parent="."]
+[node name="PanelsContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="ArmorContainer" type="MarginContainer" parent="PanelsContainer"]
-layout_mode = 1
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 153.0
-grow_vertical = 2
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_horizontal = 0
 
 [node name="TabContainer" type="TabContainer" parent="PanelsContainer/ArmorContainer"]
 layout_mode = 2
@@ -286,7 +284,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/ArmorContainer/TabContainer/H/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer/H/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -4056,7 +4053,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/ArmorContainer/TabContainer/B/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer/B/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -7971,7 +7967,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/ArmorContainer/TabContainer/A/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer/A/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -11816,7 +11811,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/ArmorContainer/TabContainer/W/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer/W/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -15350,7 +15344,6 @@ layout_mode = 2
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelsContainer/ArmorContainer/TabContainer/L/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-horizontal_scroll_mode = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelsContainer/ArmorContainer/TabContainer/L/VBoxContainer/ScrollContainer"]
 layout_mode = 2
@@ -18734,15 +18727,14 @@ size_flags_vertical = 3
 layout_mode = 2
 text = "ADD_SET"
 
+[node name="Spacer" type="Control" parent="PanelsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
 [node name="PlayerContainer" type="MarginContainer" parent="PanelsContainer"]
-layout_mode = 1
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -148.0
-grow_horizontal = 0
-grow_vertical = 2
+layout_mode = 2
+size_flags_horizontal = 8
 
 [node name="TabContainer" type="TabContainer" parent="PanelsContainer/PlayerContainer"]
 layout_mode = 2
