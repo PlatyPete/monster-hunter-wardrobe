@@ -12,7 +12,8 @@ ANTISEPTIC_STONE,Antiseptic Stone,抗菌石,抗菌石
 APP_TITLE,Monster Hunter Armor Wardrobe,,怪物猎人防具展柜
 ARMOR,Armor,防具,防具
 ARMOR_CODE_COPY,Copy this armor code to the armor builder at https://www.mh1g.info/armor. Or copy the code from the builder into the input here and press Ok.,,复制下方防具组合代码到 https://www.mh1g.info/armor 处的防具配置组合工具导出粘贴使用，或从前述组合工具中复制代码到此处进行导入。
-ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
+ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with
+restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
 ARMOR_SETS,Sets,,套装
 ARMS,Arms,腕,腕
 ATTACK_STAT,Attack,攻撃,攻击
