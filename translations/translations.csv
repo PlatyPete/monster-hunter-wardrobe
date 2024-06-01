@@ -12,17 +12,16 @@ ANTISEPTIC_STONE,Antiseptic Stone,抗菌石,抗菌石
 APP_TITLE,Monster Hunter Armor Wardrobe,,怪物猎人防具展柜
 ARMOR,Armor,防具,防具
 ARMOR_CODE_COPY,Copy this armor code to the armor builder at https://www.mh1g.info/armor. Or copy the code from the builder into the input here and press Ok.,,复制下方防具组合代码到 https://www.mh1g.info/armor 处的防具配置组合工具导出粘贴使用，或从前述组合工具中复制代码到此处进行导入。
-ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with
-restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
-ARMOR_SETS,Sets,,
+ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
+ARMOR_SETS,Sets,,套装
 ARMS,Arms,腕,腕
 ATTACK_STAT,Attack,攻撃,攻击
 ATTACK_UP_L,Attack Up [L],攻撃力UP【大】,攻击力UP【大】
 ATTACK_UP_M,Attack Up [M],攻撃力UP【中】,攻击力UP【中】
 ATTACK_UP_S,Attack Up [S],攻撃力UP【小】,攻击力UP【小】
 ATTACK_UP_SKILL,Attack,攻撃,攻击
-AUDIO,Audio,音響,
-AUDIO_OPTIONS,Audio Options,音響の選択肢,
+AUDIO,Audio,音響,声音
+AUDIO_OPTIONS,Audio Options,音響の選択肢,声音选项
 AUROROS_GAUNTLETS,Auroros Gauntlets,暁丸【篭手】,晓丸【笼手】
 AUROROS_GAUNTLETS_HAKU,Auroros Gauntlets Haku,暁丸・覇【篭手】,晓丸・霸【笼手】
 AUROROS_GAUNTLETS_MAI,Auroros Gauntlets Mai,暁丸・羅【篭手】,晓丸・罗【笼手】
@@ -43,7 +42,7 @@ AUROROS_TORSO,Auroros Torso,暁丸【胴当て】,晓丸【胴当】
 AUROROS_TORSO_HAKU,Auroros Torso Haku,暁丸・覇【胴当て】,晓丸・霸【胴当】
 AUROROS_TORSO_MAI,Auroros Torso Mai,暁丸・羅【胴当て】,晓丸・罗【胴当】
 AUROROS_TORSO_TEN,Auroros Torso Ten,暁丸・皇【胴当て】,晓丸・皇【胴当】
-AUTO,Auto,,
+AUTO,Auto,,自动
 AUTO_GUARD_ACTIVATED,Auto-Guard,オートガード,全自动防御
 AUTO_GUARD_SKILL,Auto-Guard,自動防御,自动防御
 AUTO_MAP,Auto-Map,地図不要,地图常备
@@ -207,8 +206,8 @@ BULLFANGO_HIDE,Bullfango Hide,ファンゴの毛皮,大野猪的毛皮
 BULLFANGO_MASK,Bullfango Mask,ブルファンゴフェイク,大野猪伪装头
 BULLFANGO_MASK_PLUS,Bullfango Mask+,ブルＧフェイク,大野猪Ｇ伪装头
 BULLFANGO_MASK_S,Bullfango Mask S,ブルＳフェイク,大野猪Ｓ伪装头
-BUYING_PRICE,Buy,買い値,
-CANCEL,Cancel,止める,
+BUYING_PRICE,Buy,買い値,购买价格
+CANCEL,Cancel,止める,取消
 CARBALITE_ORE,Carbalite Ore,カブレライト鉱石,灵鹤石
 CEPHADROME_TOP_FIN,Cephadrome Top Fin,砂竜の背ビレ,砂龙的背鳍
 CEPHALOS_CAP,Cephalos Cap,ガレオスキャップ,砂龙软帽
@@ -267,7 +266,7 @@ CHAIN_MAIL_S,Chain Mail S,チェーンＳメイル,锁链Ｓ铠甲
 CHAIN_VAMBRACES,Chain Vambraces,チェーンアーム,锁链臂甲
 CHAIN_VAMBRACES_PLUS,Chain Vambraces+,チェーンＧアーム,锁链Ｇ臂甲
 CHAIN_VAMBRACES_S,Chain Vambraces S,チェーンＳアーム,锁链Ｓ臂甲
-CHINESE,Chinese (Simplified),中国語,汉语
+CHINESE,Chinese (Simplified),中国語,简体中文
 CHROME_METAL_BOOTS,Chrome Metal Boots,クロムメタルブーツ,合金靴・阳
 CHROME_METAL_BOOTS_PLUS,Chrome Metal Boots+,クロムメタルＧブーツ,合金Ｇ靴・阳
 CHROME_METAL_BOOTS_S,Chrome Metal Boots S,クロムメタルＳブーツ,合金Ｓ靴・阳
@@ -347,7 +346,7 @@ DIABLOS_SPINE,Diablos Spine,角竜の背甲,角龙的背甲
 DIABLOS_THORACIC,Diablos Thoracic,角竜の堅甲,角龙的坚甲
 DISASTER,Disaster,災難,灾难
 DISC_STONE,Disc Stone,円盤石,圆盘石
-DISPLAY_STYLE,Display Style,,
+DISPLAY_STYLE,Display Style,,显示方式
 DIVINE_PROTECTION,Divine Protection,精霊の加護,精灵的加护
 DIVINE_TOOLSAVER,Divine Toolsaver,神のきまぐれ,神的反复无常
 DIVINE_WHIM,Divine Whim,神の気まぐれ,神的反覆无常
@@ -410,7 +409,7 @@ ELEMENT_RES_PLUS_5,Element Res +5,各耐性+5,各耐性+5
 ELEMENT_RES_UP,Element Res Up,全耐性ＵＰ,全耐性UP
 ENABLE_ARMOR_RESTRICTIONS,Enable Armor Restrictions,,启用防具类型限制
 ENGLISH,English,英語,英语
-EQUIP,Equip,,
+EQUIP,Equip,,装备
 ESP,ESP,心眼,心眼
 EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
 FACE,Face,,面容
@@ -490,7 +489,7 @@ FISHING_MASTER,Fishing Master,釣り名人,垂钓名人
 FLABBY_HIDE,Flabby Hide,ブヨブヨした皮,柔软的皮
 FLUTE_MASTER,Flute Master,笛吹き名人,吹笛名人
 FLUTE_SKILL,Flute,笛,笛
-FORGING_PRICE,Forge,生産価格,
+FORGING_PRICE,Forge,生産価格,购买价格
 GATHERING,Gathering,採取,采取
 GATHERING_MINUS_1,Gathering -1,採取-1,采取-1
 GATHERING_MINUS_2,Gathering -2,採取-2,采取-2
@@ -758,7 +757,7 @@ HEAT_RES,Heat Res,耐暑,耐暑
 HEAT_X_1_5,Heat x1.5,暑さ倍加【×1.5】,暑热倍加【×1.5】
 HEAVENS_GAUNTLET,Heaven's Gauntlet,天上天下無双手甲 ,天上天下无双手甲
 HELP,Help,,帮助
-HELP_COPY,Rotate the hunter with J and L or the Right Analog stick; show/hide the armor and hunter panels with Tab or the Select button on a gamepad. Video and Audio settings can be found in the Options dropdown. Equipped armor and custom armor sets will be saved automatically.,,
+HELP_COPY,Rotate the hunter with J and L or the Right Analog stick; show/hide the armor and hunter panels with Tab or the Select button on a gamepad. Video and Audio settings can be found in the Options dropdown. Equipped armor and custom armor sets will be saved automatically.,,使用J/L键或手柄右摇杆旋转猎人；使用Tab键或手柄SELECT键切换防具显示；画面与声音设置可在选项中的下拉菜单找到，装备的防具与自定义套装将会自动保存。
 HI_METAL_CAP,Hi-Metal Cap,ハイメタキャップ,精炼矿石软帽
 HI_METAL_CAP_PLUS,Hi-Metal Cap+,ハイメタＧキャップ,精炼矿石Ｇ软帽
 HI_METAL_CAP_S,Hi-Metal Cap S,ハイメタＳキャップ,精炼矿石Ｓ软帽
@@ -982,7 +981,7 @@ KO_HALVED_MHG,Stun Halved,気絶確率半減,气绝概率半减
 KO_NEGATED_MH1,Faint Negated,気絶無効,气绝无效
 KO_NEGATED_MHG,Stun Negated,気絶無効,气绝无效
 KO_SKILL_MHG,Stun,気絶,气绝
-KOKOTO_HOUSE,Kokoto House,ココット村の家,
+KOKOTO_HOUSE,Kokoto House,ココット村の家,科科特村的家
 KUT_KU_CARAPACE,Kut-Ku Carapace,怪鳥の堅殻,怪鸟的坚壳
 KUT_KU_COAT,Kut-Ku Coat,クックコート,怪鸟围腰
 KUT_KU_COAT_PLUS,Kut-Ku Coat+,クックＧコート,怪鸟Ｇ围腰
@@ -1015,7 +1014,7 @@ KUT_KU_VEST_U,Kut-Ku Vest U,クックＵレジスト,怪鸟Ｕ轻甲
 KUT_KU_WEBBING,Kut-Ku Webbing,怪鳥の翼膜,怪鸟的翼膜
 KUT_KU_WING,Kut-Ku Wing,怪鳥の翼,怪鸟的翼
 LANCE_TICKET,Lance Ticket,ランスチケット,长枪券
-LANGUAGE,Language,,
+LANGUAGE,Language,,语言
 LAO_SHAN_CARAPACE,Lao-Shan Carapace,老山龍の堅殻,老山龍的坚壳
 LAO_SHAN_CLAW,Lao-Shan Claw,老山龍の爪,老山龍的爪
 LAO_SHAN_HEAVY_SHELL,Lao-Shan Heavy Shell,老山龍の重甲,老山龍的重甲
@@ -1089,7 +1088,7 @@ MAIL_ARMOR,Mail,胸当て,胴装备
 MAJESTIC_HORN,Majestic Horn,上質なねじれた角,优质的弯角
 MALE,Male,男性,男性
 MAP,Map,地図,地图
-MASTER_VOLUME,Master,音量,
+MASTER_VOLUME,Master,音量,音量
 MASTERS_SKULL,Master’s Skull,達人のドクロ,达人的髑髅
 MATERIALS,Materials,生産に必要な素材,所需素材
 MED_MONSTER_BONE,Med Monster Bone,竜骨【中】,龙骨【中】
@@ -1133,11 +1132,11 @@ MOSSWINE_HIDE,Mosswine Hide,モスの苔皮,苔猪的皮
 MOSSWINE_MASK,Mosswine Mask,モスフェイク,苔猪伪装头
 MOSSWINE_MASK_PLUS,Mosswine Mask+,モスＧフェイク,苔猪Ｇ伪装头
 MOSSWINE_MASK_S,Mosswine Mask S,モスＳフェイク,苔猪Ｓ伪装头
-MUSIC,Music,音楽,
-MUTE,Mute,ミュート,
-NAME,Name,名称,
+MUSIC,Music,音楽,音乐
+MUTE,Mute,ミュート,静音
+NAME,Name,名称,名称
 NO_MAP,No Map,地図無効,地图无效
-NO_SKILL,No Skill,スキル無し,
+NO_SKILL,No Skill,スキル無し,无技能
 NONE,None,なし,无
 NORMAL_S_ADD,Normal S Add,通常弾追加,通常弹追加
 NORMAL_S_ADD_1,Normal S Add 1,通常弾ＬＶ１追加,通常弹LV1追加
@@ -1147,8 +1146,8 @@ NORMAL_S_UP_SKILL,Normal S Up,通常弾強化,通常弹强化
 NOVACRYSTAL,Novacrystal,ノヴァクリスタル,耀水晶
 OK,OK,OK,OK
 ONE_HANDED_SWORD_TICKET,One-handed Sword Ticket,片手剣チケット,片手剑券
-OPTIONS,Options,選択肢,
-OVERWRITE,Overwrite,,
+OPTIONS,Options,選択肢,选项
+OVERWRITE,Overwrite,,覆盖
 PALE_BONE,Pale Bone,アルビノの中落ち,白化的脊肉
 PALE_KHEZU_STEAK,Pale Khezu Steak,アルビノの霜降り,白化的雪花肉
 PARALYSIS_DOUBLED_MH1,Stun x 2,麻痺倍加,麻痹倍加
@@ -1246,12 +1245,12 @@ POWER_PIERCING,Power Piercing,力のピアス,力之耳饰
 PROTECTION_PIERCING,Protection Piercing,護りのピアス,守护耳饰
 PROTECTION_SKILL,Protection,加護,加护
 PROVOCATION,Provocation,挑発,挑衅
-PS2,PS2,,
+PS2,PS2,,PS2
 PSYCHIC,Psychic,千里眼,千里眼
 PURECRYSTAL,Purecrystal,ピュアクリスタル,纯水晶
 PURPLE_RUBBERY_HIDE,Purple Rubbery Hide,ゴム質の紫皮,橡胶质的紫皮
 QUEEN_ROOM,Queen Room,クイーン,王后套房
-QUIT,Quit,抜ける,
+QUIT,Quit,抜ける,退出
 RAPID_FIRE,Rapid Fire,連射,连射
 RATH_HEART_CAP,Rath Heart Cap,リオハートキャップ,樱火龙软帽
 RATH_HEART_CAP_PLUS,Rath Heart Cap+,リオハートＧキャップ,樱火龙Ｇ软帽
@@ -1437,7 +1436,7 @@ SHARPENER_SKILL,Sharpener,研ぎ師,研磨师
 SHARPNESS_DOWN,Sharpness Down,斬れ味レベル-1,锋利度等级-1
 SHARPNESS_RESTORATION_PLUS_25,Sharpness Restoration + 25%,斬れ味回復＋25%,锋利度回复＋25%
 SHARPNESS_RESTORATION_PLUS_50,Sharpness Restoration + 50%,斬れ味回復＋50%,锋利度回复＋50%
-SHARPNESS_SKILL,Sharpness,斬れ味,利度
+SHARPNESS_SKILL,Sharpness,斬れ味,锐利
 SHARPNESS_UP,Sharpness Up,斬れ味レベル+1,锋利度等级+1
 SHINOBI_BELT_BLACK,Shinobi Belt 'Black',忍の帯・黒,忍之带・黑
 SHINOBI_BELT_EARTH,Shinobi Belt 'Earth',忍の帯・地,忍之带・地
@@ -1492,7 +1491,7 @@ SILVER_SOL_TASSET,Silver Sol Tasset,シルバーソルコイル,银日扣带
 SILVER_SOL_VAMBRACES,Silver Sol Vambraces,シルバーソルアーム,银日臂甲
 SILVER_SOL_VEST,Silver Sol Vest,シルバーソルレジスト,银日轻甲
 SKILL,Skill,スキル,技能
-SKILLED_ARMOR_SETS,Skilled Armor Sets,,
+SKILLED_ARMOR_SETS,Skilled Armor Sets,,技能套装
 SKILLS,Skills,スキル,技能
 SKULL_FACE,Skull Face,スカルフェイス,髑髅面
 SKULL_FACE_PLUS,Skull Face+,スカルＧフェイス,髑髅Ｇ面
@@ -1507,7 +1506,7 @@ SM_LOBSTERSHELL,Sm Lobstershell,エビの小殻,虾之小壳
 SM_MONSTER_BONE,Sm Monster Bone,竜骨【小】,龙骨【小】
 SNAKEBEE_LARVA,Snakebee Larva,ツチハチノコ,土蜂幼虫
 SOLID_BLOS_HORN,Solid Blos Horn,堅牢なねじれた角,坚牢的弯角
-SOUND_EFFECTS,Sound,音響効果,
+SOUND_EFFECTS,Sound,音響効果,音效
 SPECTRES_WHIM,Spectre's Whim,悪霊の気まぐれ,恶灵的反覆无常
 SPEED_EATER,Speed Eater,拾い食い,拣食
 SPEED_GATHERING_ACTIVATED,Speed Gathering & Carving,高速剥ぎ取り＆採取,高速剥取＆采取
@@ -1515,7 +1514,7 @@ SPEED_GATHERING_SKILL,Speed Gathering,高速収集,高速收集
 SPIRITS_WHIM,Spirit's Whim,精霊の気まぐれ,精灵的反覆无常
 SPLENDID_BEAK,Splendid Beak,立派なクチバシ,气派的喙
 STAMINA_STAT,Stamina,体力,耐力
-STATS,Stats,性能,
+STATS,Stats,性能,统计
 STATUS_ATTACK_UP,Status Attack Up,状態異常攻撃強化,状态异常攻击强化
 STATUS_SKILL,Status,特殊攻撃,特殊攻击
 STEALTH,Stealth,隠密,隐密
@@ -1643,8 +1642,8 @@ VESPOID_VEST,Vespoid Vest,ランゴレジスト,巨蜂轻甲
 VESPOID_VEST_PLUS,Vespoid Vest+,ランゴＧレジスト,巨蜂Ｇ轻甲
 VESPOID_VEST_S,Vespoid Vest S,ランゴＳレジスト,巨蜂Ｓ轻甲
 VESPOID_WING,Vespoid Wing,ランゴスタの羽,巨蜂的羽
-VIDEO,Video,,
-VIDEO_OPTIONS,Video,,
+VIDEO,Video,,画面
+VIDEO_OPTIONS,Video,,画面选项
 WAIST,Waist,腰,腰
 WATER_MINUS_10_MH1,Water - 10,水耐性－10,水耐性－10
 WATER_MINUS_10_MHG,Water Res -10,水耐性-10,水耐性-10
