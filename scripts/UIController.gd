@@ -1,6 +1,6 @@
 extends Control
 
-enum Option { VIDEO, AUDIO }
+enum Option { VIDEO, AUDIO, IMPORT_EXPORT }
 
 signal armor_selected
 signal room_changed(room_index: int)
@@ -117,6 +117,9 @@ func _ready():
 		for armor_row in armor_tables[category_index].table_body.get_children():
 			armor_row.armor_selected.connect(_on_armor_selected)
 
+	$ImportExport.about_to_popup.connect(_on_import_export_popup)
+	$ImportExport.armor_code_imported.connect(_on_armor_code_imported)
+
 	var settings = SaveData.load_user_data()
 	load_settings(settings)
 
@@ -132,6 +135,18 @@ func _on_add_set_button_pressed():
 	var hunter_class: ArmorData.HunterClass = ArmorData.get_hunter_class_from_indices(armor_indices)
 	add_armor_set_row(ArmorData.game_version, gender, hunter_class, armor_indices, "")
 	save_armor_sets()
+
+
+func _on_armor_code_imported(armor_code: Array):
+	if ArmorData.game_version != armor_code[0]:
+		set_game(armor_code[0])
+		game_options.select(armor_code[0])
+
+	if get_gender() != armor_code[1]:
+		set_gender(armor_code[1])
+
+	for armor_category in ArmorData.CATEGORY_COUNT:
+		equip_armor(armor_code[0], armor_category, armor_code[1], armor_code[3 + armor_category])
 
 
 func _on_armor_set_name_changed():
@@ -201,6 +216,10 @@ func _on_hunter_class_changed():
 	toggle_armor_rows()
 
 
+func _on_import_export_popup():
+	$ImportExport.set_export_code(hunters[get_gender()].get_armor_code())
+
+
 func _on_locale_changed(locale_index: int):
 	set_locale(locale_index)
 
@@ -235,6 +254,8 @@ func _on_options_selected(option_index: int):
 			$VideoOptions.popup_centered()
 		Option.AUDIO:
 			$AudioOptions.popup_centered()
+		Option.IMPORT_EXPORT:
+			$ImportExport.popup_centered()
 
 
 func _on_quit_pressed():

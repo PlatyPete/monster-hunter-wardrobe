@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://bq45b0sufjwd4"]
+[gd_scene load_steps=46 format=3 uid="uid://bq45b0sufjwd4"]
 
 [ext_resource type="Theme" uid="uid://c31wgu5mwbrda" path="res://themes/mh1_theme.tres" id="1_rept1"]
 [ext_resource type="Script" path="res://scripts/UIController.gd" id="2_jy3o4"]
@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cn7u6ro8ton6n" path="res://icons/arms.tres" id="23_n7fo1"]
 [ext_resource type="Texture2D" uid="uid://lm1o2i32uy48" path="res://icons/waist.tres" id="24_6o5xr"]
 [ext_resource type="Texture2D" uid="uid://dofghj60k1068" path="res://icons/legs.tres" id="25_7im3o"]
+[ext_resource type="Script" path="res://scripts/ImportExport.gd" id="29_ewvt8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1giod"]
 atlas = ExtResource("10_skm8h")
@@ -54,6 +55,27 @@ region = Rect2(64, 128, 32, 32)
 [sub_resource type="ButtonGroup" id="ButtonGroup_8v4jl"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_4t304"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwqb0"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qjilg"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s25jn"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 1)
 
 [node name="UIController" type="VBoxContainer" node_paths=PackedStringArray("game_options", "room_options", "mh1_armor_sets_button", "options_dropdown", "locale_options", "help_button", "quit_button", "armor_tables", "tab_container", "armor_sets_container", "add_set_button", "female_check", "male_check", "f_face_options", "f_hair_options", "f_hair_color", "m_face_options", "m_hair_options", "m_hair_color", "sword_check", "gun_check", "stats_container", "skill_rows", "active_skill_container", "material_rows", "forge_row", "buy_row")]
 anchors_preset = 15
@@ -140,11 +162,13 @@ size_flags_horizontal = 3
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "OPTIONS"
-item_count = 2
+item_count = 3
 popup/item_0/text = "VIDEO"
 popup/item_0/id = 1
 popup/item_1/text = "AUDIO"
 popup/item_1/id = 0
+popup/item_2/text = "IMPORT_EXPORT_ARMOR"
+popup/item_2/id = 2
 
 [node name="LocaleButton" type="OptionButton" parent="PanelContainer/HBoxContainer"]
 custom_minimum_size = Vector2(0, 16)
@@ -19342,6 +19366,61 @@ size_flags_vertical = 3
 
 [node name="ArmorSetRows" type="VBoxContainer" parent="MH1ArmorSets/MarginContainer/VBoxContainer/ScrollContainer"]
 layout_mode = 2
+
+[node name="ImportExport" type="AcceptDialog" parent="." node_paths=PackedStringArray("export_field", "export_button", "import_field", "import_button")]
+title = "IMPORT_EXPORT_ARMOR"
+position = Vector2i(0, 36)
+size = Vector2i(256, 135)
+unresizable = true
+popup_window = true
+script = ExtResource("29_ewvt8")
+export_field = NodePath("MarginContainer/GridContainer/Export Code")
+export_button = NodePath("MarginContainer/GridContainer/ExportButton")
+import_field = NodePath("MarginContainer/GridContainer/Import Code")
+import_button = NodePath("MarginContainer/GridContainer/ImportButton")
+
+[node name="MarginContainer" type="MarginContainer" parent="ImportExport"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 249.0
+offset_bottom = 95.0
+
+[node name="GridContainer" type="GridContainer" parent="ImportExport/MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Label" type="Label" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "IMPORT_ARMOR_CODE"
+
+[node name="Import Code" type="LineEdit" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_kwqb0")
+placeholder_text = "0,0,0,0,0,0,0,0"
+
+[node name="ImportButton" type="Button" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "IMPORT"
+
+[node name="Label2" type="Label" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+text = "EXPORT_ARMOR_CODE"
+
+[node name="Export Code" type="LineEdit" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_uneditable_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_qjilg")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_s25jn")
+editable = false
+expand_to_text_length = true
+
+[node name="ExportButton" type="Button" parent="ImportExport/MarginContainer/GridContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "EXPORT"
 
 [node name="HelpPopup" type="AcceptDialog" parent="."]
 title = "HELP"
