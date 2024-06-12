@@ -23,6 +23,7 @@ var room_name: String
 
 func _ready():
 	$UIController.armor_selected.connect(_on_armor_selected)
+	$UIController.panels_toggled.connect(_on_panels_toggled)
 	$UIController.room_changed.connect(_on_room_changed)
 
 	$AnimationPlayer.animation_finished.connect(_on_animation_finished)
@@ -57,6 +58,10 @@ func _on_armor_selected():
 	play_equip_sound()
 
 
+func _on_panels_toggled(panels_visible: bool):
+	$CameraGimbal.move_for_ui(panels_visible)
+
+
 func _on_room_changed(room_index: int):
 	room_name = ROOM_NAMES[room_index]
 	$AnimationPlayer.play("fade_to_black")
@@ -75,6 +80,7 @@ func load_room(new_room_name: String):
 	add_child(room)
 
 	$CameraGimbal.rotation.y = room.player_position.rotation.y
+	$CameraGimbal.move_for_ui(true)
 	room.position = -room.player_position.position
 	$HunterContainer.rotation = room.player_position.rotation
 	room.play_music()

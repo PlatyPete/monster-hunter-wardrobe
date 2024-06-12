@@ -3,6 +3,7 @@ extends Control
 enum Option { VIDEO, AUDIO, IMPORT_EXPORT }
 
 signal armor_selected
+signal panels_toggled(panels_visible: bool)
 signal room_changed(room_index: int)
 
 const LOCALES: Array[String] = [
@@ -127,6 +128,7 @@ func _ready():
 func _input(inputEvent: InputEvent):
 	if inputEvent.is_action_pressed("toggle_panels"):
 		$PanelsContainer.set_visible(!$PanelsContainer.is_visible())
+		panels_toggled.emit($PanelsContainer.is_visible())
 
 
 func _on_add_set_button_pressed():
