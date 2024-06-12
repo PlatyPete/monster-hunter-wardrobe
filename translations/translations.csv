@@ -413,6 +413,8 @@ ENGLISH,English,英語,英语
 EQUIP,Equip,,装备
 ESP,ESP,心眼,心眼
 EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
+EXPORT,Export,,
+EXPORT_ARMOR_CODE,Export Code,,
 FACE,Face,,面容
 FACE_1,Face 1,,面容1
 FACE_10,Face 10,,面容10
@@ -758,7 +760,7 @@ HEAT_RES,Heat Res,耐暑,耐暑
 HEAT_X_1_5,Heat x1.5,暑さ倍加【×1.5】,暑热倍加【×1.5】
 HEAVENS_GAUNTLET,Heaven's Gauntlet,天上天下無双手甲 ,天上天下无双手甲
 HELP,Help,,帮助
-HELP_COPY,Rotate the hunter with J and L or the Right Analog stick; show/hide the armor and hunter panels with Tab or the Select button on a gamepad. Video and Audio settings can be found in the Options dropdown. Equipped armor and custom armor sets will be saved automatically.,,使用J/L键或手柄右摇杆旋转猎人；使用Tab键或手柄SELECT键切换防具显示；画面与声音设置可在选项中的下拉菜单找到，装备的防具与自定义套装将会自动保存。
+HELP_COPY,Rotate the hunter with J and L or the Right Analog stick, show/hide the armor and hunter panels with Tab or the Select button on a gamepad. Video and Audio settings can be found in the Options dropdown. Equipped armor and custom armor sets will be saved automatically.,使用J/L键或手柄右摇杆旋转猎人；使用Tab键或手柄SELECT键切换防具显示；画面与声音设置可在选项中的下拉菜单找到，装备的防具与自定义套装将会自动保存。
 HI_METAL_CAP,Hi-Metal Cap,ハイメタキャップ,精炼矿石软帽
 HI_METAL_CAP_PLUS,Hi-Metal Cap+,ハイメタＧキャップ,精炼矿石Ｇ软帽
 HI_METAL_CAP_S,Hi-Metal Cap S,ハイメタＳキャップ,精炼矿石Ｓ软帽
@@ -887,6 +889,8 @@ HUNTERS_VEST_PLUS,Hunter's Vest+,ハンターＧレジスト,猎人Ｇ轻甲
 HUNTERS_VEST_S,Hunter's Vest S,ハンターＳレジスト,猎人Ｓ轻甲
 HUNTERS_VEST_U,Hunter's Vest U,ハンターＵレジスト,猎人Ｕ轻甲
 HUSKBERRY,Huskberry,カラの実,空心果
+IMPORT,Import,,
+IMPORT_ARMOR_CODE,Import Code,,
 IMPORT_EXPORT_ARMOR,Import/Export Armor,,导入/导出防具组合
 IODROME_HIDE,Iodrome Hide,ドスイーオスの皮,红速龙王的皮
 IOPREY_CAP,Ioprey Cap,イーオスキャップ,红速龙软帽
