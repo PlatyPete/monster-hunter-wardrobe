@@ -46,6 +46,18 @@ func equip_armor(game_version: int, armor_category: ArmorData.Category, armor_in
 		print("The selected armor is not valid for this gender")
 
 
+# An armor code is a list of values: game version, gender, hunter class, head, body, arms, waist, legs
+func get_armor_code() -> Array[int]:
+	var armor_code: Array[int] = [
+		ArmorData.game_version,
+		gender,
+		2
+	]
+	armor_code.append_array(get_armor_indices(ArmorData.game_version))
+
+	return armor_code
+
+
 func get_armor_indices(game_version: ArmorData.Game) -> Array:
 	return armor_indices.slice(game_version * ArmorData.CATEGORY_COUNT, ArmorData.CATEGORY_COUNT + game_version * ArmorData.CATEGORY_COUNT)
 
