@@ -413,8 +413,8 @@ ENGLISH,English,英語,英语
 EQUIP,Equip,,装备
 ESP,ESP,心眼,心眼
 EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
-EXPORT,Export,,
-EXPORT_ARMOR_CODE,Export Code,,
+EXPORT,Export,,导出
+EXPORT_ARMOR_CODE,Export Code,,导出代码
 FACE,Face,,面容
 FACE_1,Face 1,,面容1
 FACE_10,Face 10,,面容10
@@ -889,8 +889,8 @@ HUNTERS_VEST_PLUS,Hunter's Vest+,ハンターＧレジスト,猎人Ｇ轻甲
 HUNTERS_VEST_S,Hunter's Vest S,ハンターＳレジスト,猎人Ｓ轻甲
 HUNTERS_VEST_U,Hunter's Vest U,ハンターＵレジスト,猎人Ｕ轻甲
 HUSKBERRY,Huskberry,カラの実,空心果
-IMPORT,Import,,
-IMPORT_ARMOR_CODE,Import Code,,
+IMPORT,Import,,导入
+IMPORT_ARMOR_CODE,Import Code,,导入代码
 IMPORT_EXPORT_ARMOR,Import/Export Armor,,导入/导出防具组合
 IODROME_HIDE,Iodrome Hide,ドスイーオスの皮,红速龙王的皮
 IOPREY_CAP,Ioprey Cap,イーオスキャップ,红速龙软帽
