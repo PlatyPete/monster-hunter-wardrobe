@@ -11,9 +11,8 @@ ANTI_THEFT_MHG,Anti-Theft,盗み無効,偷盗无效
 ANTISEPTIC_STONE,Antiseptic Stone,抗菌石,抗菌石
 APP_TITLE,Monster Hunter Armor Wardrobe,,怪物猎人防具展柜
 ARMOR,Armor,防具,防具
-ARMOR_CODE_COPY,Copy this armor code to the armor builder at https://www.mh1g.info/armor. Or copy the code from the builder into the input here and press Ok.,,复制下方防具组合代码到 https://www.mh1g.info/armor 处的防具配置组合工具导出粘贴使用，或从前述组合工具中复制代码到此处进行导入。
-ARMOR_RESTRICTIONS_TOOLTIP,"Please note! Armor combinations made with
-restrictions off will not be valid in-game (sadly.)",,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
+ARMOR_CODE_COPY,Copy this armor code to the armor builder at https://wiki.mholdschool.com/armor. Or copy the code from the builder into the input here and press Ok.,,复制下方防具组合代码到 https://wiki.mholdschool.com/armor 处的防具配置组合工具导出粘贴使用，或从前述组合工具中复制代码到此处进行导入。
+ARMOR_RESTRICTIONS_TOOLTIP,Please note! Armor combinations made with restrictions off will not be valid in-game (sadly.),,请注意！解除类型限制的防具搭配无法用于游戏中(允悲)
 ARMOR_SETS,Sets,,套装
 ARMS,Arms,腕,腕
 ATTACK_STAT,Attack,攻撃,攻击
@@ -43,7 +42,7 @@ AUROROS_TORSO,Auroros Torso,暁丸【胴当て】,晓丸【胴当】
 AUROROS_TORSO_HAKU,Auroros Torso Haku,暁丸・覇【胴当て】,晓丸・霸【胴当】
 AUROROS_TORSO_MAI,Auroros Torso Mai,暁丸・羅【胴当て】,晓丸・罗【胴当】
 AUROROS_TORSO_TEN,Auroros Torso Ten,暁丸・皇【胴当て】,晓丸・皇【胴当】
-AUTO,Auto,,自动
+AUTO,Auto,オート,自动
 AUTO_GUARD_ACTIVATED,Auto-Guard,オートガード,全自动防御
 AUTO_GUARD_SKILL,Auto-Guard,自動防御,自动防御
 AUTO_MAP,Auto-Map,地図不要,地图常备
@@ -347,7 +346,7 @@ DIABLOS_SPINE,Diablos Spine,角竜の背甲,角龙的背甲
 DIABLOS_THORACIC,Diablos Thoracic,角竜の堅甲,角龙的坚甲
 DISASTER,Disaster,災難,灾难
 DISC_STONE,Disc Stone,円盤石,圆盘石
-DISPLAY_STYLE,Display Style,,显示方式
+DISPLAY_STYLE,Display Style,体裁,显示方式
 DIVINE_PROTECTION,Divine Protection,精霊の加護,精灵的加护
 DIVINE_TOOLSAVER,Divine Toolsaver,神のきまぐれ,神的反复无常
 DIVINE_WHIM,Divine Whim,神の気まぐれ,神的反覆无常
@@ -415,31 +414,31 @@ ESP,ESP,心眼,心眼
 EXPERT_PIERCING,Expert Piercing,達人のピアス,达人耳饰
 EXPORT,Export,,导出
 EXPORT_ARMOR_CODE,Export Code,,导出代码
-FACE,Face,,面容
-FACE_1,Face 1,,面容1
-FACE_10,Face 10,,面容10
-FACE_11,Face 11,,面容11
-FACE_12,Face 12,,面容12
-FACE_13,Face 13,,面容13
-FACE_14,Face 14,,面容14
-FACE_15,Face 15,,面容15
-FACE_16,Face 16,,面容16
-FACE_17,Face 17,,面容17
-FACE_18,Face 18,,面容18
-FACE_19,Face 19,,面容19
-FACE_2,Face 2,,面容2
-FACE_20,Face 20,,面容20
-FACE_21,Face 21,,面容21
-FACE_22,Face 22,,面容22
-FACE_23,Face 23,,面容23
-FACE_24,Face 24,,面容24
-FACE_3,Face 3,,面容3
-FACE_4,Face 4,,面容4
-FACE_5,Face 5,,面容5
-FACE_6,Face 6,,面容6
-FACE_7,Face 7,,面容7
-FACE_8,Face 8,,面容8
-FACE_9,Face 9,,面容9
+FACE,Face,面目,面容
+FACE_1,Face 1,面目1,面容1
+FACE_10,Face 10,面目10,面容10
+FACE_11,Face 11,面目11,面容11
+FACE_12,Face 12,面目12,面容12
+FACE_13,Face 13,面目13,面容13
+FACE_14,Face 14,面目14,面容14
+FACE_15,Face 15,面目15,面容15
+FACE_16,Face 16,面目16,面容16
+FACE_17,Face 17,面目17,面容17
+FACE_18,Face 18,面目18,面容18
+FACE_19,Face 19,面目19,面容19
+FACE_2,Face 2,面目2,面容2
+FACE_20,Face 20,面目20,面容20
+FACE_21,Face 21,面目21,面容21
+FACE_22,Face 22,面目22,面容22
+FACE_23,Face 23,面目23,面容23
+FACE_24,Face 24,面目24,面容24
+FACE_3,Face 3,面目3,面容3
+FACE_4,Face 4,面目4,面容4
+FACE_5,Face 5,面目5,面容5
+FACE_6,Face 6,面目6,面容6
+FACE_7,Face 7,面目7,面容7
+FACE_8,Face 8,面目8,面容8
+FACE_9,Face 9,面目9,面容9
 FARSIGHT,Farsight,地図常備,地图常备
 FATALIS_CRIMSON_CHEST_SHELL,Fatalis' Crimson Chest Shell,黒龍の紅胸殻,黑龍的红胸壳
 FATALIS_CRIMSON_HORN,Fatalis' Crimson Horn,黒龍の紅角,黑龍的红角
@@ -727,18 +726,18 @@ GYPCEROS_VEST,Gypceros Vest,ゲリョスレジスト,毒怪鸟轻甲
 GYPCEROS_VEST_PLUS,Gypceros Vest+,ゲリョスＧレジスト,毒怪鸟Ｇ轻甲
 GYPCEROS_VEST_S,Gypceros Vest S,ゲリョスＳレジスト,毒怪鸟Ｓ轻甲
 GYPCEROS_VEST_U,Gypceros Vest U,ゲリョスＵレジスト,毒怪鸟Ｕ轻甲
-HAIR_1,Hair 1,,发型1
-HAIR_10,Hair 10,,发型10
-HAIR_2,Hair 2,,发型2
-HAIR_3,Hair 3,,发型3
-HAIR_4,Hair 4,,发型4
-HAIR_5,Hair 5,,发型5
-HAIR_6,Hair 6,,发型6
-HAIR_7,Hair 7,,发型7
-HAIR_8,Hair 8,,发型8
-HAIR_9,Hair 9,,发型9
-HAIR_COLOR,Hair Color,,发色
-HAIR_OPTION,Hair,,发型
+HAIR_1,Hair 1,髪1,发型1
+HAIR_10,Hair 10,髪10,发型10
+HAIR_2,Hair 2,髪2,发型2
+HAIR_3,Hair 3,髪3,发型3
+HAIR_4,Hair 4,髪4,发型4
+HAIR_5,Hair 5,髪5,发型5
+HAIR_6,Hair 6,髪6,发型6
+HAIR_7,Hair 7,髪7,发型7
+HAIR_8,Hair 8,髪8,发型8
+HAIR_9,Hair 9,髪9,发型9
+HAIR_COLOR,Hair Color,毛色,发色
+HAIR_OPTION,Hair,髪,发型
 HAMMER_TICKET,Hammer Ticket,ハンマーチケット,大锤券
 HANDICRAFT,Handicraft,匠,匠
 HEAD,Head,頭,头
@@ -759,7 +758,7 @@ HEAT_NEGATED_MHG,Heat Negated,暑さ無効,暑热无效
 HEAT_RES,Heat Res,耐暑,耐暑
 HEAT_X_1_5,Heat x1.5,暑さ倍加【×1.5】,暑热倍加【×1.5】
 HEAVENS_GAUNTLET,Heaven's Gauntlet,天上天下無双手甲 ,天上天下无双手甲
-HELP,Help,,帮助
+HELP,Help,助け,帮助
 HELP_COPY,Rotate the hunter with J and L or the Right Analog stick, show/hide the armor and hunter panels with Tab or the Select button on a gamepad. Video and Audio settings can be found in the Options dropdown. Equipped armor and custom armor sets will be saved automatically.,使用J/L键或手柄右摇杆旋转猎人；使用Tab键或手柄SELECT键切换防具显示；画面与声音设置可在选项中的下拉菜单找到，装备的防具与自定义套装将会自动保存。
 HI_METAL_CAP,Hi-Metal Cap,ハイメタキャップ,精炼矿石软帽
 HI_METAL_CAP_PLUS,Hi-Metal Cap+,ハイメタＧキャップ,精炼矿石Ｇ软帽
@@ -1019,7 +1018,7 @@ KUT_KU_VEST_U,Kut-Ku Vest U,クックＵレジスト,怪鸟Ｕ轻甲
 KUT_KU_WEBBING,Kut-Ku Webbing,怪鳥の翼膜,怪鸟的翼膜
 KUT_KU_WING,Kut-Ku Wing,怪鳥の翼,怪鸟的翼
 LANCE_TICKET,Lance Ticket,ランスチケット,长枪券
-LANGUAGE,Language,,语言
+LANGUAGE,Language,言葉,语言
 LAO_SHAN_CARAPACE,Lao-Shan Carapace,老山龍の堅殻,老山龍的坚壳
 LAO_SHAN_CLAW,Lao-Shan Claw,老山龍の爪,老山龍的爪
 LAO_SHAN_HEAVY_SHELL,Lao-Shan Heavy Shell,老山龍の重甲,老山龍的重甲
@@ -1152,7 +1151,7 @@ NOVACRYSTAL,Novacrystal,ノヴァクリスタル,耀水晶
 OK,OK,OK,OK
 ONE_HANDED_SWORD_TICKET,One-handed Sword Ticket,片手剣チケット,片手剑券
 OPTIONS,Options,選択肢,选项
-OVERWRITE,Overwrite,,覆盖
+OVERWRITE,Overwrite,重ね書き,覆盖
 PALE_BONE,Pale Bone,アルビノの中落ち,白化的脊肉
 PALE_KHEZU_STEAK,Pale Khezu Steak,アルビノの霜降り,白化的雪花肉
 PARALYSIS_DOUBLED_MH1,Stun x 2,麻痺倍加,麻痹倍加
@@ -1250,7 +1249,7 @@ POWER_PIERCING,Power Piercing,力のピアス,力之耳饰
 PROTECTION_PIERCING,Protection Piercing,護りのピアス,守护耳饰
 PROTECTION_SKILL,Protection,加護,加护
 PROVOCATION,Provocation,挑発,挑衅
-PS2,PS2,,PS2
+PS2,PS2,PS2,PS2
 PSYCHIC,Psychic,千里眼,千里眼
 PURECRYSTAL,Purecrystal,ピュアクリスタル,纯水晶
 PURPLE_RUBBERY_HIDE,Purple Rubbery Hide,ゴム質の紫皮,橡胶质的紫皮
@@ -1555,7 +1554,7 @@ TORSO,Torso,胴,胴
 TORSO_PLUS_1,Torso +1,胴系統＋１,胴系统＋１
 TORSO_PLUS_2,Torso +2,胴系統＋２,胴系统＋２
 TORSO_UP,Torso Up,胴系統倍加,胴系统倍加
-TOTAL,Total,,总计
+TOTAL,Total,全額,总计
 TRAINING_CENTER_ONLY,Training center only,訓練所専用,训练所专用
 TWISTED_BLACK_BLOS_HORN,Twisted Black Blos Horn,黒巻き角,黑卷角
 TWISTED_HORN,Twisted Horn,ねじれた角,弯曲的角
