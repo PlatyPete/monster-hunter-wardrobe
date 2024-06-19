@@ -6,19 +6,21 @@
 [ext_resource type="AnimationLibrary" uid="uid://bpu4w87fvtjla" path="res://music/music_animations.res" id="4_fol21"]
 
 [sub_resource type="Environment" id="Environment_frffb"]
-background_energy_multiplier = 0.5
+background_energy_multiplier = 0.25
 
 [node name="Kokoto House" instance=ExtResource("1_y6mu8")]
 script = ExtResource("2_um0qg")
 
 [node name="Player Position" type="Node3D" parent="." index="1"]
-transform = Transform3D(0.241008, 0, 0.970524, 0, 1, 0, -0.970524, 0, 0.241008, -5.07489, 2.38419e-07, -3.67718)
+transform = Transform3D(0.557413, 0, 0.830237, 0, 1, 0, -0.830237, 0, 0.557413, -3.954, -0.05, -4.797)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="2"]
 environment = SubResource("Environment_frffb")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.74783, 1.56326, -4.35864)
+light_energy = 0.5
+shadow_enabled = true
 
 [node name="SpotLight3D" type="SpotLight3D" parent="." index="4"]
 transform = Transform3D(1, 0, 0, 0, -0.769979, 0.638069, 0, -0.638069, -0.769979, -4.67436, 2.25814, -9.10309)

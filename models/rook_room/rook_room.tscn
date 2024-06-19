@@ -16,9 +16,11 @@ script = ExtResource("2_6c0qc")
 environment = SubResource("Environment_7kxns")
 
 [node name="Room Light" type="OmniLight3D" parent="." index="2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.87489, 1.37741, -4.73954)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47227, 1.92116, -4.73954)
+light_energy = 0.5
+shadow_enabled = true
 omni_range = 4.5
-omni_attenuation = 1.10957
+omni_attenuation = 2.0
 
 [node name="Window Light" type="SpotLight3D" parent="." index="3"]
 transform = Transform3D(1, 0, 0, 0, -0.377178, 0.926141, 0, -0.926141, -0.377178, -4.78154, 3.21436, -10.0198)
@@ -34,7 +36,7 @@ spot_attenuation = 0.482968
 spot_angle = 52.27
 
 [node name="Player Position" type="Node3D" parent="." index="5"]
-transform = Transform3D(0.726898, 0, 0.686745, 0, 1, 0, -0.686745, 0, 0.726898, -3.23101, 0, -6.08612)
+transform = Transform3D(0.510723, 0, 0.859745, 0, 1, 0, -0.859745, 0, 0.510723, -4.484, -0.05, -5.154)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="6"]
 stream = ExtResource("3_73glp")

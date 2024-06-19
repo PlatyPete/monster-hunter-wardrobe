@@ -22,7 +22,7 @@ spot_range = 12.0
 spot_angle = 50.14
 
 [node name="Player Position" type="Node3D" parent="." index="3"]
-transform = Transform3D(0.746452, 0, 0.665439, 0, 1, 0, -0.665439, 0, 0.746452, -5.73433, -2.38419e-07, -2.01377)
+transform = Transform3D(0.746452, 0, 0.665439, 0, 1, 0, -0.665439, 0, 0.746452, -4.086, 0, -3.868)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="4"]
 stream = ExtResource("3_qho07")

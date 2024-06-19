@@ -10,15 +10,22 @@
 [node name="King Room" instance=ExtResource("1_e7bo7")]
 script = ExtResource("2_golqt")
 
+[node name="FModMeshpart 001" parent="." index="3"]
+cast_shadow = 0
+
+[node name="FModMeshpart 000" parent="." index="4"]
+cast_shadow = 0
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." index="5"]
 environment = SubResource("Environment_naopu")
 
 [node name="Sun Light" type="DirectionalLight3D" parent="." index="6"]
-transform = Transform3D(0.736912, 0.18165, -0.651125, 0, 0.963219, 0.268718, 0.675989, -0.198022, 0.709807, 0, 0, 0)
+transform = Transform3D(0.274326, 0.296971, -0.914633, -0.112561, 0.954499, 0.276155, 0.955026, 0.0271954, 0.295272, 0, 0, 0)
 light_energy = 0.5
+shadow_enabled = true
 
 [node name="Player Position" type="Node3D" parent="." index="7"]
-transform = Transform3D(0.427216, 0, -0.90415, 0, 1, 0, 0.90415, 0, 0.427216, -7.75293, 0, -6.28826)
+transform = Transform3D(0.839791, 0, 0.542911, 0, 1, 0, -0.542911, 0, 0.839791, -14.982, -0.05, -3.816)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
 stream = ExtResource("3_ubur0")
