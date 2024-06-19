@@ -8,21 +8,43 @@ In keeping with version 1 of the app, I will attempt to provide working executab
 
 - Linux 32-bit
 - Linux 64-bit
+- Linux Arm64
 - Mac OSX
 - Windows 32-bit
 - Windows 64-bit
 
-I have designed this app for a desktop computer environment, with a keyboard and mouse (gamepad support is planned). You can use Godot to build this app in your own environment for yourself, but I cannot promise it will work properly for any platform except those listed above.
+No installation required: just download the compressed folder for your system from the Releases page and extract the contents to the folder of your choice. Be sure to keep all contents in the same place in order for the application to work properly. Your platform may require additional steps for the app to run: see the sections below.
+
+I have designed this app for a desktop computer environment, with a keyboard and mouse; I have plans to implement more control elements and inputs to allow everything to work with only the keyboard or mouse. I'm also planning to implement gamepad support.
+
+Feel free to use Godot to build this app in your environment for yourself, but I cannot promise it will work properly for any platform except those listed above.
+
+### Linux
+
+In order to run the app, you need to allow the executable to run as a program. Open the Properties menu for the MHAW file (`MHAW.x86_32`, `MHAW.x86_64`, or `MHAW.arm64` depending on your platform), visit the Permissions tab, and check "Allow executing file as program".
+
+### MacOS
+
+Extract to your Applications directory to avoid file path issues. Gatekeeper will block execution of this app, since it isn't notarized and signed, warning you that "Apple cannot check it for malicious software." At this time, I am not part of the Apple Developer Program, so I cannot code sign the app for MacOS users. Godot maintains directions for macOS users to run unsigned apps in its documentation [here](https://docs.godotengine.org/en/stable/tutorials/export/running_on_macos.html#doc-running-on-macos), but I'll summarize.
+
+There are two ways to open the app:
+
+- 1. Try to open the app normally, and the warning popup will appear. Open System Preferences and go to Security & Privacy. In the General tab, "Monster Hunter Armor Wardrobe" will be listed in the "Allow apps" section: click "Open Anyway" to open the app.
+- 2. Right click, or Control + click, the app and select Open from the dropdown. The same warning popup will appear, but an "Open" button will be available.
+
+### Windows
+
+Windows Defender will interrupt execution of this app, but you can click "Run anyway" to open it. A signed certificate would be expensive to maintain, so I am not expecting to code sign the app for Windows any time soon.
 
 ## Interface
 
-The menu panel on the left will include the list of all armor pieces, with a radio button to select each piece to equip. The right menu will display the player's stats and skills based on the current equipment, and provide a panel to edit the player's features (gender, face, hair, etc.) Several armor pieces are gendered, so I've opted to keep armor selections isolated between the female and male player models as if there are always two player slots available in the app: one female, one male. You will be able to save and load armor sets regardless of your player customization, but invalid armor pieces will display a message and not be equipped by default: E.G. loading a set with Maiden armor pieces on a male player. You will be able to disable this feature, and make all armor pieces available to display regardless of armor restrictions (like gender and weapon class), but these will not be valid armor sets for use in the games.
+The menu panel on the left includes the list of all armor pieces, with a radio button to select each piece to equip. The right menu displays the player's stats and skills based on the current equipment, and provides a panel to edit the player's features (gender, face, hair, etc.) Several armor pieces are gendered, so I've opted to keep armor selections isolated between the female and male player models as if there are always two player slots available in the app: one female, one male. You can save and load armor sets regardless of your player customization, but invalid armor pieces will display a message and not be equipped by default: E.G. loading a set with Maiden armor pieces on a male player.
 
 ## Tools and Resources
 
 ### Godot Engine
 
-I've used [Godot](https://godotengine.org/) 4 to build this project, while the previous iteration of the app used Godot 3. This requires some extensive code re-writing, due to changes in the engine and GDScript, but has been painless so far. I considered using some C# or even C++ for this project, but I haven't yet found any instances where this would provide a significant improvement in performance: most of the scripting operations here are built-in engine commands, or fairly lightweight operations whose minor improvements will be offset by the greater amount of debugging time incurred by c# restrictions and lacking documentation on Godot's part.
+I've used [Godot](https://godotengine.org/) 4 to build this project, while the previous iteration of the app used Godot 3. This required some extensive code re-writing, due to changes in the engine and GDScript, but has been painless so far. I considered using some C# or even C++ for this project, but I haven't yet found any instances where this would provide a significant improvement in performance: most of the scripting operations here are built-in engine commands, or fairly lightweight operations whose minor improvements will be offset by the greater amount of debugging time incurred by C# restrictions and lacking documentation on Godot's part.
 
 ### Game Resources
 
@@ -33,15 +55,15 @@ All models and audio files were extracted, and converted where needed, from game
 - [MHMultiTool](https://github.com/MH-Oldschool/MHMultitool): Used to extract images, such as textures and icons, and convert them to .png format.
 - [2Tie's Addons](https://drive.google.com/file/d/15rCCcZWy1YBcEY0g1eX3WK3vLuqUYgh3/view?usp=sharing): Used to import .amo model files and animations into Blender. This is a modified plugin created by [2Tie](https://github.com/2Tie), based on the [Monster Hunter Frontier Importer](https://github.com/AsteriskAmpersand/Monster-Hunter-Frontier-Importer). 2Ties modifications account for the PlayStation 2 games using the .amo format, which includes geometry and bone data in the same file, while Frontier split geometry and bones into two separate files.
 
-[Darto](https://github.com/The1andonlyDarto) has provided [this wiki page](https://github.com/The1andonlyDarto/MHAssetInfo/wiki/2Tie's-Old-Gen-MH-Model-Importing) to assist in Monster Hunter assets specifically, which contains links to some of the above tools.
+[Darto](https://github.com/The1andonlyDarto) has provided [this wiki page](https://github.com/The1andonlyDarto/MHAssetInfo/wiki/2Tie's-Old-Gen-MH-Model-Importing) to assist in handling Monster Hunter assets specifically, which contains further directions and links to some of the above tools.
 
 ### Models
 
-I exported all models in .glb format, with .png images as textures. Models have been scaled down to 1% of their original size; it seems that the in-game world scale was much different than modern standards, likely in keeping with the PlayStation 2's unusual floating-point numbers.
+I exported all models in `.glb` format, with .png images as textures. Models have been scaled down to 1% of their original size; it seems that the in-game world scale was much different than modern standards, likely in keeping with the PlayStation 2's unusual floating-point numbers.
 
 ### Armor Models
 
-Monster Hunter armor models and player models are grouped together into six categories: hair, body, arms, waist, legs, and face. Each model includes its own bones, and although most model categories include only the bones they need for their geometry, legs models include the full skeleton (barring a few extra hair bones that belong to a few hair models). The Hair category includes all headgear models as well as player hair options. The body, arms, and legs categories include the base player models (E.G. no armor equipped), which do not appear to have differing geometry, but have different skin textures: one for each of the four possible skin tones. The player's chosen face model determines their skin tone.
+Monster Hunter armor models and player models are grouped together into six categories: hair, body, arms, waist, legs, and face. Each model includes its own bones, and although most model categories include only the bones they need for their geometry, legs models include the full skeleton (barring a extra hair bones that belong to a few hair models). The Hair category includes all headgear models as well as player hair options. The body, arms, and legs categories include the base player models (E.G. no armor equipped), which do not appear to have differing geometry, but do have different skin textures: one for each of the four possible skin tones. The player's chosen face model determines their skin tone.
 
 In order to reduce file size and ensure synchronized poses between body parts, I decided to use one single armature for each gender of hunter, and map all the models onto it. After much trial and error, I succeeded in combining everyting into two models in this project: one female hunter and one male. Each model contains all the body part and armor piece models for its gender.
 
@@ -49,11 +71,11 @@ I had a hard time applying player animations from the game, and so both the male
 
 ### Rooms and Lighting
 
-Room models don't contain any lighting information, to my knowledge. I've attempted to recreate the lighting conditions used in-game based on video and screenshot reference, but it doesn't look quite right at the time of writing. I would like to better emulate the in-game lighting at some point in the future.
+Room models don't contain any lighting information, to my knowledge. I've attempted to recreate the lighting conditions used in-game based on video and screenshot reference, but it will always be an approximation. I would like to better emulate the in-game lighting at some point in the future.
 
 ### Audio
 
-The .snd and .snp audio files don't appear to contain a sample rate definition (or PSound doesn't know how to parse it), and there isn't a common sample rate used across all audio files. I've had to use my memory and best guesses to determine which sample rates to use when converting these files, but I believe they're accurate enough if not perfect.
+The `.snd` and `.snp` audio files don't appear to contain a sample rate definition (or PSound doesn't know how to parse it), and there isn't a common sample rate used across all audio files. I've had to use my memory and best guesses to determine which sample rates to use when converting these files, but I believe they're accurate enough if not perfect.
 
 ### Language and Fonts
 
