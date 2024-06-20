@@ -40,6 +40,24 @@ Windows Defender will interrupt execution of this app, but you can click "Run an
 
 The menu panel on the left includes the list of all armor pieces, with a radio button to select each piece to equip. The right menu displays the player's stats and skills based on the current equipment, and provides a panel to edit the player's features (gender, face, hair, etc.) Several armor pieces are gendered, so I've opted to keep armor selections isolated between the female and male player models as if there are always two player slots available in the app: one female, one male. You can save and load armor sets regardless of your player customization, but invalid armor pieces will display a message and not be equipped by default: E.G. loading a set with Maiden armor pieces on a male player.
 
+The toolbar at the top contains dropdowns to change the game, change the room, equip a skilled armor set for Monster Hunter 1, change various options for the app, and quit.
+
+### Options
+
+In the Audio menu, change or mute the master volume, and the same for sound effects and music separately.
+
+In the Video menu, choose between two Display Style options:
+- "PS2" will render at roughly the same resolution as the original game (640 x 480), and scale to the window size.
+- "Auto" will render at the same size as the window.
+
+## Save Data
+
+Save data is split into two files: `settings.cfg` which contains the window size, and `save.cfg` which contains all other data, including character customization, armor sets, and audio settings. Your save data location depends on the platform you're using, and can be found in the following directories:
+
+- Linux: `~/.local/share/mh_armor_wardrobe`
+- macOS: `~/Library/Application Support/mh_armor_wardrobe`
+- Windows: `%APPDATA%\mh_armor_wardrobe`
+
 ## Tools and Resources
 
 ### Godot Engine
