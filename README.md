@@ -109,6 +109,7 @@ I've used two fonts courtesy of Google Fonts in this project: Noto Sans, and Yan
 	- [x] Apply current skin texture when equipping armor with exposed skin
 	- [x] Menu to equip MH1 armor sets that have armor skills
 	- [x] Import and Export comma-separated armor code to integrate with the wiki's set builder
+	- [ ] Include armor skill points in the armor piece list for MHG
 	- [ ] Search bar for armor pieces by name
 	- [ ] Filter by element resistance
 	- [ ] Filter by armor skill
