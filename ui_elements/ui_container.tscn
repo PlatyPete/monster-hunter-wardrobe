@@ -27380,7 +27380,7 @@ layout_mode = 2
 tooltip_text = "PS2: 640 x 480
 Auto: scales to window"
 item_count = 2
-selected = 0
+selected = 1
 popup/item_0/text = "PS2"
 popup/item_0/id = 0
 popup/item_1/text = "AUTO"
