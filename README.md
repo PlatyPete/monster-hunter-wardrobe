@@ -1,5 +1,7 @@
 # Monster Hunter Wardrobe
 
+![Monster Hunter Armor Wardrobe 2.0, featuring the Hunter's armor set, the Kokoto House interior, and the new UI](preview.png)
+
 This is a native desktop app in which you can preview every armor piece available in Monster Hunter 1 (NTSC-J) and Monster Hunter G. You can also change the player model, and pick from any of the five guest house rooms or the Kokoto player house as a backdrop. This project is version 2 of the app that is currently available for download through my [Monster Hunter 1/G/2 wiki.](https://wiki.mholdschool.com/) I didn't use version tracking for version 1 of the app, and never published the source code, hence I'm starting this app from scratch at version 2.
 
 ## OS Support
