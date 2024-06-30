@@ -4,14 +4,16 @@ This is a native desktop app in which you can preview every armor piece availabl
 
 ## OS Support
 
-In keeping with version 1 of the app, I will attempt to provide working executables (found in the releases section) for the following five platforms:
+In keeping with version 1 of the app, I will attempt to provide working executables (found in the releases section) for the following five platforms and Linux arm64 (note that Vulkan renderer is required in addition to other requirements):
 
-- Linux 32-bit
-- Linux 64-bit
-- Linux Arm64
-- Mac OSX
-- Windows 32-bit
-- Windows 64-bit
+- Linux arm64 (untested)
+- Linux 32-bit (untested)
+- Linux 64-bit (Mint 21.3 Cinnamon tested)
+- macOS (untested)
+- Windows 32-bit (untested)
+- Windows 64-bit (10 tested)
+
+The macOS build should theoretically work on 10.12 Sierra or newer, however I haven't been able to test this.
 
 No installation required: just download the compressed folder for your system from the Releases page and extract the contents to the folder of your choice. Be sure to keep all contents in the same place in order for the application to work properly. Your platform may require additional steps for the app to run: see the sections below.
 
@@ -21,7 +23,7 @@ Feel free to use Godot to build this app in your environment for yourself, but I
 
 ### Linux
 
-In order to run the app, you need to allow the executable to run as a program. Open the Properties menu for the MHAW file (`MHAW.x86_32`, `MHAW.x86_64`, or `MHAW.arm64` depending on your platform), visit the Permissions tab, and check "Allow executing file as program".
+In order to run the app, you need to allow the executable to run as a program. Open the Properties menu for the MHAW file (`MHAW.x86_32`, `MHAW.x86_64`, or `MHAW.arm64` depending on your platform), visit the Permissions tab, and check "Allow executing file as program". I have only tested the x86_64-bit build on Linux Mint 21.3 Cinnamon, but I believe the releases should work just fine in most distros with the help of the bundled libraries.
 
 ### MacOS
 
@@ -32,9 +34,11 @@ There are two ways to open the app:
 - 1. Try to open the app normally, and the warning popup will appear. Open System Preferences and go to Security & Privacy. In the General tab, "Monster Hunter Armor Wardrobe" will be listed in the "Allow apps" section: click "Open Anyway" to open the app.
 - 2. Right click, or Control + click, the app and select Open from the dropdown. The same warning popup will appear, but an "Open" button will be available.
 
+Theoretically, the app should run on macOS 10.12 Sierra or newer. In my brief testing, the OpenGL3 fallback did not work properly in 10.13 High Sierra.
+
 ### Windows
 
-Windows Defender will interrupt execution of this app, but you can click "Run anyway" to open it. A signed certificate would be expensive to maintain, so I am not expecting to code sign the app for Windows any time soon.
+Windows Defender will interrupt execution of this app, but you can click "Run anyway" to open it. A signed certificate would be expensive to maintain, so I am not expecting to code sign the app for Windows any time soon. I have only tested the Windows 64-bit build in Windows 10, though it should work just fine in Windows 11 as well. Theoretically, Windows 7 and 8 should be able to run the app, using OpenGL3 as a fallback if Vulkan drivers aren't available.
 
 ## Interface
 
