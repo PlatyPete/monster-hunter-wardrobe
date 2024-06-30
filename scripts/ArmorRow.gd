@@ -4,6 +4,7 @@ signal armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Ca
 
 @export var armor_category: ArmorData.Category
 @export var armor_index: int
+@export var button_group: ButtonGroup
 @export var game_version: int
 @export var gender: ArmorData.Gender
 @export var hunter_class: ArmorData.HunterClass
@@ -13,6 +14,8 @@ func _ready():
 	# Since this is a packed scene, we can't use the tool script to fill in any data
 	var armor_data = ArmorData.ARMOR[game_version][armor_category][armor_index]
 	set_armor_name(armor_data.name)
+	set_armor_skills(armor_data)
+	set_button_group(button_group)
 
 	if armor_index != 0:
 		set_defense(str(armor_data.def))
@@ -28,6 +31,26 @@ func _ready():
 
 func set_armor_name(new_name: String):
 	$CheckBox.set_text(new_name)
+
+
+func set_armor_skills(armor_data):
+	match game_version:
+		ArmorData.Game.MH1:
+			$SkillsSeparator.hide()
+		ArmorData.Game.MHG:
+			var armor_skill_points = $ResourcePreloader.get_resource("armor_skill_points")
+			if armor_data.has("skills") and armor_data.skills.size() != 0:
+				var index: int = 0
+				var last_index: int = armor_data.skills.size() - 1
+				for skill in armor_data.skills:
+					var skill_label = armor_skill_points.instantiate()
+					skill_label.set_skill_info(skill.q, skill.k, index < last_index)
+					add_child(skill_label)
+					index += 1
+			else:
+				var skill_label = armor_skill_points.instantiate()
+				skill_label.set_skill_info(0, "NONE", false)
+				add_child(skill_label)
 
 
 func set_button_group(button_group: ButtonGroup):

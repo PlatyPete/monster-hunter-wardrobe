@@ -4,21 +4,10 @@ extends Control
 @export var table_body: Node
 @export var scroll_container: ScrollContainer
 
-@export_group("Button Groups")
-@export var f_button_group: ButtonGroup
-@export var m_button_group: ButtonGroup
-
 var scroll_when_next_shown: bool = false
 
 
 func _ready():
-	for armor_row in table_body.get_children():
-		match armor_row.gender:
-			ArmorData.Gender.FEMALE:
-				armor_row.set_button_group(f_button_group)
-			ArmorData.Gender.MALE:
-				armor_row.set_button_group(m_button_group)
-
 	visibility_changed.connect(_on_visibility_changed)
 
 

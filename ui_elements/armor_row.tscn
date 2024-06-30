@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://hh82ts8ouwhe"]
+[gd_scene load_steps=3 format=3 uid="uid://hh82ts8ouwhe"]
 
 [ext_resource type="Script" path="res://scripts/ArmorRow.gd" id="1_nl6m7"]
+[ext_resource type="PackedScene" uid="uid://8fb1muqwt51i" path="res://ui_elements/armor_skill_points.tscn" id="2_t4qff"]
 
 [node name="ArmorRow" type="HBoxContainer"]
 size_flags_horizontal = 3
@@ -9,7 +10,7 @@ script = ExtResource("1_nl6m7")
 [node name="CheckBox" type="CheckBox" parent="."]
 custom_minimum_size = Vector2(128, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
 mouse_default_cursor_shape = 2
 text = "Armor"
 
@@ -19,7 +20,7 @@ layout_mode = 2
 [node name="Defense" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "24"
 horizontal_alignment = 2
 
@@ -29,7 +30,7 @@ layout_mode = 2
 [node name="FireRes" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 2
 
@@ -39,7 +40,7 @@ layout_mode = 2
 [node name="WaterRes" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 2
 
@@ -49,7 +50,7 @@ layout_mode = 2
 [node name="ThunderRes" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 2
 
@@ -59,6 +60,12 @@ layout_mode = 2
 [node name="DragonRes" type="Label" parent="."]
 custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 2
+
+[node name="SkillsSeparator" type="VSeparator" parent="."]
+layout_mode = 2
+
+[node name="ResourcePreloader" type="ResourcePreloader" parent="."]
+resources = [PackedStringArray("armor_skill_points"), [ExtResource("2_t4qff")]]

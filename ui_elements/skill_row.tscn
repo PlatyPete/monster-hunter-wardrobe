@@ -22,7 +22,7 @@ layout_mode = 2
 [node name="HairPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
 
@@ -32,7 +32,7 @@ layout_mode = 2
 [node name="BodyPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
 
@@ -42,7 +42,7 @@ layout_mode = 2
 [node name="ArmsPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
 
@@ -52,7 +52,7 @@ layout_mode = 2
 [node name="WaistPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
 
@@ -62,7 +62,7 @@ layout_mode = 2
 [node name="LegsPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(16, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
 
@@ -72,6 +72,6 @@ layout_mode = 2
 [node name="TotalPoints" type="Label" parent="."]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 8
 text = "-1"
 horizontal_alignment = 1
