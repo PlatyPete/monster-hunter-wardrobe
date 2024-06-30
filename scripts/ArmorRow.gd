@@ -2,9 +2,9 @@ extends Control
 
 signal armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.Category, gender: ArmorData.Gender, armor_index: int)
 
+@export var armor_button_group: ButtonGroup
 @export var armor_category: ArmorData.Category
 @export var armor_index: int
-@export var button_group: ButtonGroup
 @export var game_version: int
 @export var gender: ArmorData.Gender
 @export var hunter_class: ArmorData.HunterClass
@@ -15,7 +15,7 @@ func _ready():
 	var armor_data = ArmorData.ARMOR[game_version][armor_category][armor_index]
 	set_armor_name(armor_data.name)
 	set_armor_skills(armor_data)
-	set_button_group(button_group)
+	set_button_group(armor_button_group)
 
 	if armor_index != 0:
 		set_defense(str(armor_data.def))
@@ -53,8 +53,8 @@ func set_armor_skills(armor_data):
 				add_child(skill_label)
 
 
-func set_button_group(button_group: ButtonGroup):
-	$CheckBox.set_button_group(button_group)
+func set_button_group(armor_button_group: ButtonGroup):
+	$CheckBox.set_button_group(armor_button_group)
 
 
 func set_defense(new_defense: String):

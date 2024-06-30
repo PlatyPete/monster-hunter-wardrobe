@@ -28,7 +28,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("2_x31q2")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Head" type="Label" parent="GridContainer2"]
 layout_mode = 2
@@ -40,7 +40,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("3_1bkbs")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Body" type="Label" parent="GridContainer2"]
 layout_mode = 2
@@ -52,7 +52,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("4_acxwy")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Arms" type="Label" parent="GridContainer2"]
 layout_mode = 2
@@ -64,7 +64,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("5_jay2t")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Waist" type="Label" parent="GridContainer2"]
 layout_mode = 2
@@ -76,7 +76,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 texture = ExtResource("6_r4y8a")
 expand_mode = 1
-stretch_mode = 4
+stretch_mode = 5
 
 [node name="Legs" type="Label" parent="GridContainer2"]
 layout_mode = 2

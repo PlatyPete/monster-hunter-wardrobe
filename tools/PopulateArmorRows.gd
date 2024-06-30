@@ -76,7 +76,7 @@ func set_armor_row_data(armor_row: ArmorRow, game_version: ArmorData.Game, armor
 	armor_row.armor_index = armor_index
 	armor_row.game_version = game_version
 	armor_row.hunter_class = armor_data.get("hunter_class", ArmorData.HunterClass.BOTH)
-	armor_row.button_group = ButtonGroups[game_version][gender][armor_category]
+	armor_row.armor_button_group = ButtonGroups[game_version][gender][armor_category]
 
 	match game_version:
 		ArmorData.Game.MH1:
