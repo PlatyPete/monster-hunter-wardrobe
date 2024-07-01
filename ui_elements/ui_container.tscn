@@ -19344,7 +19344,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 max_value = 1.0
 step = 0.01
-value = 1.0
+value = 0.5
 
 [node name="MasterMute" type="CheckBox" parent="AudioOptions/MarginContainer/GridContainer"]
 layout_mode = 2
