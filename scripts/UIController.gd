@@ -653,6 +653,7 @@ func toggle_gender_options(gender: ArmorData.Gender):
 			m_hair_color.show()
 
 	toggle_armor_rows()
+	$MH1ArmorSets.toggle_sets_by_gender(gender)
 
 	hunters[gender].show()
 	hunters[(gender + 1) % 2].hide()

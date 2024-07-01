@@ -28,3 +28,10 @@ func set_armor_details(armor_set_index: int):
 		_skill_list.append(TranslationServer.translate(skill_name))
 
 	$Skills.set_text(", ".join(_skill_list))
+
+	if ArmorData.SKILL_SETS[armor_set_index].has("gender"):
+		match ArmorData.SKILL_SETS[armor_set_index].gender:
+			ArmorData.Gender.FEMALE:
+				add_to_group("female_sets")
+			ArmorData.Gender.MALE:
+				add_to_group("male_sets")

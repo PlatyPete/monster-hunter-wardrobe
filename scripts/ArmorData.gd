@@ -1618,7 +1618,10 @@ var SKILL_SETS = [
 	armor_set.armor_indices = [ 0, 0, 0, 0, 0 ]
 	for armor_category in CATEGORY_COUNT:
 		var armor_index: int = get_armor_index_by_name(Game.MH1, armor_category, armor_set.armor[armor_category])
+		var armor_piece = ARMOR[Game.MH1][armor_category][armor_index]
 		armor_set.armor_indices[armor_category] = armor_index
+		if armor_piece.has("gender"):
+			armor_set.gender = armor_piece.gender
 
 	return armor_set
 )
