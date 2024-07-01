@@ -6,6 +6,40 @@ signal armor_selected
 signal panels_toggled(panels_visible: bool)
 signal room_changed(room_index: int)
 
+const ButtonGroups: Array = [
+	[
+		[
+			preload("res://button_groups/f_1_hair_buttons.tres"),
+			preload("res://button_groups/f_1_body_buttons.tres"),
+			preload("res://button_groups/f_1_arms_buttons.tres"),
+			preload("res://button_groups/f_1_waist_buttons.tres"),
+			preload("res://button_groups/f_1_legs_buttons.tres")
+		],
+		[
+			preload("res://button_groups/m_1_hair_buttons.tres"),
+			preload("res://button_groups/m_1_body_buttons.tres"),
+			preload("res://button_groups/m_1_arms_buttons.tres"),
+			preload("res://button_groups/m_1_waist_buttons.tres"),
+			preload("res://button_groups/m_1_legs_buttons.tres")
+		]
+	],
+	[
+		[
+			preload("res://button_groups/f_g_hair_buttons.tres"),
+			preload("res://button_groups/f_g_body_buttons.tres"),
+			preload("res://button_groups/f_g_arms_buttons.tres"),
+			preload("res://button_groups/f_g_waist_buttons.tres"),
+			preload("res://button_groups/f_g_legs_buttons.tres")
+		],
+		[
+			preload("res://button_groups/m_g_hair_buttons.tres"),
+			preload("res://button_groups/m_g_body_buttons.tres"),
+			preload("res://button_groups/m_g_arms_buttons.tres"),
+			preload("res://button_groups/m_g_waist_buttons.tres"),
+			preload("res://button_groups/m_g_legs_buttons.tres")
+		]
+	]
+]
 const LOCALES: Array[String] = [
 	"en",
 	"ja",
@@ -116,6 +150,8 @@ func _ready():
 		tab_container.set_tab_icon(category_index, armor_tables[category_index].tab_icon)
 
 		for armor_row in armor_tables[category_index].table_body.get_children():
+			var armor_button_group = ButtonGroups[armor_row.game_version][armor_row.gender][armor_row.armor_category]
+			armor_row.set_button_group(armor_button_group)
 			armor_row.armor_selected.connect(_on_armor_selected)
 
 	$ImportExport.about_to_popup.connect(_on_import_export_popup)
