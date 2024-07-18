@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://0p5rbvkh8a4e"]
+
+[ext_resource type="Script" path="res://scripts/ArmorCheckbox.gd" id="1_sb5xl"]
+
+[node name="ArmorCheckbox" type="CheckBox"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_default_cursor_shape = 2
+text = "Armor"
+script = ExtResource("1_sb5xl")
+armor_category = null
+armor_index = null
+game_version = null
+gender = null
+hunter_class = null

@@ -148,11 +148,14 @@ func _ready():
 	for category_index in ArmorData.CATEGORY_COUNT:
 		tab_container.set_tab_title(category_index, "")
 		tab_container.set_tab_icon(category_index, armor_tables[category_index].tab_icon)
+		armor_tables[category_index].update_layout()
 
-		for armor_row in armor_tables[category_index].table_body.get_children():
-			var armor_button_group = ButtonGroups[armor_row.game_version][armor_row.gender][armor_row.armor_category]
-			armor_row.set_button_group(armor_button_group)
-			armor_row.armor_selected.connect(_on_armor_selected)
+		for armor_checkbox in armor_tables[category_index].armor_checkboxes:
+			var armor_button_group = ButtonGroups[armor_checkbox.game_version][armor_checkbox.gender][armor_checkbox.armor_category]
+			armor_checkbox.set_button_group(armor_button_group)
+			armor_checkbox.armor_selected.connect(_on_armor_selected)
+
+	tab_container.tab_changed.connect(_on_armor_tab_changed)
 
 	$ImportExport.about_to_popup.connect(_on_import_export_popup)
 	$ImportExport.armor_code_imported.connect(_on_armor_code_imported)
@@ -214,6 +217,11 @@ func _on_armor_selected(game_version: ArmorData.Game, armor_category: ArmorData.
 	equip_armor(game_version, armor_category, gender, armor_index)
 	update_armor_stats(game_version, gender)
 	save_hunter_settings()
+
+
+func _on_armor_tab_changed(tab: int):
+	if tab < ArmorData.CATEGORY_COUNT:
+		armor_tables[tab].call_deferred("update_layout")
 
 
 func _on_face_selected(face_index: int):
@@ -612,6 +620,10 @@ func toggle_armor_rows():
 	var gender: ArmorData.Gender = get_gender()
 	var hunter_class: ArmorData.HunterClass = get_hunter_class()
 
+	for table in armor_tables:
+		table.update_columns()
+		table.update_name_label()
+
 	var scene_tree: SceneTree = get_tree()
 	match gender:
 		ArmorData.Gender.FEMALE:
@@ -633,6 +645,8 @@ func toggle_game_elements():
 		node.set_visible(show_mh1_elements)
 	for node in scene_tree.get_nodes_in_group("mhg_elements"):
 		node.set_visible(not show_mh1_elements)
+
+	armor_tables[tab_container.current_tab].call_deferred("update_layout")
 
 
 func toggle_gender_options(gender: ArmorData.Gender):
